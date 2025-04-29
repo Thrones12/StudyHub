@@ -1,0 +1,42 @@
+.storage-page {
+    margin: 30px 0;
+}
+
+.storage-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    padding-bottom: 8px;
+}
+/* HEADER */
+.storage-page .storage-header {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+.storage-page .storage-header .title {
+    height: 40px;
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.storage-page .storage-header .storage-header-tools {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.storage-page .storage-header .storage-header-tools button {
+    background-color: var(--blue-500);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 14px;
+    box-shadow: var(--box-shadow-2);
+    transition: all 0.3s ease;
+}
+.storage-page .storage-header .storage-header-tools button:hover {
+    background-color: var(--blue-600);
+    box-shadow: var(--box-shadow-3);
+}

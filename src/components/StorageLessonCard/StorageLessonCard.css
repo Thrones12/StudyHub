@@ -1,0 +1,112 @@
+/* STORAGE LESSON CARD */
+.storage-lesson-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--gray-400);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.storage-lesson-card .video {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.storage-lesson-card .lesson-title {
+    font-size: 16px !important;
+    color: var(--gray-800);
+    width: 100%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    line-height: 20px; /* Giả sử mỗi dòng cao 20px */
+    height: 40px; /* 2 dòng * 20px */
+}
+.storage-lesson-card .seperator {
+    width: 100%;
+    height: 1px;
+    border-top: 1px dashed var(--gray-400);
+}
+.storage-lesson-card .footer {
+    width: 100%;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.storage-lesson-card .footer .text {
+    display: flex;
+    align-items: center;
+    color: var(--gray-700);
+}
+.storage-lesson-card .footer .text svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.storage-lesson-card .footer.done .text svg {
+    color: var(--green-600);
+}
+.storage-lesson-card .footer.not-done .text svg {
+    color: var(--gray-600);
+}
+/* BUTTON */
+.storage-lesson-card .btn {
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.15s ease-in-out;
+}
+.storage-lesson-card .btn-green {
+    color: var(--white);
+    background-color: var(--green-500);
+}
+.storage-lesson-card .btn-green:hover {
+    background-color: var(--green-600);
+}
+.storage-lesson-card .btn-gray {
+    color: var(--gray-700);
+    background-color: var(--gray-300);
+}
+.storage-lesson-card .btn-gray:hover {
+    background-color: var(--gray-400);
+}
+/* DELETE BUTTON */
+.storage-lesson-card .delete-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--gray-600);
+    padding: 0;
+    margin: 0;
+    background-color: var(--red-400);
+    color: var(--white);
+    transition: transform 0.3s ease, background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.storage-lesson-card .delete-btn:hover {
+    background-color: var(--red-500);
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.storage-lesson-card .delete-btn svg {
+    width: 12px;
+    height: 12px;
+}

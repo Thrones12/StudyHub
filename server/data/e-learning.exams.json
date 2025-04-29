@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "680d36c00d808c70bd34b7b2"
+  },
+  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "duration": 3600,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "easy",
+  "attemptCount": 120,
+  "saveCount": 60,
+  "completionCount": 40,
+  "createdAt": {
+    "$date": "2025-04-26T19:40:48.880Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d36c30d808c70bd34b7b6"
+  },
+  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "duration": 3600,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "easy",
+  "attemptCount": 510,
+  "saveCount": 51,
+  "completionCount": 500,
+  "createdAt": {
+    "$date": "2025-04-26T19:40:51.037Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d36c60d808c70bd34b7ba"
+  },
+  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "duration": 3600,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "hard",
+  "attemptCount": 117,
+  "saveCount": 34,
+  "completionCount": 96,
+  "createdAt": {
+    "$date": "2025-04-26T19:40:54.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d36ca0d808c70bd34b7be"
+  },
+  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "duration": 3600,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 1324,
+  "saveCount": 968,
+  "completionCount": 1013,
+  "createdAt": {
+    "$date": "2025-04-26T19:40:58.605Z"
+  },
+  "__v": 0
+}]

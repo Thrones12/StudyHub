@@ -1,0 +1,26 @@
+[
+    {
+        "_id": {
+            "$oid": "67d3e2770d4ad89b7f805264"
+        },
+        "user": "67c384622c90a98bc7c8a848",
+        "message": "Bài học tốt",
+        "likes": ["67c384622c90a98bc7c8a848"]
+    },
+    {
+        "_id": {
+            "$oid": "67da853991b87432fd9b3872"
+        },
+        "user": "67c384622c90a98bc7c8a848",
+        "message": "Bài học không tệ lắm",
+        "likes": []
+    },
+    {
+        "_id": {
+            "$oid": "67da854491b87432fd9b3873"
+        },
+        "user": "67c384622c90a98bc7c8a848",
+        "message": "Câu 3 làm như thế nào vậy mọi người",
+        "likes": []
+    }
+]

@@ -1,0 +1,790 @@
+[{
+  "_id": {
+    "$oid": "68015c14a41c886b7e1a6d25"
+  },
+  "avatar": "/images/profile.png",
+  "fullname": "Người dùng",
+  "email": "hungphong.canhan@gmail.com",
+  "password": "$2b$10$R7prThQ9QhhjdrX2E0.lTuKFcnHCeX5SjK9A0vPK09lHD8P5lshu.",
+  "role": "student",
+  "learned": [
+    {
+      "courseId": "67a9c5090d5fbff4d3b34e2d",
+      "subjects": [
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e39",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d27"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e36",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d28"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3a",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d29"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e37",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2a"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e38",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2b"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3b",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2c"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3c",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2d"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3d",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2e"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3e",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2f"
+          }
+        },
+        {
+          "subjectId": "67d2fd0c1332f6140b9c9e1c",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d30"
+          }
+        },
+        {
+          "subjectId": "67d2fd0c1332f6140b9c9e1d",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d31"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68015c14a41c886b7e1a6d26"
+      }
+    },
+    {
+      "courseId": "67a9c5250d5fbff4d3b34e2e",
+      "subjects": [
+        {
+          "subjectId": "67d301f51332f6140b9c9e22",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d33"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e23",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d34"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e24",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d35"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e25",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d36"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e26",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d37"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e27",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d38"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e28",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d39"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e29",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3a"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2a",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3b"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2b",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3c"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2c",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3d"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2d",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3e"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68015c14a41c886b7e1a6d32"
+      }
+    },
+    {
+      "courseId": "67a9c5290d5fbff4d3b34e2f",
+      "subjects": [
+        {
+          "subjectId": "67d301f51332f6140b9c9e2e",
+          "lessons": [
+            {
+              "lessonId": "68015b8dfcf88f9de2ec9529",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d41"
+              }
+            },
+            {
+              "lessonId": "68015ba9fcf88f9de2ec952a",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d42"
+              }
+            },
+            {
+              "lessonId": "68015bbffcf88f9de2ec952b",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d43"
+              }
+            },
+            {
+              "lessonId": "68015bd7fcf88f9de2ec952c",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d44"
+              }
+            },
+            {
+              "lessonId": "68015be9fcf88f9de2ec952d",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d45"
+              }
+            }
+          ],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d40"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2f",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d46"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e30",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d47"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e31",
+          "lessons": [
+            {
+              "lessonId": "67aa092fe07a8de25c30a648",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d49"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e92",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4a"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e93",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4b"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e94",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4c"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e95",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4d"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e96",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4e"
+              }
+            }
+          ],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d48"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e33",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d4f"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e34",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d50"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e35",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d51"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e36",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d52"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e37",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d53"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e38",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d54"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e39",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d55"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68015c14a41c886b7e1a6d3f"
+      }
+    }
+  ],
+  "examResults": [
+    "67ec302548570fe63a9b22a2"
+  ],
+  "histories": [
+    {
+      "$oid": "6800eacbfcf88f9de2ec94fd"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec94fe"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec94ff"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec9500"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec9501"
+    }
+  ],
+  "likes": [],
+  "__v": 14,
+  "storages": [
+    {
+      "$oid": "680172344f20c0f428b5daa0"
+    },
+    {
+      "$oid": "680178ef7962b95cc28524e0"
+    },
+    {
+      "$oid": "680178f87962b95cc2852514"
+    },
+    {
+      "$oid": "680179007962b95cc2852548"
+    },
+    {
+      "$oid": "68025a90ba3c8feada909cf6"
+    },
+    {
+      "$oid": "68025beee6c8612a18fa8bdc"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6806968b9fccc85cb2759b53"
+  },
+  "avatar": "/images/profile.png",
+  "fullname": "Người dùng",
+  "email": "hungphong.canhan@gmail.com",
+  "password": "$2b$10$R7prThQ9QhhjdrX2E0.lTuKFcnHCeX5SjK9A0vPK09lHD8P5lshu.",
+  "role": "student",
+  "learned": [
+    {
+      "courseId": "67a9c5090d5fbff4d3b34e2d",
+      "subjects": [
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e39",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d27"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e36",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d28"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3a",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d29"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e37",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2a"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e38",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2b"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3b",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2c"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3c",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2d"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3d",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2e"
+          }
+        },
+        {
+          "subjectId": "67a9c9060d5fbff4d3b34e3e",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d2f"
+          }
+        },
+        {
+          "subjectId": "67d2fd0c1332f6140b9c9e1c",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d30"
+          }
+        },
+        {
+          "subjectId": "67d2fd0c1332f6140b9c9e1d",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d31"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68015c14a41c886b7e1a6d26"
+      }
+    },
+    {
+      "courseId": "67a9c5250d5fbff4d3b34e2e",
+      "subjects": [
+        {
+          "subjectId": "67d301f51332f6140b9c9e22",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d33"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e23",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d34"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e24",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d35"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e25",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d36"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e26",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d37"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e27",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d38"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e28",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d39"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e29",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3a"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2a",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3b"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2b",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3c"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2c",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3d"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2d",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d3e"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68015c14a41c886b7e1a6d32"
+      }
+    },
+    {
+      "courseId": "67a9c5290d5fbff4d3b34e2f",
+      "subjects": [
+        {
+          "subjectId": "67d301f51332f6140b9c9e2e",
+          "lessons": [
+            {
+              "lessonId": "68015b8dfcf88f9de2ec9529",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d41"
+              }
+            },
+            {
+              "lessonId": "68015ba9fcf88f9de2ec952a",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d42"
+              }
+            },
+            {
+              "lessonId": "68015bbffcf88f9de2ec952b",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d43"
+              }
+            },
+            {
+              "lessonId": "68015bd7fcf88f9de2ec952c",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d44"
+              }
+            },
+            {
+              "lessonId": "68015be9fcf88f9de2ec952d",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d45"
+              }
+            }
+          ],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d40"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e2f",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d46"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e30",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d47"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e31",
+          "lessons": [
+            {
+              "lessonId": "67aa092fe07a8de25c30a648",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d49"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e92",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4a"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e93",
+              "isDone": true,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4b"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e94",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4c"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e95",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4d"
+              }
+            },
+            {
+              "lessonId": "67d32bb1cbc084035d9b8e96",
+              "isDone": false,
+              "_id": {
+                "$oid": "68015c14a41c886b7e1a6d4e"
+              }
+            }
+          ],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d48"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e33",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d4f"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e34",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d50"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e35",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d51"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e36",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d52"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e37",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d53"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e38",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d54"
+          }
+        },
+        {
+          "subjectId": "67d301f51332f6140b9c9e39",
+          "lessons": [],
+          "_id": {
+            "$oid": "68015c14a41c886b7e1a6d55"
+          }
+        }
+      ],
+      "_id": {
+        "$oid": "68015c14a41c886b7e1a6d3f"
+      }
+    }
+  ],
+  "examResults": [
+    "67ec302548570fe63a9b22a2"
+  ],
+  "histories": [
+    {
+      "$oid": "6800eacbfcf88f9de2ec94fd"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec94fe"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec94ff"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec9500"
+    },
+    {
+      "$oid": "6800eacbfcf88f9de2ec9501"
+    }
+  ],
+  "likes": [],
+  "__v": 14,
+  "storages": [
+    {
+      "$oid": "680172344f20c0f428b5daa0"
+    },
+    {
+      "$oid": "680178ef7962b95cc28524e0"
+    },
+    {
+      "$oid": "680178f87962b95cc2852514"
+    },
+    {
+      "$oid": "680179007962b95cc2852548"
+    },
+    {
+      "$oid": "68025a90ba3c8feada909cf6"
+    },
+    {
+      "$oid": "68025beee6c8612a18fa8bdc"
+    }
+  ]
+}]

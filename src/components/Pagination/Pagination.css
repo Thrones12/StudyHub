@@ -1,0 +1,28 @@
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.pagination button {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.pagination button:hover {
+    background-color: var(--gray-200);
+}
+.pagination button.active {
+    background-color: var(--gray-300);
+}
+.pagination button:hover.disable {
+    background-color: transparent;
+    cursor: default;
+}

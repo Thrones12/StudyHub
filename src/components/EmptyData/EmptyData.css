@@ -1,0 +1,37 @@
+/* EMPTY  */
+.empty-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    text-align: center;
+    background-color: var(--gray-100);
+    border-radius: 10px;
+    border: 1px dashed var(--gray-300);
+}
+
+.empty-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--gray-700);
+    margin-bottom: 16px;
+}
+
+.empty-btn {
+    background-color: var(--blue-500);
+    box-shadow: var(--box-shadow-2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.empty-btn:hover {
+    background-color: var(--blue-600);
+    box-shadow: var(--box-shadow-3);
+}

@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "680172344f20c0f428b5daa0"
+  },
+  "title": "Danh sách mới nè",
+  "type": "lesson",
+  "__v": 0,
+  "items": [
+    "67aa092fe07a8de25c30a648"
+  ]
+},
+{
+  "_id": {
+    "$oid": "680178ef7962b95cc28524e0"
+  },
+  "title": "Này là lesson nè",
+  "type": "lesson",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680178f87962b95cc2852514"
+  },
+  "title": "Này là exam nè",
+  "type": "exam",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680179007962b95cc2852548"
+  },
+  "title": "Này là exercise nè",
+  "type": "exercise",
+  "items": [],
+  "__v": 0
+}]

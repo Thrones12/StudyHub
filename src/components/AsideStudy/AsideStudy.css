@@ -1,0 +1,128 @@
+.aside-study {
+    /* 60px là chiều cao của header */
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+    min-width: 265px;
+    max-width: 265px;
+    height: calc(100vh - 60px);
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow-3);
+    transform: translateX(-265px);
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+.aside-study.active {
+    transform: translateX(0);
+}
+/* HEADER */
+.aside-study .header {
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding: 25px 15px;
+    border-bottom: 1px dashed var(--gray-700);
+}
+.aside-study .header .title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.aside-study .header svg {
+    font-size: 16px;
+    margin-right: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+/* LINK LIST */
+.aside-study .link-list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    overflow-y: auto; /* Hiển thị thanh cuộn khi cần */
+}
+/* TITLE */
+.aside-study .chapter-group {
+    font-size: 14px;
+}
+.aside-study .chapter-group .chapter-title svg {
+    margin-left: 5px;
+    transition: color 0.15s ease, transform 0.35s ease;
+}
+.aside-study .chapter-group .chapter-title svg.active {
+    transform: rotate(180deg);
+}
+.aside-study .chapter-group .chapter-title {
+    cursor: pointer;
+    user-select: none;
+    color: var(--gray-500);
+    text-align: justify;
+    padding: 8px 0;
+    transition: color 0.15s ease;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+.aside-study .chapter-group .chapter-title p {
+    margin: 0;
+    flex: 1;
+}
+.aside-study .chapter-group .chapter-title:hover,
+.aside-study .chapter-group .chapter-title.active {
+    color: var(--white);
+}
+/* LESSON LIST */
+.aside-study .chapter-group .lesson-list .lesson-item,
+.aside-study .chapter-group .lesson-list .exam-item {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 0 8px 20px;
+    color: var(--gray-500);
+    text-align: justify;
+    transition: color 0.15s ease;
+    display: flex;
+    align-items: center;
+}
+.aside-study .chapter-group .lesson-list .lesson-item:hover,
+.aside-study .chapter-group .lesson-list .exam-item:hover {
+    color: var(--white);
+}
+
+.aside-study .chapter-group .lesson-list .lesson-item.active,
+.aside-study .chapter-group .lesson-list .exam-item.active {
+    background-color: var(--blue-700);
+    color: var(--white);
+    border-radius: 5px;
+}
+.aside-study .chapter-group .lesson-list .lesson-item::before,
+.aside-study .chapter-group .lesson-list .exam-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--gray-600);
+    margin-right: 10px;
+}
+.aside-study .chapter-group .lesson-list .lesson-item.done::before,
+.aside-study .chapter-group .lesson-list .exam-item.done::before {
+    background-color: var(--white);
+}
+.aside-study .chapter-group .lesson-list .lesson-item svg,
+.aside-study .chapter-group .lesson-list .exam-item svg {
+    font-size: 4px;
+    margin: 0 10px;
+}
+
+/* Smooth expand animation for lesson list */
+.aside-study .chapter-group .lesson-list {
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}

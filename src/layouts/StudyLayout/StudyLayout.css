@@ -1,0 +1,9 @@
+.study-layout-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.study-layout-content .outlet {
+    transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,200 @@
+.exam-start-modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.exam-start-modal .exam-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* mờ tối */
+    backdrop-filter: blur(3px); /* làm mờ nội dung phía sau */
+    z-index: 101;
+}
+.exam-start-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* MODAL */
+.exam-start-modal .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 110;
+    width: 440px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+}
+/* HEADER */
+.exam-start-modal .modal .header {
+    position: relative;
+    box-shadow: var(--box-shadow-2);
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 54px 10px 14px;
+    height: auto;
+}
+.exam-start-modal .modal .header .title {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+}
+.exam-start-modal .modal .header .course-subject {
+    color: var(--gray-500);
+    font-size: 13px;
+}
+.exam-start-modal .modal .header svg {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    right: 15px;
+    color: var(--gray-200);
+    transform: translate(0, -50%);
+}
+/* EXAM INFO */
+.exam-start-modal .modal .exam-info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+.exam-start-modal .modal .exam-info button {
+    background-color: var(--green-500);
+    color: var(--white);
+    box-shadow: var(--box-shadow-3);
+    border: 1px solid var(--green-600);
+    border-radius: 10px;
+    z-index: 1000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.exam-start-modal .modal .exam-info button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-4);
+}
+.exam-start-modal .modal .exam-info .info-box {
+    background-color: var(--gray-200);
+    box-shadow: var(--box-shadow-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+.exam-start-modal .modal .exam-info .info-box svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+/* BEST RESULT */
+.exam-start-modal .modal .best-result {
+    transition: all 0.5s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.exam-start-modal .modal .best-result .score {
+    width: 110px;
+    height: 110px;
+    background: conic-gradient(var(--green-500) var(--exam-score), #e0e0e0 0);
+    box-shadow: var(--box-shadow-3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exam-start-modal .modal .best-result .score::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #fff;
+}
+.exam-start-modal .modal .best-result .score .text {
+    margin: 0;
+    z-index: 10;
+    font-size: 30px;
+    font-weight: 600;
+}
+.exam-start-modal .modal .best-result .main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 0 10px;
+}
+.exam-start-modal .modal .best-result .main .info {
+    flex: 1;
+}
+.exam-start-modal .modal .info {
+    flex: 1;
+}
+.exam-start-modal .modal .info .title {
+    color: var(--gray-900);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    overflow: hidden;
+    height: 26px;
+    width: 220px;
+}
+.exam-start-modal .modal .info .stat {
+    color: var(--gray-600);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.exam-start-modal .modal .best-result .footer {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+.exam-start-modal .modal .best-result .footer .info-box {
+    flex: 1;
+    height: 36px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    user-select: none;
+}
+.exam-start-modal .modal .best-result .footer .info-box.green {
+    border: 1px solid var(--green-600);
+    background-color: var(--green-200);
+}
+.exam-start-modal .modal .best-result .footer .info-box.red {
+    border: 1px solid var(--red-600);
+    background-color: var(--red-200);
+}
+.exam-start-modal .modal .best-result .footer .info-box.gray {
+    border: 1px solid var(--gray-500);
+    background-color: var(--white);
+}

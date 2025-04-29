@@ -1,0 +1,53 @@
+.exam-page {
+    margin: 30px 0;
+}
+.exam-page .exam-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    padding-bottom: 20px;
+}
+
+/* SELECT */
+.exam-page .controls {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 15px 0;
+}
+.exam-page .controls select {
+    padding: 8px 12px;
+    border: 1px solid var(--gray-500);
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-2);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-800);
+    outline: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23999' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 36px;
+}
+
+.exam-page .controls select:hover {
+    border-color: var(--gray-600);
+    box-shadow: var(--box-shadow-3);
+}
+
+.exam-page .controls select:focus {
+    border-color: var(--primary-500);
+    box-shadow: var(--box-shadow-3);
+}
+.exam-page .controls select option {
+    font-size: 14px;
+    color: var(--gray-800);
+    background-color: #fff;
+    font-weight: 500;
+    padding: 8px;
+}

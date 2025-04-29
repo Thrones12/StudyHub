@@ -1,13 +1,249 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Inter, Helvetica, sans-serif;
+    font-size: 13px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    padding: 8px 12px;
+    box-shadow: var;
+    user-select: none;
+}
+
+:root {
+    --white: #fff;
+    --black: #1f212a;
+
+    --gray-100: #f9f9f9;
+    --gray-200: #f1f1f4;
+    --gray-300: #e3e4e9;
+    --gray-400: #c8cad3;
+    --gray-500: #99a1b7;
+    --gray-600: #6b7284;
+    --gray-700: #404659;
+    --gray-800: #252f4a;
+    --gray-900: #071437;
+
+    --blue-100: #e6f0ff;
+    --blue-200: #cce0ff;
+    --blue-300: #99c2ff;
+    --blue-400: #66a3ff;
+    --blue-500: #1b84ff;
+    --blue-600: #1473e6;
+    --blue-700: #056ee9;
+    --blue-800: #0052cc;
+    --blue-900: #003d99;
+
+    --green-100: #e6f9f0;
+    --green-200: #c2f1dc;
+    --green-300: #8ce4bd;
+    --green-400: #4dd39b;
+    --green-500: #22c55e;
+    --green-600: #16a34a;
+    --green-700: #15803d;
+    --green-800: #166534;
+    --green-900: #14532d;
+
+    --red-100: #feeceb;
+    --red-200: #fdd5d2;
+    --red-300: #f9a8a8;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --red-600: #dc2626;
+    --red-700: #b91c1c;
+    --red-800: #991b1b;
+    --red-900: #7f1d1d;
+
+    --orange-100: #fff4e5;
+    --orange-200: #ffe8cc;
+    --orange-300: #ffd1a6;
+    --orange-400: #ffb875;
+    --orange-500: #ffa94d;
+    --orange-600: #ff922b;
+    --orange-700: #fd7e14;
+    --orange-800: #e8590c;
+    --orange-900: #d9480f;
+
+    /* Nhẹ nhất */
+    --box-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* Nhẹ */
+    --box-shadow-2: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Trung bình */
+    --box-shadow-3: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Đậm */
+    --box-shadow-4: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Rất đậm */
+    --box-shadow-5: 0 8px 16px rgba(0, 0, 0, 0.25);
+    /* Cực đậm */
+    --box-shadow-6: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Siêu đậm */
+    --box-shadow-7: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-gray);
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* Row chứa các cột */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Cột (col) */
+.col {
+    flex: 1 0 0%;
+}
+
+/* Tạo hệ thống 12 cột */
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .col-md-1 {
+        width: 8.33%;
+    }
+    .col-md-2 {
+        width: 16.66%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-4 {
+        width: 33.33%;
+    }
+    .col-md-5 {
+        width: 41.66%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-7 {
+        width: 58.33%;
+    }
+    .col-md-8 {
+        width: 66.66%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-10 {
+        width: 83.33%;
+    }
+    .col-md-11 {
+        width: 91.66%;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-sm-1 {
+        width: 8.33%;
+    }
+    .col-sm-2 {
+        width: 16.66%;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-4 {
+        width: 33.33%;
+    }
+    .col-sm-5 {
+        width: 41.66%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-7 {
+        width: 58.33%;
+    }
+    .col-sm-8 {
+        width: 66.66%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-10 {
+        width: 83.33%;
+    }
+    .col-sm-11 {
+        width: 91.66%;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+}
+
+/* Căn giữa nội dung */
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
 }

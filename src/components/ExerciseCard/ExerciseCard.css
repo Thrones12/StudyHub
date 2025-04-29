@@ -1,0 +1,148 @@
+.exercise-card {
+    position: relative;
+    width: 100%;
+    background-color: var(--gray-200);
+    padding: 0px 20px 10px;
+}
+.exercise-card .question-index {
+    font-size: 20px;
+    font-weight: 600;
+}
+.exercise-card .question {
+    margin: 10px 0 20px;
+    padding: 14px 12px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-2);
+    border: 1px solid var(--gray-400);
+    border-radius: 4px;
+    font-size: 18px;
+}
+.exercise-card .option {
+    padding: 8px 12px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-2);
+    border: 1px solid var(--gray-400);
+    border-radius: 4px;
+}
+.exercise-card .option-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.exercise-card .option-wrapper .option-index {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 15px;
+    user-select: none;
+}
+.exercise-card .option-wrapper .option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    user-select: none;
+    cursor: pointer;
+}
+.exercise-card .option-wrapper:hover .option {
+    border: 1px solid var(--blue-600);
+    transform: scale(1.01);
+}
+.exercise-card .option-wrapper.disabled {
+    pointer-events: none;
+    color: var(--black);
+}
+.exercise-card .option-wrapper .option.checked {
+    border: 1px solid var(--blue-600);
+    background-color: var(--blue-200);
+}
+.exercise-card .option-wrapper .option.true {
+    border: 1px solid var(--green-600);
+    background-color: var(--green-200);
+}
+.exercise-card .option-wrapper .option.false {
+    border: 1px solid var(--red-600);
+    background-color: var(--red-200);
+}
+/* BUTTON */
+.exercise-card .btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 30px;
+}
+.exercise-card .btn-wrapper .btn {
+    color: var(--white);
+    box-shadow: var(--box-shadow-3);
+    border-radius: 10px;
+    z-index: 1000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.exercise-card .btn-wrapper .btn-green {
+    background-color: var(--green-500);
+    border: 1px solid var(--green-600);
+}
+.exercise-card .btn-wrapper .btn-green:hover {
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-4);
+}
+.exercise-card .btn-wrapper .btn-blue {
+    background-color: var(--blue-500);
+    border: 1px solid var(--blue-600);
+}
+.exercise-card .btn-wrapper .btn-blue:hover {
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-4);
+}
+.exercise-card .btn-wrapper .btn-gray {
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-600);
+}
+.exercise-card .btn-wrapper .btn-gray:hover {
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow-4);
+}
+/* EXPLANATION */
+.exercise-card .explanation {
+    text-align: justify;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-2);
+    margin-top: 20px;
+    border: 1px solid var(--gray-400);
+    border-radius: 4px;
+    padding: 14px 12px;
+    font-size: 16px;
+}
+/* DELETE BUTTON */
+.exercise-card .delete-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--gray-600);
+    padding: 0;
+    margin: 0;
+    background-color: var(--red-400);
+    color: var(--white);
+    transition: transform 0.3s ease, background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.exercise-card .delete-btn:hover {
+    background-color: var(--red-500);
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.exercise-card .delete-btn svg {
+    width: 12px;
+    height: 12px;
+}

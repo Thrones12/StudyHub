@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "6800eacbfcf88f9de2ec94fd"
+  },
+  "title": "Bình luận vào bài học HTML cơ bản",
+  "date": "2025-04-17T08:45:32.123Z",
+  "type": "comment",
+  "componentId": ""
+},
+{
+  "_id": {
+    "$oid": "6800eacbfcf88f9de2ec94fe"
+  },
+  "type": "like",
+  "title": "Thích khóa học CSS nâng cao",
+  "date": "2025-03-22T08:45:32.123Z",
+  "componentId": ""
+},
+{
+  "_id": {
+    "$oid": "6800eacbfcf88f9de2ec94ff"
+  },
+  "type": "bookmark",
+  "title": "Lưu khóa học JavaScript Pro",
+  "date": "2025-03-12T08:45:32.123Z",
+  "componentId": ""
+},
+{
+  "_id": {
+    "$oid": "6800eacbfcf88f9de2ec9500"
+  },
+  "type": "lesson",
+  "title": "Hoàn thành bài học ReactJS",
+  "date": "2025-04-01T08:45:32.123Z",
+  "componentId": ""
+},
+{
+  "_id": {
+    "$oid": "6800eacbfcf88f9de2ec9501"
+  },
+  "type": "exam",
+  "title": "Hoàn thành bài kiểm tra",
+  "date": "2025-04-02T08:45:32.123Z",
+  "componentId": ""
+}]

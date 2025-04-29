@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "67d079073ba0ec3a1c67bee9"
+  },
+  "name": "Dạng bài: Xác định phương trình dao động",
+  "exercises": [
+    "67d33e247509cbf964605008",
+    "6804da082e86ba329d7c24e3",
+    "6804da082e86ba329d7c24e4"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d07a3c3ba0ec3a1c67beea"
+  },
+  "name": "Dạng bài: Tìm vận tốc và gia tốc",
+  "exercises": [
+    "67d33e247509cbf964605009",
+    "6804da082e86ba329d7c24e5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d07a4d3ba0ec3a1c67beeb"
+  },
+  "name": "Dạng bài: Tìm năng lượng dao động",
+  "exercises": []
+}]

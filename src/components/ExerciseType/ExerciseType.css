@@ -1,0 +1,16 @@
+.exercise-type-wrapper {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.exercise-type-wrapper .type-element {
+    width: 100%;
+    padding: 5px 8px;
+    transition: all 0.1s ease;
+}
+
+.exercise-type-wrapper .type-element:hover {
+    background-color: var(--bg-color-light-purple);
+    color: #fff;
+}

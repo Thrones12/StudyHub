@@ -1,0 +1,75 @@
+.exercise-container {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.inputAnswer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inputAnswer input {
+    width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputAnswer img {
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.retry-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.answer-btn {
+    background: #2196f3;
+    color: white;
+}
+
+.reset-btn {
+    background: #f44336;
+    color: white;
+}
+
+.correct-msg {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect-msg {
+    color: red;
+    font-weight: bold;
+}
+
+.answer {
+    color: #333;
+    font-style: italic;
+}

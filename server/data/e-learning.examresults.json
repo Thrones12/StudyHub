@@ -1,0 +1,38 @@
+[
+    {
+        "_id": {
+            "$oid": "67ec302548570fe63a9b22a2"
+        },
+        "exam": {
+            "$oid": "67d346ad7509cbf96460500f"
+        },
+        "score": 10,
+        "answers": [
+            {
+                "questionId": "67d33e247509cbf964605008",
+                "answer": "Toán",
+                "_id": {
+                    "$oid": "67ec302548570fe63a9b22a3"
+                }
+            },
+            {
+                "questionId": "67d33e247509cbf964605009",
+                "answer": "Văn",
+                "_id": {
+                    "$oid": "67ec302548570fe63a9b22a4"
+                }
+            },
+            {
+                "questionId": "67d33e247509cbf96460500a",
+                "answer": "Tớ",
+                "_id": {
+                    "$oid": "67ec302548570fe63a9b22a5"
+                }
+            }
+        ],
+        "submitAt": {
+            "$date": "2025-04-01T18:27:49.978Z"
+        },
+        "__v": 0
+    }
+]

@@ -1,0 +1,13 @@
+.course-page-wrapper {
+    margin-top: 30px;
+}
+.course-page-wrapper .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.course-page-wrapper .course .title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

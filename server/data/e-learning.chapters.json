@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "67a9dab2e07a8de25c30a635"
+  },
+  "title": "Chương 1: Dao động cơ",
+  "lessons": [
+    "67aa092fe07a8de25c30a648",
+    "67d32bb1cbc084035d9b8e92",
+    "67d32bb1cbc084035d9b8e93",
+    "67d32bb1cbc084035d9b8e94",
+    "67d32bb1cbc084035d9b8e95",
+    "67d32bb1cbc084035d9b8e96"
+  ],
+  "exams": [
+    "67d346ad7509cbf96460500f",
+    "67d346ad7509cbf964605010"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e89"
+  },
+  "title": "Chương 2: Sóng cơ và sóng âm",
+  "lessons": [],
+  "exams": [
+    "67d346ad7509cbf964605011"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e8a"
+  },
+  "title": "Chương 3: Dòng điện xoay chiều",
+  "lessons": [],
+  "exams": [
+    "67d346ad7509cbf964605011"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e8b"
+  },
+  "title": "Chương 4: Dao động và sóng điện từ",
+  "lessons": [],
+  "exams": []
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e8c"
+  },
+  "title": "Chương 5: Sóng ánh sáng",
+  "lessons": [],
+  "exams": []
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e8d"
+  },
+  "title": "Chương 6: Lượng tử ánh sáng",
+  "lessons": [],
+  "exams": []
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e8e"
+  },
+  "title": "Chương 7: Hạt nhân nguyên tử",
+  "lessons": [],
+  "exams": []
+},
+{
+  "_id": {
+    "$oid": "67d326eecbc084035d9b8e8f"
+  },
+  "title": "Chương 8: Từ vi mô đến vĩ mô",
+  "lessons": [],
+  "exams": []
+},
+{
+  "_id": {
+    "$oid": "68015b1efcf88f9de2ec951d"
+  },
+  "title": "Tuần 1",
+  "lessons": [
+    "68015b8dfcf88f9de2ec9529",
+    "68015ba9fcf88f9de2ec952a"
+  ],
+  "exams": []
+},
+{
+  "_id": {
+    "$oid": "68015b21fcf88f9de2ec951e"
+  },
+  "title": "Tuần 2",
+  "lessons": [
+    "68015bbffcf88f9de2ec952b",
+    "68015bd7fcf88f9de2ec952c",
+    "68015be9fcf88f9de2ec952d"
+  ],
+  "exams": []
+}]

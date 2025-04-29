@@ -1,0 +1,9 @@
+.wrapper .profile-content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.wrapper .profile-content .outlet {
+    transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,147 @@
+.modal-new-task {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.modal-new-task .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+.modal-new-task.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* MODAL */
+.modal-new-task .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 110;
+    width: 500px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+}
+.modal-new-task .modal .header {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    height: auto;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-new-task .modal .header svg {
+    transition: color 0.15s ease, transform 0.15s ease-in-out;
+}
+.modal-new-task .modal .header svg:hover {
+    color: var(--red-500);
+    transform: scale(1.1);
+}
+/* INPUT */
+.modal-new-task .modal .row-input {
+    margin: 20px 16px;
+    display: flex;
+    flex-direction: row;
+}
+.modal-new-task .modal .row-input .icon {
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-new-task .modal .row-input .icon svg {
+    width: 20px;
+    height: 20px;
+}
+.modal-new-task .modal .row-input input {
+    outline: none;
+    border: none;
+    flex: 1;
+}
+.modal-new-task .modal .row-input.no-icon {
+    padding-left: 40px;
+}
+.modal-new-task .modal .row-input.no-icon input {
+    border-bottom: 1px solid var(--gray-400);
+    font-size: 24px;
+    transition: all 0.2s ease;
+}
+.modal-new-task .modal .row-input.no-icon input:focus {
+    border-bottom: 1px solid var(--gray-700);
+}
+.modal-new-task .modal .row-input select {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e7e8eb;
+    font-size: 17px;
+    transition: all 0.2s ease;
+}
+.modal-new-task .modal .row-input select:hover,
+.modal-new-task .modal .row-input select:focus {
+    background-color: #d1d3d6;
+    outline: none;
+}
+.modal-new-task .modal .row-input option {
+    background-color: var(--color-light-gray);
+}
+.modal-new-task .modal .row-input option:hover {
+    background-color: #d1d3d6;
+}
+.modal-new-task .modal .row-input textarea {
+    padding: 8px 16px;
+    flex: 1;
+    background-color: #e7e8eb;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: all 0.2s ease;
+    resize: none;
+}
+.modal-new-task .modal .row-input textarea:hover {
+    background-color: #d1d3d6;
+}
+.modal-new-task .modal .row-input textarea:focus {
+    background-color: #d1d3d6;
+    outline: none;
+}
+.modal-new-task .modal .row-input.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-new-task .modal .row-input .btn {
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 12px;
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-2);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.modal-new-task .modal .row-input .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-3);
+}

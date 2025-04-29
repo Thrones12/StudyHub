@@ -1,0 +1,69 @@
+.pdf-preview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* TOOLBAR */
+.pdf-toolbar {
+    height: 40px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 18px;
+    background-color: transparent;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.pdf-toolbar button {
+    background-color: #ffffff;
+    color: #0052cc;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pdf-toolbar button:hover {
+    background-color: #e6f0ff;
+}
+.pdf-toolbar span {
+    width: 35px;
+    display: flex;
+    justify-content: center;
+}
+/* DOCUMENT */
+.pdf-container {
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 165px);
+    overflow: auto;
+    display: flex;
+    border: 1px solid #ddd;
+}
+/* PAGINATION */
+.pdf-pagination {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+}
+.pdf-pagination button {
+    background-color: var(--gray-300);
+    transition: all 0.3s ease;
+}
+.pdf-pagination button:hover {
+    background-color: var(--gray-400);
+}
+.pdf-pagination input:focus {
+    outline: none;
+}

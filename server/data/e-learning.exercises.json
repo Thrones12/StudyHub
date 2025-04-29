@@ -1,0 +1,56 @@
+[
+    {
+        "_id": {
+            "$oid": "67d33e247509cbf964605008"
+        },
+        "question": "câu 1",
+        "options": ["Toán", "Lý", "Hóa", "Sinh"],
+        "answer": "Toán",
+        "explanation": "Bài giải nè"
+    },
+    {
+        "_id": {
+            "$oid": "67d33e247509cbf964605009"
+        },
+        "question": "câu 2",
+        "options": ["Sử", "Địa", "GDCD", "Văn"],
+        "answer": "Văn",
+        "explanation": "Bài giải nè"
+    },
+    {
+        "_id": {
+            "$oid": "67d33e247509cbf96460500a"
+        },
+        "question": "câu 3",
+        "options": ["Tôi", "Tớ", "Bạn", "Mình"],
+        "answer": "Tớ",
+        "explanation": "Bài giải nè"
+    },
+    {
+        "_id": {
+            "$oid": "6804da082e86ba329d7c24e3"
+        },
+        "question": "câu 4",
+        "options": ["Tôi", "Tớ", "Bạn", "Mình"],
+        "answer": "Tớ",
+        "explanation": "Bài giải nè"
+    },
+    {
+        "_id": {
+            "$oid": "6804da082e86ba329d7c24e4"
+        },
+        "question": "câu 5",
+        "options": ["Tôi", "Tớ", "Bạn", "Mình"],
+        "answer": "Tớ",
+        "explanation": "Bài giải nè"
+    },
+    {
+        "_id": {
+            "$oid": "6804da082e86ba329d7c24e5"
+        },
+        "question": "câu 6",
+        "options": ["Tôi", "Tớ", "Bạn", "Mình"],
+        "answer": "Tớ",
+        "explanation": "Bài giải nè"
+    }
+]

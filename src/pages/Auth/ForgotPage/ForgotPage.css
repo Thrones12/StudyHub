@@ -1,0 +1,214 @@
+.forgot-page .container {
+    /* Animation trong LoginPage.css */
+    animation: slideUp 1s ease-out;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6f5f7;
+}
+
+.forgot-page {
+    display: flex;
+    justify-content: center;
+}
+
+.forgot-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Container to center the card */
+.flip-card {
+    max-width: 100%;
+    min-height: 500px;
+    width: 380px;
+    height: 200px;
+    perspective: 1000px; /* Enables 3D effect */
+}
+
+.flip-card h3 {
+    color: var(--color-purple);
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Flip the card on hover */
+.flip-card.active .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Styling for both sides of the card */
+.flip-card-front,
+.flip-card-back {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side initially */
+    font-size: 1.2em;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 25px;
+}
+
+/* Back side styling and positioning */
+.flip-card-back {
+    transform: rotateY(
+        180deg
+    ); /* Initially flipped so it’s hidden until hover */
+}
+
+.forgot-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.forgot-page .flip-card-back,
+.flip-card-back form,
+.flip-card-back form .input-field,
+.flip-card-front,
+.flip-card-front form,
+.flip-card-front form .input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forgot-page form {
+    width: 260px;
+}
+
+.forgot-page .flip-card-back-header {
+    background-image: url("/public/images/send-email.gif");
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 100px;
+}
+
+.forgot-page .flip-card-back,
+.flip-card-front {
+    padding: 50px 30px 0;
+}
+
+.forgot-page .flip-card-back > *,
+.flip-card-front > * {
+    margin: 5px 0;
+}
+.forgot-page .flip-card-back p,
+.flip-card-front p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.forgot-page form .input-field {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.forgot-page form .input-field input {
+    height: 50px;
+    width: 43px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: all 0.15s ease;
+    color: var(--color-purple);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.forgot-page form .input-field input:focus {
+    box-shadow: var(--box-shadow);
+}
+/* Ẩn nút tăng giảm trên Chrome, Safari, Edge, và Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.forgot-page .flip-card-back form button,
+.flip-card-front form button {
+    margin: 25px 0 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    pointer-events: none;
+    background-color: var(--color-light-purple);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.forgot-page .flip-card-back form button.active,
+.flip-card-front form button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forgot-page .flip-card-back form button:hover,
+.flip-card-front form button:hover {
+    background-color: var(--color-purple);
+}
+
+.forgot-page .flip-card-back p,
+.flip-card-front p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.forgot-page .flip-card-back a,
+.flip-card-front a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-light-purple);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.forgot-page .flip-card-back a:hover,
+.flip-card-front a:hover {
+    color: var(--color-purple);
+}
+
+.forgot-page form input[type="email"] {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    transition: all 0.15s ease;
+}
+
+.forgot-page .flip-card-front-header {
+    background-image: url("/public/images/lock.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 100px;
+}

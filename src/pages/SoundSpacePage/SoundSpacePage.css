@@ -1,0 +1,137 @@
+.sound-page-wrapper .sound-page-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-page-wrapper .title {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    width: 1000px;
+}
+
+.sound-page-wrapper .text {
+    width: 400px;
+    height: 200px;
+    font-size: 48px;
+    font-weight: 600;
+    color: #6daf9f;
+    text-align: end;
+    flex: 1;
+}
+
+.sound-page-wrapper .image {
+    height: 200px;
+    flex: 1;
+}
+
+.sound-page-wrapper .image img {
+    height: 200px;
+    width: auto;
+}
+
+.sound-page-wrapper .sound-list {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.sound-page-wrapper .sound-item {
+    position: relative;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.sound-page-wrapper .sound-item .sound-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+.sound-page-wrapper .sound-item .sound-icon:hover {
+    transform: scale(1.1);
+}
+.sound-page-wrapper .sound-item .sound-volume {
+    -webkit-appearance: none; /* Bỏ mặc định của trình duyệt */
+    position: absolute;
+    bottom: -40px;
+    cursor: pointer;
+    background: #6daf9f;
+    width: 200px;
+    height: 3px;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+    opacity: 0;
+}
+.sound-page-wrapper .sound-item .sound-volume.active {
+    opacity: 1;
+}
+/* Tùy chỉnh nút kéo trên thanh trượt */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #6daf9f; /* Màu chính */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+/* Khi bấm vào nút kéo */
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+/* Khi bấm vào nút kéo */
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.2);
+}
+.sound-page-wrapper .video-item {
+    margin: 0 0 50px 0;
+}
+.sound-page-wrapper .video-item .video {
+    width: 900px;
+    height: 450px;
+    border: 10px;
+    box-shadow: var(--box-shadow-3);
+    border: 2px solid #6daf9f;
+}
+.sound-page-wrapper .youtube-search {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    border: 2px solid #6daf9f;
+    box-shadow: var(--box-shadow-3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px 0;
+}
+.sound-page-wrapper .youtube-search input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 16px;
+}
+.sound-page-wrapper .youtube-search button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 0;
+    font-size: 16px;
+    margin: 0;
+    background-color: #6daf9f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.sound-page-wrapper .youtube-search button:hover {
+    background-color: #5c998d;
+}
