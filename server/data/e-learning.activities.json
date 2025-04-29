@@ -3,9 +3,9 @@
     "$oid": "6800eacbfcf88f9de2ec94fd"
   },
   "title": "Bình luận vào bài học HTML cơ bản",
-  "date": "2025-04-17T08:45:32.123Z",
   "type": "comment",
-  "componentId": ""
+  "componentId": "",
+  "createdAt": "2025-04-17T08:45:32.123Z"
 },
 {
   "_id": {
@@ -13,8 +13,8 @@
   },
   "type": "like",
   "title": "Thích khóa học CSS nâng cao",
-  "date": "2025-03-22T08:45:32.123Z",
-  "componentId": ""
+  "componentId": "",
+  "createdAt": "2025-03-22T08:45:32.123Z"
 },
 {
   "_id": {
@@ -22,8 +22,8 @@
   },
   "type": "bookmark",
   "title": "Lưu khóa học JavaScript Pro",
-  "date": "2025-03-12T08:45:32.123Z",
-  "componentId": ""
+  "componentId": "",
+  "createdAt": "2025-03-12T08:45:32.123Z"
 },
 {
   "_id": {
@@ -40,6 +40,33 @@
   },
   "type": "exam",
   "title": "Hoàn thành bài kiểm tra",
-  "date": "2025-04-02T08:45:32.123Z",
-  "componentId": ""
+  "componentId": "",
+  "createdAt": "2025-04-02T08:45:32.123Z"
+},
+{
+  "_id": {
+    "$oid": "6800ecb6fcf88f9de2ec9509"
+  },
+  "title": "Bình luận vào bài học HTML cơ bản",
+  "type": "comment",
+  "componentId": "",
+  "createdAt": "2025-04-17T08:45:32.123Z"
+},
+{
+  "_id": {
+    "$oid": "6800ecb8fcf88f9de2ec950a"
+  },
+  "type": "like",
+  "title": "Thích khóa học CSS nâng cao",
+  "componentId": "",
+  "createdAt": "2025-03-22T08:45:32.123Z"
+},
+{
+  "_id": {
+    "$oid": "6800ecbafcf88f9de2ec950b"
+  },
+  "type": "like",
+  "title": "Thích khóa học CSS nâng cao",
+  "componentId": "",
+  "createdAt": "2025-03-22T08:45:32.123Z"
 }]

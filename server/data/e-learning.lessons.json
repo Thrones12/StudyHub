@@ -1,199 +1,197 @@
-[
+[{
+  "_id": {
+    "$oid": "67aa092fe07a8de25c30a648"
+  },
+  "title": "Bài 1: Dao động điều hòa",
+  "video": {
+    "url": "/videos/test3.mp4",
+    "chapters": [
+      {
+        "time": 0,
+        "title": "Mở bài"
+      },
+      {
+        "time": 30,
+        "title": "Thân bài"
+      },
+      {
+        "time": 60,
+        "title": "Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài"
+      },
+      {
+        "time": 90,
+        "title": "Kết bài"
+      }
+    ]
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [
+    "67d079073ba0ec3a1c67bee9",
+    "67d07a3c3ba0ec3a1c67beea",
+    "67d07a4d3ba0ec3a1c67beeb"
+  ],
+  "discussions": [
     {
-        "_id": {
-            "$oid": "67aa092fe07a8de25c30a648"
-        },
-        "title": "Bài 1: Dao động điều hòa",
-        "video": {
-            "url": "/videos/test3.mp4",
-            "chapters": [
-                {
-                    "time": 0,
-                    "title": "Mở bài"
-                },
-                {
-                    "time": 30,
-                    "title": "Thân bài"
-                },
-                {
-                    "time": 60,
-                    "title": "Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài"
-                },
-                {
-                    "time": 90,
-                    "title": "Kết bài"
-                }
-            ]
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [
-            "67d079073ba0ec3a1c67bee9",
-            "67d07a3c3ba0ec3a1c67beea",
-            "67d07a4d3ba0ec3a1c67beeb"
-        ],
-        "discussions": [
-            {
-                "$oid": "67d3e2770d4ad89b7f805264"
-            },
-            {
-                "$oid": "6802bdfd2e86ba329d7c24d0"
-            },
-            {
-                "$oid": "6802bf81c08701f6ab36033b"
-            }
-        ],
-        "view": 0,
-        "__v": 3
+      "$oid": "67d3e2770d4ad89b7f805264"
     },
     {
-        "_id": {
-            "$oid": "67d32bb1cbc084035d9b8e92"
-        },
-        "title": "Bài 2: Con lắc lò xo",
-        "video": {
-            "url": "/videos/test2.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 0
+      "$oid": "6802bdfd2e86ba329d7c24d0"
     },
     {
-        "_id": {
-            "$oid": "67d32bb1cbc084035d9b8e93"
-        },
-        "title": "Bài 3: Con lắc đơn",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 0
-    },
-    {
-        "_id": {
-            "$oid": "67d32bb1cbc084035d9b8e94"
-        },
-        "title": "Bài 4: Dao động tắt dần và dao động cưỡng bức",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 0
-    },
-    {
-        "_id": {
-            "$oid": "67d32bb1cbc084035d9b8e95"
-        },
-        "title": "Bài 5: Tổng hợp hai dao động điều hòa cùng phương, cùng tần số và Phương pháp Fre-nen",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 0
-    },
-    {
-        "_id": {
-            "$oid": "67d32bb1cbc084035d9b8e96"
-        },
-        "title": "Bài 6: Thực hành khảo sát thực nghiệm các định luật dao động của con lắc đơn",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 0
-    },
-    {
-        "_id": {
-            "$oid": "68015b8dfcf88f9de2ec9529"
-        },
-        "title": "Khái quát văn học Việt Nam từ đầu Cách mạng tháng Tám 1945 đến thế kỉ XX",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 100
-    },
-    {
-        "_id": {
-            "$oid": "68015ba9fcf88f9de2ec952a"
-        },
-        "title": "Nghị luận về một tư tưởng, đạo lý",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 100
-    },
-    {
-        "_id": {
-            "$oid": "68015bbffcf88f9de2ec952b"
-        },
-        "title": "Tuyên ngôn độc lập - Hồ Chí Minh",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 100
-    },
-    {
-        "_id": {
-            "$oid": "68015bd7fcf88f9de2ec952c"
-        },
-        "title": "Giữ gìn sự trong sáng của tiếng Việt",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 100
-    },
-    {
-        "_id": {
-            "$oid": "68015be9fcf88f9de2ec952d"
-        },
-        "title": "Viết bài làm văn số 1: Nghị luận xã hội",
-        "video": {
-            "url": "/videos/test1.mp4",
-            "chapters": []
-        },
-        "documentUrl": "/documents/test.pdf",
-        "guideUrl": "/documents/test.pdf",
-        "exerciseTypes": [],
-        "discussions": [],
-        "view": 100
+      "$oid": "6802bf81c08701f6ab36033b"
     }
-]
+  ],
+  "view": 0,
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "67d32bb1cbc084035d9b8e92"
+  },
+  "title": "Bài 2: Con lắc lò xo",
+  "video": {
+    "url": "/videos/test2.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 0
+},
+{
+  "_id": {
+    "$oid": "67d32bb1cbc084035d9b8e93"
+  },
+  "title": "Bài 3: Con lắc đơn",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 0
+},
+{
+  "_id": {
+    "$oid": "67d32bb1cbc084035d9b8e94"
+  },
+  "title": "Bài 4: Dao động tắt dần và dao động cưỡng bức",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 0
+},
+{
+  "_id": {
+    "$oid": "67d32bb1cbc084035d9b8e95"
+  },
+  "title": "Bài 5: Tổng hợp hai dao động điều hòa cùng phương, cùng tần số và Phương pháp Fre-nen",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 0
+},
+{
+  "_id": {
+    "$oid": "67d32bb1cbc084035d9b8e96"
+  },
+  "title": "Bài 6: Thực hành khảo sát thực nghiệm các định luật dao động của con lắc đơn",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 0
+},
+{
+  "_id": {
+    "$oid": "68015b8dfcf88f9de2ec9529"
+  },
+  "title": "Khái quát văn học Việt Nam từ đầu Cách mạng tháng Tám 1945 đến thế kỉ XX",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 100
+},
+{
+  "_id": {
+    "$oid": "68015ba9fcf88f9de2ec952a"
+  },
+  "title": "Nghị luận về một tư tưởng, đạo lý",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 100
+},
+{
+  "_id": {
+    "$oid": "68015bbffcf88f9de2ec952b"
+  },
+  "title": "Tuyên ngôn độc lập - Hồ Chí Minh",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 100
+},
+{
+  "_id": {
+    "$oid": "68015bd7fcf88f9de2ec952c"
+  },
+  "title": "Giữ gìn sự trong sáng của tiếng Việt",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 100
+},
+{
+  "_id": {
+    "$oid": "68015be9fcf88f9de2ec952d"
+  },
+  "title": "Viết bài làm văn số 1: Nghị luận xã hội",
+  "video": {
+    "url": "/videos/test1.mp4",
+    "chapters": []
+  },
+  "documentUrl": "/documents/test.pdf",
+  "guideUrl": "/documents/test.pdf",
+  "exerciseTypes": [],
+  "discussions": [],
+  "view": 100
+}]

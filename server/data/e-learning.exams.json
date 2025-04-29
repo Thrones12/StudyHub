@@ -1,8 +1,8 @@
 [{
   "_id": {
-    "$oid": "680d36c00d808c70bd34b7b2"
+    "$oid": "680d489b9ed7a3b0357a27d4"
   },
-  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "title": "Bài kiểm tra số 1",
   "duration": 3600,
   "questions": [
     {
@@ -25,54 +25,21 @@
     }
   ],
   "level": "easy",
-  "attemptCount": 120,
-  "saveCount": 60,
-  "completionCount": 40,
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
   "createdAt": {
-    "$date": "2025-04-26T19:40:48.880Z"
+    "$date": "2025-04-26T20:56:59.592Z"
   },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "680d36c30d808c70bd34b7b6"
+    "$oid": "680d48a79ed7a3b0357a27da"
   },
-  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
-  "duration": 3600,
-  "questions": [
-    {
-      "$oid": "67d33e247509cbf964605008"
-    },
-    {
-      "$oid": "67d33e247509cbf964605009"
-    },
-    {
-      "$oid": "67d33e247509cbf96460500a"
-    },
-    {
-      "$oid": "6804da082e86ba329d7c24e3"
-    },
-    {
-      "$oid": "6804da082e86ba329d7c24e4"
-    },
-    {
-      "$oid": "6804da082e86ba329d7c24e5"
-    }
-  ],
-  "level": "easy",
-  "attemptCount": 510,
-  "saveCount": 51,
-  "completionCount": 500,
-  "createdAt": {
-    "$date": "2025-04-26T19:40:51.037Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "680d36c60d808c70bd34b7ba"
-  },
-  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "title": "Bài kiểm tra số 2",
   "duration": 3600,
   "questions": [
     {
@@ -95,19 +62,21 @@
     }
   ],
   "level": "hard",
-  "attemptCount": 117,
-  "saveCount": 34,
-  "completionCount": 96,
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
   "createdAt": {
-    "$date": "2025-04-26T19:40:54.508Z"
+    "$date": "2025-04-26T20:57:11.644Z"
   },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "680d36ca0d808c70bd34b7be"
+    "$oid": "680d48ba9ed7a3b0357a27e0"
   },
-  "title": "Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2 Bài kiểm tra số 2",
+  "title": "Bài kiểm tra số 3",
   "duration": 3600,
   "questions": [
     {
@@ -130,11 +99,716 @@
     }
   ],
   "level": "medium",
-  "attemptCount": 1324,
-  "saveCount": 968,
-  "completionCount": 1013,
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
   "createdAt": {
-    "$date": "2025-04-26T19:40:58.605Z"
+    "$date": "2025-04-26T20:57:30.692Z"
   },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d48ff9ed7a3b0357a28bc"
+  },
+  "title": "Bài kiểm tra số 1",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T20:58:39.287Z"
+  },
+  "subjectTag": "ngu-van-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a589ed7a3b0357a2c8c"
+  },
+  "title": "Bài kiểm tra số 2",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:24.815Z"
+  },
+  "subjectTag": "ngu-van-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a5b9ed7a3b0357a2c92"
+  },
+  "title": "Bài kiểm tra số 3",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:27.433Z"
+  },
+  "subjectTag": "ngu-van-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a659ed7a3b0357a2c98"
+  },
+  "title": "Bài kiểm tra số 1",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:37.236Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a679ed7a3b0357a2c9e"
+  },
+  "title": "Bài kiểm tra số 2",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:39.173Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a699ed7a3b0357a2ca4"
+  },
+  "title": "Bài kiểm tra số 3",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:41.138Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a6f9ed7a3b0357a2caa"
+  },
+  "title": "Bài kiểm tra số 1",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:47.830Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a719ed7a3b0357a2cb0"
+  },
+  "title": "Bài kiểm tra số 2",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:49.721Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a749ed7a3b0357a2cb6"
+  },
+  "title": "Bài kiểm tra số 3",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:52.003Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a7a9ed7a3b0357a2cbc"
+  },
+  "title": "Bài kiểm tra số 1",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:04:58.087Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a7c9ed7a3b0357a2cc2"
+  },
+  "title": "Bài kiểm tra số 2",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:00.150Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a7e9ed7a3b0357a2cc8"
+  },
+  "title": "Bài kiểm tra số 3",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:02.693Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a8e9ed7a3b0357a2cce"
+  },
+  "title": "Bài kiểm tra số 4",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:18.302Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a919ed7a3b0357a2cd4"
+  },
+  "title": "Bài kiểm tra số 5",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:21.776Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a939ed7a3b0357a2cda"
+  },
+  "title": "Bài kiểm tra số 6",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:23.958Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a969ed7a3b0357a2ce0"
+  },
+  "title": "Bài kiểm tra số 7",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:26.061Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a989ed7a3b0357a2ce6"
+  },
+  "title": "Bài kiểm tra số 8",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:28.404Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4a9a9ed7a3b0357a2cec"
+  },
+  "title": "Bài kiểm tra số 9",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:30.943Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680d4aa09ed7a3b0357a2cf2"
+  },
+  "title": "Bài kiểm tra số 10",
+  "duration": 7200,
+  "questions": [
+    {
+      "$oid": "67d33e247509cbf964605008"
+    },
+    {
+      "$oid": "67d33e247509cbf964605009"
+    },
+    {
+      "$oid": "67d33e247509cbf96460500a"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e3"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e4"
+    },
+    {
+      "$oid": "6804da082e86ba329d7c24e5"
+    }
+  ],
+  "level": "medium",
+  "attemptCount": 0,
+  "saveCount": 0,
+  "completionCount": 0,
+  "createdAt": {
+    "$date": "2025-04-26T21:05:36.194Z"
+  },
+  "subjectTag": "vat-ly-12",
+  "courseTag": "lop-12",
   "__v": 0
 }]

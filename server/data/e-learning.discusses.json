@@ -1,26 +1,47 @@
-[
+[{
+  "_id": {
+    "$oid": "67d3e2770d4ad89b7f805264"
+  },
+  "user": {
+    "$oid": "68015c14a41c886b7e1a6d25"
+  },
+  "message": "Bài học tốt",
+  "likes": [
     {
-        "_id": {
-            "$oid": "67d3e2770d4ad89b7f805264"
-        },
-        "user": "67c384622c90a98bc7c8a848",
-        "message": "Bài học tốt",
-        "likes": ["67c384622c90a98bc7c8a848"]
+      "$oid": "67c384622c90a98bc7c8a848"
     },
     {
-        "_id": {
-            "$oid": "67da853991b87432fd9b3872"
-        },
-        "user": "67c384622c90a98bc7c8a848",
-        "message": "Bài học không tệ lắm",
-        "likes": []
-    },
-    {
-        "_id": {
-            "$oid": "67da854491b87432fd9b3873"
-        },
-        "user": "67c384622c90a98bc7c8a848",
-        "message": "Câu 3 làm như thế nào vậy mọi người",
-        "likes": []
+      "$oid": "68015c14a41c886b7e1a6d25"
     }
-]
+  ],
+  "__v": 23
+},
+{
+  "_id": {
+    "$oid": "6802bdfd2e86ba329d7c24d0"
+  },
+  "user": {
+    "$oid": "6806968b9fccc85cb2759b53"
+  },
+  "message": "Bài học khá tốt",
+  "likes": [
+    {
+      "$oid": "67c384622c90a98bc7c8a848"
+    },
+    {
+      "$oid": "68015c14a41c886b7e1a6d25"
+    }
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6802bf81c08701f6ab36033b"
+  },
+  "user": {
+    "$oid": "68015c14a41c886b7e1a6d25"
+  },
+  "message": "quat sup",
+  "likes": [],
+  "__v": 0
+}]

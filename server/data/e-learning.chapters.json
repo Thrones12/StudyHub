@@ -12,9 +12,17 @@
     "67d32bb1cbc084035d9b8e96"
   ],
   "exams": [
-    "67d346ad7509cbf96460500f",
-    "67d346ad7509cbf964605010"
-  ]
+    {
+      "$oid": "680d489b9ed7a3b0357a27d4"
+    },
+    {
+      "$oid": "680d48a79ed7a3b0357a27da"
+    },
+    {
+      "$oid": "680d48ba9ed7a3b0357a27e0"
+    }
+  ],
+  "__v": 14
 },
 {
   "_id": {
@@ -23,8 +31,17 @@
   "title": "Chương 2: Sóng cơ và sóng âm",
   "lessons": [],
   "exams": [
-    "67d346ad7509cbf964605011"
-  ]
+    {
+      "$oid": "680d4a659ed7a3b0357a2c98"
+    },
+    {
+      "$oid": "680d4a679ed7a3b0357a2c9e"
+    },
+    {
+      "$oid": "680d4a699ed7a3b0357a2ca4"
+    }
+  ],
+  "__v": 3
 },
 {
   "_id": {
@@ -33,8 +50,17 @@
   "title": "Chương 3: Dòng điện xoay chiều",
   "lessons": [],
   "exams": [
-    "67d346ad7509cbf964605011"
-  ]
+    {
+      "$oid": "680d4a6f9ed7a3b0357a2caa"
+    },
+    {
+      "$oid": "680d4a719ed7a3b0357a2cb0"
+    },
+    {
+      "$oid": "680d4a749ed7a3b0357a2cb6"
+    }
+  ],
+  "__v": 3
 },
 {
   "_id": {
@@ -42,7 +68,39 @@
   },
   "title": "Chương 4: Dao động và sóng điện từ",
   "lessons": [],
-  "exams": []
+  "exams": [
+    {
+      "$oid": "680d4a7a9ed7a3b0357a2cbc"
+    },
+    {
+      "$oid": "680d4a7c9ed7a3b0357a2cc2"
+    },
+    {
+      "$oid": "680d4a7e9ed7a3b0357a2cc8"
+    },
+    {
+      "$oid": "680d4a8e9ed7a3b0357a2cce"
+    },
+    {
+      "$oid": "680d4a919ed7a3b0357a2cd4"
+    },
+    {
+      "$oid": "680d4a939ed7a3b0357a2cda"
+    },
+    {
+      "$oid": "680d4a969ed7a3b0357a2ce0"
+    },
+    {
+      "$oid": "680d4a989ed7a3b0357a2ce6"
+    },
+    {
+      "$oid": "680d4a9a9ed7a3b0357a2cec"
+    },
+    {
+      "$oid": "680d4aa09ed7a3b0357a2cf2"
+    }
+  ],
+  "__v": 10
 },
 {
   "_id": {
@@ -85,7 +143,18 @@
     "68015b8dfcf88f9de2ec9529",
     "68015ba9fcf88f9de2ec952a"
   ],
-  "exams": []
+  "exams": [
+    {
+      "$oid": "680d48ff9ed7a3b0357a28bc"
+    },
+    {
+      "$oid": "680d4a589ed7a3b0357a2c8c"
+    },
+    {
+      "$oid": "680d4a5b9ed7a3b0357a2c92"
+    }
+  ],
+  "__v": 3
 },
 {
   "_id": {

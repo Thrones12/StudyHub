@@ -1,23 +1,24 @@
-[
-    {
-        "_id": {
-            "$oid": "67d6a24391b361f3a4b06c45"
-        },
-        "subject": "",
-        "lessons": ["67aa092fe07a8de25c30a648", "67d32bb1cbc084035d9b8e92"]
-    },
-    {
-        "_id": {
-            "$oid": "67d6a24391b361f3a4b06c46"
-        },
-        "subject": "",
-        "lessons": []
-    },
-    {
-        "_id": {
-            "$oid": "67d6a24391b361f3a4b06c47"
-        },
-        "subject": "",
-        "lessons": []
-    }
-]
+[{
+  "_id": {
+    "$oid": "67d6a24391b361f3a4b06c45"
+  },
+  "subject": "67d301f51332f6140b9c9e31",
+  "lessons": [
+    "67aa092fe07a8de25c30a648",
+    "67d32bb1cbc084035d9b8e92"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d6a24391b361f3a4b06c46"
+  },
+  "subject": "67d301f51332f6140b9c9e32",
+  "lessons": []
+},
+{
+  "_id": {
+    "$oid": "67d6a24391b361f3a4b06c47"
+  },
+  "subject": "67d301f51332f6140b9c9e2f",
+  "lessons": []
+}]

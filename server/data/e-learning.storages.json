@@ -4,7 +4,7 @@
   },
   "title": "Danh sách mới nè",
   "type": "lesson",
-  "__v": 0,
+  "__v": 5,
   "items": [
     "67aa092fe07a8de25c30a648"
   ]
@@ -15,8 +15,10 @@
   },
   "title": "Này là lesson nè",
   "type": "lesson",
-  "items": [],
-  "__v": 0
+  "items": [
+    "67aa092fe07a8de25c30a648"
+  ],
+  "__v": 1
 },
 {
   "_id": {
@@ -24,8 +26,13 @@
   },
   "title": "Này là exam nè",
   "type": "exam",
-  "items": [],
-  "__v": 0
+  "items": [
+    "680d489b9ed7a3b0357a27d4",
+    "680d48a79ed7a3b0357a27da",
+    "680d48ba9ed7a3b0357a27e0",
+    "680d48ff9ed7a3b0357a28bc"
+  ],
+  "__v": 4
 },
 {
   "_id": {
@@ -33,6 +40,83 @@
   },
   "title": "Này là exercise nè",
   "type": "exercise",
+  "items": [
+    "67d33e247509cbf964605008",
+    "6804da082e86ba329d7c24e5"
+  ],
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "68025a5f7a46661bffc76009"
+  },
+  "title": "asd",
+  "type": "lesson",
+  "items": [
+    "67aa092fe07a8de25c30a648"
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "680aa242b2be5c10a2c3d875"
+  },
+  "title": "123",
+  "type": "exam",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680aa246b2be5c10a2c3d878"
+  },
+  "title": "123",
+  "type": "exam",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680aa24d8d52ae87be211c59"
+  },
+  "title": "123",
+  "type": "exam",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680aa25c44ce8fc7eedb9588"
+  },
+  "title": "123",
+  "type": "exam",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680aa439d8a8cbaf5796cf14"
+  },
+  "title": "123",
+  "type": "lesson",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680aa4d2d8a8cbaf5796dbd3"
+  },
+  "title": "12345",
+  "type": "exam",
+  "items": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680aa4dad8a8cbaf5796dc75"
+  },
+  "title": "1111",
+  "type": "lesson",
   "items": [],
   "__v": 0
 }]
