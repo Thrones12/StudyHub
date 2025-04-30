@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./ModalNewTask.css";
+import "./ModalTask.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faClose,
@@ -17,7 +17,14 @@ import dayjs from "dayjs";
 import { Task } from "../../services";
 import { AuthContext } from "../../context/AuthContext";
 
-const ModalNewTask = ({ initDate, isOpen, setIsOpen, setReload, task }) => {
+const ModalTask = ({
+    initDate,
+    isOpen,
+    setIsOpen,
+    setReload,
+    task,
+    setTask,
+}) => {
     const { userId } = useContext(AuthContext);
     const [date, setDate] = useState(dayjs());
     const [taskTitle, setTaskTitle] = useState("");
@@ -52,7 +59,10 @@ const ModalNewTask = ({ initDate, isOpen, setIsOpen, setReload, task }) => {
     // Tắt modal khi nhấn ESC
     useEffect(() => {
         const handleEsc = (event) => {
-            if (event.key === "Escape") setIsOpen(false);
+            if (event.key === "Escape") {
+                setIsOpen(false);
+                setTask(null);
+            }
         };
         window.addEventListener("keydown", handleEsc);
 
@@ -98,6 +108,14 @@ const ModalNewTask = ({ initDate, isOpen, setIsOpen, setReload, task }) => {
         // Done
         setIsOpen(false);
         setReload((prev) => !prev);
+        setTask(null);
+    };
+    const handleDelete = () => {
+        Task.Delete(task._id);
+        // Done
+        setIsOpen(false);
+        setReload((prev) => !prev);
+        setTask(null);
     };
     return (
         <div className={`modal-new-task ${isOpen ? "show" : ""}`}>
@@ -105,7 +123,7 @@ const ModalNewTask = ({ initDate, isOpen, setIsOpen, setReload, task }) => {
                 className='modal-overlay'
                 onClick={() => setIsOpen(false)}
             ></div>
-            <div className='modal'>
+            <div className='modal' onWheel={(e) => e.stopPropagation()}>
                 <div className='header'>
                     Công việc mới
                     <FontAwesomeIcon
@@ -243,15 +261,35 @@ const ModalNewTask = ({ initDate, isOpen, setIsOpen, setReload, task }) => {
                         />
                     </div>
                     {/* Nút xác nhận tạo công việc */}
-                    <div className='row-input btn-wrapper'>
-                        <div className='btn' onClick={() => handleSubmit()}>
-                            Xác nhận
+                    {task ? (
+                        <div className='row-input btn-wrapper'>
+                            <div
+                                className='btn btn-red'
+                                onClick={() => handleDelete()}
+                            >
+                                Xóa
+                            </div>
+                            <div
+                                className='btn btn-blue'
+                                onClick={() => handleSubmit()}
+                            >
+                                Cập nhập
+                            </div>
                         </div>
-                    </div>
+                    ) : (
+                        <div className='row-input btn-wrapper'>
+                            <div
+                                className='btn btn-green'
+                                onClick={() => handleSubmit()}
+                            >
+                                Xác nhận
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
     );
 };
 
-export default ModalNewTask;
+export default ModalTask;

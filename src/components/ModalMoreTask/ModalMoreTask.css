@@ -1,0 +1,63 @@
+.modal-more-task {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.modal-more-task.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* MODAL */
+.modal-more-task .modal {
+    padding: 10px 0;
+    z-index: 110;
+    width: 100%;
+    background-color: var(--gray-200);
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    user-select: none;
+}
+.modal-more-task .modal .modal-task-list {
+    max-height: 600px;
+    overflow: auto;
+}
+.modal-more-task .modal .more-task-item {
+    margin: 4px auto;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 8px;
+    width: 95%;
+    background-color: var(--blue-500);
+    box-shadow: var(--box-shadow-2);
+    color: var(--white);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.calendar .more-task-item:hover {
+    background-color: var(--blue-600);
+    transform: translateY(-2px);
+}
+/* HEADER */
+.modal-more-task .modal .header {
+    padding: 4px 10px 9px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-700);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-more-task .modal .header svg {
+    transition: all 0.2s ease;
+}
+.modal-more-task .modal .header svg:hover {
+    color: var(--red-500);
+}

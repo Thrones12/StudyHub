@@ -21,7 +21,8 @@ import EmptyData from "./EmptyData/EmptyData";
 import Pagination from "./Pagination/Pagination";
 import ModalNotification from "./ModalNotification/ModalNotification";
 import Calendar from "./Calendar/Calendar";
-import ModalNewTask from "./ModalNewTask/ModalNewTask";
+import ModalTask from "./ModalTask/ModalTask";
+import ModalMoreTask from "./ModalMoreTask/ModalMoreTask";
 
 export {
     Header,
@@ -47,5 +48,6 @@ export {
     Pagination,
     ModalNotification,
     Calendar,
-    ModalNewTask,
+    ModalTask,
+    ModalMoreTask,
 };

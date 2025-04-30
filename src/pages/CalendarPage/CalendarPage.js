@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { TimeFormat } from "../../services";
 import { motion, AnimatePresence } from "framer-motion";
-import ModalNewTask from "../../components/ModalNewTask/ModalNewTask";
+import ModalTask from "../../components/ModalTask/ModalTask";
 import { useNavigate, useParams } from "react-router-dom";
 
 // animation variants
@@ -38,7 +38,7 @@ const CalendarPage = () => {
     const { year, month } = useParams();
     const [currentDate, setCurrentDate] = useState(dayjs());
     const [direction, setDirection] = useState(0); // 1: next, -1: prev
-    const [isOpenModalNewTask, setIsOpenModalNewTask] = useState(false);
+    const [isOpenModalTask, setIsOpenModalTask] = useState(false);
     const [reload, setReload] = useState(false);
     useEffect(() => {
         if (year && month) {
@@ -89,7 +89,7 @@ const CalendarPage = () => {
                     >
                         <div
                             className='btn'
-                            onClick={() => setIsOpenModalNewTask(true)}
+                            onClick={() => setIsOpenModalTask(true)}
                         >
                             Tạo mới
                         </div>
@@ -116,9 +116,9 @@ const CalendarPage = () => {
                     </motion.div>
                 </AnimatePresence>
 
-                <ModalNewTask
-                    isOpen={isOpenModalNewTask}
-                    setIsOpen={setIsOpenModalNewTask}
+                <ModalTask
+                    isOpen={isOpenModalTask}
+                    setIsOpen={setIsOpenModalTask}
                     setReload={setReload}
                 />
             </div>

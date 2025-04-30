@@ -19,7 +19,6 @@ import {
     CalendarPage,
 } from "./pages";
 // Page dùng basic layout
-import OldCalendarPage from "./pages/OldCalendarPage/OldCalendarPage";
 import SoundSpacePage from "./pages/SoundSpacePage/SoundSpacePage";
 import StudyGroupPage from "./pages/StudyGroupPage/StudyGroupPage";
 import { AuthPage, ForgotPage, VerifyPage } from "./pages";
@@ -53,10 +52,6 @@ function App() {
                         <Route
                             path='calendar/:year/:month'
                             element={<CalendarPage />}
-                        />
-                        <Route
-                            path='old-calendar'
-                            element={<OldCalendarPage />}
                         />
                     </Route>
                     <Route path='/' element={<BasicLayout />}>

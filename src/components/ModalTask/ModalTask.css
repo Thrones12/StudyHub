@@ -127,6 +127,7 @@
 .modal-new-task .modal .row-input.btn-wrapper {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 .modal-new-task .modal .row-input .btn {
     cursor: pointer;
@@ -144,4 +145,19 @@
 .modal-new-task .modal .row-input .btn:hover {
     transform: translateY(-2px);
     box-shadow: var(--box-shadow-3);
+}
+.modal-new-task .modal .row-input .btn.btn-green {
+    background-color: var(--green-500);
+    border: 1px solid var(--green-600);
+    color: var(--white);
+}
+.modal-new-task .modal .row-input .btn.btn-blue {
+    background-color: var(--blue-500);
+    border: 1px solid var(--blue-600);
+    color: var(--white);
+}
+.modal-new-task .modal .row-input .btn.btn-red {
+    background-color: var(--red-500);
+    border: 1px solid var(--red-600);
+    color: var(--white);
 }

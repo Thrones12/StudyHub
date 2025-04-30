@@ -69,33 +69,37 @@ const SoundSpacePage = () => {
 
     return (
         <div className='sound-page-wrapper container'>
-            <div className='sound-page-content'>
-                <div className='video-item'>
-                    <div className='youtube-search'>
-                        <input
-                            type='text'
-                            value={videoUrl}
-                            onChange={handleInputChange}
-                            placeholder='Nhập link youtube vào đấy'
-                        />
-                        <button onClick={() => handleSearchYoutube()}>
-                            Xác nhận
-                        </button>
-                    </div>
-
-                    {videoId && (
-                        <div style={{ marginTop: "10px" }}>
-                            <iframe
-                                src={`https://www.youtube.com/embed/${videoId}`}
-                                title='YouTube video player'
-                                frameBorder='0'
-                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                                allowFullScreen
-                                className='video'
-                            ></iframe>
+            <div className='sound-page'>
+                <div className='card'>
+                    <div className='video-item'>
+                        <div className='youtube-search'>
+                            <input
+                                type='text'
+                                value={videoUrl}
+                                onChange={handleInputChange}
+                                placeholder='Nhập link youtube vào đấy'
+                            />
+                            <button onClick={() => handleSearchYoutube()}>
+                                Xác nhận
+                            </button>
                         </div>
-                    )}
+
+                        {videoId && (
+                            <div style={{ marginTop: "10px" }}>
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${videoId}`}
+                                    title='YouTube video player'
+                                    frameBorder='0'
+                                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                                    allowFullScreen
+                                    className='video'
+                                ></iframe>
+                            </div>
+                        )}
+                    </div>
                 </div>
+            </div>
+            <div className='sound-page-content'>
                 <div className='sound-list'>
                     {sounds &&
                         sounds.map((sound, index) => (

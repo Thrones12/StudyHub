@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 1600px;
     margin: 10px auto 20px;
-    overflow: hidden;
 }
 .calendar-page .controls {
     display: flex;

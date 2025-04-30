@@ -123,7 +123,7 @@ const Delete = async (req, res) => {
             // 404 - Not Found
             if (!user) return res.status(404).json({ message: "Not Found" });
             // Xóa bằng filter
-            user.tasks = user.Tasks.filter((n) => n.toString() !== id);
+            user.tasks = user.tasks.filter((n) => n.toString() !== id);
 
             await user.save();
         }

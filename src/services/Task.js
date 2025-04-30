@@ -1,7 +1,6 @@
 import axios from "axios";
 import Noti from "../utils/Noti";
 import constants from "../utils/constants";
-import { startOfMonth, endOfMonth, parseISO } from "date-fns";
 import dayjs from "dayjs";
 const API = constants.API;
 // Get task of month
@@ -62,6 +61,19 @@ const Update = async ({ id, title, loop, description, date }) => {
         }
     }
 };
-const Task = { GetTaskOfMonth, Create, Update };
+// Delete
+const Delete = async (id) => {
+    try {
+        await axios.delete(`${API}/task?id=${id}`);
+        Noti.success("Xóa thành công");
+    } catch (err) {
+        if (err.response && err.response.data?.message) {
+            Noti.error(err.response.data.message);
+        } else {
+            Noti.error("Xóa dữ liệu thất bại");
+        }
+    }
+};
+const Task = { GetTaskOfMonth, Create, Update, Delete };
 
 export { Task };

@@ -24,12 +24,6 @@ const navItems = [
     { name: "Exam", label: "Kiểm tra", icon: faClipboard, path: "/exam" },
     { name: "Storage", label: "Lưu trữ", icon: faBookmark, path: "/storage" },
     {
-        name: "OldCalendar",
-        label: "Old Lịch học",
-        icon: faCalendar,
-        path: "/old-calendar",
-    },
-    {
         name: "Calendar",
         label: "Lịch học",
         icon: faCalendar,
