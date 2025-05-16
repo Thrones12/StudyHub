@@ -15,7 +15,12 @@ export const AuthProvider = ({ children }) => {
     // Kiểm tra trạng thái đăng nhập khi load trang
     useEffect(() => {
         const checkLogin = async () => {
-            const excludedPaths = ["/auth", "/auth/verify", "/auth/forgot"];
+            const excludedPaths = [
+                "/auth",
+                "/auth/register",
+                "/auth/verify",
+                "/auth/forgot",
+            ];
             const currentPath = location.pathname;
             if (excludedPaths.includes(currentPath)) {
                 return; // Bỏ qua kiểm tra login cho các path này
@@ -51,7 +56,24 @@ export const AuthProvider = ({ children }) => {
         };
 
         checkLogin();
-    }, []);
+    }, [API, userId]);
+
+    // Kiểm tra learning hour của user
+    useEffect(() => {
+        const checkLearningHour = async () => {
+            try {
+                await axios.post(`${API}/user/check-learning-hour`, { userId });
+            } catch (err) {
+                if (err.response && err.response.data?.message) {
+                    Noti.error(err.response.data.message);
+                } else {
+                    Noti.error("Check learning hour thất bại");
+                }
+            }
+        };
+
+        if (userId) checkLearningHour();
+    }, [API, userId]);
 
     const login = async (email, password, rememberMe) => {
         logout();

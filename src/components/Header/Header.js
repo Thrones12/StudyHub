@@ -129,10 +129,22 @@ const Header = ({ isOpen, handleAside }) => {
                                 </div>
                                 <div
                                     className='dropdown-item'
+                                    onClick={() => handleNav("progress")}
+                                >
+                                    Tiến độ
+                                </div>
+                                <div
+                                    className='dropdown-item'
                                     onClick={() => handleNav("statis")}
                                 >
                                     Thống kê
                                 </div>
+                                {/* <div
+                                    className='dropdown-item'
+                                    onClick={() => handleNav("learning-path")}
+                                >
+                                    Lộ trình
+                                </div> */}
                                 <div
                                     className='dropdown-item'
                                     onClick={() => handleNav("activities")}

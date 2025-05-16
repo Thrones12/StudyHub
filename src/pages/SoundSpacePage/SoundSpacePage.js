@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Howl } from "howler";
 import axios from "axios";
@@ -13,7 +13,7 @@ const SoundSpacePage = () => {
     const [volumes, setVolumes] = useState({});
     const [videoUrl, setVideoUrl] = useState("");
     const [videoId, setVideoId] = useState(null);
-
+    const videoRef = useRef();
     // Fetch sound
     useEffect(() => {
         const fetchData = async () => {
@@ -68,7 +68,7 @@ const SoundSpacePage = () => {
     };
 
     return (
-        <div className='sound-page-wrapper container'>
+        <div className='container'>
             <div className='sound-page'>
                 <div className='card'>
                     <div className='video-item'>
@@ -84,50 +84,59 @@ const SoundSpacePage = () => {
                             </button>
                         </div>
 
-                        {videoId && (
-                            <div style={{ marginTop: "10px" }}>
-                                <iframe
-                                    src={`https://www.youtube.com/embed/${videoId}`}
-                                    title='YouTube video player'
-                                    frameBorder='0'
-                                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                                    allowFullScreen
-                                    className='video'
-                                ></iframe>
-                            </div>
-                        )}
+                        <div
+                            ref={videoRef}
+                            style={{
+                                marginTop: "10px",
+                                maxHeight: videoId
+                                    ? videoRef.current.scrollHeight
+                                    : "0px",
+                                overflow: "hidden",
+                                transition: "all 0.5s ease-in-out",
+                            }}
+                        >
+                            <iframe
+                                src={`https://www.youtube.com/embed/${videoId}`}
+                                title='YouTube video player'
+                                frameBorder='0'
+                                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                                allowFullScreen
+                                className='video'
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='sound-page-content'>
-                <div className='sound-list'>
-                    {sounds &&
-                        sounds.map((sound, index) => (
-                            <div className='sound-item' key={index}>
-                                <img
-                                    className='sound-icon'
-                                    src={sound.icon}
-                                    onClick={() => toggleSound(sound)}
-                                    alt={sound.name}
-                                />
-                                <input
-                                    className={`sound-volume ${
-                                        playing[sound.name] ? "active" : ""
-                                    }`}
-                                    type='range'
-                                    min='0'
-                                    max='1'
-                                    step='0.01'
-                                    value={volumes[sound.name] || 1}
-                                    onChange={(e) =>
-                                        changeVolume(
-                                            sound,
-                                            parseFloat(e.target.value)
-                                        )
-                                    }
-                                />
-                            </div>
-                        ))}
+                <div className='card'>
+                    {" "}
+                    <div className='sound-list'>
+                        {sounds &&
+                            sounds.map((sound, index) => (
+                                <div className='sound-item' key={index}>
+                                    <img
+                                        className='sound-icon'
+                                        src={sound.icon}
+                                        onClick={() => toggleSound(sound)}
+                                        alt={sound.name}
+                                    />
+                                    <input
+                                        className={`sound-volume ${
+                                            playing[sound.name] ? "active" : ""
+                                        }`}
+                                        type='range'
+                                        min='0'
+                                        max='1'
+                                        step='0.01'
+                                        value={volumes[sound.name] || 1}
+                                        onChange={(e) =>
+                                            changeVolume(
+                                                sound,
+                                                parseFloat(e.target.value)
+                                            )
+                                        }
+                                    />
+                                </div>
+                            ))}
+                    </div>
                 </div>
             </div>
         </div>

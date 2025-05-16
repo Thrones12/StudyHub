@@ -1,0 +1,24 @@
+@import "../../../styles/variables";
+
+.registerPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $gray-100;
+    h2 {
+        font-size: 2rem;
+        color: $black;
+        margin-bottom: 20px;
+    }
+    form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: $white;
+        border-radius: 15px;
+        border: 1px solid $gray-200;
+        box-shadow: $box-shadow-3;
+    }
+}

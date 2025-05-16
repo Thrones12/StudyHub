@@ -4,7 +4,9 @@ import "./ProfileNavbar.css";
 
 const tabs = [
     { name: "Hồ sơ", key: "account" },
+    { name: "Tiến độ", key: "progress" },
     { name: "Thống kê", key: "statis" },
+    // { name: "Lộ trình", key: "learning-path" },
     { name: "Hoạt động", key: "activities" },
 ];
 

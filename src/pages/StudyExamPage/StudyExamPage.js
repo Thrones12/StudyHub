@@ -138,6 +138,7 @@ const StudyExamPage = () => {
             await axios.post(`${API}/examResult`, {
                 user: userId,
                 exam: exam._id,
+                chapterId: chapterId,
                 score: (trueAnswer / questions.length) * 10,
                 duration: duration,
                 result: checkQuestions,

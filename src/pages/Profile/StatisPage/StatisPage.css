@@ -1,0 +1,35 @@
+.profile-page .text {
+    font-size: 16px;
+    font-weight: 600;
+}
+.profile-page .score {
+    user-select: none;
+    font-size: 34px;
+    color: var(--white);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid var(--blue-600);
+    background-color: #2fa2cc;
+    box-shadow: var(--box-shadow-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.profile-page .more-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.profile-page .more-info .info {
+    width: 300px;
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-2);
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-700);
+}

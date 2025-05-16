@@ -23,6 +23,10 @@ import ModalNotification from "./ModalNotification/ModalNotification";
 import Calendar from "./Calendar/Calendar";
 import ModalTask from "./ModalTask/ModalTask";
 import ModalMoreTask from "./ModalMoreTask/ModalMoreTask";
+import SelectComponent from "./SelectComponent/SelectComponent";
+import LearningHourChart from "./LearningHourChart/LearningHourChart";
+import ChartAverageScore from "./ChartAverageScore/ChartAverageScore";
+import ChartHistogram from "./ChartHistogram/ChartHistogram";
 
 export {
     Header,
@@ -50,4 +54,8 @@ export {
     Calendar,
     ModalTask,
     ModalMoreTask,
+    SelectComponent,
+    LearningHourChart,
+    ChartAverageScore,
+    ChartHistogram,
 };

@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
 const shema = new mongoose.Schema({
+    username: { type: String },
+    password: { type: String },
+    email: { type: String },
     avatar: { type: String, default: "/images/profile.png" },
     fullname: { type: String, default: "Người dùng" },
     address: { type: String },
     phone: { type: String },
-    email: { type: String },
-    password: { type: String },
     role: {
         type: String,
         enum: ["student", "admin"],
@@ -24,6 +25,23 @@ const shema = new mongoose.Schema({
                         {
                             lessonId: { type: String },
                             isDone: { type: Boolean, default: false },
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
+    learningHour: [
+        {
+            time: { type: Date },
+            courses: [
+                {
+                    courseId: { type: String },
+                    subjects: [
+                        {
+                            link: { type: String },
+                            subjectTitle: { type: String },
+                            second: { type: Number, default: 0 },
                         },
                     ],
                 },

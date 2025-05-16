@@ -35,12 +35,12 @@ const navItems = [
         icon: faBookOpen,
         path: "/sound-space",
     },
-    {
-        name: "Group",
-        label: "Học cùng nhau",
-        icon: faUsers,
-        path: "/study-group",
-    },
+    // {
+    //     name: "Group",
+    //     label: "Học cùng nhau",
+    //     icon: faUsers,
+    //     path: "/study-group",
+    // },
 ];
 
 const getSelectedItem = (pathname) => {

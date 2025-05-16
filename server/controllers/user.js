@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Course = require("../models/course");
+const ExamResult = require("../models/examResult");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
@@ -92,6 +93,213 @@ const GetStorage = async (req, res) => {
         let filterdData = data.storages.filter((d) => d.type === type);
 
         return res.json({ data: filterdData, message: "Get all data" });
+    } catch (err) {
+        return res.status(500).json({ data: [], message: "Lỗi server" });
+    }
+};
+// GET /user/get-learning-hour?id=...
+const GetLearningHour = async (req, res) => {
+    try {
+        // Các query có thể có khi get data
+        const { id, month, year } = req.query;
+
+        let data; // Biến lưu trữ dữ liệu ban đầu khi get
+
+        // 404 - User not Found
+        let user = await User.findById(id);
+        if (!user) return res.status(404).json({ message: "Data not found" });
+
+        // Lọc learningHour theo tháng và năm (nếu có truyền vào)
+        if (month && year) {
+            const m = parseInt(month);
+            const y = parseInt(year);
+
+            data = user.learningHour.find((entry) => {
+                const time = new Date(entry.time);
+                return time.getMonth() === m && time.getFullYear() === y;
+            });
+        }
+
+        // 404 - Not Found
+        if (!data) return res.status(201).json({ data });
+
+        // 200 - Success
+        return res.status(200).json({ data: data });
+    } catch (err) {
+        return res.status(500).json({ message: "Lỗi server" });
+    }
+};
+// GET /user/get-progress?id=...
+const GetProgress = async (req, res) => {
+    try {
+        const { id } = req.query;
+        let data = []; // Dữ liệu return
+
+        // Get User
+        let user = await User.findById(id);
+
+        // Get Course
+        const courses = await Course.find().populate({
+            path: "subjects",
+            model: "Subject",
+            populate: { path: "chapters", model: "Chapter" },
+        });
+
+        // Get Exam Result
+        const examResults = await ExamResult.find({ user: id });
+        const examChapterIds = examResults.map((e) => e.chapterId.toString());
+
+        // 404 - Course Not Found
+        if (!courses)
+            return res.status(404).json({ message: "Data not found" });
+        if (!user) return res.status(404).json({ message: "Data not found" });
+
+        for (let learnedCourse of user.learned) {
+            const course = courses.find(
+                (c) => c._id.toString() === learnedCourse.courseId
+            );
+            if (!course) continue;
+
+            for (let subjectProgress of learnedCourse.subjects) {
+                const subject = course.subjects.find(
+                    (s) => s._id.toString() === subjectProgress.subjectId
+                );
+                if (!subject) continue;
+
+                const totalChapters = subject.chapters.length;
+                let totalLessons = 0;
+                let doneLessons = 0;
+                let doneExams = 0;
+
+                const learnedSubject = subjectProgress.lessons || [];
+
+                doneLessons += learnedSubject.filter((l) => l.isDone).length;
+
+                for (const chapter of subject.chapters) {
+                    totalLessons += chapter.lessons.length;
+
+                    if (examChapterIds.includes(chapter._id.toString())) {
+                        doneExams += 1;
+                    }
+                }
+
+                let progress =
+                    totalLessons > 0 && totalChapters > 0
+                        ? (doneLessons + doneExams) /
+                          (totalLessons + totalChapters)
+                        : 0;
+
+                if (progress > 0)
+                    data.push({
+                        courseTitle: course.title,
+                        subjectTitle: subject.title,
+                        progress: (progress * 100).toFixed(0),
+                        totalLessons: totalLessons,
+                        doneLessons: doneLessons,
+                        totalExams: totalChapters,
+                        doneExams: doneExams,
+                        link: `/study/${course.tag}/${subject.tag}/${subject.chapters[0].lessons[0]}`,
+                    });
+            }
+        }
+        console.log(data);
+
+        // 200 - Success
+        return res.status(200).json({ data });
+    } catch (err) {
+        return res.status(500).json({ data: [], message: "Lỗi server" });
+    }
+};
+
+// GET /user/get-average-score?id=...&courseId=...
+const GetAverageScore = async (req, res) => {
+    try {
+        const { id, courseId } = req.query;
+        let data; // Return data
+
+        // Get User và Course
+        let user, course;
+        if (id && courseId) {
+            user = await User.findById(id).populate({
+                path: "examResults",
+                model: "ExamResult",
+            });
+            course = await Course.findById(courseId).populate({
+                path: "subjects",
+                model: "Subject",
+                populate: { path: "chapters", model: "Chapter" },
+            });
+        }
+        // 404 - Not Found
+        if (!user || !course)
+            return res.status(404).json({ message: "Data not found" });
+
+        // Xử lí điểm trung bình
+        let examCount = 0;
+        let subjectScore = course.subjects.map((subject) => {
+            let count = 0;
+            let score = subject.chapters.reduce((average, item) => {
+                let examResult = user.examResults.find(
+                    (result) => result.chapterId === item._id.toString()
+                );
+                if (examResult) {
+                    count += 1;
+                    examCount += 1;
+                }
+                return examResult ? average + examResult.score : average + 0;
+            }, 0);
+
+            return {
+                subject: subject.title,
+                score: count > 0 ? Number((score / count).toFixed(2)) : 0,
+            };
+        });
+
+        // Điểm trung bình cao nhất
+        let highest = null;
+        if (subjectScore.length > 0) {
+            highest = subjectScore[0];
+            for (let i = 1; i < subjectScore.length; i++) {
+                if (subjectScore[i].score > highest.score)
+                    highest = subjectScore[i];
+            }
+            if (highest.score === 0) highest = null;
+        }
+        // Điểm trung bình thấp nhất
+        let lowest = null;
+        if (subjectScore.length > 0) {
+            lowest = subjectScore[0];
+            for (let i = 1; i < subjectScore.length; i++) {
+                if (
+                    subjectScore[i].score < lowest.score &&
+                    subjectScore[i].score !== 0
+                )
+                    lowest = subjectScore[i];
+            }
+
+            if (lowest.score === 0) lowest = null;
+        }
+
+        data = {
+            averageScore:
+                subjectScore.length > 0
+                    ? Number(
+                          (
+                              subjectScore.reduce(
+                                  (score, item) => (score += item.score),
+                                  0
+                              ) / subjectScore.length
+                          ).toFixed(2)
+                      )
+                    : 0,
+            examCount,
+            highest: highest ? highest.subject : null,
+            lowest: lowest ? lowest.subject : null,
+            subjects: subjectScore,
+        };
+
+        // 200 - Success
+        return res.json({ data });
     } catch (err) {
         return res.status(500).json({ data: [], message: "Lỗi server" });
     }
@@ -422,7 +630,78 @@ const SendPassword = async (req, res) => {
         });
     }
 };
+// POST /user/check-learning-hour
+const CheckLearningHour = async (req, res) => {
+    try {
+        const { userId } = req.body;
 
+        // Kiểm tra user tồn tại
+        const user = await User.findById(userId);
+
+        // 404 - Not Found
+        if (!user) return res.status(404).json({ message: "Not found" });
+
+        // Kiểm tra thời gian học tập tháng này có chưa
+        const now = new Date();
+
+        const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+        const endOfMonth = new Date(
+            now.getFullYear(),
+            now.getMonth() + 1,
+            0,
+            23,
+            59,
+            59,
+            999
+        );
+
+        const hasThisMonth = user.learningHour.some((entry) => {
+            const entryDate = new Date(entry.time);
+            return entryDate >= startOfMonth && entryDate <= endOfMonth;
+        });
+
+        // Thêm learning hour mới vào user
+        if (!hasThisMonth) {
+            // Lấy danh sách tất cả course
+            const allCourses = await Course.find({}).populate({
+                path: "subjects",
+                model: "Subject",
+                populate: { path: "chapters", model: "Chapter" },
+            });
+
+            // Chuẩn bị dữ liệu để push
+            const coursesForLearningHour = allCourses.map((course) => ({
+                courseId: course._id.toString(),
+                subjects: course.subjects.map((subject) => ({
+                    link:
+                        subject.chapters.length > 0 &&
+                        subject.chapters[0].lessons.length > 0
+                            ? `/study/${course.tag}/${subject.tag}/${subject.chapters[0].lessons[0]}`
+                            : "",
+                    subjectTitle: subject.title,
+                    hour: 0, // khởi tạo số giờ học là 0
+                })),
+            }));
+
+            // Push vào learningHour
+            user.learningHour.push({
+                time: now,
+                courses: coursesForLearningHour,
+            });
+
+            user.save();
+        }
+
+        // Dù thêm mới hay chưa thì vẫn trả về dữ liệu bình thường
+        res.status(200).json({
+            message: "Mật khẩu mới đã được gửi đến email của bạn",
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Lỗi server",
+        });
+    }
+};
 // PUT /user/lesson-done
 const SetLessonDone = async (req, res) => {
     try {
@@ -479,10 +758,14 @@ module.exports = {
     GetData,
     GetOne,
     GetStorage,
+    GetLearningHour,
+    GetProgress,
+    GetAverageScore,
     Create,
     Update,
     UpdateEmail,
     UpdatePassword,
+    CheckLearningHour,
     Login,
     VerifyToken,
     Register,

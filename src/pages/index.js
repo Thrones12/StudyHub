@@ -2,10 +2,13 @@
 import AuthPage from "./Auth/AuthPage/AuthPage";
 import ForgotPage from "./Auth/ForgotPage/ForgotPage";
 import VerifyPage from "./Auth/VerifyPage/VerifyPage";
+import RegisterPage from "./Auth/RegisterPage/RegisterPage";
 
 // Profile
 import AccountPage from "./Profile/AccountPage/AccountPage";
+import ProgressPage from "./Profile/ProgressPage/ProgressPage";
 import StatisPage from "./Profile/StatisPage/StatisPage";
+import LearningPathPage from "./Profile/LearningPathPage/LearningPathPage";
 import ActivitiesPage from "./Profile/ActivitiesPage/ActivitiesPage";
 
 // Study
@@ -19,14 +22,20 @@ import StoragePage from "../pages/StoragePage/StoragePage";
 import ExamPage from "../pages/ExamPage/ExamPage";
 import NotificationPage from "./NotificationPage/NotificationPage";
 import CalendarPage from "./CalendarPage/CalendarPage";
+
+import SoundSpacePage from "./SoundSpacePage/SoundSpacePage";
+import HomePage from "./HomePage/HomePage";
 export {
     // Auth page
     AuthPage,
     ForgotPage,
     VerifyPage,
+    RegisterPage,
     // Profile page
     AccountPage,
+    ProgressPage,
     StatisPage,
+    LearningPathPage,
     ActivitiesPage,
     // Study page
     CoursePage,
@@ -38,4 +47,7 @@ export {
     ExamPage,
     NotificationPage,
     CalendarPage,
+    //
+    SoundSpacePage,
+    HomePage,
 };

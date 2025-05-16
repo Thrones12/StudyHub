@@ -2,12 +2,14 @@
     margin: 30px 0;
 }
 .sound-page .card {
+    margin: 30px 0;
     border: 1px solid var(--gray-600);
     border-radius: 20px;
     box-shadow: var(--box-shadow-3);
     background-color: var(--white);
     display: flex;
     justify-content: center;
+    padding: 40px 0;
 }
 .sound-page .video-item {
     width: 90%;
@@ -21,7 +23,6 @@
     box-shadow: var(--box-shadow-3);
     border-radius: 10px;
     overflow: hidden;
-    margin: 40px 0;
 }
 .sound-page .card .youtube-search input {
     border: none;
@@ -44,7 +45,7 @@
     background-color: #5c998d;
 }
 
-.sound-page-wrapper .sound-page-content {
+.sound-page .sound-page-content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -52,7 +53,7 @@
     justify-content: center;
     align-items: center;
 }
-.sound-page-wrapper .title {
+.sound-page .title {
     margin: 30px 0;
     display: flex;
     flex-direction: row;
@@ -61,7 +62,7 @@
     gap: 30px;
     width: 1000px;
 }
-.sound-page-wrapper .text {
+.sound-page .text {
     width: 400px;
     height: 200px;
     font-size: 48px;
@@ -70,38 +71,34 @@
     text-align: end;
     flex: 1;
 }
-.sound-page-wrapper .image {
+.sound-page .image {
     height: 200px;
     flex: 1;
 }
-.sound-page-wrapper .image img {
+.sound-page .image img {
     height: 200px;
     width: auto;
 }
-.sound-page-wrapper .sound-list {
-    width: 1000px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
+.sound-page .sound-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 100%;
 }
-.sound-page-wrapper .sound-item {
+.sound-page .sound-item {
     position: relative;
-    width: 300px;
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
 }
-.sound-page-wrapper .sound-item .sound-icon {
+.sound-page .sound-item .sound-icon {
     width: 100px;
     height: 100px;
     transition: transform 0.3s ease;
 }
-.sound-page-wrapper .sound-item .sound-icon:hover {
+.sound-page .sound-item .sound-icon:hover {
     transform: scale(1.1);
 }
-.sound-page-wrapper .sound-item .sound-volume {
+.sound-page .sound-item .sound-volume {
     -webkit-appearance: none; /* Bỏ mặc định của trình duyệt */
     position: absolute;
     bottom: -40px;
@@ -114,11 +111,11 @@
     transition: background 0.3s;
     opacity: 0;
 }
-.sound-page-wrapper .sound-item .sound-volume.active {
+.sound-page .sound-item .sound-volume.active {
     opacity: 1;
 }
 /* Tùy chỉnh nút kéo trên thanh trượt */
-input[type="range"]::-webkit-slider-thumb {
+.sound-page .sound-item input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 14px;
     height: 14px;
@@ -128,17 +125,17 @@ input[type="range"]::-webkit-slider-thumb {
     transition: transform 0.3s ease;
 }
 /* Khi bấm vào nút kéo */
-input[type="range"]::-webkit-slider-thumb:hover {
+.sound-page .sound-item input[type="range"]::-webkit-slider-thumb:hover {
     transform: scale(1.2);
 }
 /* Khi bấm vào nút kéo */
-input[type="range"]::-webkit-slider-thumb:active {
+.sound-page .sound-item input[type="range"]::-webkit-slider-thumb:active {
     transform: scale(1.2);
 }
 
-.sound-page-wrapper .video-item .video {
-    width: 900px;
-    height: 450px;
+.sound-page .video-item .video {
+    width: 100%;
+    height: 690px;
     border: 10px;
     box-shadow: var(--box-shadow-3);
     border: 2px solid #6daf9f;

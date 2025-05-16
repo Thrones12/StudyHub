@@ -1,0 +1,106 @@
+.learning-time-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.learning-time-table th,
+.learning-time-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.learning-time-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table-scroll-wrapper {
+    max-height: 440px;
+    overflow-y: auto;
+}
+/* TABLE LINK */
+.learning-time-table .table-link {
+    position: relative;
+    color: #2563eb;
+    cursor: pointer;
+    font-weight: 500;
+    width: auto;
+    font-style: italic;
+}
+.learning-time-table .table-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 40px;
+    height: 1px;
+    background-color: #2563eb;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.learning-time-table .table-link:hover::after {
+    transform: scaleX(1);
+}
+/* LEARNING PROGRESS */
+.learning-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.learning-progress .learning-progress-item {
+    cursor: pointer;
+    user-select: none;
+    box-shadow: var(--box-shadow-2);
+    border: 1px solid var(--gray-600);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+}
+.learning-progress .learning-progress-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-3);
+}
+.learning-progress .learning-progress-item .progcess-bar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#4caf50 var(--score), #e0e0e0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.learning-progress .learning-progress-item .progcess-bar::before {
+    content: "";
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    background: #fff;
+}
+.learning-progress .learning-progress-item .progcess-bar .text {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.learning-progress .learning-progress-item .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+.learning-progress .learning-progress-item .info .primary {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--gray-600);
+}
+.learning-progress .learning-progress-item .info .secodary {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--gray-900);
+    flex: 1;
+    display: flex;
+    align-items: center;
+}

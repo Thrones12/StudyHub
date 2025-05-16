@@ -12,7 +12,6 @@ const GetAll = async (req, res) => {
         if (page) skip = page * limit;
 
         // Get dữ liệu
-
         if (userId) {
             data = await Notification.find({ userId })
                 .sort({ createdAt: -1 })

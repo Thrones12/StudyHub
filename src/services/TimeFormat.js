@@ -5,6 +5,19 @@ const SecondToMinute = (seconds) => {
     return `${minutes} phút`;
 };
 
+const convertToHourAndMinute = (seconds) => {
+    if (!seconds || seconds < 0) return "0 phút";
+
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+
+    let result = "";
+    if (hours > 0) result += `${hours} giờ `;
+    if (minutes > 0 || hours === 0) result += `${minutes} phút`;
+
+    return result.trim();
+};
+
 function TimeAgo(inputDate) {
     const date = new Date(inputDate);
     const now = new Date();
@@ -49,6 +62,7 @@ const TimeFormat = {
     TimeAgo,
     isOlderThanOneHour,
     getMonthYear,
+    convertToHourAndMinute,
 };
 
 export { TimeFormat };

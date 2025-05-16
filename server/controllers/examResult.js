@@ -1,25 +1,34 @@
 const ExamResult = require("../models/examResult");
 const User = require("../models/user");
+const Subject = require("../models/subject");
 
 const GetData = async (req, res) => {
-    // Các query có thể có khi get data
-    const { id } = req.query;
+    let { userId, subjectId } = req.query;
+    let data; // Return data
 
-    let data; // Biến lưu trữ dữ liệu ban đầu khi get
-
-    // Nếu có 1 biến query phù hợp thì sẽ get còn không thì trả về toàn bộ dữ liệu trong csdl
-    if (id) {
-        data = await ExamResult.findById(id);
+    // Get Data
+    if (userId && subjectId) {
+        let examResults = await ExamResult.find({ user: userId }).populate({
+            model: "Exam",
+            path: "exam",
+        });
+        let subjects = await Subject.findById(subjectId);
+        data = examResults.filter((exam) =>
+            subjects.chapters.some(
+                (chapter) => chapter.toString() === exam.chapterId
+            )
+        );
     } else {
         data = await ExamResult.find({})
             .populate({ model: "User", path: "user" })
             .populate({ model: "Exam", path: "exam" });
     }
 
-    // Nếu không có dữ liệu nào thì báo lỗi 404 - Not Found
-    if (!data) return res.status(404).json({ message: "ExamResult not found" });
+    // 404 - Not Found
+    if (!data) return res.status(404).json({ message: "Data not found" });
 
-    return res.status(200).json({ data: data, message: "" });
+    // 200 - Success
+    return res.status(200).json({ data: data });
 };
 // GET /examResult/get-one?id=...&examId=...
 const GetOne = async (req, res) => {
@@ -54,8 +63,7 @@ const GetOne = async (req, res) => {
 
 const Create = async (req, res) => {
     try {
-        const { user, exam, score, duration, result } = req.body;
-        console.log(duration);
+        const { user, exam, chapterId, score, duration, result } = req.body;
 
         let existingExam = await ExamResult.findOne({ exam: exam });
 
@@ -72,7 +80,14 @@ const Create = async (req, res) => {
                 existingExam.save();
             }
         } else {
-            let data = new ExamResult({ user, exam, score, duration, result });
+            let data = new ExamResult({
+                user,
+                exam,
+                chapterId,
+                score,
+                duration,
+                result,
+            });
             data.save();
 
             let existingUser = await User.findById(user);
