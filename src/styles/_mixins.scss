@@ -1,28 +1,40 @@
-@import "../../styles/variables.scss";
+@use "sass:math";
+@use "./variables";
 
+// Mixin chia hàng
 @mixin row {
     display: flex;
     flex-wrap: wrap;
 }
+
+// Mixin chia cột theo tỉ lệ
 @mixin col($columns: 12, $total: 12) {
-    flex: 0 0 percentage($columns / $total);
-    max-width: percentage($columns / $total);
+    flex: 0 0 math.percentage(math.div($columns, $total));
+    max-width: math.percentage(math.div($columns, $total));
 }
+
+// Mixin căn giữa bằng flex
 @mixin flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+// Mixin full chiều rộng & chiều cao
 @mixin fullSize {
     width: 100%;
     height: 100%;
 }
+
+// Mixin căn giữa tuyệt đối
 @mixin absoluteCenter {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Mixin box shadow theo cấp độ
 @mixin boxShadow($level: 2) {
     box-shadow: var(--box-shadow-#{$level});
 }

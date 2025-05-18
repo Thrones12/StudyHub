@@ -31,7 +31,6 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.3",
     "recharts": "^2.15.3",
-    "sass": "^1.89.0",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.17.2",
     "web-vitals": "^2.1.4",
@@ -60,5 +59,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.89.0",
+    "sass-loader": "^16.0.5"
   }
 }

@@ -1,0 +1,110 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+
+.verifyPage {
+    @include mixins.fullSize;
+    @include mixins.flexCenter;
+    background-color: variables.$gray-100;
+    height: 100vh;
+
+    .verifyModal {
+        width: 600px;
+        background-color: variables.$white;
+        border-radius: 15px;
+        box-shadow: variables.$box-shadow-2;
+        overflow: hidden;
+        padding: 60px;
+        text-align: center;
+        border: 1px solid variables.$gray-200;
+        h2 {
+            font-size: 45px;
+            color: variables.$gray-400;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 18px;
+            color: variables.$gray-400;
+            margin-bottom: 40px;
+
+            span {
+                font-weight: bold;
+                color: variables.$green-400;
+            }
+        }
+        .inputGroup {
+            margin: 50px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            user-select: none;
+            input {
+                color: variables.$gray-400;
+                width: 70px;
+                height: 70px;
+                border: 2px solid variables.$gray-200;
+                border-radius: 50%;
+                box-shadow: variables.$box-shadow-2;
+                font-size: 25px;
+                text-align: center;
+                transition: all 0.1s ease;
+                caret-color: transparent;
+            }
+            input:focus {
+                outline: none;
+                border-color: variables.$gray-400;
+                box-shadow: variables.$box-shadow-3;
+            }
+            input::selection {
+                background-color: transparent;
+                color: variables.$gray-400;
+            }
+        }
+        .submitButton {
+            padding: 16px 28px;
+            background-color: variables.$black;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            width: 100%;
+        }
+        .resend {
+            font-size: 18px;
+            color: variables.$gray-400;
+            margin-top: 20px;
+            a {
+                font-weight: bold;
+                font-size: 18px;
+                color: variables.$gray-400;
+                transition: all 0.15s ease;
+            }
+            a:hover {
+                color: variables.$green-400;
+            }
+            .timer {
+                font-weight: bold;
+                font-size: 18px;
+                color: variables.$gray-400;
+                transition: all 0.15s ease;
+            }
+        }
+        .backLink {
+            cursor: pointer;
+            user-select: none;
+            font-size: 18px;
+            color: variables.$gray-400;
+            margin-top: 20px;
+            @include mixins.flexCenter;
+            flex-direction: row;
+            gap: 5px;
+            transition: all 0.15s ease;
+            p {
+                margin-top: 3px;
+            }
+            &:hover {
+                color: variables.$green-400;
+            }
+        }
+    }
+}

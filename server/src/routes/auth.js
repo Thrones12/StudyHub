@@ -6,7 +6,11 @@ const authController = require("../controllers/auth");
 router.post("/register", authController.register);
 // Đăng nhập
 router.post("/login", authController.login);
-// Xác thực OTP
-router.post("/verify-otp", authController.verifyOtp);
+// Gửi OTP
+router.post("/send-otp", authController.sendOtp);
+// Kích hoạt tài khoản
+router.post("/active-account", authController.activeAccount);
+// Gửi mật khẩu mới
+router.post("/send-new-password", authController.sendNewPassword);
 
 module.exports = router;

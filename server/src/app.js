@@ -13,8 +13,12 @@ app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
 // Routes
+const authRouter = require("./routes/auth");
+app.use("/api/auth", authRouter);
 const userRouter = require("./routes/user");
 app.use("/api/user", userRouter);
+const notiRouter = require("../routers/notification");
+app.use("/api/notification", notiRouter);
 
 // 404 handler
 app.use((req, res, next) => {

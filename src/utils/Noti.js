@@ -4,7 +4,25 @@ const success = (text) => {
     Swal.fire({
         title: "Thành công!",
         text: text,
-        icon: "success", // Các tùy chọn icon: "success", "error", "warning", "info", "question"
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1500,
+    });
+};
+const warning = (text) => {
+    Swal.fire({
+        title: "Cảnh báo!",
+        text: text,
+        icon: "warning",
+        showConfirmButton: false,
+        timer: 1500,
+    });
+};
+const question = (text) => {
+    Swal.fire({
+        title: "Cảnh báo!",
+        text: text,
+        icon: "warning",
         showConfirmButton: false,
         timer: 1500,
     });
@@ -14,7 +32,7 @@ const error = (text) => {
     Swal.fire({
         title: "Thất bại!",
         text: text,
-        icon: "error", // Các tùy chọn icon: "success", "error", "warning", "info", "question"
+        icon: "error",
         showConfirmButton: false,
         timer: 2500,
     });
@@ -24,7 +42,7 @@ const info = (text) => {
     Swal.fire({
         title: "Thông báo!",
         text: text,
-        icon: "info", // Các tùy chọn icon: "success", "error", "warning", "info", "question"
+        icon: "info",
         confirmButtonText: "Đã biết!",
     });
 };
@@ -33,7 +51,7 @@ const infoWithDirection = ({ text, confirmText, func }) => {
     Swal.fire({
         title: "Thông báo!",
         text: text,
-        icon: "info", // Các tùy chọn icon: "success", "error", "warning", "info", "question"
+        icon: "info",
         confirmButtonText: confirmText ? confirmText : "Xác nhận",
         reverseButtons: true,
     }).then((result) => {
@@ -59,6 +77,13 @@ const infoWithYesNo = ({ title, text, confirmText, func }) => {
     });
 };
 
-const Noti = { success, error, info, infoWithDirection, infoWithYesNo };
+const Noti = {
+    success,
+    warning,
+    error,
+    info,
+    infoWithDirection,
+    infoWithYesNo,
+};
 
 export default Noti;

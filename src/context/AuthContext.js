@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const API = constants.API;
     const location = useLocation();
     const navigate = useNavigate();
-    const [userId, setUserId] = useState(null);
+    const [user, setUser] = useState(null);
 
     // Kiểm tra trạng thái đăng nhập khi load trang
     useEffect(() => {
@@ -42,10 +42,10 @@ export const AuthProvider = ({ children }) => {
                     },
                 });
 
-                if (res.status === 200 && res.data.userId) {
-                    setUserId(res.data.userId); // hoặc setUser(res.data.user)
+                if (res.status === 200 && res.data.user) {
+                    setUser(res.data.user); // hoặc setUser(res.data.user)
                 } else {
-                    throw new Error("Token không hợp lệ");
+                    throw "Token không hợp lệ";
                 }
             } catch (err) {
                 // Nếu token hết hạn hoặc không hợp lệ
@@ -56,13 +56,15 @@ export const AuthProvider = ({ children }) => {
         };
 
         checkLogin();
-    }, [API, userId]);
+    }, [API, user]);
 
     // Kiểm tra learning hour của user
     useEffect(() => {
         const checkLearningHour = async () => {
             try {
-                await axios.post(`${API}/user/check-learning-hour`, { userId });
+                await axios.post(`${API}/user/check-learning-hour`, {
+                    userId: user._id,
+                });
             } catch (err) {
                 if (err.response && err.response.data?.message) {
                     Noti.error(err.response.data.message);
@@ -72,121 +74,149 @@ export const AuthProvider = ({ children }) => {
             }
         };
 
-        if (userId) checkLearningHour();
-    }, [API, userId]);
-
-    const login = async (email, password, rememberMe) => {
+        if (user) checkLearningHour();
+    }, [API, user]);
+    // Đăng nhập
+    const Login = async ({ username, password, rememberMe = "'" }) => {
+        // Đăng xuất trước (xoá token cũ nếu có)
         logout();
+        // Kiểm tra đầu vào
+        if (!username) {
+            throw "Vui lòng nhập tên đăng nhập";
+        }
+        if (!password) {
+            throw "Vui lòng nhập mật khẩu";
+        }
         try {
-            const res = await axios.post(`${API}/user/login`, {
-                email,
+            const res = await axios.post(`${API}/auth/login`, {
+                username,
                 password,
             });
 
-            if (res.status === 200) {
-                const { token, userId } = res.data.data;
+            const { token, user } = res.data?.data || {};
 
-                // Lưu token theo rememberMe
-                if (rememberMe) {
-                    localStorage.setItem("token", token);
-                } else {
-                    sessionStorage.setItem("token", token);
-                }
-
-                // Cập nhật state userId
-                setUserId(userId);
-
-                // Thông báo và chuyển hướng
-                Noti.success("Đăng nhập thành công");
-                navigate("/");
+            if (!token || !user) {
+                throw "Dữ liệu phản hồi không hợp lệ";
             }
-        } catch (err) {
-            if (err.response && err.response.data?.message) {
-                Noti.error(err.response.data.message);
+
+            // Lưu token theo rememberMe
+            if (rememberMe) {
+                localStorage.setItem("token", token);
             } else {
-                Noti.error("Đăng nhập thất bại");
+                sessionStorage.setItem("token", token);
+            }
+
+            // Cập nhật state
+            setUser(user);
+            return res.data?.message || "Đăng nhập thành công";
+        } catch (error) {
+            if (error.response && error.response.data?.message) {
+                throw error.response.data.message || "Đăng nhập thất bại";
+            } else {
+                throw "Không thể kết nối đến máy chủ";
             }
         }
     };
-
-    const register = async (email, password, confirmPassword) => {
+    // Đăng ký
+    const Register = async ({
+        lastName,
+        firstName,
+        username,
+        email,
+        password,
+        confirmPassword,
+    }) => {
         try {
-            // Kiểm tra khớp mật khẩu
-            if (password !== confirmPassword) {
-                Noti.error("Mật khẩu không khớp");
-                return;
-            }
-
-            const res = await axios.post(`${API}/user/register`, {
-                email,
-                password,
+            const res = await axios.post(`${API}/auth/register`, {
+                lastName: lastName,
+                firstName: firstName,
+                username: username,
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword,
             });
-
-            if (res.status === 200) {
-                Noti.success("Đăng ký thành công");
-                // Chuyển hướng đến trang đăng nhập hoặc tự động đăng nhập
-                navigate("/auth"); // hoặc navigate("/") nếu tự động login
-            }
-        } catch (err) {
-            if (err.response && err.response.data?.message) {
-                Noti.error(err.response.data.message);
+            return res.data.message;
+        } catch (error) {
+            if (error.response && error.response.data?.message) {
+                throw error.response.data.message || "Đăng ký thất bại";
             } else {
-                Noti.error("Đăng ký thất bại");
+                throw "Không thể kết nối đến máy chủ";
             }
         }
     };
-
+    // Đăng xuất
     const logout = () => {
         // Xóa token ở cả localStorage và sessionStorage
         localStorage.removeItem("token");
         sessionStorage.removeItem("token");
 
         // Cập nhật lại trạng thái trong app
-        setUserId(null);
+        setUser(null);
 
         // Chuyển hướng về trang đăng nhập
         navigate("/auth");
     };
-
-    const sendOtp = async (email) => {
+    // Gửi OTP
+    const SendOtp = async (email) => {
+        let otp;
+        await axios
+            .post(`${API}/auth/send-otp`, { email })
+            .then((res) => {
+                otp = res.data.otp;
+            })
+            .catch((err) => {
+                return Noti.warning(
+                    err.response.data?.message || "Gửi mã xác thực thất bại"
+                );
+            });
+        return otp;
+    };
+    // Kích hoạt tài khoản
+    const ActiveAccount = async (email) => {
         try {
-            await axios.post(`${API}/user/send-otp`, { email });
-            Noti.info("OTP đã được gửi về email");
-            navigate("/auth/verify", { state: { email } });
-        } catch (err) {
-            if (err.response && err.response.data?.message) {
-                Noti.error(err.response.data.message);
+            const res = await axios.post(`${API}/auth/active-account`, {
+                email,
+            });
+            return res.data.message;
+        } catch (error) {
+            if (error.response && error.response.data?.message) {
+                throw (
+                    error.response.data.message ||
+                    "Kích hoạt tài khoản thất bại"
+                );
             } else {
-                Noti.error("Gửi OTP thất bại");
+                throw "Không thể kết nối đến máy chủ";
             }
         }
     };
-
-    const verify = async (email, inputOtp) => {
+    // Gửi mật khẩu mới
+    const SendNewPassword = async (email) => {
         try {
-            await axios.post(`${API}/user/verify`, { email, inputOtp });
-            return true;
-        } catch (err) {
-            return false;
+            const res = await axios.post(`${API}/auth/send-new-password`, {
+                email,
+            });
+            return res.data.message;
+        } catch (error) {
+            if (error.response && error.response.data?.message) {
+                throw (
+                    error.response.data.message || "Gửi mật khẩu mới thất bại"
+                );
+            } else {
+                throw "Không thể kết nối đến máy chủ";
+            }
         }
-    };
-
-    const sendPassword = async (email) => {
-        await axios.post(`${API}/user/send-password`, { email });
-        Noti.success("Mật khẩu mới đã được gửi đến email của bạn");
-        navigate("/auth");
     };
 
     return (
         <AuthContext.Provider
             value={{
-                userId,
-                login,
-                register,
+                user,
+                Login,
+                Register,
                 logout,
-                sendOtp,
-                verify,
-                sendPassword,
+                SendOtp,
+                ActiveAccount,
+                SendNewPassword,
             }}
         >
             {children}

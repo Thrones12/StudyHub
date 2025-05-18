@@ -1,8 +1,8 @@
 // Auth
-import AuthPage from "./Auth/AuthPage/AuthPage";
 import ForgotPage from "./Auth/ForgotPage/ForgotPage";
 import VerifyPage from "./Auth/VerifyPage/VerifyPage";
 import RegisterPage from "./Auth/RegisterPage/RegisterPage";
+import LoginPage from "./Auth/LoginPage/LoginPage";
 
 // Profile
 import AccountPage from "./Profile/AccountPage/AccountPage";
@@ -27,10 +27,10 @@ import SoundSpacePage from "./SoundSpacePage/SoundSpacePage";
 import HomePage from "./HomePage/HomePage";
 export {
     // Auth page
-    AuthPage,
     ForgotPage,
     VerifyPage,
     RegisterPage,
+    LoginPage,
     // Profile page
     AccountPage,
     ProgressPage,

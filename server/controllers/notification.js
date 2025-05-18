@@ -59,10 +59,7 @@ const Create = async (req, res) => {
         const newData = new Notification({ userId, type, content, link });
         newData.save();
 
-        // Add Notification vào User
-        const user = await User.findById(userId);
-        user.notifications.push(newData._id.toString());
-        user.save();
+        console.log(req.body);
 
         // 200 - Success
         return res.status(200).json({ data: newData });

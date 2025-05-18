@@ -3,6 +3,7 @@ import Noti from "../utils/Noti";
 import constants from "../utils/constants";
 import dayjs from "dayjs";
 const API = constants.API;
+
 // Get user
 const GetUser = async (userId, setData) => {
     try {
