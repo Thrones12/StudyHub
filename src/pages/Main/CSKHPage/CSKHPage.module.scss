@@ -1,0 +1,112 @@
+@use "../../../styles/variables";
+
+.wrapper {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    color: variables.$gray-400;
+    .container {
+        padding: 0 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0 10px;
+    }
+    .Contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .Contact {
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .Socials {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 5px;
+        a {
+            color: variables.$gray-400;
+        }
+        .Social {
+            cursor: pointer;
+            svg {
+                width: 28px;
+                height: 28px;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .FAQ {
+        margin-right: 20px;
+        font-size: 14px;
+        .Question {
+            font-weight: bold;
+            color: variables.$gray-400;
+        }
+        .Answer {
+        }
+    }
+    .Form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .ColLeft {
+            width: calc(50% - 5px);
+            margin-right: 5px;
+        }
+        .ColRight {
+            width: calc(50% - 5px);
+            margin-left: 5px;
+        }
+        .Field {
+            input,
+            textarea {
+                font-size: 16px;
+                padding: 8px 12px;
+                outline: none;
+                border: 1px solid variables.$gray-200;
+                border-radius: 3px;
+                box-shadow: variables.$box-shadow-2;
+                width: 100%;
+                transition: all 0.3s ease;
+                &:focus {
+                    border: 1px solid variables.$green-200;
+                    box-shadow: variables.$box-shadow-3;
+                }
+            }
+        }
+        .Button {
+            button {
+                width: auto;
+                font-size: 16px;
+                padding: 8px 12px;
+                border-radius: 10px;
+                background-color: variables.$green-300;
+                box-shadow: variables.$box-shadow-2;
+                color: #fff;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: variables.$green-400;
+                    box-shadow: variables.$box-shadow-3;
+                }
+            }
+        }
+    }
+}

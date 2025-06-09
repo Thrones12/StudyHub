@@ -5,49 +5,69 @@ import RegisterPage from "./Auth/RegisterPage/RegisterPage";
 import LoginPage from "./Auth/LoginPage/LoginPage";
 
 // Profile
-import AccountPage from "./Profile/AccountPage/AccountPage";
+import ProfilePage from "./Profile/ProfilePage/ProfilePage";
 import ProgressPage from "./Profile/ProgressPage/ProgressPage";
 import StatisPage from "./Profile/StatisPage/StatisPage";
 import LearningPathPage from "./Profile/LearningPathPage/LearningPathPage";
-import ActivitiesPage from "./Profile/ActivitiesPage/ActivitiesPage";
+import SaveExamPage from "./Profile/SaveExamPage/SaveExamPage";
+import LikeLessonPage from "./Profile/LikeLessonPage/LikeLessonPage";
+
+// Main
+import HomePage from "./Main/HomePage/HomePage";
+import CoursePage from "./Main/CoursePage/CoursePage";
+import ExamPage from "./Main/ExamPage/ExamPage";
+import TaskPage from "./Main/TaskPage/TaskPage";
+import SoundPage from "./Main/SoundPage/SoundPage";
+import CSKHPage from "./Main/CSKHPage/CSKHPage";
 
 // Study
-import CoursePage from "../pages/CoursePage/CoursePage";
-import StudyPage from "../pages/StudyPage/StudyPage";
-import StudyExamPage from "../pages/StudyExamPage/StudyExamPage";
+import TestPage from "./Study/TestPage/TestPage";
+import LessonStudyPage from "./Study/LessonStudyPage/LessonStudyPage";
 
 // Storage
-import StorageItemPage from "../pages/StorageItemPage/StorageItemPage";
-import StoragePage from "../pages/StoragePage/StoragePage";
-import ExamPage from "../pages/ExamPage/ExamPage";
-import NotificationPage from "./NotificationPage/NotificationPage";
 import CalendarPage from "./CalendarPage/CalendarPage";
 
-import SoundSpacePage from "./SoundSpacePage/SoundSpacePage";
-import HomePage from "./HomePage/HomePage";
+// Admin
+import AdminUserPage from "./Admin/AdminUserPage/AdminUserPage";
+import AdminUserDetailPage from "./Admin/AdminUserDetailPage/AdminUserDetailPage";
+import AdminLessonPage from "./Admin/AdminLessonPage/AdminLessonPage";
+import AdminExamPage from "./Admin/AdminExamPage/AdminExamPage";
+import AdminQuestionPage from "./Admin/AdminQuestionPage/AdminQuestionPage";
+import AdminThemePage from "./Admin/AdminThemePage/AdminThemePage";
+import AdminSoundPage from "./Admin/AdminSoundPage/AdminSoundPage";
+import AdminSupportPage from "./Admin/AdminSupportPage/AdminSupportPage";
 export {
     // Auth page
     ForgotPage,
     VerifyPage,
     RegisterPage,
     LoginPage,
+    CSKHPage,
+    // Main route
+    TaskPage,
     // Profile page
-    AccountPage,
+    ProfilePage,
     ProgressPage,
     StatisPage,
     LearningPathPage,
-    ActivitiesPage,
+    SaveExamPage,
+    LikeLessonPage,
     // Study page
+    TestPage,
+    LessonStudyPage,
     CoursePage,
-    StudyPage,
-    StudyExamPage,
-    // Storae
-    StoragePage,
-    StorageItemPage,
     ExamPage,
-    NotificationPage,
     CalendarPage,
     //
-    SoundSpacePage,
+    SoundPage,
     HomePage,
+    // Admin
+    AdminUserPage,
+    AdminUserDetailPage,
+    AdminLessonPage,
+    AdminExamPage,
+    AdminQuestionPage,
+    AdminThemePage,
+    AdminSoundPage,
+    AdminSupportPage,
 };

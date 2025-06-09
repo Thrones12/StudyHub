@@ -1,36 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./ExamCard.css";
 import constants from "../../utils/constants";
-import Noti from "../../utils/Noti";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import styles from "./ExamCard.module.scss";
 
 const ExamCard = ({ item }) => {
     const API = constants.API;
     const nav = useNavigate();
     const [courseTitle, setCourseTitle] = useState("");
     const [subjectTitle, setSubjectTitle] = useState("");
-
-    // Fetch title
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await axios.get(
-                    `${API}/exam/get-title?id=${item._id}`
-                );
-                let data = res.data.data;
-                setCourseTitle(data.courseTitle);
-                setSubjectTitle(data.subjectTitle);
-            } catch (err) {
-                if (err.response && err.response.data?.message) {
-                    Noti.error(err.response.data.message);
-                } else {
-                    Noti.error("Tải trang thất bại");
-                }
-            }
-        };
-        fetchData();
-    }, [API, courseTitle, subjectTitle]);
 
     const formatTimeToMinute = (seconds) => {
         const minutes = Math.round(seconds / 60); // dùng round để làm tròn
@@ -72,46 +50,48 @@ const ExamCard = ({ item }) => {
         return `Vừa xong`;
     }
     return (
-        <div
-            className={`exam-card ${item.level}`}
-            onClick={() => nav(`/exam/${item._id}`)}
-        >
-            {/* BEGIN: Main info */}
-            <div className='main-info'>
-                <div className='title-wrapper'>
-                    <div className='title'>{item.title}</div>
-                    <div className='sub-title'>
-                        {courseTitle} - {subjectTitle}
+        <div className={styles.wrapper}>
+            <div
+                className={`exam-card ${item.level} ${styles.exam}`}
+                onClick={() => nav(`/exam/${item._id}`)}
+            >
+                {/* BEGIN: Main info */}
+                <div className='main-info'>
+                    <div className='title-wrapper'>
+                        <div className='title'>{item.title}</div>
+                        <div className='sub-title'>
+                            {courseTitle} - {subjectTitle}
+                        </div>
+                    </div>
+                    <div className='exam-info'>
+                        <div className='info-item'>
+                            Số lượng câu hỏi:{" "}
+                            <span>{item.questions.length} câu</span>
+                        </div>
+                        <div className='info-item'>
+                            Thời gian làm bài:{" "}
+                            <span>{formatTimeToMinute(item.duration)}</span>
+                        </div>
                     </div>
                 </div>
-                <div className='exam-info'>
-                    <div className='info-item'>
-                        Số lượng câu hỏi:{" "}
-                        <span>{item.questions.length} câu</span>
+                {/* END: Main info */}
+                {/* BEGIN: Sub info */}
+                <div className='sub-info'>
+                    <div className='info'>
+                        {formatAttemptCount(item.attemptCount)} lượt làm
+                        {" - "}
+                        {formatTimeAgo(item.createdAt)}
                     </div>
-                    <div className='info-item'>
-                        Thời gian làm bài:{" "}
-                        <span>{formatTimeToMinute(item.duration)}</span>
+                    <div className='level'>
+                        {item.level === "easy"
+                            ? "Dễ"
+                            : item.level === "medium"
+                            ? "Trung bình"
+                            : "Khó"}
                     </div>
                 </div>
+                {/* END: Sub info */}
             </div>
-            {/* END: Main info */}
-            {/* BEGIN: Sub info */}
-            <div className='sub-info'>
-                <div className='info'>
-                    {formatAttemptCount(item.attemptCount)} lượt làm
-                    {" - "}
-                    {formatTimeAgo(item.createdAt)}
-                </div>
-                <div className='level'>
-                    {item.level === "easy"
-                        ? "Dễ"
-                        : item.level === "medium"
-                        ? "Trung bình"
-                        : "Khó"}
-                </div>
-            </div>
-            {/* END: Sub info */}
         </div>
     );
 };

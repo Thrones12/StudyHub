@@ -1,11 +1,10 @@
 import { Route } from "react-router-dom";
-import StudyPage from "../pages/StudyPage/StudyPage";
-import StudyExamPage from "../pages/StudyExamPage/StudyExamPage";
+import { TestPage, LessonStudyPage } from "../pages";
 
 const StudyRoutes = (
     <>
-        <Route path=':lessonId' element={<StudyPage />} />
-        <Route path='exam/:chapterId' element={<StudyExamPage />} />
+        <Route path='lesson/:lessonId' element={<LessonStudyPage />} />
+        <Route path='exam/:examId' element={<TestPage />} />
     </>
 );
 

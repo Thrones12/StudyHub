@@ -10,7 +10,6 @@ const shema = new mongoose.Schema(
         },
         content: { type: String },
         isRead: { type: Boolean, default: false },
-        isShow: { type: Boolean, default: true },
         link: { type: String },
     },
     { timestamps: true }

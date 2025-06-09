@@ -81,8 +81,8 @@
 }
 .exam-card .exam-info .info-item span {
     font-size: 15px;
-    font-weight: 600; /* in đậm */
-    color: var(--gray-900); /* tùy chỉnh màu nếu cần nổi bật hơn */
+    font-weight: 600;
+    color: var(--gray-900);
 }
 /* SUB INFO */
 .exam-card .sub-info {

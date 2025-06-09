@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const shema = new mongoose.Schema({
+const schema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -36,13 +36,19 @@ const shema = new mongoose.Schema({
     profile: {
         avatarUrl: {
             type: String,
-            default: "",
+            default:
+                "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749332122/user-286_kf2bvt.png",
         },
-        lastname: {
+        fullname: {
             type: String,
             default: "",
         },
-        firstname: {
+        gender: {
+            type: String,
+            enum: ["Male", "Female", "Other"],
+            default: "Male",
+        },
+        address: {
             type: String,
             default: "",
         },
@@ -50,13 +56,25 @@ const shema = new mongoose.Schema({
             type: String,
             default: "",
         },
-        address: {
-            type: String,
-            default: "",
-        },
         birthdate: {
             type: Date,
             default: null,
+        },
+        school: {
+            type: String,
+            default: "",
+        },
+        grade: {
+            type: String,
+            default: "",
+        },
+        hobby: {
+            type: String,
+            default: "",
+        },
+        interests: {
+            type: String,
+            default: "",
         },
     },
     learned: [
@@ -85,6 +103,7 @@ const shema = new mongoose.Schema({
                         {
                             link: { type: String },
                             subjectTitle: { type: String },
+                            subjectId: { type: String },
                             second: { type: Number, default: 0 },
                         },
                     ],
@@ -93,13 +112,24 @@ const shema = new mongoose.Schema({
         },
     ],
     examResults: [{ type: mongoose.Schema.Types.ObjectId, ref: "ExamResult" }],
-    histories: [{ type: mongoose.Schema.Types.ObjectId, ref: "Activity" }],
+    histories: [{ type: String }],
     likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Lesson" }],
-    storages: [{ type: mongoose.Schema.Types.ObjectId, ref: "Storage" }],
+    saves: [{ type: mongoose.Schema.Types.ObjectId, ref: "Exam" }],
     notifications: [
         { type: mongoose.Schema.Types.ObjectId, ref: "Notification" },
     ],
     tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: "Task" }],
+    customThemes: [{ type: String }],
+    todos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Todo" }],
+    sessions: [{ type: mongoose.Schema.Types.ObjectId, ref: "Session" }],
+    searchs: [
+        {
+            title: { type: String },
+            info: { type: String },
+            link: { type: String },
+            timestamp: { type: Date, default: Date.now },
+        },
+    ],
 });
 
-module.exports = mongoose.model("User", shema);
+module.exports = mongoose.model("User", schema);

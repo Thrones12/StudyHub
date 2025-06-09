@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
     // Kiểm tra trạng thái đăng nhập khi load trang
     useEffect(() => {
-        const checkLogin = async () => {
+        const verifyToken = async () => {
             const excludedPaths = [
                 "/auth",
                 "/auth/register",
@@ -36,28 +36,36 @@ export const AuthProvider = ({ children }) => {
             }
 
             try {
-                const res = await axios.get(`${API}/user/verify-token`, {
-                    headers: {
-                        Authorization: `Bearer ${storedToken}`,
-                    },
-                });
+                const res = await axios.post(
+                    `${API}/auth/verify-token`,
+                    {},
+                    {
+                        headers: {
+                            Authorization: `Bearer ${storedToken}`,
+                        },
+                    }
+                );
 
-                if (res.status === 200 && res.data.user) {
-                    setUser(res.data.user); // hoặc setUser(res.data.user)
+                if (res.status === 200 && res.data?.user) {
+                    setUser(res.data.user);
                 } else {
                     throw "Token không hợp lệ";
                 }
             } catch (err) {
-                // Nếu token hết hạn hoặc không hợp lệ
+                // Token sai hoặc hết hạn => xóa và chuyển hướng
                 localStorage.removeItem("token");
                 sessionStorage.removeItem("token");
+                Noti.warning(
+                    "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại."
+                );
                 navigate("/auth");
             }
         };
 
-        checkLogin();
+        if (user === null) {
+            verifyToken();
+        }
     }, [API, user]);
-
     // Kiểm tra learning hour của user
     useEffect(() => {
         const checkLearningHour = async () => {
@@ -77,9 +85,9 @@ export const AuthProvider = ({ children }) => {
         if (user) checkLearningHour();
     }, [API, user]);
     // Đăng nhập
-    const Login = async ({ username, password, rememberMe = "'" }) => {
+    const Login = async ({ username, password, rememberMe = false }) => {
         // Đăng xuất trước (xoá token cũ nếu có)
-        logout();
+        Logout();
         // Kiểm tra đầu vào
         if (!username) {
             throw "Vui lòng nhập tên đăng nhập";
@@ -108,7 +116,7 @@ export const AuthProvider = ({ children }) => {
 
             // Cập nhật state
             setUser(user);
-            return res.data?.message || "Đăng nhập thành công";
+            return user;
         } catch (error) {
             if (error.response && error.response.data?.message) {
                 throw error.response.data.message || "Đăng nhập thất bại";
@@ -119,8 +127,7 @@ export const AuthProvider = ({ children }) => {
     };
     // Đăng ký
     const Register = async ({
-        lastName,
-        firstName,
+        fullname,
         username,
         email,
         password,
@@ -128,8 +135,7 @@ export const AuthProvider = ({ children }) => {
     }) => {
         try {
             const res = await axios.post(`${API}/auth/register`, {
-                lastName: lastName,
-                firstName: firstName,
+                fullname: fullname,
                 username: username,
                 email: email,
                 password: password,
@@ -145,7 +151,7 @@ export const AuthProvider = ({ children }) => {
         }
     };
     // Đăng xuất
-    const logout = () => {
+    const Logout = () => {
         // Xóa token ở cả localStorage và sessionStorage
         localStorage.removeItem("token");
         sessionStorage.removeItem("token");
@@ -211,9 +217,10 @@ export const AuthProvider = ({ children }) => {
         <AuthContext.Provider
             value={{
                 user,
+                setUser,
                 Login,
                 Register,
-                logout,
+                Logout,
                 SendOtp,
                 ActiveAccount,
                 SendNewPassword,

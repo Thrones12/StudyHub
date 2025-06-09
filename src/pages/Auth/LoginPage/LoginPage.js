@@ -10,8 +10,8 @@ export default function LoginPage() {
     const nav = useNavigate();
     const { Login } = useContext(AuthContext);
     const [form, setForm] = useState({
-        username: "",
-        password: "",
+        username: "hungphongpq1",
+        password: "Phong@123",
     });
     const [showPassword, setShowPassword] = useState(false);
     const togglePassword = () => setShowPassword((prev) => !prev);
@@ -29,8 +29,10 @@ export default function LoginPage() {
             password: form.password,
         })
             .then((res) => {
-                if (res) {
+                if (res.role === "user") {
                     nav("/");
+                } else {
+                    nav("/admin");
                 }
             })
             .catch((err) => {

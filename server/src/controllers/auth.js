@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Todo = require("../models/todo");
 const generator = require("../utils/generator");
 const { sendMail } = require("../utils/mailers");
 const bcrypt = require("bcryptjs");
@@ -8,24 +9,11 @@ require("dotenv").config();
 // Đăng ký tài khoản mới
 exports.register = async (req, res) => {
     try {
-        const {
-            lastName,
-            firstName,
-            username,
-            email,
-            password,
-            confirmPassword,
-        } = req.body;
+        const { fullname, username, email, password, confirmPassword } =
+            req.body;
 
         // Kiểm tra dữ liệu đầu vào
-        if (
-            !lastName ||
-            !firstName ||
-            !username ||
-            !email ||
-            !password ||
-            !confirmPassword
-        ) {
+        if (!fullname || !username || !email || !password || !confirmPassword) {
             return res
                 .status(400)
                 .json({ message: "Mời nhập thông tin đăng ký" });
@@ -51,9 +39,14 @@ exports.register = async (req, res) => {
             username,
             email,
             password: hashedPassword,
-            profile: { lastName, firstName },
+            profile: { fullname },
             status: "not_verify",
         });
+
+        let todo = new Todo({ name: "Công việc" });
+        await todo.save();
+        newUser.todos.push(todo._id);
+
         await newUser.save();
         // Tạo OTP và gửi email
         const otp = generator.generateOTP();
@@ -82,7 +75,11 @@ exports.login = async (req, res) => {
                 .json({ message: "Mời nhập thông tin đăng ký" });
         }
         // Tìm người dùng theo username
-        const user = await User.findOne({ username });
+
+        const user = await User.findOne({ username }).populate({
+            path: "sessions",
+            model: "Session",
+        });
         if (!user)
             return res
                 .status(404)
@@ -111,12 +108,11 @@ exports.login = async (req, res) => {
             process.env.JWT_SECRET,
             { expiresIn: "30d" }
         );
+        const { password: userPassword, ...userWithoutPassword } = user._doc;
+
         // Thành công
         return res.status(200).json({
-            data: {
-                token,
-                user: { _id: user._id, email: user.email, role: user.role },
-            },
+            data: { token, user: userWithoutPassword },
             message: "Đăng nhập thành công",
         });
     } catch (err) {
@@ -207,5 +203,36 @@ exports.sendNewPassword = async (req, res) => {
         });
     } catch (err) {
         res.status(500).json({ message: err.message });
+    }
+};
+// Xác nhận token
+exports.verifyToken = async (req, res) => {
+    try {
+        const authHeader = req.headers.authorization;
+        if (!authHeader || !authHeader.startsWith("Bearer ")) {
+            return res.status(401).json({ message: "Không có token" });
+        }
+
+        const token = authHeader.split(" ")[1];
+
+        try {
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+            const user = await User.findById(decoded._id)
+                .populate({ path: "sessions", model: "Session" })
+                .select("-password");
+            if (!user) {
+                return res
+                    .status(404)
+                    .json({ message: "Người dùng không tồn tại" });
+            }
+
+            return res.status(200).json({ user });
+        } catch (err) {
+            return res.status(401).json({ message: "Token không hợp lệ" });
+        }
+    } catch (err) {
+        console.error("Lỗi verify token:", err);
+        return res.status(500).json({ message: "Lỗi server" });
     }
 };

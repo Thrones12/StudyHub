@@ -1,8 +1,8 @@
 .calendar-page {
     display: flex;
     flex-direction: column;
-    width: 1600px;
-    margin: 10px auto 20px;
+    width: 100%;
+    margin: 0 auto;
 }
 .calendar-page .controls {
     display: flex;

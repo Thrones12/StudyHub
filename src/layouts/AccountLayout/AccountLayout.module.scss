@@ -1,0 +1,12 @@
+@use "../../styles//variables";
+
+.BackButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: variables.$gray-400;
+    transition: all 0.3s ease;
+    &:hover {
+        color: variables.$green-200;
+    }
+}

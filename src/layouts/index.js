@@ -1,6 +1,6 @@
-import ProfileLayout from "./ProfileLayout/ProfileLayout";
+import AccountLayout from "./AccountLayout/AccountLayout";
 import MainLayout from "./MainLayout/MainLayout";
 import BasicLayout from "./BasicLayout/BasicLayout";
-import StudyLayout from "./StudyLayout/StudyLayout";
+import AdminLayout from "./AdminLayout/AdminLayout";
 
-export { ProfileLayout, MainLayout, BasicLayout, StudyLayout };
+export { AccountLayout, MainLayout, BasicLayout, AdminLayout };

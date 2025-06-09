@@ -19,12 +19,8 @@ import ModalMoreTask from "../ModalMoreTask/ModalMoreTask";
 
 const MAX_TASKS_DISPLAY = 3; // Số task tối đa hiển thị
 const MAX_DAY = 42; // 6 row, 7 column
-const Calendar = ({ date, setReload }) => {
+const Calendar = ({ date, tasks, openTask }) => {
     const { userId } = useContext(AuthContext);
-    const [modalDate, setModalDate] = useState(dayjs());
-    const [isOpenModalTask, setIsOpenModalTask] = useState(false);
-    const [tasks, setTasks] = useState();
-    const [selectTask, setSelectTask] = useState(null);
     const [isOpenMoreTask, setIsOpenMoreTask] = useState(-1);
 
     let daysOfWeek = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
@@ -43,30 +39,72 @@ const Calendar = ({ date, setReload }) => {
         setDays([...tempDays]);
     }, [date]);
 
-    // Get công việc trong tháng
-    useEffect(() => {
-        if (date && userId) {
-            Task.GetTaskOfMonth(userId, dayjs(date), setTasks);
-        }
-    }, [userId, date]);
-
     const getTaskOfDay = (day) => {
-        let data = [];
-        data = tasks
-            .filter((task) => isSameDay(task.date, day))
-            .sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort tăng dần
-        return data;
-    };
-    const openTask = (e, task, day) => {
-        e.stopPropagation();
-        setSelectTask(task);
-        setModalDate(dayjs(day));
-        setIsOpenModalTask(true);
+        const target = new Date(day);
+        target.setHours(0, 0, 0, 0);
+
+        return tasks
+            .filter((task) => {
+                const dueDate = new Date(task.dueDate);
+                dueDate.setHours(0, 0, 0, 0);
+
+                // Trường hợp có repeat
+                if (task.repeat && task.repeat !== "none") {
+                    switch (task.repeat) {
+                        case "daily":
+                            return target >= dueDate;
+
+                        case "weekly":
+                            return (
+                                target >= dueDate &&
+                                target.getDay() === dueDate.getDay()
+                            );
+
+                        case "monthly":
+                            return (
+                                target >= dueDate &&
+                                target.getDate() === dueDate.getDate()
+                            );
+
+                        case "yearly":
+                            return (
+                                target >= dueDate &&
+                                target.getDate() === dueDate.getDate() &&
+                                target.getMonth() === dueDate.getMonth()
+                            );
+
+                        default:
+                            return false;
+                    }
+                }
+
+                // Trường hợp không lặp (repeat === "none" hoặc không có)
+                const endDate = new Date(task.endDate);
+                endDate.setHours(0, 0, 0, 0);
+                return target >= dueDate && target <= endDate;
+            })
+            .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
     };
 
     const openMoreTask = (e, index) => {
         e.stopPropagation();
         setIsOpenMoreTask(index);
+    };
+    const getTaskColor = (task) => {
+        if (task.completed) return "#4CAF50"; // ✅ Đã hoàn thành (xanh lá)
+
+        switch (task.priority) {
+            case "low":
+                return "#2196F3"; // 🟢 Ưu tiên thấp (xanh dương)
+            case "medium":
+                return "#FFC107"; // 🟡 Trung bình (vàng)
+            case "high":
+                return "#FF9800"; // 🟠 Cao (cam)
+            case "urgent":
+                return "#F44336"; // 🔴 Khẩn cấp (đỏ)
+            default:
+                return "#BDBDBD"; // ⚪️ Mặc định (xám nhạt)
+        }
     };
     return (
         <div className='calendar'>
@@ -89,10 +127,6 @@ const Calendar = ({ date, setReload }) => {
                                 className={`calendar-day ${
                                     isSameMonth(day, date) ? "" : "disabled"
                                 } ${isToday(day) ? "today" : ""}`}
-                                onClick={() => {
-                                    setModalDate(dayjs(day));
-                                    setIsOpenModalTask(true);
-                                }}
                             >
                                 <div className='date-number'>
                                     {format(day, "d")}
@@ -101,10 +135,12 @@ const Calendar = ({ date, setReload }) => {
                                     taskOfDay.map((task, index) => (
                                         <div
                                             key={index}
-                                            className='task-item'
-                                            onClick={(e) =>
-                                                openTask(e, task, day)
-                                            }
+                                            className={`task-item`}
+                                            style={{
+                                                backgroundColor:
+                                                    getTaskColor(task),
+                                            }}
+                                            onClick={() => openTask(task)}
                                         >
                                             {task.title
                                                 ? task.title
@@ -118,7 +154,11 @@ const Calendar = ({ date, setReload }) => {
                                             .map((task, index) => (
                                                 <div
                                                     key={index}
-                                                    className='task-item'
+                                                    className={`task-item ${
+                                                        task.completed === true
+                                                            ? "completed"
+                                                            : ""
+                                                    }`}
                                                     onClick={(e) =>
                                                         openTask(e, task, day)
                                                     }
@@ -151,14 +191,6 @@ const Calendar = ({ date, setReload }) => {
                         );
                     })}
             </div>
-            <ModalTask
-                initDate={modalDate}
-                isOpen={isOpenModalTask}
-                setIsOpen={setIsOpenModalTask}
-                setReload={setReload}
-                task={selectTask}
-                setTask={setSelectTask}
-            />
         </div>
     );
 };

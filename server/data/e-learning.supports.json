@@ -1,0 +1,164 @@
+[
+    {
+        "_id": {
+            "$oid": "683d6bde009a9d8d2ca96f33"
+        },
+        "name": "Phạm Hùng Phong",
+        "email": "21110273@student.hcmute.edu.vn",
+        "title": "Đây là tiêu đề",
+        "question": "Làm sao để liên hệ với CSKH?",
+        "answer": "Bạn có thể liên hệ qua Facebook, Instagram, email hoặc số điện thoại bên phải.",
+        "isShow": true,
+        "createdAt": {
+            "$date": "2025-06-02T09:16:14.642Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-02T09:16:14.642Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "683d6be8009a9d8d2ca96f35"
+        },
+        "name": "Phạm Hùng Phong",
+        "email": "21110273@student.hcmute.edu.vn",
+        "title": "Đây là tiêu đề",
+        "question": "Làm sao để đăng ký tài khoản?",
+        "answer": "Bạn vào trang Đăng ký và điền đầy đủ thông tin để tạo tài khoản mới.",
+        "isShow": true,
+        "createdAt": {
+            "$date": "2025-06-02T09:16:24.381Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-02T09:16:24.381Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "683d6bf6009a9d8d2ca96f37"
+        },
+        "name": "Phạm Hùng Phong",
+        "email": "21110273@student.hcmute.edu.vn",
+        "title": "Đây là tiêu đề",
+        "question": "Tôi quên mật khẩu thì phải làm sao?",
+        "answer": "Bạn có thể bấm 'Quên mật khẩu' để lấy lại qua email đã đăng ký.",
+        "isShow": true,
+        "createdAt": {
+            "$date": "2025-06-02T09:16:38.081Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-02T09:16:38.081Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "683d6c03009a9d8d2ca96f39"
+        },
+        "name": "Phạm Hùng Phong",
+        "email": "21110273@student.hcmute.edu.vn",
+        "title": "Đây là tiêu đề",
+        "question": "Câu hỏi nè",
+        "answer": "",
+        "isShow": false,
+        "createdAt": {
+            "$date": "2025-06-02T09:16:51.298Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-02T09:16:51.298Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6841e94200f1fc42d4b0cc5d"
+        },
+        "name": "Phạm Hùng Phong",
+        "email": "hungphong.canhan@gmail.com",
+        "title": "Tiêu đề nè",
+        "question": "Nội dung báo cáo nè",
+        "answer": "",
+        "isShow": false,
+        "createdAt": {
+            "$date": "2025-06-05T19:00:18.175Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-05T19:00:18.175Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6841e9f000f1fc42d4b0cc5f"
+        },
+        "name": "Phạm Hùng Phong",
+        "email": "hungphong.canhan@gmail.com",
+        "title": "Báo cáo ở bài học 683c4d9fcd45165ec1affd06: Sai nội dung bài giảng",
+        "question": "Đây là nội dung bài giảng môn ngữ văn chứ không phải môn vật lý",
+        "answer": "",
+        "isShow": false,
+        "createdAt": {
+            "$date": "2025-06-05T19:03:12.580Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-05T19:03:12.580Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "684429d35772a2cb2a60c643"
+        },
+        "name": "phongggg",
+        "email": "123@gmail.com",
+        "title": "123",
+        "question": "123",
+        "answer": "",
+        "isShow": false,
+        "createdAt": {
+            "$date": "2025-06-07T12:00:19.722Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-07T12:00:19.722Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "684429e05772a2cb2a60c645"
+        },
+        "name": "phongggg",
+        "email": "thunder1412.td@gmail.com",
+        "title": "123123",
+        "question": "1231231",
+        "answer": "",
+        "isShow": false,
+        "createdAt": {
+            "$date": "2025-06-07T12:00:32.181Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-07T12:00:32.181Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "68442a095772a2cb2a60c647"
+        },
+        "name": "Samsung Galaxy S211",
+        "email": "hungphong.canhan@gmail.com",
+        "title": "123123",
+        "question": "341516",
+        "answer": "",
+        "isShow": false,
+        "createdAt": {
+            "$date": "2025-06-07T12:01:13.634Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-07T12:01:13.634Z"
+        },
+        "__v": 0
+    }
+]

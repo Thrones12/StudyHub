@@ -78,12 +78,6 @@ const Header = ({ isOpen, handleAside }) => {
             {/* End: Logo */}
 
             <div className='container'>
-                {/* Begin: Search */}
-                <div className='search'>
-                    <SearchBar />
-                </div>
-                {/* End: Search */}
-
                 {/* Begin: Tools */}
                 <div className='tools'>
                     {/* Begin: ModalNotification */}

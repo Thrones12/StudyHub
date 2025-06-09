@@ -1,0 +1,132 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    .filter {
+        flex: 1;
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        .verticaline {
+            width: 1px;
+            height: 24px;
+            background-color: variables.$gray-200;
+            margin: 0 5px;
+        }
+    }
+    .button {
+        user-select: none;
+        @include mixins.iconButton();
+        height: 40px;
+        padding: 10px;
+        gap: 8px;
+        font-size: 14px;
+        color: variables.$gray-400;
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+        &.active {
+            border: 1px solid variables.$green-200;
+            box-shadow: variables.$box-shadow-2;
+        }
+    }
+    .search {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        color: variables.$gray-300;
+        border: 1px solid variables.$gray-200;
+        border-radius: 10px;
+        box-shadow: variables.$box-shadow-2;
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: variables.$box-shadow-3;
+            border: 1px solid variables.$green-300;
+        }
+        &:has(input:focus) {
+            box-shadow: variables.$box-shadow-3;
+            border: 1px solid variables.$green-300;
+        }
+        svg {
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+        }
+    }
+    .sort {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: variables.$gray-300;
+    }
+    .ModalHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid variables.$gray-200;
+        .button {
+            width: 25px;
+            height: 25px;
+            border-radius: 8px;
+            &:hover {
+                border-color: variables.$red-300;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .ModalBody {
+        flex: 1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: variables.$gray-100;
+        overflow: auto;
+        .checkboxItem {
+            @include mixins.checkBox;
+        }
+        .filterList {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            h3 {
+                margin: 5px 0;
+            }
+        }
+    }
+}

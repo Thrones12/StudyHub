@@ -37,8 +37,7 @@ export default function RegisterPage() {
         setError("");
 
         await Register({
-            lastName: form.lastName,
-            firstName: form.firstName,
+            fullname: form.lastName + form.firstName,
             username: form.username,
             email: form.email,
             password: form.password,

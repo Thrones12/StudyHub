@@ -1,0 +1,17 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.modalWrapper {
+    @include mixins.slide-in-left(320px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border: 1px solid variables.$gray-400;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}

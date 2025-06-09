@@ -1,7 +1,6 @@
 import axios from "axios";
 import Noti from "../utils/Noti";
 import constants from "../utils/constants";
-import dayjs from "dayjs";
 const API = constants.API;
 
 // Get user
@@ -70,65 +69,94 @@ const GetAverageScore = async (userId, courseId, setData) => {
         }
     }
 };
-// Create
-const Create = async ({ userId, title, loop, description, date }) => {
+const AddSearch = async ({ userId, title, info, link }) => {
     try {
-        await axios.post(`${API}/task`, {
-            userId: userId,
-            title: title,
-            loop: loop,
-            description: description,
-            date: date,
-        });
-        Noti.success("Thêm công việc thành công");
+        await axios.post(`${API}/user/search/${userId}`, { title, info, link });
+        return true;
     } catch (err) {
         if (err.response && err.response.data?.message) {
             Noti.error(err.response.data.message);
         } else {
             Noti.error("Thêm dữ liệu thất bại");
         }
+        return false;
     }
 };
-// Update
-const Update = async ({ id, title, loop, description, date }) => {
+// Thêm hình ảnh vào custom theme của người dùng
+const AddImageToTheme = async (id, file) => {
     try {
-        await axios.put(`${API}/task`, {
-            id: id,
-            title: title,
-            loop: loop,
-            description: description,
-            date: date,
-        });
-        Noti.success("Cập nhập thành công");
+        const formData = new FormData();
+        formData.append("id", id);
+        formData.append("image", file);
+        await axios.put(`${API}/user/theme`, formData);
     } catch (err) {
         if (err.response && err.response.data?.message) {
             Noti.error(err.response.data.message);
         } else {
-            Noti.error("Cập nhập dữ liệu thất bại");
+            Noti.error("Thêm hình ảnh thất bại");
         }
     }
 };
-// Delete
-const Delete = async (id) => {
+// Xóa hình ảnh trong custom theme của người dùng
+const DeleteImageOfTheme = async (id, image) => {
     try {
-        await axios.delete(`${API}/task?id=${id}`);
-        Noti.success("Xóa thành công");
+        await axios.post(`${API}/user/theme`, { id, image });
     } catch (err) {
         if (err.response && err.response.data?.message) {
             Noti.error(err.response.data.message);
         } else {
-            Noti.error("Xóa dữ liệu thất bại");
+            Noti.error("Thêm hình ảnh thất bại");
         }
     }
 };
+// Xử lý lưu trữ bài kiểm tra
+async function Save({ userId, examId }) {
+    try {
+        let res = await axios.put(`${API}/user/save`, { userId, examId });
+        if (res.data.isSaved) {
+            Noti.success("Đã thêm vào mục lưu trữ");
+        } else {
+            Noti.success("Đã xóa khỏi mục lưu trữ");
+        }
+        return res.data;
+    } catch (err) {
+        if (err.response && err.response.data?.message) {
+            Noti.error(err.response.data.message);
+        } else {
+            Noti.error("Lưu trữ thất bại");
+        }
+        return null;
+    }
+}
+// Xử lý yêu thích bài học
+async function Like({ userId, lessonId }) {
+    try {
+        let res = await axios.put(`${API}/user/like`, { userId, lessonId });
+        if (res.data.isLiked) {
+            Noti.success("Đã thêm vào mục yêu thích");
+        } else {
+            Noti.success("Đã xóa khỏi mục yêu thích");
+        }
+        return res.data;
+    } catch (err) {
+        if (err.response && err.response.data?.message) {
+            Noti.error(err.response.data.message);
+        } else {
+            Noti.error("Lưu trữ thất bại");
+        }
+        return null;
+    }
+}
 const User = {
     GetUser,
     GetLearningHour,
     GetProgressData,
     GetAverageScore,
-    Create,
-    Update,
-    Delete,
+    AddSearch,
+    AddImageToTheme,
+    DeleteImageOfTheme,
+    Save,
+    Like,
 };
 
 export { User };

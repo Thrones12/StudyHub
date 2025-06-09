@@ -1,197 +1,1018 @@
 [{
   "_id": {
-    "$oid": "67aa092fe07a8de25c30a648"
+    "$oid": "683c4d9fcd45165ec1affd06"
   },
   "title": "Bài 1: Dao động điều hòa",
+  "chapterId": {
+    "$oid": "683c3a4e8475a22496f60fc6"
+  },
   "video": {
     "url": "/videos/test3.mp4",
     "chapters": [
       {
-        "time": 0,
-        "title": "Mở bài"
+        "time": 40,
+        "title": "Phần 1"
       },
       {
-        "time": 30,
-        "title": "Thân bài"
+        "time": 100,
+        "title": "Phần 2"
       },
       {
-        "time": 60,
-        "title": "Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài Kết bài"
-      },
-      {
-        "time": 90,
-        "title": "Kết bài"
+        "time": 120,
+        "title": "Phần 3"
       }
     ]
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [
-    "67d079073ba0ec3a1c67bee9",
-    "67d07a3c3ba0ec3a1c67beea",
-    "67d07a4d3ba0ec3a1c67beeb"
-  ],
-  "discussions": [
+  "document": "**2.1. Dao động cơ, dao động tuần hoàn.**  \n\\- Dao động cơ là chuyển động qua lại của vật quanh vị trí cân bằng.  \n\\- Dao động tuần hoàn là dao động mà sau những khoảng thời gian bằng nhau, gọi là chu kỳ, vật trở lại vị trí cũ theo hướng cũ. Dao động tuần hoàn đơn giản nhất là dao động điều hòa.\n\n**2.2. Dao động điều hòa.**\n\n&nbsp;&nbsp;&nbsp;&nbsp;**a. Ví dụ dao động điều hòa**\n\n\n![Mô tả ảnh](https://res.cloudinary.com/ds5lvyntx/image/upload/v1749115890/12_p3kezr.png)\n\n\\- Giả sử M chuyển động theo chiều dương vận tốc góc là $$\\omega$$, **P** là hình chiếu của M lên Ox.\n\\- Tại t=0, M có tọa độ góc $$\\varphi$$",
+  "exercises": [
     {
-      "$oid": "67d3e2770d4ad89b7f805264"
+      "type": "Dạng bài 1",
+      "questions": [
+        {
+          "$oid": "683ebf3f45b9d24226965809"
+        }
+      ]
     },
     {
-      "$oid": "6802bdfd2e86ba329d7c24d0"
+      "type": "Dạng bài 2",
+      "questions": [
+        {
+          "$oid": "683ec00445b9d2422696580d"
+        }
+      ]
     },
     {
-      "$oid": "6802bf81c08701f6ab36033b"
+      "type": "Dạng bài 3",
+      "questions": [
+        {
+          "$oid": "683ec04345b9d24226965811"
+        }
+      ]
     }
   ],
-  "view": 0,
-  "__v": 3
+  "comments": [
+    {
+      "$oid": "681e8c82fc9f8f02001dcf19"
+    },
+    {
+      "$oid": "6819261d707fc47fa55fca8b"
+    },
+    {
+      "$oid": "6819265e707fc47fa55fca93"
+    },
+    {
+      "$oid": "68433a6748df3a0824187f9b"
+    },
+    {
+      "$oid": "68433a6a48df3a0824187fbb"
+    }
+  ],
+  "views": 4802,
+  "order": 0,
+  "__v": 42,
+  "rating": {
+    "details": [
+      {
+        "_id": {
+          "$oid": "684225c8fae7105bb8480d4e"
+        },
+        "userId": "6840d73c5030b9a16d8c2b6a",
+        "rate": 3,
+        "content": "Phần tóm tắt lý thuyết hơi sơ sài"
+      },
+      {
+        "userId": "682a073de2776895a05ae93b",
+        "rate": 5,
+        "content": "123",
+        "_id": {
+          "$oid": "6842e42e9cd0a4d3d7527f19"
+        }
+      }
+    ],
+    "overall": 4
+  },
+  "likes": 1
 },
 {
   "_id": {
-    "$oid": "67d32bb1cbc084035d9b8e92"
+    "$oid": "683c4dbacd45165ec1affd0a"
   },
   "title": "Bài 2: Con lắc lò xo",
+  "chapterId": {
+    "$oid": "683c3a4e8475a22496f60fc6"
+  },
   "video": {
-    "url": "/videos/test2.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 0
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 },
 {
   "_id": {
-    "$oid": "67d32bb1cbc084035d9b8e93"
+    "$oid": "683c4dc0cd45165ec1affd0e"
   },
   "title": "Bài 3: Con lắc đơn",
+  "chapterId": {
+    "$oid": "683c3a4e8475a22496f60fc6"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 0
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 1,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  },
+  "likes": 0
 },
 {
   "_id": {
-    "$oid": "67d32bb1cbc084035d9b8e94"
+    "$oid": "683c4dcecd45165ec1affd12"
   },
   "title": "Bài 4: Dao động tắt dần và dao động cưỡng bức",
+  "chapterId": {
+    "$oid": "683c3a4e8475a22496f60fc6"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 0
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 4,
+  "order": 0,
+  "__v": 0,
+  "likes": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 },
 {
   "_id": {
-    "$oid": "67d32bb1cbc084035d9b8e95"
+    "$oid": "683c4deecd45165ec1affd16"
   },
-  "title": "Bài 5: Tổng hợp hai dao động điều hòa cùng phương, cùng tần số và Phương pháp Fre-nen",
+  "title": "Bài 5: Tổng hợp hai dao động điều hòa cùng phương, cùng tần số và phương pháp Fre-nen",
+  "chapterId": {
+    "$oid": "683c3a4e8475a22496f60fc6"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 0
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 136,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  },
+  "likes": 0
 },
 {
   "_id": {
-    "$oid": "67d32bb1cbc084035d9b8e96"
+    "$oid": "683c4e12cd45165ec1affd1a"
   },
   "title": "Bài 6: Thực hành khảo sát thực nghiệm các định luật dao động của con lắc đơn",
+  "chapterId": {
+    "$oid": "683c3a4e8475a22496f60fc6"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 0
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 6,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  },
+  "likes": 0
 },
 {
   "_id": {
-    "$oid": "68015b8dfcf88f9de2ec9529"
+    "$oid": "683c58a7cd45165ec1affd58"
   },
-  "title": "Khái quát văn học Việt Nam từ đầu Cách mạng tháng Tám 1945 đến thế kỉ XX",
+  "title": "Bài 7: Sóng cơ và sự truyền sóng cơ",
+  "chapterId": {
+    "$oid": "683c3a7b8475a22496f60fca"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 100
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 },
 {
   "_id": {
-    "$oid": "68015ba9fcf88f9de2ec952a"
+    "$oid": "683c58aecd45165ec1affd5c"
   },
-  "title": "Nghị luận về một tư tưởng, đạo lý",
+  "title": "Bài 8: Giao thoa sóng",
+  "chapterId": {
+    "$oid": "683c3a7b8475a22496f60fca"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 100
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 },
 {
   "_id": {
-    "$oid": "68015bbffcf88f9de2ec952b"
+    "$oid": "683c58b4cd45165ec1affd60"
   },
-  "title": "Tuyên ngôn độc lập - Hồ Chí Minh",
+  "title": "Bài 9: Sóng dừng",
+  "chapterId": {
+    "$oid": "683c3a7b8475a22496f60fca"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 100
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 },
 {
   "_id": {
-    "$oid": "68015bd7fcf88f9de2ec952c"
+    "$oid": "683c58becd45165ec1affd64"
   },
-  "title": "Giữ gìn sự trong sáng của tiếng Việt",
+  "title": "Bài 10: Đặc trưng vật lý của âm",
+  "chapterId": {
+    "$oid": "683c3a7b8475a22496f60fca"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 100
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 },
 {
   "_id": {
-    "$oid": "68015be9fcf88f9de2ec952d"
+    "$oid": "683c58c7cd45165ec1affd68"
   },
-  "title": "Viết bài làm văn số 1: Nghị luận xã hội",
+  "title": "Bài 11: Đặc trưng sinh lý của âm",
+  "chapterId": {
+    "$oid": "683c3a7b8475a22496f60fca"
+  },
   "video": {
-    "url": "/videos/test1.mp4",
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
     "chapters": []
   },
-  "documentUrl": "/documents/test.pdf",
-  "guideUrl": "/documents/test.pdf",
-  "exerciseTypes": [],
-  "discussions": [],
-  "view": 100
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c58decd45165ec1affd6c"
+  },
+  "title": "Bài 12: Đại cương về dòng điện xoay chiều",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c58f3cd45165ec1affd70"
+  },
+  "title": "Bài 13: Các mạch điện xoay chiều",
+  "chapterId": "683c3a868475a22496f60fce",
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5906cd45165ec1affd74"
+  },
+  "title": "Bài 14: Mạch có R, L, C mắc nối tiếp",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5922cd45165ec1affd78"
+  },
+  "title": "Bài 15: Công suất điện tiêu thụ của mạch điện xoay chiều và hệ số công suất",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 174,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  },
+  "likes": 1
+},
+{
+  "_id": {
+    "$oid": "683c593bcd45165ec1affd7c"
+  },
+  "title": "Bài 16: Truyền tải điện năng và máy biến áp",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5949cd45165ec1affd80"
+  },
+  "title": "Bài 17: Máy phát điện xoay chiều",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5954cd45165ec1affd84"
+  },
+  "title": "Bài 18: Động cơ không đồng bộ ba pha",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5965cd45165ec1affd88"
+  },
+  "title": "Bài 19: Thực hành khảo sát đoạn mạch xoay chiều RLC",
+  "chapterId": {
+    "$oid": "683c3a868475a22496f60fce"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c597ccd45165ec1affd8c"
+  },
+  "title": "Bài 20: Mạch dao động",
+  "chapterId": {
+    "$oid": "683c3a918475a22496f60fd2"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c598dcd45165ec1affd90"
+  },
+  "title": "Bài 21: Điện từ trường",
+  "chapterId": {
+    "$oid": "683c3a918475a22496f60fd2"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5995cd45165ec1affd94"
+  },
+  "title": "Bài 22: Sóng điện từ",
+  "chapterId": {
+    "$oid": "683c3a918475a22496f60fd2"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c59becd45165ec1affd98"
+  },
+  "title": "Bài 23: Nguyên tắc thông tin liên lạc bằng sóng vô tuyến",
+  "chapterId": {
+    "$oid": "683c3a918475a22496f60fd2"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5ab3cd45165ec1affd9c"
+  },
+  "title": "Bài 24: Tán sắc ánh sáng",
+  "chapterId": {
+    "$oid": "683c3a998475a22496f60fd6"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5abccd45165ec1affda0"
+  },
+  "title": "Bài 25: Giao thoa ánh sáng",
+  "chapterId": {
+    "$oid": "683c3a998475a22496f60fd6"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5ac7cd45165ec1affda4"
+  },
+  "title": "Bài 26: Các loại quang phổ",
+  "chapterId": {
+    "$oid": "683c3a998475a22496f60fd6"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5aefcd45165ec1affda8"
+  },
+  "title": "Bài 27: Tia hồng ngoại và tia tử ngoại",
+  "chapterId": {
+    "$oid": "683c3a998475a22496f60fd6"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5af4cd45165ec1affdac"
+  },
+  "title": "Bài 28: Tia X",
+  "chapterId": {
+    "$oid": "683c3a998475a22496f60fd6"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5b03cd45165ec1affdb0"
+  },
+  "title": "Bài 29: Thực hành đo bước sóng ánh sáng bằng phương pháp giao thoa",
+  "chapterId": {
+    "$oid": "683c3a998475a22496f60fd6"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5b56cd45165ec1affdb4"
+  },
+  "title": "Bài 30: Hiện tượng quang điện và thuyết lượng tử ánh sáng",
+  "chapterId": {
+    "$oid": "683c3aa28475a22496f60fda"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5b61cd45165ec1affdb8"
+  },
+  "title": "Bài 31: Hiện tượng quang điện trong",
+  "chapterId": {
+    "$oid": "683c3aa28475a22496f60fda"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5b72cd45165ec1affdbc"
+  },
+  "title": "Bài 32: Hiện tượng quang - phát quang",
+  "chapterId": {
+    "$oid": "683c3aa28475a22496f60fda"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5b7ecd45165ec1affdc0"
+  },
+  "title": "Bài 33: Mẫu nguyên tử Bo",
+  "chapterId": {
+    "$oid": "683c3aa28475a22496f60fda"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5ba2cd45165ec1affdc4"
+  },
+  "title": "Bài 34: Sơ lược về laze",
+  "chapterId": {
+    "$oid": "683c3aa28475a22496f60fda"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5bbacd45165ec1affdc8"
+  },
+  "title": "Bài 35: Tính chất và cấu tạo của hạt nhân",
+  "chapterId": {
+    "$oid": "683c3aab8475a22496f60fde"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5bd4cd45165ec1affdcc"
+  },
+  "title": "Bài 36: Năng lượng liên kết của hạt nhân và phản ứng hạt nhân",
+  "chapterId": {
+    "$oid": "683c3aab8475a22496f60fde"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5c38cd45165ec1affdd0"
+  },
+  "title": "Bài 37: Phóng xạ",
+  "chapterId": {
+    "$oid": "683c3aab8475a22496f60fde"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5c77cd45165ec1affdd4"
+  },
+  "title": "Bài 38: Phản ứng phân hạch",
+  "chapterId": {
+    "$oid": "683c3aab8475a22496f60fde"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5cafcd45165ec1affdd8"
+  },
+  "title": "Bài 39: Phản ứng nhiệt hạch",
+  "chapterId": {
+    "$oid": "683c3aab8475a22496f60fde"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5cf5cd45165ec1affddc"
+  },
+  "title": "Bài 40: Các hạt sơ cấp",
+  "chapterId": {
+    "$oid": "683c3ab68475a22496f60fe2"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "683c5cfdcd45165ec1affde0"
+  },
+  "title": "Bài 41: Cấu tạo vũ trụ",
+  "chapterId": {
+    "$oid": "683c3ab68475a22496f60fe2"
+  },
+  "video": {
+    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "chapters": []
+  },
+  "document": "Content nè",
+  "exercises": [],
+  "comments": [],
+  "views": 0,
+  "order": 0,
+  "__v": 0,
+  "rating": {
+    "details": [],
+    "overall": 0
+  }
 }]

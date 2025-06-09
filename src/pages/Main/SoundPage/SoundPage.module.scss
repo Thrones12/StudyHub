@@ -1,0 +1,1219 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+$box-shadow: 0 0 12px rgba(120, 216, 122, 0.6);
+$text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+$text-glow: 0 0 10px variables.$green-200;
+.wrapper {
+    position: "fixed";
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: "100vh";
+    .button {
+        cursor: pointer;
+        position: absolute;
+        color: variables.$gray-200 !important;
+        .icon {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            transition: color 0.2s ease;
+            transition: all 0.5s ease;
+        }
+        &:hover .icon {
+            color: variables.$green-200;
+            transform: scale(1.2);
+        }
+    }
+    .clock {
+        user-select: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: variables.$white;
+        text-align: center;
+        .time {
+            font-size: 40px;
+            margin-bottom: -8px;
+        }
+        .date {
+            font-size: 14px;
+        }
+    }
+    .tools {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px 30px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        .tool {
+            cursor: pointer;
+            color: variables.$gray-200;
+            width: 30px;
+            height: 30px;
+            transition: all 0.5s ease;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+            &:hover {
+                color: variables.$green-200;
+                transform: scale(1.2) translateY(-3px);
+            }
+            &.active {
+                color: variables.$green-200;
+            }
+        }
+    }
+    .backgroundTool,
+    .ambienceTool,
+    .animationTool,
+    .pomodoroTool {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 10;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .header {
+            user-select: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: variables.$white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        p {
+            color: variables.$gray-200;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .backgroundTool {
+        width: 900px;
+        p {
+            user-select: none;
+        }
+        .categories {
+            height: 120px;
+        }
+        .categories,
+        .images {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+            overflow: auto;
+            @include mixins.scrollBar;
+            .category {
+                cursor: pointer;
+                overflow: hidden;
+                width: 100px;
+                height: 100px;
+                border: 1px solid variables.$gray-400;
+                color: variables.$white;
+                font-size: 18px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+                background-color: rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                transition: all 0.5s ease;
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+                &:hover {
+                    border-color: variables.$green-200;
+                    transform: translateY(-5px);
+                    box-shadow: $box-shadow;
+                }
+                &.active {
+                    border-color: variables.$green-200;
+                }
+            }
+            .image {
+                cursor: pointer;
+                position: relative;
+                width: 150px;
+                height: 110px;
+                border: 1px solid variables.$black;
+                border-radius: 15px;
+                transition: all 0.5s ease;
+                padding: 5px;
+                background-color: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    border-color: variables.$green-200;
+                    transform: translateY(-5px);
+                    box-shadow: $box-shadow;
+                }
+                img {
+                    width: 100%;
+                    height: 100px;
+                    border-radius: 15px;
+                }
+                .deleteIcon {
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    width: 20px;
+                    height: 20px;
+                    color: variables.$white;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: variables.$red-300;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        .images {
+            height: 270px;
+        }
+    }
+    .ambienceTool {
+        width: 400px;
+        height: 320px;
+        .header {
+            align-items: center;
+            svg {
+                cursor: pointer;
+                margin-left: 10px;
+                width: 30px;
+                height: 30px;
+                color: variables.$green-200;
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+        }
+        .sounds {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+            overflow: auto;
+            height: 260px;
+            @include mixins.scrollBar;
+            .sound {
+                position: relative;
+                width: 100px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                svg {
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    color: variables.$gray-200;
+                    transition: all 0.5s ease;
+                    border-radius: 50%;
+                    &:hover {
+                        color: variables.$green-200;
+                        transform: scale(1.2);
+                    }
+                    &.active {
+                        color: variables.$green-200 !important;
+                        filter: drop-shadow(0 2px 5px variables.$green-200);
+                    }
+                }
+                .soundVolume {
+                    -webkit-appearance: none; /* Bỏ mặc định của trình duyệt */
+                    position: absolute;
+                    bottom: -0px;
+                    cursor: pointer;
+                    background: variables.$green-200;
+                    width: 80px;
+                    height: 3px;
+                    border-radius: 15px;
+                    outline: none;
+                    transition: background-color 0.3s;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+                /* Tùy chỉnh nút kéo trên thanh trượt */
+                input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 10px;
+                    height: 10px;
+                    background: variables.$green-200;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+                /* Khi bấm vào nút kéo */
+                input[type="range"]::-webkit-slider-thumb:hover {
+                    transform: scale(1.2);
+                }
+                /* Khi bấm vào nút kéo */
+                input[type="range"]::-webkit-slider-thumb:active {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .animationTool {
+        width: 400px;
+        height: 320px;
+        padding: 10px 0 !important;
+        .header {
+            align-items: center;
+            svg {
+                cursor: pointer;
+                margin-left: 10px;
+                width: 30px;
+                height: 30px;
+                color: variables.$green-200;
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+        }
+        .animations {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            margin: 0 10px;
+            overflow: auto;
+            height: 260px;
+            @include mixins.scrollBar;
+            .animation {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                z-index: 10;
+                p {
+                    color: variables.$white;
+                }
+            }
+        }
+    }
+    .sessionTool {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 10;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .Typewriter {
+            color: variables.$white;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .NewSessionBtn {
+            color: variables.$white;
+            text-align: center;
+            padding: 6px 10px;
+            width: 180px;
+            margin: 0 auto;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(50px);
+            border: 1px solid variables.$gray-400;
+            transition: all 0.5s ease;
+            &:hover {
+                box-shadow: $box-shadow;
+                border: 1px solid variables.$green-200;
+            }
+        }
+        .Controls {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+            padding: 0 10px;
+            .Control {
+                user-select: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 5px;
+                padding: 3px 8px;
+                background-color: #000;
+                color: variables.$orange-300;
+                &:hover {
+                    .sortSelect {
+                        opacity: 1;
+                        visibility: visible;
+                        max-height: 220px;
+                    }
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+                .sortSelect {
+                    position: absolute;
+                    max-height: 0;
+                    top: 40px;
+                    right: 0;
+                    width: 200px;
+                    background-color: #000;
+                    border: 1px solid variables.$gray-300;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease-in-out;
+                    .title {
+                        padding: 6px 10px;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    .option {
+                        padding: 4px 10px;
+                        font-weight: 500;
+                        &:hover {
+                            background-color: #444444;
+                        }
+                        &.active {
+                            background-color: #444444;
+                        }
+                    }
+                }
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    color: variables.$orange-300;
+                    width: 150px;
+                }
+            }
+        }
+        .sessions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow: auto;
+            padding: 10px;
+            height: 450px;
+            @include mixins.scrollBar;
+            .session {
+                cursor: pointer;
+                background-color: #000;
+                width: 900px;
+                border: 1px solid variables.$gray-400;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 14px;
+                transition: all 0.5s ease;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                &:hover {
+                    box-shadow: $box-shadow;
+                    border: 1px solid variables.$green-200;
+                }
+                .sessionInfo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    flex: 1;
+                    .title {
+                        font-size: 16px;
+                        color: variables.$white;
+                        &.done {
+                            text-decoration-line: line-through;
+                        }
+                    }
+                    .completed {
+                        color: variables.$green-200;
+                    }
+                    .ongoing {
+                        color: variables.$orange-300;
+                    }
+                    .moreInfo {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        gap: 15px;
+                        .info {
+                            display: flex;
+                            flex-direction: row;
+                            color: variables.$gray-300;
+                            gap: 5px;
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+                .controls {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    svg {
+                        color: variables.$white;
+                        width: 30px;
+                        height: 30px;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            color: variables.$green-200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pomodoroTool {
+        width: 400px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .pomoTitle {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 300px;
+            color: variables.$white;
+            font-size: 16px;
+            margin: 15px 0 5px;
+            text-align: center;
+            &::placeholder {
+                color: variables.$gray-300;
+                text-align: center;
+            }
+        }
+        .inputTimes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                text-align: center;
+                width: 100%;
+                height: 80px;
+                color: variables.$white;
+                font-weight: bold;
+                font-size: 70px;
+                border: 1px solid transparent;
+                border-radius: 10px;
+                &:focus {
+                    border: 1px solid variables.$white;
+                }
+            }
+            p {
+                color: variables.$white;
+                font-size: 60px;
+                transform: translateY(-5px);
+            }
+        }
+        .timeLabels {
+            width: 100%;
+            color: variables.$white;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            span {
+                width: 100px;
+                text-align: center;
+            }
+        }
+        .modeBtn,
+        .startBtn {
+            color: variables.$white;
+            text-align: center;
+            padding: 6px 10px;
+            margin-top: 15px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.5s ease;
+            &:hover {
+                box-shadow: $box-shadow;
+            }
+        }
+        .modeBtn {
+            font-size: 13px;
+            border: 1px solid variables.$gray-300;
+        }
+        .startBtn {
+            font-size: 18px;
+            border: 1px solid variables.$green-200;
+            width: 100%;
+        }
+    }
+    .PomodoroSpotlight {
+        @include mixins.centerPosition;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: variables.$white;
+        .title {
+            user-select: none;
+            font-size: 18px;
+            text-align: center;
+            text-shadow: $text-shadow;
+        }
+        .timeleft {
+            user-select: none;
+            height: 140px;
+            font-size: 120px;
+            display: flex;
+            align-items: center;
+            text-shadow: $text-shadow;
+        }
+        &:hover .controls {
+            opacity: 1;
+            visibility: visible;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            svg {
+                cursor: pointer;
+                filter: drop-shadow(0 0 5px variables.$black);
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &:hover .progress {
+            transform: translateX(0);
+            p {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .progress {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            transform: translateX(20px);
+            transition: all 0.5s ease;
+            padding: 0 10px;
+
+            .progressBarContainer {
+                width: 100%;
+                height: 5px;
+                background-color: rgba(97, 168, 98, 0.5);
+                backdrop-filter: blur(10px);
+                box-shadow: variables.$box-shadow-3;
+                border-radius: 10px;
+                position: relative;
+                margin-right: 10px;
+                .progressBar {
+                    height: 100%;
+                    background-color: #66d669;
+                    box-shadow: $text-glow;
+                    border-radius: 10px;
+                    transition: width 0.3s ease;
+                }
+            }
+            * {
+                transition: all 0.5s ease;
+            }
+            p {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        svg {
+            transition: all 0.5s ease;
+            &:hover {
+                color: variables.$green-200;
+            }
+        }
+    }
+    .PomodoroMinimal {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 35px;
+        background-color: #000;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        user-select: none;
+        transition: all 0.5s ease;
+        padding: 10px 20px;
+        .progress {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            transition: all 0.5s ease;
+            width: 100%;
+            .progressBarContainer {
+                width: 100%;
+                height: 3px;
+                background-color: rgba(97, 168, 98, 0.5);
+                backdrop-filter: blur(10px);
+                box-shadow: variables.$box-shadow-3;
+                border-radius: 10px;
+                position: relative;
+                .progressBar {
+                    height: 100%;
+                    background-color: #66d669;
+                    box-shadow: $text-glow;
+                    border-radius: 10px;
+                    transition: width 0.3s ease;
+                }
+            }
+            * {
+                transition: all 0.5s ease;
+            }
+            p {
+                margin-left: 10px;
+                display: none;
+            }
+        }
+        .topInfo {
+            display: none;
+            width: 100%;
+            .title {
+                font-size: 12px;
+                color: variables.$gray-300;
+                margin-bottom: -5px;
+            }
+            .timerAndControls {
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .timeleft {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                .controls {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    svg {
+                        cursor: pointer;
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+        .timeleftBottom {
+            margin-top: 2px;
+            margin-bottom: -5px;
+        }
+        // Hover
+        &:hover {
+            width: 300px;
+            height: 80px;
+            .timeleftBottom {
+                display: none;
+            }
+            .topInfo {
+                display: block;
+            }
+            .progress {
+                p {
+                    display: inline;
+                }
+            }
+        }
+    }
+    .todoTool {
+        width: 1000px;
+        height: 700px;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        z-index: 10;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .leftSide {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: 180px;
+            height: 100%;
+        }
+        .rightSide {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            flex: 1;
+            background-color: #000;
+            padding: 20px 10px 0;
+            .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .listName {
+                    flex: 1;
+                    outline: none;
+                    color: variables.$white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    vertical-align: middle;
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 10px;
+                    padding: 12px 20px;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        border-color: variables.$gray-400;
+                    }
+                    &:focus {
+                        border-color: variables.$green-200;
+                    }
+                }
+                svg {
+                    transition: all 0.5s ease;
+                    width: 35px;
+                    height: auto;
+                    margin-left: 5px;
+                    &:hover {
+                        color: variables.$green-200;
+                    }
+                }
+            }
+        }
+        .lists {
+            margin-top: 35px;
+            padding: 0 10px 10px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow: auto;
+            flex: 1;
+            @include mixins.scrollBar;
+            .list {
+                cursor: pointer;
+                user-select: none;
+                color: variables.$white;
+                font-size: 12px;
+                padding: 8px 14px;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                white-space: nowrap; // Không xuống dòng
+                overflow: hidden; // Ẩn phần bị tràn
+                text-overflow: ellipsis; // Hiển thị "..."
+                &.select {
+                    background-color: #000;
+                }
+                &:hover {
+                    background-color: #000;
+                }
+            }
+        }
+        .tasks {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 10px;
+            padding-right: 5px;
+            overflow: auto;
+            @include mixins.scrollBar;
+            .task {
+                cursor: pointer !important;
+                position: relative;
+                display: flex;
+                background: transparent;
+                padding: 10px;
+                border: 1px solid transparent;
+                border-radius: 10px;
+                transition: all 0.3s ease !important;
+                gap: 10px;
+                &:hover {
+                    border: 1px solid variables.$gray-400;
+                }
+                .dragIcon {
+                    cursor: grab;
+                    width: 20px;
+                    height: 20px;
+                    color: variables.$white;
+                }
+
+                .content {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: variables.$white;
+                    gap: 3px;
+                    .title {
+                        font-size: 18px;
+                        &.completed {
+                            text-decoration-line: line-through;
+                        }
+                    }
+                    .description {
+                        font-size: 12px;
+                    }
+                    .endDate {
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 12px;
+                        gap: 5px;
+                        color: variables.$gray-300;
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                        &.today {
+                            color: variables.$green-200;
+                        }
+                        &.overdue {
+                            color: variables.$red-300;
+                        }
+                    }
+                    &:hover .deleteIcon {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .deleteIcon {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    transition: all 0.5s ease;
+                    width: 25px;
+                    height: auto;
+                    margin-left: 5px;
+                    color: variables.$white;
+                    opacity: 0;
+                    visibility: hidden;
+                    &:hover {
+                        color: variables.$green-200;
+                    }
+                }
+            }
+
+            .Accordion {
+                .AccordionSummary {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    cursor: pointer;
+                    user-select: none;
+                    margin-bottom: 10px;
+                    color: variables.$white;
+                    p {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                    svg {
+                        transform: rotate(-90deg);
+                        transition: all 0.3s ease;
+                        &.rotate {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+                .AccordionDetails {
+                    height: 100px;
+                    table-layout: auto;
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        overflow: hidden;
+                        * {
+                            vertical-align: middle;
+                        }
+                        th,
+                        td {
+                            padding: 6px;
+                            border: 1px solid #ddd;
+                        }
+
+                        th {
+                            text-align: left;
+                            color: #888;
+                        }
+                        input[type="checkbox"] {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .addText {
+            user-select: none;
+            cursor: pointer;
+            color: variables.$white;
+            padding: 8px 14px;
+        }
+        .emptyState {
+            user-select: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            color: variables.$white;
+            gap: 10px;
+        }
+    }
+    .closeBtn {
+        cursor: pointer;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        color: variables.$white;
+        transition: all 0.3s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99;
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .modalAddNewSession {
+        @include mixins.slide-down;
+        width: 600px;
+        background-color: #000;
+        border-radius: 15px;
+        z-index: 100;
+        border: 1px solid variables.$gray-400;
+        padding: 40px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: variables.$white;
+        .deleteIcon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            color: variables.$white;
+            transition: all 0.5s ease;
+            &:hover {
+                color: variables.$red-300;
+                transform: scale(1.1);
+            }
+        }
+        .title {
+            color: variables.$white;
+            font-size: 24px;
+        }
+        .titleInput {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            font-size: 18px;
+            color: variables.$white;
+            transition: all 0.3s ease;
+            &:hover,
+            &:focus {
+                border-bottom: 2px solid variables.$green-100;
+            }
+        }
+        .flexRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            p {
+                height: 20px;
+                font-size: 14px;
+            }
+            .time {
+                background-color: transparent;
+                outline: none;
+                border: 1px solid transparent;
+                color: variables.$white;
+                font-size: 14px;
+            }
+            button {
+                color: variables.$white;
+                text-align: center;
+                padding: 8px 25px;
+                margin: 15px 5px 0;
+                border: 1px solid variables.$gray-300;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                transition: all 0.5s ease;
+                &:hover {
+                    border: 1px solid variables.$green-200;
+                    box-shadow: $box-shadow;
+                }
+            }
+        }
+    }
+    .rain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+
+        .rainDrop {
+            position: absolute;
+            width: 1px;
+            height: 89px;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.4)
+            );
+            animation-name: fall;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(100vh);
+        }
+    }
+    .snow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+
+        .snowFlake {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation-name: snowDrift;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        &.hide {
+            .snowFlake {
+                opacity: 0 !important;
+            }
+        }
+    }
+
+    @keyframes snowDrift {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        20% {
+            transform: translate(5vw, 20vh) rotate(72deg);
+        }
+        40% {
+            transform: translate(2vw, 40vh) rotate(144deg);
+        }
+        60% {
+            transform: translate(7vw, 60vh) rotate(216deg);
+        }
+        80% {
+            transform: translate(3vw, 80vh) rotate(288deg);
+        }
+        100% {
+            transform: translate(10vw, 100vh) rotate(360deg);
+        }
+    }
+}

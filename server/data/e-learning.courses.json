@@ -1,63 +1,38 @@
-[{
-  "_id": {
-    "$oid": "67a9c5090d5fbff4d3b34e2d"
-  },
-  "title": "Chương trình lớp 10",
-  "tag": "lop-10",
-  "subjects": [
-    "67a9c9060d5fbff4d3b34e39",
-    "67a9c9060d5fbff4d3b34e36",
-    "67a9c9060d5fbff4d3b34e3a",
-    "67a9c9060d5fbff4d3b34e37",
-    "67a9c9060d5fbff4d3b34e38",
-    "67a9c9060d5fbff4d3b34e3b",
-    "67a9c9060d5fbff4d3b34e3c",
-    "67a9c9060d5fbff4d3b34e3d",
-    "67a9c9060d5fbff4d3b34e3e",
-    "68015261fcf88f9de2ec9516",
-    "67d2fd0c1332f6140b9c9e1c",
-    "67d2fd0c1332f6140b9c9e1d"
-  ]
-},
-{
-  "_id": {
-    "$oid": "67a9c5250d5fbff4d3b34e2e"
-  },
-  "title": "Chương trình lớp 11",
-  "tag": "lop-11",
-  "subjects": [
-    "67d301f51332f6140b9c9e22",
-    "67d301f51332f6140b9c9e23",
-    "67d301f51332f6140b9c9e24",
-    "67d301f51332f6140b9c9e25",
-    "67d301f51332f6140b9c9e26",
-    "67d301f51332f6140b9c9e27",
-    "67d301f51332f6140b9c9e28",
-    "67d301f51332f6140b9c9e29",
-    "67d301f51332f6140b9c9e2a",
-    "67d301f51332f6140b9c9e2b",
-    "67d301f51332f6140b9c9e2c",
-    "67d301f51332f6140b9c9e2d"
-  ]
-},
-{
-  "_id": {
-    "$oid": "67a9c5290d5fbff4d3b34e2f"
-  },
-  "title": "Chương trình lớp 12",
-  "tag": "lop-12",
-  "subjects": [
-    "67d301f51332f6140b9c9e2e",
-    "67d301f51332f6140b9c9e2f",
-    "67d301f51332f6140b9c9e30",
-    "67d301f51332f6140b9c9e31",
-    "68015285fcf88f9de2ec9517",
-    "67d301f51332f6140b9c9e33",
-    "67d301f51332f6140b9c9e34",
-    "67d301f51332f6140b9c9e35",
-    "67d301f51332f6140b9c9e36",
-    "67d301f51332f6140b9c9e37",
-    "67d301f51332f6140b9c9e38",
-    "67d301f51332f6140b9c9e39"
-  ]
-}]
+[
+    {
+        "_id": {
+            "$oid": "67a9c5090d5fbff4d3b34e2d"
+        },
+        "title": "Chương trình lớp 10",
+        "subjects": [
+            "67a9c9060d5fbff4d3b34e39",
+            "67a9c9060d5fbff4d3b34e36",
+            "67a9c9060d5fbff4d3b34e3a"
+        ],
+        "order": 0
+    },
+    {
+        "_id": {
+            "$oid": "67a9c5250d5fbff4d3b34e2e"
+        },
+        "title": "Chương trình lớp 11",
+        "subjects": [
+            "67d301f51332f6140b9c9e22",
+            "67d301f51332f6140b9c9e23",
+            "67d301f51332f6140b9c9e24"
+        ],
+        "order": 1
+    },
+    {
+        "_id": {
+            "$oid": "67a9c5290d5fbff4d3b34e2f"
+        },
+        "title": "Chương trình lớp 12",
+        "subjects": [
+            "67d301f51332f6140b9c9e2e",
+            "67d301f51332f6140b9c9e2f",
+            "67d301f51332f6140b9c9e31"
+        ],
+        "order": 2
+    }
+]

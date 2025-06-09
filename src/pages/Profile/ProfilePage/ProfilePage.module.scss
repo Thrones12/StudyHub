@@ -1,0 +1,187 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+
+.Card {
+    width: 1280px;
+    min-height: 200px;
+    background-color: #fff;
+    border: 1px solid variables.$gray-200;
+    border-radius: 15px;
+    box-shadow: variables.$box-shadow-2;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    .Header {
+        border-bottom: 1px solid variables.$gray-200;
+        color: variables.$gray-400;
+        font-size: 18px;
+        font-weight: bold;
+        min-height: 70px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        label {
+            font-weight: bold;
+            color: variables.$gray-400;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .Image {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: variables.$box-shadow-2;
+            img {
+                width: 150px;
+                height: 150px;
+                background-size: 100% 100%;
+                border: 3px solid variables.$gray-200;
+                border-radius: 10px;
+            }
+            label {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                transform: translate(-50%, -50%);
+                background-color: var(--white);
+                color: var(--gray-500);
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                svg {
+                    width: 10px;
+                    height: 10px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: variables.$green-200;
+                    }
+                }
+            }
+        }
+        .ImageText {
+            margin-top: 5px;
+            font-size: 12px;
+            color: variables.$gray-300;
+        }
+        input {
+            width: 100%;
+            outline: none;
+            border: 1px solid variables.$gray-200;
+            border-radius: 8px;
+            padding: 14px 22px;
+            color: variables.$gray-400;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.15s ease-in-out;
+            &:focus {
+                border: 1px solid variables.$gray-400;
+            }
+            &::placeholder {
+                font-weight: 600;
+                font-size: 15px;
+                color: var(--gray-500);
+            }
+        }
+    }
+    .Footer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid variables.$gray-200;
+        color: variables.$gray-400;
+        font-size: 18px;
+        font-weight: 600;
+        min-height: 70px;
+        padding: 0 30px;
+    }
+    .SignInMethod {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .Content {
+            display: flex;
+            flex-direction: column;
+        }
+        .Primary {
+            font-size: 15px;
+            font-weight: 600;
+            color: variables.$gray-400;
+        }
+        .Sub {
+            font-size: 13px;
+            font-weight: 600;
+            color: variables.$gray-300;
+        }
+        .ChangeWrapper {
+            display: flex;
+            flex-direction: row;
+        }
+        .icon {
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 55%;
+            transform: translateY(-50%);
+            color: variables.$gray-300;
+            transition: color 0.25s ease;
+            &:hover {
+                color: variables.$gray-400;
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    button {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        box-shadow: variables.$box-shadow-2;
+        padding: 14px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+            box-shadow: variables.$box-shadow-3;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.075); // lớp phủ đen nhạt
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        &:hover::after {
+            opacity: 1;
+        }
+        &.Gray {
+            color: var(--gray-700);
+            background-color: var(--gray-300);
+        }
+        &.Green {
+            color: var(--white);
+            background-color: variables.$green-300;
+        }
+    }
+}

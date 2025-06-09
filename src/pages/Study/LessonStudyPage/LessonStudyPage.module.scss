@@ -1,0 +1,825 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+
+.Wrapper {
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 20px;
+
+    .Button {
+        position: relative;
+        user-select: none;
+        @include mixins.iconButton();
+        min-width: 40px;
+        height: 40px;
+        padding: 10px;
+        gap: 5px;
+        font-size: 14px;
+        color: variables.$gray-400;
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+        img {
+            width: 18px;
+            height: 18px;
+        }
+        &.GreenButton {
+            cursor: pointer;
+            color: #fff;
+            background-color: variables.$green-300;
+            font-size: 18px;
+            &:hover {
+                border-color: variables.$green-300;
+            }
+        }
+        &.BlueButton {
+            cursor: pointer;
+            color: #fff;
+            background-color: variables.$blue-500;
+            font-size: 18px;
+            &:hover {
+                border-color: variables.$blue-300;
+            }
+        }
+        &.YellowButton {
+            cursor: pointer;
+            color: #fff;
+            background-color: variables.$yellow-600;
+            font-size: 18px;
+            &:hover {
+                border-color: variables.$yellow-300;
+            }
+        }
+    }
+    .AbsolutePosition {
+        position: absolute;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .Header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        min-height: 70px;
+        background-color: variables.$white;
+        box-shadow: variables.$box-shadow-2;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .Stepper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            .Step {
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                color: variables.$gray-300;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                &.done {
+                    color: variables.$green-300 !important;
+                    .Circle {
+                        background-color: variables.$green-300 !important;
+                        color: variables.$white;
+                    }
+                }
+                .Circle {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: variables.$gray-100;
+                }
+            }
+            .HorizontalLine {
+                position: relative;
+                width: 150px;
+                height: 2px;
+                background-color: variables.$gray-100;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 0%;
+                    background-color: variables.$green-300;
+                    transition: width 0.4s ease-in-out;
+                    z-index: 1;
+                }
+
+                &.active::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .Title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .LessonTitle {
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 3px solid variables.$gray-100;
+        width: 60%;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .Content {
+        position: relative;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include mixins.scrollBar;
+        width: 60%;
+        margin: 0 auto;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        .VideoWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            .Video {
+                width: 100%;
+                height: 625px;
+                overflow: hidden;
+            }
+            .ChapterList {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr); // 6 cột
+                gap: 15px;
+                .ChapterItem {
+                    position: relative;
+                    background: var(--gray-200);
+                    box-shadow: var(--box-shadow-2);
+                    border: 1px solid var(--gray-600);
+                    border-radius: 8px;
+                    cursor: pointer;
+                    text-align: left;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    width: 180px;
+                    height: 120px;
+                    &:hover {
+                        background: var(--gray-300);
+                        box-shadow: var(--box-shadow-3);
+                    }
+                    .ChapterTime {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        color: white;
+                        font-size: 14px;
+                        padding: 6px 10px;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    &:hover .ChapterTime {
+                        opacity: 1;
+                    }
+                }
+            }
+            .VideoThumbnail {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .DocumentWrapper {
+            padding: 20px;
+            .Document {
+                font-size: 16px;
+            }
+        }
+    }
+    .Questions {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        min-height: 100vh;
+        .Question {
+            position: relative;
+            background-color: variables.$white;
+            box-shadow: variables.$box-shadow-3;
+            border: 1px solid variables.$gray-200;
+            border-radius: 10px;
+            padding: 40px 60px;
+            width: 60%;
+            .Index {
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .QuestionContent {
+                margin: 10px 0 20px;
+                padding: 14px 12px;
+                background-color: var(--white);
+                box-shadow: var(--box-shadow-2);
+                border: 1px solid var(--gray-400);
+                border-radius: 4px;
+                font-size: 18px;
+            }
+            .OptionWrapper {
+                display: flex;
+                flex-direction: row;
+                margin: 10px 0;
+                cursor: pointer;
+                &:hover .Option {
+                    border: 1px solid var(--blue-600);
+                    transform: scale(1.01);
+                }
+                &.Disabled {
+                    pointer-events: none;
+                    opacity: 0.5;
+                    user-select: none;
+                }
+                .Index {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 10px 15px;
+                    user-select: none;
+                }
+                .Option {
+                    padding: 8px 12px;
+                    background-color: var(--white);
+                    box-shadow: var(--box-shadow-2);
+                    border: 1px solid var(--gray-400);
+                    border-radius: 4px;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    transition: all 0.2s ease;
+                    user-select: none;
+                    cursor: pointer;
+                }
+                .Checked {
+                    border: 1px solid var(--blue-600);
+                    background-color: var(--blue-200);
+                }
+                .True {
+                    border: 1px solid var(--green-600);
+                    background-color: var(--green-200);
+                }
+                .False {
+                    border: 1px solid var(--red-600);
+                    background-color: var(--red-200);
+                }
+            }
+        }
+    }
+    .Toggle {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        position: fixed;
+        left: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: 1px solid variables.$gray-200;
+        box-shadow: variables.$box-shadow-1;
+        transition: all 0.2s ease;
+        @include mixins.flexCenter;
+
+        &:hover {
+            border: 1px solid variables.$green-200;
+            box-shadow: variables.$box-shadow-2;
+        }
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .Overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+    .Modal {
+        position: fixed !important;
+        border: 1px solid variables.$gray-200;
+        @include mixins.slide-down();
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 820px; // padding: 40px, gap: 15px, item width: 250px
+        color: variables.$gray-400;
+        font-size: 16px;
+        .Title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .CloseButton {
+            user-select: none;
+            @include mixins.iconButton();
+            padding: 10px;
+            gap: 8px;
+            font-size: 14px;
+            color: variables.$gray-400;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+            &:hover {
+                border-color: variables.$red-300;
+            }
+            &.active {
+                border: 1px solid variables.$green-200;
+                box-shadow: variables.$box-shadow-2;
+            }
+        }
+        .Form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .ColLeft {
+                width: calc(50% - 5px);
+                margin-right: 5px;
+            }
+            .ColRight {
+                width: calc(50% - 5px);
+                margin-left: 5px;
+            }
+            .Field {
+                input,
+                textarea {
+                    font-size: 16px;
+                    padding: 8px 12px;
+                    outline: none;
+                    border: 1px solid variables.$gray-200;
+                    border-radius: 3px;
+                    box-shadow: variables.$box-shadow-2;
+                    width: 100%;
+                    transition: all 0.3s ease;
+                    resize: vertical;
+                    &:focus {
+                        border: 1px solid variables.$green-200;
+                        box-shadow: variables.$box-shadow-3;
+                    }
+                }
+            }
+            .Button {
+                background-color: variables.$green-300;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    .NavigationBar {
+        position: fixed !important;
+        border: 1px solid variables.$gray-200;
+        @include mixins.slide-in-left();
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        min-height: 100vh;
+        color: variables.$gray-400;
+        font-size: 16px;
+        .Title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0;
+            border-bottom: 1px solid variables.$gray-100;
+        }
+        .CloseButton {
+            user-select: none;
+            @include mixins.iconButton();
+            padding: 10px;
+            gap: 8px;
+            font-size: 14px;
+            color: variables.$gray-400;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+            &:hover {
+                border-color: variables.$red-300;
+            }
+            &.active {
+                border: 1px solid variables.$green-200;
+                box-shadow: variables.$box-shadow-2;
+            }
+        }
+        .Chapters {
+            display: flex;
+            flex-direction: column;
+            .Chapter {
+                cursor: pointer;
+                user-select: none;
+                padding: 10px;
+                border-top: 1px solid variables.$gray-200;
+                border-bottom: 1px solid variables.$gray-200;
+                margin-top: -1px;
+                transition: all 0.15s ease;
+                font-weight: bold;
+                text-align: justify;
+                &:hover {
+                    background-color: variables.$gray-100;
+                }
+                &.active {
+                    background-color: variables.$green-300;
+                    color: #fff;
+                }
+            }
+            .LessonList {
+                transition: max-height 0.4s ease;
+                .Lesson {
+                    cursor: pointer;
+                    user-select: none;
+                    position: relative;
+                    padding: 5px 10px 5px 30px;
+                    text-align: justify;
+                    transition: all 0.15s ease;
+                    &:hover {
+                        background-color: variables.$gray-100;
+                    }
+                    &.active {
+                        background-color: variables.$gray-100;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                        width: 2px;
+                        height: 100%;
+                        background-color: variables.$gray-200;
+                        margin-right: 10px;
+                    }
+                    &.done::before {
+                        background-color: variables.$green-200;
+                    }
+                }
+            }
+        }
+    }
+    .Footer {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        width: 60%;
+        margin: 15px auto 0;
+        align-items: flex-start; // ✅ dòng này giúp mỗi cột cao bao nhiêu tùy nội dung
+
+        .RatingWrapper,
+        .CommentWrapper {
+            position: relative;
+            background-color: #fff;
+            width: 60%;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+        .RatingWrapper {
+            .RatingBox {
+                display: flex;
+                background: #fff;
+                border-radius: 12px;
+                padding: 16px;
+                width: 100%;
+                max-width: 400px;
+                h4 {
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 120px;
+
+                    .average {
+                        font-size: 32px;
+                        font-weight: bold;
+                        color: #111827;
+                    }
+
+                    .stars {
+                        cursor: pointer;
+                        color: #fbbf24;
+                        display: flex;
+                        margin: 4px 0;
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    .count {
+                        font-size: 14px;
+                        color: #6b7280;
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+
+                    .rateBtn {
+                        position: relative;
+                        margin-top: 10px;
+                        background-color: variables.$yellow-600;
+                        color: #fff;
+                        border: none;
+                        border-radius: 6px;
+                        padding: 6px 12px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: background 0.3s ease;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            background-color: rgba(
+                                0,
+                                0,
+                                0,
+                                0.05
+                            ); // lớp phủ đen nhạt
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                            pointer-events: none;
+                        }
+                        &:hover::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .right {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    .barRow {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                    }
+
+                    .starLabel {
+                        width: 32px;
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                        font-size: 12px;
+                        color: #111827;
+                    }
+
+                    .bar {
+                        flex: 1;
+                        height: 10px;
+                        background-color: #f3f4f6;
+                        border-radius: 6px;
+                        overflow: hidden;
+
+                        .fill {
+                            height: 100%;
+                            background-color: #fbbf24;
+                        }
+                    }
+
+                    .count {
+                        width: 20px;
+                        font-size: 12px;
+                        text-align: right;
+                    }
+                }
+            }
+            .RatingItem {
+                display: flex;
+                gap: 10px;
+                border-top: 1px solid variables.$gray-100;
+                padding: 15px;
+                .RatingUserAvatar {
+                    width: 30px;
+                    height: 30px;
+                    flex-shrink: 0;
+                }
+                .AvatarImg {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    box-shadow: variables.$box-shadow-2;
+                    object-fit: cover;
+                }
+                .RatingInfo {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: variables.$gray-100;
+                    box-shadow: variables.$box-shadow-2;
+                    flex: 1;
+                    border-radius: 10px;
+                    padding: 10px;
+                    .stars {
+                        margin-top: 4px;
+                        margin-left: -4px;
+                    }
+                    .RatingTitle {
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                    .RatingContent {
+                        font-size: 14px;
+                    }
+                }
+                .RatingControls {
+                    display: flex;
+                    flex-direction: row;
+                    width: 140px;
+                    .RatingControl {
+                        cursor: pointer;
+                        user-select: none;
+                        background-color: variables.$white;
+                        box-shadow: variables.$box-shadow-1;
+                        border: 1px solid variables.$gray-200;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70px;
+                        height: 30px;
+                        padding: 5px;
+                        transition: all 0.15s ease;
+                        &:hover {
+                            border: 1px solid variables.$green-200;
+                            box-shadow: variables.$box-shadow-2;
+                            z-index: 100;
+                        }
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                        &.RightControl {
+                            border-top-left-radius: 0px;
+                            border-bottom-left-radius: 0px;
+                            border-top-right-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                            margin-left: -1px;
+                        }
+                    }
+                }
+            }
+        }
+        .CommentWrapper {
+            .CommentItem {
+                display: flex;
+                gap: 10px;
+                padding: 15px;
+                .CommentUserAvatar {
+                    width: 40px;
+                    height: 40px;
+                    flex-shrink: 0;
+                }
+                .AvatarImg {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    box-shadow: variables.$box-shadow-2;
+                    object-fit: cover;
+                }
+                .CommentInfo {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: variables.$gray-100;
+                    box-shadow: variables.$box-shadow-2;
+                    flex: 1;
+                    border-radius: 10px;
+                    padding: 10px;
+                    .stars {
+                        margin-top: 4px;
+                        margin-left: -4px;
+                    }
+                    .CommentTitle {
+                        font-weight: bold;
+                        font-size: 14px;
+                        span {
+                            margin-left: 5px;
+                            font-size: 12px;
+                            color: variables.$gray-300;
+                        }
+                    }
+                    .CommentContent {
+                        font-size: 14px;
+                    }
+                }
+                .CommentControls {
+                    display: flex;
+                    flex-direction: row;
+                    width: 140px;
+                }
+                .CommentControl {
+                    cursor: pointer;
+                    user-select: none;
+                    background-color: variables.$white;
+                    box-shadow: variables.$box-shadow-1;
+                    border: 1px solid variables.$gray-200;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3px;
+                    width: 70px;
+                    height: 30px;
+                    padding: 5px;
+                    transition: all 0.15s ease;
+                    &:hover {
+                        border: 1px solid variables.$green-200;
+                        box-shadow: variables.$box-shadow-2;
+                        z-index: 100;
+                    }
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                    &.LeftControl {
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    &.RightControl {
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        margin-left: -1px;
+                    }
+                }
+                textarea {
+                    font-size: 16px;
+                    padding: 8px 12px;
+                    outline: none;
+                    border: 1px solid variables.$gray-200;
+                    border-radius: 3px;
+                    box-shadow: variables.$box-shadow-2;
+                    width: 100%;
+                    transition: all 0.3s ease;
+                    resize: vertical;
+                    &:focus {
+                        border: 1px solid variables.$green-200;
+                        box-shadow: variables.$box-shadow-3;
+                    }
+                }
+            }
+            .ReplyToggle {
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: variables.$blue-500;
+                margin: -10px 0 5px 65px;
+            }
+        }
+    }
+}

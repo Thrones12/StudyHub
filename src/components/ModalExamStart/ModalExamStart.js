@@ -48,6 +48,8 @@ const ExamStartModal = ({
                     setPercent(0);
                 }
             } catch (err) {
+                console.log(err);
+
                 if (err.response && err.response.data?.message) {
                     Noti.error(err.response.data.message);
                 } else {
@@ -81,7 +83,7 @@ const ExamStartModal = ({
         <>
             <div
                 className={`exam-start-modal ${isShow ? "show" : ""}`}
-                style={{ top: 60, left: examId ? 0 : 265 }}
+                style={{ top: 50, left: examId ? 0 : 265 }}
             >
                 <div className='exam-overlay'></div>
                 <div className='modal'>

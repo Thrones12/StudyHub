@@ -5,35 +5,37 @@ import "./ProgressPage.css";
 import constants from "../../../utils/constants";
 import { LearningHourChart, SelectComponent } from "../../../components";
 import dayjs from "dayjs";
-import { User, Course, TimeFormat } from "../../../services";
-import { Link, useNavigate } from "react-router-dom";
+import { User, TimeFormat } from "../../../services";
+import { useNavigate } from "react-router-dom";
 import Noti from "../../../utils/Noti";
+import useFetch from "../../../hooks/useFetch";
+import styles from "./ProgressPage.module.scss";
 
 const monthOptions = [
-    { value: 0, text: "Tháng 1" },
-    { value: 1, text: "Tháng 2" },
-    { value: 2, text: "Tháng 3" },
-    { value: 3, text: "Tháng 4" },
-    { value: 4, text: "Tháng 5" },
-    { value: 5, text: "Tháng 6" },
-    { value: 6, text: "Tháng 7" },
-    { value: 7, text: "Tháng 8" },
-    { value: 8, text: "Tháng 9" },
-    { value: 9, text: "Tháng 10" },
-    { value: 10, text: "Tháng 11" },
-    { value: 11, text: "Tháng 12" },
+    { value: 0, label: "Tháng 1" },
+    { value: 1, label: "Tháng 2" },
+    { value: 2, label: "Tháng 3" },
+    { value: 3, label: "Tháng 4" },
+    { value: 4, label: "Tháng 5" },
+    { value: 5, label: "Tháng 6" },
+    { value: 6, label: "Tháng 7" },
+    { value: 7, label: "Tháng 8" },
+    { value: 8, label: "Tháng 9" },
+    { value: 9, label: "Tháng 10" },
+    { value: 10, label: "Tháng 11" },
+    { value: 11, label: "Tháng 12" },
 ];
 let yearOptions = [];
 let courseOptions = [];
 let progressOptions = [
-    { value: 0, text: "Tất cả" },
-    { value: 1, text: "Đã hoàn thành" },
-    { value: 2, text: "Chưa hoàn thành" },
+    { value: 0, label: "Tất cả" },
+    { value: 1, label: "Đã hoàn thành" },
+    { value: 2, label: "Chưa hoàn thành" },
 ];
 
 const LearningStatisPage = () => {
     const nav = useNavigate();
-    const { userId } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     // For table
     const [sortedData, setSortedData] = useState([]);
     // For chart
@@ -41,7 +43,12 @@ const LearningStatisPage = () => {
     const [prevData, setPrevData] = useState();
     const [pieChartData, setPieChartData] = useState();
     // For select
-    const [courses, setCourses] = useState([]);
+
+    // Lấy dữ liệu môn học
+    const { data: courses } = useFetch({
+        url: `http://localhost:8080/api/course`,
+        method: "GET",
+    });
     const [courseId, setCourseId] = useState();
     const [month, setMonth] = useState(0);
     const [year, setYear] = useState(0);
@@ -57,11 +64,10 @@ const LearningStatisPage = () => {
         setYear(date.year());
         let years = [];
         for (let y = date.year(); y >= date.year() - 30; y--) {
-            years.push({ value: y, text: y.toString() });
+            years.push({ value: y, label: y.toString() });
         }
         yearOptions = years;
-        Course.GetAll(setCourses);
-    }, [userId]);
+    }, [user]);
 
     useEffect(() => {
         if (courses && courses.length > 0) {
@@ -70,21 +76,35 @@ const LearningStatisPage = () => {
     }, [courses]);
 
     useEffect(() => {
-        if (courses.length > 0 && userId && courseId && month && year) {
+        if (
+            courses &&
+            courses.length > 0 &&
+            user &&
+            courseId &&
+            month &&
+            year
+        ) {
             courseOptions = courses.map((c) => ({
                 value: c._id,
-                text: c.title,
+                label: c.title,
             }));
-            User.GetLearningHour(userId, courseId, month, year, setCurrentData);
+
             User.GetLearningHour(
-                userId,
+                user._id,
+                courseId,
+                month,
+                year,
+                setCurrentData
+            );
+            User.GetLearningHour(
+                user._id,
                 courseId,
                 month - 1,
                 year,
                 setPrevData
             );
         }
-    }, [userId, courses, courseId, month, year]);
+    }, [user, courses, courseId, month, year]);
 
     useEffect(() => {
         if (currentData && currentData.length > 0) {
@@ -99,14 +119,16 @@ const LearningStatisPage = () => {
                       ).toFixed(1)
                     : 0,
             }));
+
             setPieChartData(newData);
+
             setSortedData(currentData.sort((a, b) => b.second - a.second));
         }
     }, [currentData, prevData]);
 
     useEffect(() => {
-        if (userId) User.GetProgressData(userId, setProgressData);
-    }, [userId]);
+        if (user) User.GetProgressData(user._id, setProgressData);
+    }, [user]);
 
     useEffect(() => {
         if (progressData && progressData.length > 0) {
@@ -131,13 +153,19 @@ const LearningStatisPage = () => {
     };
     return (
         <div className='container'>
-            <div className='profile-page' style={{ marginBottom: 100 }}>
-                <div className='row' style={{ margin: 0, gap: 30 }}>
-                    <div className='card' style={{ flex: 3 }}>
+            <div className='profile-page' style={{ marginBottom: 30 }}>
+                <div className='row' style={{ margin: "-30px 0", gap: 30 }}>
+                    <div className={styles.Card} style={{ flex: 3 }}>
                         {/* Begin: card-header */}
-                        <div className='card-header'>
+                        <div className={styles.Header}>
                             <div>Biểu đồ</div>
-                            <div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    gap: 5,
+                                }}
+                            >
                                 {courseId && courseOptions.length > 0 && (
                                     <SelectComponent
                                         value={courseId}
@@ -162,22 +190,22 @@ const LearningStatisPage = () => {
                         {/* End: card-header */}
 
                         {/* Begin: card-body */}
-                        <div className='card-body' style={{ padding: 10 }}>
+                        <div className={styles.Body} style={{ padding: 10 }}>
                             {pieChartData && (
                                 <LearningHourChart data={pieChartData} />
                             )}
                         </div>
                         {/* End: card-body */}
                     </div>
-                    <div className='card' style={{ flex: 2 }}>
+                    <div className={styles.Card} style={{ flex: 2 }}>
                         {/* Begin: card-header */}
-                        <div className='card-header'>
+                        <div className={styles.Header}>
                             <div>Thời gian học tập</div>
                         </div>
                         {/* End: card-header */}
 
                         {/* Begin: card-body */}
-                        <div className='card-body' style={{ padding: 0 }}>
+                        <div className={styles.Body} style={{ padding: 0 }}>
                             <div className='table-scroll-wrapper'>
                                 <table className='learning-time-table'>
                                     <thead>
@@ -220,9 +248,9 @@ const LearningStatisPage = () => {
                     </div>
                 </div>
 
-                <div className='card'>
+                <div className={styles.Card}>
                     {/* Begin: card-header */}
-                    <div className='card-header'>
+                    <div className={styles.Header}>
                         <div>Tiến độ học tập</div>
                         <SelectComponent
                             value={progressFilter}
@@ -233,7 +261,7 @@ const LearningStatisPage = () => {
                     {/* End: card-header */}
 
                     {/* Begin: card-body */}
-                    <div className='card-body'>
+                    <div className={styles.Body}>
                         <div className='learning-progress'>
                             {FilterdProgressData &&
                                 FilterdProgressData.map((item, index) => {
@@ -261,17 +289,6 @@ const LearningStatisPage = () => {
                                                 <div className='primary'>
                                                     {item.doneLessons}/
                                                     {item.totalLessons} Bài học
-                                                    <span
-                                                        style={{
-                                                            marginLeft: 10,
-                                                            marginRight: 10,
-                                                        }}
-                                                    >
-                                                        -
-                                                    </span>
-                                                    {item.doneExams}/
-                                                    {item.totalExams} Bài kiểm
-                                                    tra
                                                 </div>
                                             </div>
                                         </div>

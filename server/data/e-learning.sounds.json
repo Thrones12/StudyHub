@@ -1,80 +1,82 @@
-[{
-  "_id": {
-    "$oid": "67e01e98724ac8fd68e4500b"
-  },
-  "name": "brook",
-  "icon": "/svgs/brook.svg",
-  "src": "/sounds/brook.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e01e98724ac8fd68e4500c"
-  },
-  "name": "cafe",
-  "icon": "/svgs/cafe.svg",
-  "src": "/sounds/cafe.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e01e98724ac8fd68e4500d"
-  },
-  "name": "fire",
-  "icon": "/svgs/fire.svg",
-  "src": "/sounds/fire.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e01e98724ac8fd68e4500e"
-  },
-  "name": "forest",
-  "icon": "/svgs/forest.svg",
-  "src": "/sounds/forest.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e186fcb392e205ab04cd63"
-  },
-  "name": "leaf",
-  "icon": "/svgs/leaf.svg",
-  "src": "/sounds/leaf.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e18707b392e205ab04cd64"
-  },
-  "name": "library",
-  "icon": "/svgs/library.svg",
-  "src": "/sounds/library.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e1870fb392e205ab04cd65"
-  },
-  "name": "rain",
-  "icon": "/svgs/rain.svg",
-  "src": "/sounds/rain.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e18715b392e205ab04cd66"
-  },
-  "name": "snow",
-  "icon": "/svgs/snow.svg",
-  "src": "/sounds/snow.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e1871db392e205ab04cd67"
-  },
-  "name": "thunder",
-  "icon": "/svgs/thunder.svg",
-  "src": "/sounds/thunder.mp3"
-},
-{
-  "_id": {
-    "$oid": "67e18725b392e205ab04cd68"
-  },
-  "name": "train",
-  "icon": "/svgs/train.svg",
-  "src": "/sounds/train.mp3"
-}]
+[
+    {
+        "_id": {
+            "$oid": "67e01e98724ac8fd68e4500b"
+        },
+        "name": "brook",
+        "icon": "/svgs/brook.svg",
+        "src": "/sounds/brook.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e01e98724ac8fd68e4500c"
+        },
+        "name": "cafe",
+        "icon": "/svgs/cafe.svg",
+        "src": "/sounds/cafe.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e01e98724ac8fd68e4500d"
+        },
+        "name": "fire",
+        "icon": "/svgs/fire.svg",
+        "src": "/sounds/fire.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e01e98724ac8fd68e4500e"
+        },
+        "name": "forest",
+        "icon": "/svgs/forest.svg",
+        "src": "/sounds/forest.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e186fcb392e205ab04cd63"
+        },
+        "name": "leaf",
+        "icon": "/svgs/leaf.svg",
+        "src": "/sounds/leaf.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e18707b392e205ab04cd64"
+        },
+        "name": "library",
+        "icon": "/svgs/library.svg",
+        "src": "/sounds/library.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e1870fb392e205ab04cd65"
+        },
+        "name": "rain",
+        "icon": "/svgs/rain.svg",
+        "src": "/sounds/rain.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e18715b392e205ab04cd66"
+        },
+        "name": "snow",
+        "icon": "/svgs/snow.svg",
+        "src": "/sounds/snow.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e1871db392e205ab04cd67"
+        },
+        "name": "thunder",
+        "icon": "/svgs/thunder.svg",
+        "src": "/sounds/thunder.mp3"
+    },
+    {
+        "_id": {
+            "$oid": "67e18725b392e205ab04cd68"
+        },
+        "name": "train",
+        "icon": "/svgs/train.svg",
+        "src": "/sounds/train.mp3"
+    }
+]

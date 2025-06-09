@@ -1,0 +1,222 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.wrapper {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    .Header {
+        padding: 10px 20px;
+    }
+
+    .controls {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        .button {
+            cursor: pointer;
+            user-select: none;
+            @include mixins.iconButton();
+            min-width: 40px;
+            height: 40px;
+            padding: 10px;
+            gap: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: variables.$white;
+            background-color: variables.$green-300;
+            border: 1px solid variables.$green-300;
+            transition: all 0.2s ease;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .Modal {
+        @include mixins.slide-in-right();
+        width: 600px;
+        border: 1px solid variables.$gray-200;
+        .Header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-bottom: 1px solid variables.$gray-200;
+            .button {
+                cursor: pointer;
+                user-select: none;
+                @include mixins.iconButton();
+                padding: 10px;
+                gap: 8px;
+                font-size: 14px;
+                color: variables.$gray-400;
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+                &.active {
+                    border: 1px solid variables.$green-200;
+                    box-shadow: variables.$box-shadow-2;
+                }
+                width: 25px;
+                height: 25px;
+                border-radius: 8px;
+                &:hover {
+                    border-color: variables.$red-300;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+        .Body {
+            padding: 15px;
+        }
+    }
+    .Form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .ColLeft {
+            width: calc(50% - 5px);
+            margin-right: 5px;
+        }
+        .ColRight {
+            width: calc(50% - 5px);
+            margin-left: 5px;
+        }
+        .Field {
+            input,
+            textarea,
+            select {
+                font-size: 16px;
+                padding: 8px 12px;
+                outline: none;
+                border: 1px solid variables.$gray-200;
+                border-radius: 3px;
+                box-shadow: variables.$box-shadow-2;
+                width: 100%;
+                transition: all 0.3s ease;
+                &:focus {
+                    border: 1px solid variables.$green-200;
+                    box-shadow: variables.$box-shadow-3;
+                }
+            }
+        }
+        .Buttons {
+            button {
+                width: auto;
+                font-size: 16px;
+                padding: 8px 12px;
+                border-radius: 10px;
+                background-color: variables.$green-300;
+                box-shadow: variables.$box-shadow-2;
+                color: #fff;
+                transition: all 0.3s ease;
+                &:hover {
+                    box-shadow: variables.$box-shadow-3;
+                }
+            }
+        }
+        .IconButton {
+            cursor: pointer;
+            user-select: none;
+            @include mixins.iconButton();
+            border-radius: 3px;
+            min-width: 40px;
+            height: 40px;
+            padding: 10px;
+            gap: 5px;
+            font-size: 14px;
+            color: variables.$gray-400;
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+    .ModalTodo {
+        @include mixins.slide-down;
+
+        width: 500px;
+        background-color: #fff;
+        border-radius: 15px;
+        z-index: 1001;
+        border: 1px solid variables.$gray-400;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .TodoModalHeader {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            input {
+                font-size: 16px;
+                padding: 8px 12px;
+                outline: none;
+                border: 1px solid variables.$gray-200;
+                border-radius: 3px;
+                box-shadow: variables.$box-shadow-2;
+                width: 100%;
+                transition: all 0.3s ease;
+                &:focus {
+                    border: 1px solid variables.$green-200;
+                    box-shadow: variables.$box-shadow-3;
+                }
+            }
+            svg {
+                cursor: pointer;
+                margin-left: 10px;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: variables.$green-300;
+                }
+            }
+        }
+        .TodoItems {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            height: 200px;
+            overflow: auto;
+            @include mixins.scrollBar;
+            .TodoItem {
+                cursor: pointer;
+                border: 1px solid variables.$gray-200;
+                border-radius: 3px;
+                padding: 4px 8px;
+                transition: all 0.2s ease;
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+            }
+        }
+    }
+}

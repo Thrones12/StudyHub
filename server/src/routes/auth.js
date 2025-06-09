@@ -12,5 +12,7 @@ router.post("/send-otp", authController.sendOtp);
 router.post("/active-account", authController.activeAccount);
 // Gửi mật khẩu mới
 router.post("/send-new-password", authController.sendNewPassword);
+// Xác nhận token
+router.post("/verify-token", authController.verifyToken);
 
 module.exports = router;

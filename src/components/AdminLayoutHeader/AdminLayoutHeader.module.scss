@@ -1,0 +1,132 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.wrapper {
+    padding: 10px 20px;
+    border-bottom: 2px solid variables.$gray-100;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 65px;
+    .controls {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        .button {
+            cursor: pointer;
+            user-select: none;
+            @include mixins.iconButton();
+            min-width: 40px;
+            height: 40px;
+            padding: 10px;
+            gap: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: variables.$white;
+            background-color: variables.$green-300;
+            border: 1px solid variables.$green-300;
+            transition: all 0.2s ease;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .Modal {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        background-color: #fff;
+        border: 1px solid variables.$gray-400;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        transform: translateY(0);
+        &.open {
+            transform: translateY(10px);
+            opacity: 1;
+            visibility: visible;
+        }
+        .Header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-bottom: 1px solid variables.$gray-200;
+            .button {
+                user-select: none;
+                @include mixins.iconButton();
+                padding: 10px;
+                gap: 8px;
+                font-size: 14px;
+                color: variables.$gray-400;
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+                &.active {
+                    border: 1px solid variables.$green-200;
+                    box-shadow: variables.$box-shadow-2;
+                }
+                width: 25px;
+                height: 25px;
+                border-radius: 8px;
+                &:hover {
+                    border-color: variables.$red-300;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+        .Body {
+            user-select: none;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            max-height: 372px;
+            overflow: auto;
+            @include mixins.scrollBar;
+            .Notification {
+                background-color: #fff;
+                box-shadow: variables.$box-shadow-3;
+                padding: 10px;
+                font-size: 14px;
+                transition: all 0.15s ease;
+                .Type {
+                    font-weight: bold;
+                    span {
+                        font-weight: normal;
+                        font-style: italic;
+                    }
+                }
+                &:hover {
+                    background-color: variables.$gray-100;
+                }
+            }
+            button {
+                background-color: #fff;
+                transition: all 0.15s ease;
+                font-style: italic;
+                &:hover {
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}

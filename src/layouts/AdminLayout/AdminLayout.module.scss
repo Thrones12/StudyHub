@@ -1,0 +1,15 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: variables.$gray-100;
+    .outlet {
+        padding: 10px;
+        flex: 1;
+        transition: all 0.3s ease;
+        min-height: 100vh;
+    }
+}

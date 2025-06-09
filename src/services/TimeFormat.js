@@ -1,4 +1,7 @@
 import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
+import "dayjs/locale/vi";
+dayjs.extend(duration);
 
 const SecondToMinute = (seconds) => {
     const minutes = Math.round(seconds / 60); // dùng round để làm tròn
@@ -57,12 +60,51 @@ function getMonthYear(date = dayjs()) {
     const year = date.year();
     return `Tháng ${month}, ${year}`;
 }
+function formatDateTime(dateInput) {
+    const date = new Date(dateInput);
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1; // Tháng tính từ 0
+    const year = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+
+    return `${day} tháng ${month}, ${year} lúc ${hours}:${minutes}`;
+}
+function getTimeRemaining(targetDate) {
+    const now = dayjs();
+    const diffInMs = targetDate.diff(now);
+
+    if (diffInMs <= 0) return "0m";
+
+    const dur = dayjs.duration(diffInMs);
+
+    const days = Math.floor(dur.asDays());
+    const hours = dur.hours();
+    const minutes = dur.minutes();
+
+    return `${days}d ${hours}h ${minutes}m`;
+}
+const isToday = (date) => {
+    if (!date) return false;
+    return dayjs(date).isSame(dayjs(), "day");
+};
+function isOverdue(date) {
+    if (!date) return false;
+    const inputDate = dayjs(date).startOf("day");
+    const today = dayjs().startOf("day");
+    return inputDate.isBefore(today);
+}
 const TimeFormat = {
     SecondToMinute,
     TimeAgo,
     isOlderThanOneHour,
     getMonthYear,
     convertToHourAndMinute,
+    formatDateTime,
+    getTimeRemaining,
+    isToday,
+    isOverdue,
 };
 
 export { TimeFormat };

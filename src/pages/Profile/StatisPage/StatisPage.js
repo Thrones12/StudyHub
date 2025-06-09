@@ -7,6 +7,8 @@ import ChartAverageScore from "../../../components/ChartAverageScore/ChartAverag
 import { User, Course, ExamResult } from "../../../services";
 import { ChartHistogram, SelectComponent } from "../../../components";
 import { useNavigate } from "react-router-dom";
+import styles from "./StatisPage.module.scss";
+import useFetch from "../../../hooks/useFetch";
 
 let courseOptions = [];
 let subjectOptions = [];
@@ -14,9 +16,13 @@ let subjectOptions = [];
 const ExamStatisPage = () => {
     const API = constants.API;
     const nav = useNavigate();
-    const { userId } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [courseId, setCourseId] = useState();
-    const [courses, setCourses] = useState([]);
+    // Lấy dữ liệu môn học
+    const { data: courses } = useFetch({
+        url: `http://localhost:8080/api/course`,
+        method: "GET",
+    });
     const [subjectId, setSubjectId] = useState();
     const [subjects, setSubjects] = useState([]);
 
@@ -24,50 +30,48 @@ const ExamStatisPage = () => {
     const [examResults, setExamResults] = useState([]);
 
     useEffect(() => {
-        if (userId && subjectId)
-            ExamResult.GetHistogramData(userId, subjectId, setExamResults);
-    }, [userId, courseId, subjectId]);
-
-    useEffect(() => {
-        Course.GetAll(setCourses);
-    }, [userId]);
+        if (user && subjectId)
+            ExamResult.GetHistogramData(user._id, subjectId, setExamResults);
+    }, [user, courseId, subjectId]);
 
     useEffect(() => {
         if (courses && courses.length > 0) {
-            setCourseId(courses[2]._id);
+            setCourseId(courses[0]._id);
             courseOptions = courses.map((c) => ({
                 value: c._id,
-                text: c.title,
+                label: c.title,
             }));
-            setSubjects(courses[2].subjects);
-            setSubjectId(courses[2].subjects[0]._id);
-            subjectOptions = courses[2].subjects.map((s) => ({
+            console.log(courseOptions);
+
+            setSubjects(courses[0].subjects);
+            setSubjectId(courses[0].subjects[0]._id);
+            subjectOptions = courses[0].subjects.map((s) => ({
                 value: s._id,
-                text: s.title,
+                label: s.title,
             }));
         }
     }, [courses]);
 
     useEffect(() => {
         if (courseId) {
-            User.GetAverageScore(userId, courseId, setData);
+            User.GetAverageScore(user._id, courseId, setData);
             let course = courses.find((c) => c._id === courseId);
             setSubjects(course.subjects);
             setSubjectId(course.subjects[0]._id);
             subjectOptions = course.subjects.map((s) => ({
                 value: s._id,
-                text: s.title,
+                label: s.title,
             }));
         }
     }, [courseId]);
 
     return (
         <div className='container'>
-            <div className='profile-page' style={{ marginBottom: 100 }}>
+            <div className='profile-page' style={{ marginBottom: 30 }}>
                 {/* Begin: statis card */}
-                <div className='card'>
+                <div className={styles.Card}>
                     {/* Begin: card-header */}
-                    <div className='card-header'>
+                    <div className={styles.Header}>
                         <div>Kết quả học tập</div>
                         <div>
                             {courseId && courseOptions.length > 0 && (
@@ -82,7 +86,7 @@ const ExamStatisPage = () => {
                     {/* End: card-header */}
 
                     {/* Begin: card-body */}
-                    <div className='card-body'>
+                    <div className={styles.Body}>
                         {/* Begin: row name */}
                         {data && (
                             <div className='row'>
@@ -122,10 +126,10 @@ const ExamStatisPage = () => {
                     {/* End: card-body */}
                 </div>
                 {/* End: statis card */}
-                <div className='row' style={{ margin: 0, gap: 30 }}>
-                    <div className='card' style={{ flex: 3 }}>
+                <div className='row' style={{ margin: "-30px 0", gap: 30 }}>
+                    <div className={styles.Card} style={{ flex: 3 }}>
                         {/* Begin: card-header */}
-                        <div className='card-header'>
+                        <div className={styles.Header}>
                             <div>Phổ điểm môn học</div>
                             <div>
                                 {courseId && courseOptions.length > 0 && (
@@ -147,7 +151,10 @@ const ExamStatisPage = () => {
                         {/* End: card-header */}
                         {/* Begin: card-body */}
                         {examResults && (
-                            <div className='card-body'>
+                            <div
+                                className={styles.Body}
+                                style={{ padding: 10 }}
+                            >
                                 {/* Begin: row name */}
                                 <ChartHistogram examResults={examResults} />
                                 {/* End: row name */}
@@ -156,15 +163,15 @@ const ExamStatisPage = () => {
                         {/* End: card-body */}
                     </div>
 
-                    <div className='card' style={{ flex: 3 }}>
+                    <div className={styles.Card} style={{ flex: 3 }}>
                         {/* Begin: card-header */}
-                        <div className='card-header'>
+                        <div className={styles.Header}>
                             <div>Bài kiểm tra</div>
                         </div>
                         {/* End: card-header */}
 
                         {/* Begin: card-body */}
-                        <div className='card-body' style={{ padding: 0 }}>
+                        <div className={styles.Body} style={{ padding: 0 }}>
                             <div className='table-scroll-wrapper'>
                                 <table className='learning-time-table'>
                                     <thead>
@@ -186,7 +193,7 @@ const ExamStatisPage = () => {
                                                         className='table-link'
                                                         onClick={() =>
                                                             nav(
-                                                                `/exam/${item.exam._id}`
+                                                                `/study/exam/${item.exam._id}`
                                                             )
                                                         }
                                                     >

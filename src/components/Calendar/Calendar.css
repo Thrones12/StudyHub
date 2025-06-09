@@ -81,7 +81,7 @@
     user-select: none;
     padding: 4px 8px;
     margin: 2px 0;
-    width: 95%;
+    width: 100%;
     background-color: var(--blue-500);
     box-shadow: var(--box-shadow-2);
     color: var(--white);
@@ -91,6 +91,10 @@
 .calendar .task-item:hover {
     background-color: var(--blue-600);
     transform: translateY(-2px);
+}
+.calendar .task-item.completed {
+    background-color: var(--green-500);
+    text-decoration-line: line-through;
 }
 .calendar .more-task {
     background-color: var(--gray-300) !important;

@@ -8,93 +8,141 @@ import {
     faHourglass1,
     faFileLines,
 } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
-import "./ProfileOverall.css";
-import ProfileNavbar from "../ProfileNavbar/ProfileNavbar";
-import constants from "../../utils/constants";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import styles from "./ProfileOverall.module.scss";
+import * as MuiIcons from "@mui/icons-material";
 
+const tabs = [
+    { name: "Hồ sơ", key: "profile" },
+    { name: "Tiến độ", key: "progress" },
+    { name: "Thống kê", key: "statis" },
+    // { name: "Lộ trình", key: "learning-path" },
+    { name: "Lưu trữ", key: "saves" },
+    { name: "Yêu thích", key: "likes" },
+];
 const ProfileOverall = () => {
-    const API = constants.API;
+    const nav = useNavigate();
     const location = useLocation();
     const pathParts = location.pathname.split("/");
     const activeTab = pathParts[pathParts.length - 1];
-    const { userId } = useContext(AuthContext);
-    const [initUser, setInitUser] = useState({});
+    const { user } = useContext(AuthContext);
+    const [statis, setStatis] = useState({
+        doneLessons: 0,
+        totalHours: 0,
+        totalExams: 0,
+    });
     useEffect(() => {
-        const fetchData = async () => {
-            const res = await axios.get(`${API}/user/get-one?id=${userId}`);
-            let data = res.data.data;
+        if (user) {
+            let doneLessons =
+                user.learned?.reduce((total, course) => {
+                    return (
+                        total +
+                        course.subjects.reduce((subjectTotal, subject) => {
+                            return (
+                                subjectTotal +
+                                subject.lessons.filter(
+                                    (lesson) => lesson.isDone
+                                ).length
+                            );
+                        }, 0)
+                    );
+                }, 0) || 0;
+            let totalSeconds =
+                (user.learningHour?.reduce((total, session) => {
+                    return (
+                        total +
+                        session.courses.reduce((courseTotal, course) => {
+                            return (
+                                courseTotal +
+                                course.subjects.reduce(
+                                    (subjectTotal, subject) => {
+                                        return (
+                                            subjectTotal + (subject.second || 0)
+                                        );
+                                    },
+                                    0
+                                )
+                            );
+                        }, 0)
+                    );
+                }, 0) || 0) +
+                (user.sessions?.reduce((sessionTotal, session) => {
+                    return sessionTotal + (session.spentTime || 0) * 60; // chuyển phút sang giây
+                }, 0) || 0);
 
-            setInitUser(data);
-        };
-        if (userId) {
-            fetchData();
+            const totalHours = (totalSeconds / 3600).toFixed(2); // Ví dụ: "3.25" giờ
+            const totalExams = user.examResults?.length || 0;
+            setStatis({
+                doneLessons,
+                totalHours,
+                totalExams,
+            });
         }
-    }, [userId, API]);
+    }, [user]);
     return (
-        <div className='container'>
-            <div className='profile-overall'>
-                <div className='card'>
-                    <div className='card-body' style={{ paddingBottom: 0 }}>
-                        <div className='overview'>
-                            <div className='image'>
-                                <img src={initUser.avatar} alt='avatar' />
-                            </div>
-                            <div className='information'>
-                                <div className='username'>
-                                    {initUser.fullname}
-                                </div>
-                                <div className='info-list'>
-                                    <div className='item'>
-                                        <FontAwesomeIcon icon={faEnvelope} />
-                                        {initUser.email}
-                                    </div>
-                                    <div className='item'>
-                                        <FontAwesomeIcon icon={faPhone} />
-                                        {initUser.phone}
-                                    </div>
-                                    <div className='item'>
-                                        <FontAwesomeIcon icon={faLocationDot} />
-                                        {initUser.address}
-                                    </div>
-                                </div>
-                                <div className='user-statis'>
-                                    <div className='item'>
-                                        <div className='number'>
-                                            <FontAwesomeIcon icon={faBook} />
-                                            5019
-                                        </div>
-                                        <div className='label'>Bài học</div>
-                                    </div>
-                                    <div className='item'>
-                                        <div className='number'>
-                                            <FontAwesomeIcon
-                                                icon={faFileLines}
-                                            />
-                                            105
-                                        </div>
-                                        <div className='label'>
-                                            Bài kiểm tra
-                                        </div>
-                                    </div>
-                                    <div className='item'>
-                                        <div className='number'>
-                                            <FontAwesomeIcon
-                                                icon={faHourglass1}
-                                            />
-                                            40
-                                        </div>
-                                        <div className='label'>Giờ học</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='profile-completion'></div>
+        <div className={styles.Overall}>
+            {user && (
+                <div className={styles.Overview}>
+                    <div className={styles.Image}>
+                        <img src={user.profile.avatarUrl} alt='avatar' />
+                    </div>
+                    <div className={styles.Profile}>
+                        <div className={styles.Username}>
+                            {user.profile.fullname}
                         </div>
-                        <ProfileNavbar activeTab={activeTab} />
+                        <div className={styles.Info}>
+                            <div className={styles.Item}>
+                                <MuiIcons.Email />
+                                {user.email}
+                            </div>
+                            <div className={styles.Item}>
+                                <MuiIcons.LocationOn />
+                                {user.profile.address}
+                            </div>
+                            <div className={styles.Item}>
+                                <MuiIcons.LocalPhone />
+                                {user.profile.phone}
+                            </div>
+                        </div>
+                        <div className={styles.Statis}>
+                            <div className={styles.Item}>
+                                <div className={styles.Number}>
+                                    <MuiIcons.MenuBook />
+                                    <p>{statis.doneLessons}</p>
+                                </div>
+                                <div className={styles.Label}>Bài học</div>
+                            </div>
+                            <div className={styles.Item}>
+                                <div className={styles.Number}>
+                                    <MuiIcons.Assignment />
+                                    <p>{statis.totalExams}</p>
+                                </div>
+                                <div className={styles.Label}>Bài kiểm tra</div>
+                            </div>
+                            <div className={styles.Item}>
+                                <div className={styles.Number}>
+                                    <MuiIcons.HourglassTop />
+                                    <p>{statis.totalHours}</p>
+                                </div>
+                                <div className={styles.Label}>Giờ học</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            )}
+            <div className={styles.Navbar}>
+                {tabs.map((tab) => (
+                    <li
+                        key={tab.key}
+                        className={`${styles.Tab} ${
+                            activeTab === tab.key ? styles.Active : ""
+                        }`}
+                        onClick={() => nav(`/account/${tab.key}`)}
+                    >
+                        {tab.name}
+                    </li>
+                ))}
             </div>
         </div>
     );

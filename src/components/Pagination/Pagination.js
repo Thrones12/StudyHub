@@ -17,7 +17,6 @@ const Pagination = ({ page, setPage, total }) => {
         const range = [];
         const startPage = Math.max(1, page - 2);
         const endPage = Math.min(total, page + 2);
-        console.log(total);
 
         for (let i = startPage; i <= endPage; i++) {
             range.push(i);

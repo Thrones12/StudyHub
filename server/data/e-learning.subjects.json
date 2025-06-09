@@ -1,308 +1,119 @@
-[{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e39"
-  },
-  "title": "Ngữ văn 10",
-  "tag": "ngu-van-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e36"
-  },
-  "title": "Toán học 10",
-  "tag": "toan-hoc-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e3a"
-  },
-  "title": "Tiếng Anh 10",
-  "tag": "tieng-anh-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e37"
-  },
-  "title": "Vật lý 10",
-  "tag": "vat-ly-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e38"
-  },
-  "title": "Hóa học 10",
-  "tag": "hoa-hoc-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e3b"
-  },
-  "title": "Địa lí 10",
-  "tag": "dia-li-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e3c"
-  },
-  "title": "Lịch sử 10",
-  "tag": "lich-su-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e3d"
-  },
-  "title": "Công nghệ 10",
-  "tag": "cong-nghe-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67a9c9060d5fbff4d3b34e3e"
-  },
-  "title": "Giáo dục công dân 10",
-  "tag": "gdcd-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67aa0825e07a8de25c30a63f"
-  },
-  "title": "Tin học 10",
-  "tag": "tin-hoc-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d2fd0c1332f6140b9c9e1c"
-  },
-  "title": "Sinh học 10",
-  "tag": "sinh-hoc-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d2fd0c1332f6140b9c9e1d"
-  },
-  "title": "Giáo dục quốc phòng 10",
-  "tag": "gdqp-10",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e22"
-  },
-  "title": "Ngữ văn 11",
-  "tag": "ngu-van-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e23"
-  },
-  "title": "Toán học 11",
-  "tag": "toan-hoc-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e24"
-  },
-  "title": "Tiếng Anh 11",
-  "tag": "tieng-anh-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e25"
-  },
-  "title": "Vật lý 11",
-  "tag": "vat-ly-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e26"
-  },
-  "title": "Hóa học 11",
-  "tag": "hoa-hoc-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e27"
-  },
-  "title": "Địa lí 11",
-  "tag": "dia-li-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e28"
-  },
-  "title": "Lịch sử 11",
-  "tag": "lich-su-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e29"
-  },
-  "title": "Công nghệ 11",
-  "tag": "cong-nghe-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e2a"
-  },
-  "title": "Giáo dục công dân 11",
-  "tag": "gdcd-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e2b"
-  },
-  "title": "Tin học 11",
-  "tag": "tin-hoc-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e2c"
-  },
-  "title": "Sinh học 11",
-  "tag": "sinh-hoc-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e2d"
-  },
-  "title": "Giáo dục quốc phòng 11",
-  "tag": "gdqp-11",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e2e"
-  },
-  "title": "Ngữ văn 12",
-  "tag": "ngu-van-12",
-  "chapters": [
-    "68015b1efcf88f9de2ec951d",
-    "68015b21fcf88f9de2ec951e"
-  ]
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e2f"
-  },
-  "title": "Toán học 12",
-  "tag": "toan-hoc-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e30"
-  },
-  "title": "Tiếng Anh 12",
-  "tag": "tieng-anh-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e31"
-  },
-  "title": "Vật lý 12",
-  "tag": "vat-ly-12",
-  "chapters": [
-    "67a9dab2e07a8de25c30a635",
-    "67d326eecbc084035d9b8e89",
-    "67d326eecbc084035d9b8e8a",
-    "67d326eecbc084035d9b8e8b",
-    "67d326eecbc084035d9b8e8c",
-    "67d326eecbc084035d9b8e8d",
-    "67d326eecbc084035d9b8e8e",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f",
-    "67d326eecbc084035d9b8e8f"
-  ]
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e32"
-  },
-  "title": "Hóa học 12",
-  "tag": "hoa-hoc-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e33"
-  },
-  "title": "Địa lí 12",
-  "tag": "dia-li-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e34"
-  },
-  "title": "Lịch sử 12",
-  "tag": "lich-su-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e35"
-  },
-  "title": "Công nghệ 12",
-  "tag": "cong-nghe-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e36"
-  },
-  "title": "Giáo dục công dân 12",
-  "tag": "gdcd-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e37"
-  },
-  "title": "Tin học 12",
-  "tag": "tin-hoc-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e38"
-  },
-  "title": "Sinh học 12",
-  "tag": "sinh-hoc-12",
-  "chapters": []
-},
-{
-  "_id": {
-    "$oid": "67d301f51332f6140b9c9e39"
-  },
-  "title": "Giáo dục quốc phòng 12",
-  "tag": "gdqp-12",
-  "chapters": []
-}]
+[
+    {
+        "_id": {
+            "$oid": "67a9c9060d5fbff4d3b34e39"
+        },
+        "title": "Ngữ văn 10",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "ngu-van-10",
+        "chapters": [],
+        "courseId": "67a9c5090d5fbff4d3b34e2d",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67a9c9060d5fbff4d3b34e36"
+        },
+        "title": "Toán học 10",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "toan-hoc-10",
+        "chapters": [],
+        "courseId": "67a9c5090d5fbff4d3b34e2d",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67a9c9060d5fbff4d3b34e3a"
+        },
+        "title": "Tiếng Anh 10",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "tieng-anh-10",
+        "chapters": [],
+        "courseId": "67a9c5090d5fbff4d3b34e2d",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67d301f51332f6140b9c9e22"
+        },
+        "title": "Ngữ văn 11",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "ngu-van-11",
+        "chapters": [],
+        "courseId": "67a9c5250d5fbff4d3b34e2e",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67d301f51332f6140b9c9e23"
+        },
+        "title": "Toán học 11",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "toan-hoc-11",
+        "chapters": [],
+        "courseId": "67a9c5250d5fbff4d3b34e2e",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67d301f51332f6140b9c9e24"
+        },
+        "title": "Tiếng Anh 11",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "tieng-anh-11",
+        "chapters": [],
+        "courseId": "67a9c5250d5fbff4d3b34e2e",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67d301f51332f6140b9c9e2e"
+        },
+        "title": "Ngữ văn 12",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "ngu-van-12",
+        "chapters": ["68015b1efcf88f9de2ec951d", "68015b21fcf88f9de2ec951e"],
+        "courseId": "67a9c5290d5fbff4d3b34e2f",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67d301f51332f6140b9c9e2f"
+        },
+        "title": "Toán học 12",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "toan-hoc-12",
+        "chapters": [],
+        "courseId": "67a9c5290d5fbff4d3b34e2f",
+        "order": 0,
+        "views": 1561
+    },
+    {
+        "_id": {
+            "$oid": "67d301f51332f6140b9c9e31"
+        },
+        "title": "Vật lý 12",
+        "author": "Thầy Phạm Hùng Phong",
+        "tag": "vat-ly-12",
+        "chapters": [
+            "67a9dab2e07a8de25c30a635",
+            "67d326eecbc084035d9b8e89",
+            "67d326eecbc084035d9b8e8a",
+            "67d326eecbc084035d9b8e8b",
+            "67d326eecbc084035d9b8e8c",
+            "67d326eecbc084035d9b8e8d",
+            "67d326eecbc084035d9b8e8e",
+            "67d326eecbc084035d9b8e8f"
+        ],
+        "courseId": "67a9c5290d5fbff4d3b34e2f",
+        "order": 0,
+        "views": 1561
+    }
+]
