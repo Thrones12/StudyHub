@@ -24,6 +24,7 @@ import Breadcrumb from "./Breadcrumb/Breadcrumb";
 import SlideInLeftModal from "./SlideInLeftModal/SlideInLeftModal";
 import SlideInRightModal from "./SlideInRightModal/SlideInRightModal";
 import CircleCheckbox from "./CircleCheckbox/CircleCheckbox";
+import SquareCheckbox from "./SquareCheckbox/SquareCheckbox";
 
 // Admin
 import AdminLayoutToolbar from "./AdminLayoutToolbar/AdminLayoutToolbar";
@@ -37,6 +38,7 @@ export {
     MainLayoutTools,
     // Tools
     CircleCheckbox,
+    SquareCheckbox,
     SlideInLeftModal,
     SlideInRightModal,
     Breadcrumb,

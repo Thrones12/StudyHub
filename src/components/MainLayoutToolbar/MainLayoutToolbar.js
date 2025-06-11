@@ -120,7 +120,7 @@ const MainLayoutToolbar = ({ isCollapsed, setIsCollapsed }) => {
         });
         lessonFiltered = lessonFiltered
             .slice(0, 10)
-            .map((item) => ({ ...item, link: `/lesson/${item._id}` }));
+            .map((item) => ({ ...item, link: `/study/lesson/${item._id}` }));
         let examFiltered = exams.filter((exam) => {
             const titleWords = normalize(exam.title).split(" ");
             return searchWords.every((word) =>
@@ -129,7 +129,7 @@ const MainLayoutToolbar = ({ isCollapsed, setIsCollapsed }) => {
         });
         examFiltered = examFiltered
             .slice(0, 10)
-            .map((item) => ({ ...item, link: `/exam/${item._id}` }));
+            .map((item) => ({ ...item, link: `/study/exam/${item._id}` }));
         setSearchResults([
             { title: "Bài học", results: [...lessonFiltered] },
             { title: "Bài kiểm tra", results: [...examFiltered] },
@@ -156,7 +156,11 @@ const MainLayoutToolbar = ({ isCollapsed, setIsCollapsed }) => {
                 >
                     <img
                         className={styles.avatar}
-                        src={"/avatars/profile.png"}
+                        src={
+                            user
+                                ? user.profile.avatarUrl
+                                : "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749332122/user-286_kf2bvt.png"
+                        }
                         alt='user avatar'
                     />
                     <p className={styles.username}>

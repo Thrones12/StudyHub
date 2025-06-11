@@ -4,8 +4,14 @@
 .loginPage {
     @include mixins.fullSize;
     @include mixins.flexCenter;
-    background-color: variables.$gray-100;
     height: 100vh;
+    color: variables.$gray-400;
+    .FlexRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
     .loginForm {
         width: 1400px;
         height: 860px;
@@ -37,7 +43,7 @@
             .description {
                 font-size: 18px;
                 color: variables.$gray-400;
-                margin-bottom: 40px;
+                margin-bottom: 60px;
 
                 span {
                     font-weight: bold;
@@ -50,16 +56,18 @@
                 position: relative;
 
                 input {
+                    outline: none;
                     width: 100%;
                     padding: 16px 28px;
                     border: 2px solid variables.$gray-200;
+                    box-shadow: variables.$box-shadow-1;
                     border-radius: 50px;
                     font-size: 18px;
-                    transition: all 0.15s ease;
+                    transition: all 0.2s ease;
                 }
                 input:focus {
-                    outline: none;
-                    border-color: variables.$gray-400;
+                    border-color: variables.$green-300;
+                    box-shadow: variables.$box-shadow-2;
                 }
                 .icon {
                     cursor: pointer;
@@ -79,17 +87,17 @@
                 }
             }
             .forgotText {
-                margin: 15px 0;
                 font-size: 18px;
                 color: variables.$gray-400;
                 text-align: right;
-                margin-bottom: 20px;
-
+                vertical-align: middle;
+                user-select: none;
+                cursor: pointer;
                 a {
                     user-select: none;
                     font-size: 18px;
                     color: variables.$gray-400;
-                    transition: all 0.15s ease;
+                    transition: all 0.2s ease;
                 }
                 a:hover {
                     color: variables.$green-400;
@@ -112,6 +120,7 @@
                 font-size: 18px;
                 width: 100%;
                 margin-top: 10px;
+                transition: all 0.2s ease;
             }
             .loginText {
                 font-size: 18px;
@@ -121,7 +130,7 @@
                     font-weight: bold;
                     font-size: 18px;
                     color: variables.$gray-400;
-                    transition: all 0.15s ease;
+                    transition: all 0.2s ease;
                 }
                 a:hover {
                     color: variables.$green-400;

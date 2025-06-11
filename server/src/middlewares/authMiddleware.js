@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const verifyToken = (req, res, next) => {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1]; // Lấy phần sau "Bearer"
+    console.log(authHeader);
 
     if (!token) {
         return res.status(401).json({

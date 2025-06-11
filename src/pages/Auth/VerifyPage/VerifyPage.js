@@ -19,16 +19,28 @@ const VerifyPage = () => {
     const [time, setTime] = useState(180);
     const [canResend, setCanResend] = useState(false);
 
+    // Chuyển con trỏ chuột + text trong button Đăng ký khi đang submit
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        document.body.style.cursor = loading ? "wait" : "default";
+        return () => {
+            document.body.style.cursor = "default";
+        };
+    }, [loading]);
+
     // Kiểm tra web có email hay không
     useEffect(() => {
         const SendOTPToEmail = async (email) => {
+            setLoading(true);
             const res = await SendOtp(email);
             if (res) {
                 setCorrectOtp(res);
+
                 setCanResend(false);
                 setTime(180); // reset timer
                 Noti.success("Đã gửi OTP đến email của bạn");
             }
+            setLoading(false);
         };
 
         if (!email) {
@@ -115,6 +127,7 @@ const VerifyPage = () => {
     // Xử lý sự kiện khi nhấn nút xác nhận
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         if (otp.join("") === correctOtp) {
             if (type === "register") {
                 registerSubmit(email);
@@ -126,6 +139,7 @@ const VerifyPage = () => {
             Noti.warning("Mã OTP không chính xác");
             setOtp(new Array(6).fill(""));
         }
+        setLoading(false);
     };
     // Xử lý sự kiện khi xác thực thành công cho đăng ký
     const registerSubmit = async (email) => {
@@ -181,7 +195,7 @@ const VerifyPage = () => {
                             ))}
                         </div>
                         <button className={styles.submitButton}>
-                            Xác nhận
+                            {loading ? "Chờ trong giây lát" : "Xác nhận"}
                         </button>
                         <p className={styles.resend}>
                             {canResend ? (

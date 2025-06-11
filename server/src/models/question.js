@@ -16,10 +16,6 @@ const schema = new mongoose.Schema(
             enum: ["Easy", "Medium", "Hard", "Extreme"],
             default: "Easy",
         },
-        order: {
-            type: Number,
-            default: 0,
-        },
     },
     {
         timestamps: true,

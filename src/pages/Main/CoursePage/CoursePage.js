@@ -110,8 +110,6 @@ const SubjectListCard = ({ courseId }) => {
         deps: [courseId],
     });
     const handleNavigate = (subject) => {
-        console.log(subject);
-
         if (
             subject.chapters.length > 0 &&
             subject.chapters[0].lessons.length > 0
@@ -130,7 +128,14 @@ const SubjectListCard = ({ courseId }) => {
                         className={styles.subject}
                         onClick={() => handleNavigate(subject)}
                     >
-                        <img src='/avatars/profile.png' alt='image' />
+                        <img
+                            src={
+                                subject?.image !== ""
+                                    ? subject.image
+                                    : "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749486154/images_mlysti.jpg"
+                            }
+                            alt='image'
+                        />
                         <div className={styles.title}>{subject.title}</div>
                         <div className={styles.author}>{subject.author}</div>
                         <div className={styles.info}>

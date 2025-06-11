@@ -36,7 +36,6 @@ const TestPage = () => {
                         examId,
                     }
                 );
-                setUser(res.data);
             } catch (err) {}
         }
         if (user && examId) {
@@ -75,6 +74,17 @@ const TestPage = () => {
             )
         );
     };
+
+    const onExit = () => {
+        Noti.infoWithYesNo({
+            title: "Xác nhận thoát",
+            text: "Bạn thực sự muốn ngừng kiểm tra?",
+            func: () => {
+                nav(-1);
+            },
+        });
+    };
+
     // Xử lý khi người dùng nộp bài
     const handleSubmit = async (timeLeft) => {
         let trueCount = 0;
@@ -460,7 +470,7 @@ function ModalStart({ isOpen, onStart, exam, isSaved, onSave }) {
                         </div>
                         <div className={styles.FlexColumn}>
                             <p>Đánh giá</p>
-                            <h3>{exam.rating.overall}</h3>
+                            <h3>{exam.rating.overall} sao</h3>
                         </div>
                     </div>
                     {/* Số lượng câu hỏi */}
@@ -569,6 +579,7 @@ function ModalResult({
             : null,
         method: "GET",
         enabled: !!exam, // chỉ chạy khi examId có dữ liệu
+        deps: [user, exam, result],
     });
     useEffect(() => {
         if (ranked) {
@@ -578,15 +589,17 @@ function ModalResult({
             const currentUserIndex = ranked.findIndex(
                 (userId) => userId === currentUserId
             );
+            console.log(currentUserId);
+
             setCurrentUserRank(currentUserIndex + 1);
             setCurrentUser(ranked[currentUserIndex]);
         }
-    }, [ranked, user._id]);
+    }, [ranked, user]);
 
     // RATING
     const [average, setAverage] = useState(exam.rating.overall);
     // Xử lý đánh giá của người dùng
-    const [userRate, setUserRate] = useState(0);
+    const [userRate, setUserRate] = useState(5);
     useEffect(() => {
         let rateOfUser = exam.rating.details.find(
             (detail) => detail.userId === user._id
@@ -860,7 +873,7 @@ function ModalResult({
                         </div>
                     )}
                     {/* Đánh giá */}
-                    {userRate && ratings && (
+                    {
                         <div
                             className={styles.FlexColumn}
                             style={{ flex: 4, justifyContent: "start" }}
@@ -937,7 +950,7 @@ function ModalResult({
                                 </div>
                             </div>
                         </div>
-                    )}
+                    }
                 </div>
                 {/* Button */}
                 <div className={styles.Buttons}>

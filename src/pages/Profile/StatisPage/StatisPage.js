@@ -9,6 +9,7 @@ import { ChartHistogram, SelectComponent } from "../../../components";
 import { useNavigate } from "react-router-dom";
 import styles from "./StatisPage.module.scss";
 import useFetch from "../../../hooks/useFetch";
+import { formatExamLevel } from "../../../utils/Helpers";
 
 let courseOptions = [];
 let subjectOptions = [];
@@ -186,7 +187,11 @@ const ExamStatisPage = () => {
                                         {examResults.map((item, index) => (
                                             <tr key={index}>
                                                 <td>{item.exam.title}</td>
-                                                <td>{item.exam.level}</td>
+                                                <td>
+                                                    {formatExamLevel(
+                                                        item.exam.level
+                                                    )}
+                                                </td>
                                                 <td>{item.score.toFixed(2)}</td>
                                                 <td>
                                                     <div

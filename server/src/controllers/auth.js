@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Todo = require("../models/todo");
+const Course = require("../models/course");
 const generator = require("../utils/generator");
 const { sendMail } = require("../utils/mailers");
 const bcrypt = require("bcryptjs");
@@ -35,12 +36,44 @@ exports.register = async (req, res) => {
         }
         // Tạo user mới với status not_verify
         const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Tạo mảng learned theo cấu trúc mới
+        const courses = await Course.find().populate({
+            path: "subjects",
+            model: "Subject",
+            populate: {
+                path: "chapters",
+                model: "Chapter",
+                populate: {
+                    path: "lessons",
+                    model: "Lesson",
+                },
+            },
+        });
+        const learned = courses.map((course) => ({
+            courseId: course._id.toString(),
+            subjects: course.subjects.map((subject) => {
+                // Gom tất cả lesson từ tất cả chapters
+                const allLessons = subject.chapters.flatMap((chapter) =>
+                    chapter.lessons.map((lesson) => ({
+                        lessonId: lesson._id.toString(),
+                        isDone: false,
+                    }))
+                );
+
+                return {
+                    subjectId: subject._id.toString(),
+                    lessons: allLessons,
+                };
+            }),
+        }));
         const newUser = new User({
             username,
             email,
             password: hashedPassword,
             profile: { fullname },
             status: "not_verify",
+            learned: learned,
         });
 
         let todo = new Todo({ name: "Công việc" });
@@ -86,9 +119,11 @@ exports.login = async (req, res) => {
                 .json({ message: "Người dùng không tồn tại" });
         // Kiểm tra trạng thái
         if (user.status === "not_verify")
-            return res
-                .status(403)
-                .json({ message: "Tài khoản chưa được xác thực" });
+            return res.status(403).json({
+                email: user.email,
+                isVerify: false,
+                message: "Tài khoản chưa được xác thực",
+            });
         if (user.status === "locked")
             return res.status(403).json({ message: "Tài khoản đã bị khóa" });
 

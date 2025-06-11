@@ -24,8 +24,15 @@ exports.getAll = async (req, res) => {
             const subject = await Subject.findById(chapter.subjectId).populate({
                 path: "chapters",
                 model: "Chapter",
-                populate: { path: "lessons", model: "Lesson" },
+                populate: {
+                    path: "lessons",
+                    model: "Lesson",
+                    options: { sort: { order: 1 } },
+                },
+                options: { sort: { order: 1 } },
             });
+            console.log(subject);
+
             if (!subject) {
                 return res.status(404).json({ message: "Subject not found" });
             }

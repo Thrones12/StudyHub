@@ -9,6 +9,8 @@ import useFetch from "../../../hooks/useFetch";
 import * as MuiIcons from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { formatExamLevel, formatTimeAgo } from "../../../utils/Helpers";
+import { Tooltip } from "@mui/material";
+import Noti from "../../../utils/Noti";
 
 const ExamPage = () => {
     const [data, setData] = useState([]);
@@ -130,8 +132,8 @@ const ExamPage = () => {
         switch (sortValue) {
             case "best":
                 filtered.sort((a, b) => {
-                    const scoreA = (a.attempts || 0) + (a.saves || 0);
-                    const scoreB = (b.attempts || 0) + (b.saves || 0);
+                    const scoreA = (a.attemps || 0) + (a.saves || 0);
+                    const scoreB = (b.attemps || 0) + (b.saves || 0);
                     if (scoreB === scoreA) {
                         return new Date(b.createdAt) - new Date(a.createdAt);
                     }
@@ -147,7 +149,7 @@ const ExamPage = () => {
                 filtered.sort((a, b) => a.title.localeCompare(b.title));
                 break;
             case "attemp":
-                filtered.sort((a, b) => (b.attempts || 0) - (a.attempts || 0));
+                filtered.sort((a, b) => (b.attemps || 0) - (a.attemps || 0));
                 break;
             case "save":
                 filtered.sort((a, b) => (b.saves || 0) - (a.saves || 0));
@@ -172,8 +174,6 @@ const ExamPage = () => {
 
         setData(filtered);
     }, [exams, courses, filterValue, sortValue]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(1);
 
     return (
         <div className={styles.wrapper}>
@@ -204,14 +204,6 @@ const ExamPage = () => {
                                 <ExamCard key={index} exam={exam} />
                             ))}
                         </div>
-                        {/* Pagination */}
-                        {exams && exams.length > 0 && (
-                            <Pagination
-                                page={currentPage}
-                                setPage={setCurrentPage}
-                                total={totalPages}
-                            />
-                        )}
                     </>
                 ) : (
                     <div className={styles.noExam}>
@@ -249,6 +241,10 @@ function ExamCard(props) {
         return number.toString();
     }
     function handleNavigate(exam) {
+        if (exam.questions.length <= 0) {
+            Noti.info("Bài kiểm tra hiện tại chưa có câu hỏi.");
+            return;
+        }
         nav(`/study/exam/${exam._id}`);
     }
     return (
@@ -294,14 +290,18 @@ function ExamCard(props) {
                     {formatTimeAgo(exam.createdAt)}
                 </div>
                 <div className={styles.Info}>
-                    <div className={styles.flexRow}>
-                        <MuiIcons.Assignment />
-                        <p>{formatCount(exam.attemps)}</p>
-                    </div>
-                    <div className={styles.flexRow}>
-                        <MuiIcons.BookmarkOutlined />
-                        <p>{formatCount(exam.saves)}</p>
-                    </div>
+                    <Tooltip title='Lượt làm bài'>
+                        <div className={styles.flexRow}>
+                            <MuiIcons.Assignment />
+                            <p>{formatCount(exam.attemps)}</p>
+                        </div>
+                    </Tooltip>
+                    <Tooltip title='Lượt lưu trữ'>
+                        <div className={styles.flexRow}>
+                            <MuiIcons.BookmarkOutlined />
+                            <p>{formatCount(exam.saves)}</p>
+                        </div>
+                    </Tooltip>
                 </div>
             </div>
         </div>

@@ -355,7 +355,7 @@ const AdminSoundPage = () => {
                             <input
                                 type='text'
                                 name='src'
-                                placeholder='Tiêu đề'
+                                placeholder='Nguồn'
                                 value={formData.src}
                                 onChange={handleChange}
                                 required

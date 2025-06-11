@@ -8,6 +8,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const API = constants.API;
+    const nav = useNavigate();
     const location = useLocation();
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
@@ -35,6 +36,11 @@ export const AuthProvider = ({ children }) => {
                 return;
             }
 
+            // Thiết lập token cho các request sau này
+            axios.defaults.headers.common[
+                "Authorization"
+            ] = `Bearer ${storedToken}`;
+
             try {
                 const res = await axios.post(
                     `${API}/auth/verify-token`,
@@ -48,6 +54,12 @@ export const AuthProvider = ({ children }) => {
 
                 if (res.status === 200 && res.data?.user) {
                     setUser(res.data.user);
+                    if (
+                        location.pathname.includes("admin") &&
+                        res.data.user.role === "user"
+                    ) {
+                        nav("/auth");
+                    }
                 } else {
                     throw "Token không hợp lệ";
                 }
@@ -85,15 +97,13 @@ export const AuthProvider = ({ children }) => {
         if (user) checkLearningHour();
     }, [API, user]);
     // Đăng nhập
-    const Login = async ({ username, password, rememberMe = false }) => {
-        // Đăng xuất trước (xoá token cũ nếu có)
-        Logout();
+    const Login = async ({ username, password, isRemember = false }) => {
         // Kiểm tra đầu vào
         if (!username) {
-            throw "Vui lòng nhập tên đăng nhập";
+            throw new Error("Vui lòng nhập tên đăng nhập");
         }
         if (!password) {
-            throw "Vui lòng nhập mật khẩu";
+            throw new Error("Vui lòng nhập mật khẩu");
         }
         try {
             const res = await axios.post(`${API}/auth/login`, {
@@ -102,27 +112,40 @@ export const AuthProvider = ({ children }) => {
             });
 
             const { token, user } = res.data?.data || {};
+            if (!token || !user)
+                throw new Error("Dữ liệu phản hồi không hợp lệ");
 
-            if (!token || !user) {
-                throw "Dữ liệu phản hồi không hợp lệ";
-            }
+            // Lưu token theo isRemember
+            if (isRemember) localStorage.setItem("token", token);
+            else sessionStorage.setItem("token", token);
 
-            // Lưu token theo rememberMe
-            if (rememberMe) {
-                localStorage.setItem("token", token);
-            } else {
-                sessionStorage.setItem("token", token);
-            }
+            // Thiết lập token cho các request sau này
+            axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
             // Cập nhật state
             setUser(user);
-            return user;
+            return { user, token };
         } catch (error) {
-            if (error.response && error.response.data?.message) {
-                throw error.response.data.message || "Đăng nhập thất bại";
-            } else {
-                throw "Không thể kết nối đến máy chủ";
+            if (error?.response?.data?.isVerify === false) {
+                Noti.infoWithYesNo({
+                    title: "Xác thực tài khoản",
+                    text: "Tài khoản hiện tại chưa được xác thực, bạn có muốn xác thực tài khoản không?",
+                    func: () => {
+                        nav("/auth/verify", {
+                            state: {
+                                email: error.response.data.email,
+                                type: "register",
+                            },
+                        });
+                    },
+                });
             }
+            if (error.response && error.response.data?.message) {
+                throw new Error(
+                    error.response.data.message || "Đăng nhập thất bại"
+                );
+            }
+            throw new Error("Không thể kết nối đến máy chủ");
         }
     };
     // Đăng ký
@@ -144,9 +167,11 @@ export const AuthProvider = ({ children }) => {
             return res.data.message;
         } catch (error) {
             if (error.response && error.response.data?.message) {
-                throw error.response.data.message || "Đăng ký thất bại";
+                throw new Error(
+                    error.response.data.message || "Đăng ký thất bại"
+                );
             } else {
-                throw "Không thể kết nối đến máy chủ";
+                throw new Error("Không thể kết nối đến máy chủ");
             }
         }
     };

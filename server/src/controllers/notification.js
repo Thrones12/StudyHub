@@ -4,6 +4,26 @@ const User = require("../models/user");
 // Get all notifications, sorted by order
 exports.getAll = async (req, res) => {
     try {
+        const { userId } = req.body;
+
+        if (userId) {
+            const user = await User.findById(userId);
+            if (!user) {
+                return res.status(404).json({ message: "User not found" });
+            }
+
+            const notifications = user.notifications.sort(
+                (a, b) => b.createdAt - a.createdAt
+            );
+
+            if (!notifications || notifications.length === 0) {
+                return res
+                    .status(404)
+                    .json({ message: "No notifications found" });
+            }
+
+            return res.json(notifications);
+        }
         const notifications = await Notification.find().sort({ createdAt: -1 }); // 1 = cũ -> mới, -1 = mới -> cũ
 
         if (!notifications || notifications.length === 0) {

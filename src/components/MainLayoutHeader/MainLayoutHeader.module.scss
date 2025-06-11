@@ -102,6 +102,7 @@
             flex-direction: column;
             flex: 1;
             max-height: 372px;
+            min-height: 372px;
             overflow: auto;
             @include mixins.scrollBar;
             .Notification {
@@ -129,6 +130,16 @@
                     text-decoration-line: underline;
                 }
             }
+        }
+        .empty {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 14px;
+            color: variables.$gray-300;
+            text-align: center;
         }
     }
 }

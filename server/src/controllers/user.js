@@ -172,15 +172,12 @@ exports.getProgress = async (req, res) => {
             populate: { path: "chapters", model: "Chapter" },
         });
 
-        // Get Exam Result
-        const examResults = await ExamResult.find({ user: id });
-        const examChapterIds = examResults.map((e) => e.chapterId.toString());
-
         // 404 - Course Not Found
         if (!courses)
             return res.status(404).json({ message: "Data not found" });
         if (!user) return res.status(404).json({ message: "Data not found" });
 
+        console.log(courses);
         for (let learnedCourse of user.learned) {
             const course = courses.find(
                 (c) => c._id.toString() === learnedCourse.courseId
@@ -204,10 +201,6 @@ exports.getProgress = async (req, res) => {
 
                 for (const chapter of subject.chapters) {
                     totalLessons += chapter.lessons.length;
-
-                    if (examChapterIds.includes(chapter._id.toString())) {
-                        doneExams += 1;
-                    }
                 }
 
                 let progress =
@@ -224,7 +217,6 @@ exports.getProgress = async (req, res) => {
                         totalLessons: totalLessons,
                         doneLessons: doneLessons,
                         totalExams: totalChapters,
-                        doneExams: doneExams,
                         link: `/study/lesson/${subject.chapters[0].lessons[0]}`,
                     });
             }
@@ -961,41 +953,56 @@ exports.delete = async (req, res) => {
 exports.logTime = async (req, res) => {
     try {
         const { userId, subjectId, second } = req.body;
-        const user = await User.findById(userId);
-        if (!user) return res.status(404).json({ message: "User not found" });
-
         const now = new Date();
         const currentMonth = now.getMonth();
         const currentYear = now.getFullYear();
 
-        // Tìm bản ghi learningHour có cùng tháng và năm
-        let monthEntry = user.learningHour.find((entry) => {
+        const user = await User.findOne({ _id: userId });
+        if (!user) return res.status(404).json({ message: "User not found" });
+
+        const learningHour = user.learningHour;
+        const monthIndex = learningHour.findIndex((entry) => {
             const entryDate = new Date(entry.time);
             return (
                 entryDate.getMonth() === currentMonth &&
                 entryDate.getFullYear() === currentYear
             );
         });
-        // Đã có entry của tháng
-        if (monthEntry) {
-            // Duyệt qua từng course để tìm subject
-            let subjectFound = false;
 
-            for (let course of monthEntry.courses) {
-                const subject = course.subjects.find(
-                    (s) => s.subjectId === subjectId
-                );
-                if (subject) {
-                    console.log(subject.second + second);
+        if (monthIndex === -1) {
+            return res
+                .status(404)
+                .json({
+                    message: "No learningHour entry found for this month.",
+                });
+        }
 
-                    subject.second += second;
-                    subjectFound = true;
-                    break;
-                }
+        let updated = false;
+
+        for (const course of learningHour[monthIndex].courses) {
+            const subject = course.subjects.find(
+                (s) => s.subjectId == subjectId
+            );
+            if (subject) {
+                subject.second += second;
+                updated = true;
+                break;
             }
         }
-        await user.save();
-        res.status(200).json({ message: "Time logged successfully" });
+
+        if (!updated) {
+            return res
+                .status(404)
+                .json({ message: "Subject not found in any course." });
+        }
+
+        // cập nhật lại toàn bộ learningHour array (an toàn)
+        await User.updateOne(
+            { _id: userId },
+            { $set: { learningHour: learningHour } }
+        );
+
+        return res.status(200).json({ message: "Time logged successfully" });
     } catch (error) {
         console.error("logTime error:", error);
         res.status(500).json({ message: "Server error" });

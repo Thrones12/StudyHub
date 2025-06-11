@@ -1,119 +1,761 @@
 [
     {
         "_id": {
-            "$oid": "67a9c9060d5fbff4d3b34e39"
+            "$oid": "68489863f11429f28356482b"
         },
-        "title": "Ngữ văn 10",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "ngu-van-10",
-        "chapters": [],
-        "courseId": "67a9c5090d5fbff4d3b34e2d",
+        "title": "Giải tích",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749588060/images_xakrwk.jpg",
         "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67a9c9060d5fbff4d3b34e36"
-        },
-        "title": "Toán học 10",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "toan-hoc-10",
-        "chapters": [],
-        "courseId": "67a9c5090d5fbff4d3b34e2d",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67a9c9060d5fbff4d3b34e3a"
-        },
-        "title": "Tiếng Anh 10",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "tieng-anh-10",
-        "chapters": [],
-        "courseId": "67a9c5090d5fbff4d3b34e2d",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67d301f51332f6140b9c9e22"
-        },
-        "title": "Ngữ văn 11",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "ngu-van-11",
-        "chapters": [],
-        "courseId": "67a9c5250d5fbff4d3b34e2e",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67d301f51332f6140b9c9e23"
-        },
-        "title": "Toán học 11",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "toan-hoc-11",
-        "chapters": [],
-        "courseId": "67a9c5250d5fbff4d3b34e2e",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67d301f51332f6140b9c9e24"
-        },
-        "title": "Tiếng Anh 11",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "tieng-anh-11",
-        "chapters": [],
-        "courseId": "67a9c5250d5fbff4d3b34e2e",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67d301f51332f6140b9c9e2e"
-        },
-        "title": "Ngữ văn 12",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "ngu-van-12",
-        "chapters": ["68015b1efcf88f9de2ec951d", "68015b21fcf88f9de2ec951e"],
-        "courseId": "67a9c5290d5fbff4d3b34e2f",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67d301f51332f6140b9c9e2f"
-        },
-        "title": "Toán học 12",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "toan-hoc-12",
-        "chapters": [],
-        "courseId": "67a9c5290d5fbff4d3b34e2f",
-        "order": 0,
-        "views": 1561
-    },
-    {
-        "_id": {
-            "$oid": "67d301f51332f6140b9c9e31"
-        },
-        "title": "Vật lý 12",
-        "author": "Thầy Phạm Hùng Phong",
-        "tag": "vat-ly-12",
+        "views": 0,
         "chapters": [
-            "67a9dab2e07a8de25c30a635",
-            "67d326eecbc084035d9b8e89",
-            "67d326eecbc084035d9b8e8a",
-            "67d326eecbc084035d9b8e8b",
-            "67d326eecbc084035d9b8e8c",
-            "67d326eecbc084035d9b8e8d",
-            "67d326eecbc084035d9b8e8e",
-            "67d326eecbc084035d9b8e8f"
+            {
+                "$oid": "68489b52ef9bf50d246bae4f"
+            },
+            {
+                "$oid": "6848a675718b08cf11e573da"
+            },
+            {
+                "$oid": "6848aa743e9f2a0fc526caf2"
+            },
+            {
+                "$oid": "6848aad13e9f2a0fc526cb06"
+            }
         ],
-        "courseId": "67a9c5290d5fbff4d3b34e2f",
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ab7e3e9f2a0fc526cd80"
+        },
+        "title": "Hình học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593400/Hinh-hoc-12_l9qfpe.jpg",
         "order": 0,
-        "views": 1561
+        "views": 0,
+        "chapters": [
+            {
+                "$oid": "6848ab8d3e9f2a0fc526cd84"
+            },
+            {
+                "$oid": "6848ab9a3e9f2a0fc526cd88"
+            },
+            {
+                "$oid": "6848abad3e9f2a0fc526cd8c"
+            }
+        ],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848adb13e9f2a0fc526cfec"
+        },
+        "title": "Ngữ văn",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593492/Ngu-Van-12-Tap-1_djw5gc.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [
+            {
+                "$oid": "6848d328aefb6e69ffdf2034"
+            },
+            {
+                "$oid": "6848d329aefb6e69ffdf2038"
+            },
+            {
+                "$oid": "6848d32aaefb6e69ffdf203c"
+            },
+            {
+                "$oid": "6848d32caefb6e69ffdf2040"
+            },
+            {
+                "$oid": "6848d32daefb6e69ffdf2044"
+            },
+            {
+                "$oid": "6848d32eaefb6e69ffdf2048"
+            },
+            {
+                "$oid": "6848d32faefb6e69ffdf204c"
+            },
+            {
+                "$oid": "6848d331aefb6e69ffdf2050"
+            },
+            {
+                "$oid": "6848d332aefb6e69ffdf2054"
+            },
+            {
+                "$oid": "6848d333aefb6e69ffdf2058"
+            },
+            {
+                "$oid": "6848d33caefb6e69ffdf205c"
+            },
+            {
+                "$oid": "6848d33daefb6e69ffdf2060"
+            },
+            {
+                "$oid": "6848d33eaefb6e69ffdf2064"
+            },
+            {
+                "$oid": "6848d33faefb6e69ffdf2068"
+            },
+            {
+                "$oid": "6848d340aefb6e69ffdf206c"
+            },
+            {
+                "$oid": "6848d341aefb6e69ffdf2070"
+            },
+            {
+                "$oid": "6848d342aefb6e69ffdf2074"
+            },
+            {
+                "$oid": "6848d343aefb6e69ffdf2078"
+            },
+            {
+                "$oid": "6848d344aefb6e69ffdf207c"
+            },
+            {
+                "$oid": "6848d347aefb6e69ffdf2080"
+            },
+            {
+                "$oid": "6848d347aefb6e69ffdf2084"
+            },
+            {
+                "$oid": "6848d348aefb6e69ffdf2088"
+            },
+            {
+                "$oid": "6848d349aefb6e69ffdf208c"
+            },
+            {
+                "$oid": "6848d34aaefb6e69ffdf2090"
+            },
+            {
+                "$oid": "6848d34baefb6e69ffdf2094"
+            },
+            {
+                "$oid": "6848d34caefb6e69ffdf2098"
+            },
+            {
+                "$oid": "6848d34daefb6e69ffdf209c"
+            },
+            {
+                "$oid": "6848d34eaefb6e69ffdf20a0"
+            },
+            {
+                "$oid": "6848d34faefb6e69ffdf20a4"
+            },
+            {
+                "$oid": "6848d351aefb6e69ffdf20a8"
+            },
+            {
+                "$oid": "6848d353aefb6e69ffdf20ac"
+            },
+            {
+                "$oid": "6848d354aefb6e69ffdf20b0"
+            },
+            {
+                "$oid": "6848d355aefb6e69ffdf20b4"
+            },
+            {
+                "$oid": "6848d356aefb6e69ffdf20b8"
+            }
+        ],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848adbc3e9f2a0fc526cff0"
+        },
+        "title": "Tiếng anh",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593515/sgk-l12-gd-306_rgnt7c.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ade63e9f2a0fc526cff4"
+        },
+        "title": "Vật lý",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593564/latest_xltrsc.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [
+            {
+                "$oid": "68493548aefb6e69ffdf25bc"
+            },
+            {
+                "$oid": "68493552aefb6e69ffdf25c0"
+            },
+            {
+                "$oid": "68493558aefb6e69ffdf25c4"
+            },
+            {
+                "$oid": "68493564aefb6e69ffdf25c8"
+            },
+            {
+                "$oid": "6849356faefb6e69ffdf25cc"
+            },
+            {
+                "$oid": "6849357baefb6e69ffdf25d0"
+            },
+            {
+                "$oid": "68493596aefb6e69ffdf25d4"
+            },
+            {
+                "$oid": "684935a1aefb6e69ffdf25d8"
+            }
+        ],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ae6a3e9f2a0fc526cff8"
+        },
+        "title": "Hóa học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593605/Hoa-hoc-12_jqeehy.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ae723e9f2a0fc526cffc"
+        },
+        "title": "Sinh học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593618/Sinh-hoc-12_sm9bc1.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ae813e9f2a0fc526d000"
+        },
+        "title": "Địa lí",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593633/dia-li-12-293_utcjff.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ae8d3e9f2a0fc526d004"
+        },
+        "title": "Lịch sử",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593642/Lich-su-12_rxznh0.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848ae9e3e9f2a0fc526d008"
+        },
+        "title": "Giáo dục công dân",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593649/Giao-duc-cong-dan-12_aba8tl.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848aeab3e9f2a0fc526d00c"
+        },
+        "title": "Tin học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593680/Tin-hoc-12_axn5tn.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848aeb53e9f2a0fc526d010"
+        },
+        "title": "Công nghệ",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489786f11429f28356478a",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749593683/Cong-nghe-12_gdqdav.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848db93aefb6e69ffdf22cc"
+        },
+        "title": "Toán",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605249/sach-giao-khoa-toan-11-tap-1-ket-noi-tri-thuc-voi-cuoc-song_uhccho.png",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848db9baefb6e69ffdf22d0"
+        },
+        "title": "Ngữ văn",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605410/images_z8wguw.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dba1aefb6e69ffdf22d4"
+        },
+        "title": "Tiếng anh",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605421/sach-tieng-anh-lop-11-ket-noi-tri-thuc-sua2024-1_qzb9s5.png",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dba6aefb6e69ffdf22d8"
+        },
+        "title": "Vật lý",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605431/images_rwm7wf.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dba8aefb6e69ffdf22dc"
+        },
+        "title": "Hóa học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605436/Hoa-Hoc-11-Bo-Ket-Noi-Tri-Thuc_r5z1pz.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbabaefb6e69ffdf22e0"
+        },
+        "title": "Sinh học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605454/images_oeu5s7.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbb0aefb6e69ffdf22e4"
+        },
+        "title": "Địa lí",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605464/dia-li-lop-11-ket-noi-tri-thuc_m7deem.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbb5aefb6e69ffdf22e8"
+        },
+        "title": "Lịch sử",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605505/sach-lich-su-lop-11-ket-noi-tri-thuc-sua2024-1_cx1ggz.png",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbbaaefb6e69ffdf22ec"
+        },
+        "title": "Tin học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605540/Tin-Hoc-11-Dinh-Huong-Tinh-Hoc-Ung-Dung-Bo-Ket-Noi-Tri-Thuc_fffo3i.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbbdaefb6e69ffdf22f0"
+        },
+        "title": "Công nghệ",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489780f11429f283564788",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749605544/cong_nghe_11_cong_nghe_co_khi_ket_noi_ac996be4844d46c6b1aed213d4080864_f28bd331156b413793cd6874f2d92758_master_fuqh0q.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbd1aefb6e69ffdf22f4"
+        },
+        "title": "Toán",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749627962/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song_tb5bsj.png",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbd5aefb6e69ffdf22f8"
+        },
+        "title": "Ngữ văn",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749627986/images_ykhlw7.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbdaaefb6e69ffdf22fc"
+        },
+        "title": "Tiếng anh",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628000/images_mxts7h.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbddaefb6e69ffdf2300"
+        },
+        "title": "Vật lý",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628010/images_r6lk0u.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbe0aefb6e69ffdf2304"
+        },
+        "title": "Hóa học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628020/1_cwmsf0.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbe3aefb6e69ffdf2308"
+        },
+        "title": "Sinh học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628031/sach-sinh-hoc-10-ket-noi-tri-thuc-sua2024-1_eclfzi.png",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbe7aefb6e69ffdf230c"
+        },
+        "title": "Địa lí",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628034/images_prngzh.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbebaefb6e69ffdf2310"
+        },
+        "title": "Lịch sử",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628087/1_luxsgr.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbefaefb6e69ffdf2314"
+        },
+        "title": "Tin học",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628108/1_berv6k.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "6848dbf3aefb6e69ffdf2318"
+        },
+        "title": "Công nghệ",
+        "author": "thầy Phạm Hùng Phong",
+        "courseId": "68489774f11429f283564786",
+        "image": "https://res.cloudinary.com/ds5lvyntx/image/upload/v1749628113/images_gaxsqu.jpg",
+        "order": 0,
+        "views": 0,
+        "chapters": [],
+        "createdAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "updatedAt": {
+            "$date": "2025-06-11T08:36:15.499Z"
+        },
+        "__v": 0
     }
 ]

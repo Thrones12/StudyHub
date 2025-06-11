@@ -296,7 +296,7 @@ const ProfilePage = () => {
                                 <input
                                     type='date'
                                     name='birthdate'
-                                    value={formik.values.birthdate}
+                                    value={formik.values.birthdate.slice(0, 10)}
                                     onChange={formik.handleChange}
                                     placeholder='Ngày sinh (dd/mm/yyyy)'
                                 />
@@ -382,7 +382,7 @@ const ProfilePage = () => {
                 </form>
             </div>
             <div className={styles.Card}>
-                <div className={styles.Header}>Đổi mật khẩu</div>
+                <div className={styles.Header}>Thông tin khác</div>
                 <div className={styles.Body}>
                     {/* Begin: change email */}
                     {user && !isChangeEmail ? (

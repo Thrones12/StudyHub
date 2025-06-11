@@ -10,10 +10,13 @@ import {
 import { motion } from "framer-motion";
 
 const ForgotPage = () => {
+    // REACT
     const nav = useNavigate();
+    // STATE
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
 
+    // Xử lý khi nhấn Xác nhận
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (email.trim() === "") {
@@ -47,10 +50,11 @@ const ForgotPage = () => {
                                 cả hộp thư rác.
                             </span>
                         </p>
-
+                        {/* Thông báo lỗi */}
                         <div className={styles.error}>
                             {error ? `* ${error}` : ""}
                         </div>
+                        {/* Email */}
                         <div className={styles.inputGroup}>
                             <input
                                 type='email'
@@ -64,7 +68,10 @@ const ForgotPage = () => {
                         <button className={styles.submitButton}>
                             Xác nhận
                         </button>
-                        <div className={styles.backLink}>
+                        <div
+                            className={styles.backLink}
+                            onClick={() => nav(-1)}
+                        >
                             <FontAwesomeIcon icon={faLongArrowAltLeft} />
                             <p>Quay lại</p>
                         </div>
@@ -72,41 +79,6 @@ const ForgotPage = () => {
                 </div>
             </motion.div>
         </div>
-        // <div className='forgot-page'>
-        //     <div className='container'>
-        //         <div className={`flip-card `}>
-        //             <div className='flip-card-inner'>
-        //                 <div className='flip-card-front'>
-        //                     <div className='flip-card-front-header'></div>
-        //                     <h3>Quên mật khẩu</h3>
-        //                     <p>
-        //                         Nhập Email của tài khoản cần tìm lại mật khẩu.
-        //                     </p>
-        //                     <form>
-        //                         <input
-        //                             type='email'
-        //                             placeholder='Email'
-        //                             onChange={(e) => setEmail(e.target.value)}
-        //                         />
-        //                         <button
-        //                             className='active'
-        //                             onClick={(e) => sendOTP(e)}
-        //                         >
-        //                             Xác nhận
-        //                         </button>
-        //                     </form>
-
-        //                     <p>
-        //                         Quay lại đăng nhập?{" "}
-        //                         <span>
-        //                             <Link to='/auth/login'>Quay lại</Link>
-        //                         </span>
-        //                     </p>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     );
 };
 

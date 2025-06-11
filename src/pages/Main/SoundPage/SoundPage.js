@@ -784,6 +784,7 @@ function SessionTool(props) {
     const { data, refetch } = useFetch({
         url: `http://localhost:8080/api/session?userId=${userId}`,
         method: "GET",
+        deps: [userId],
     });
     // Xử lý dữ liệu phiên học sau khi fetch
     useEffect(() => {
@@ -794,7 +795,7 @@ function SessionTool(props) {
     // Lấy lại dữ liệu mỗi khi tắt / mở tool
     useEffect(() => {
         if (isOpen === true) refetch();
-    }, [isOpen, refetch]);
+    }, [isOpen]);
     // Chuyển phút thành giờ + phút
     function formatMinutes(minutes) {
         const hrs = Math.floor(minutes / 60);

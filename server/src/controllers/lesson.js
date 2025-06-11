@@ -59,6 +59,11 @@ exports.create = async (req, res) => {
     try {
         const lesson = new Lesson(req.body);
         const newLesson = await lesson.save();
+        if (req.body.chapterId) {
+            let chapter = await Chapter.findById(req.body.chapterId);
+            chapter.lessons.push(newLesson._id);
+            await chapter.save();
+        }
         res.status(201).json(newLesson);
     } catch (err) {
         res.status(400).json({ message: err.message });

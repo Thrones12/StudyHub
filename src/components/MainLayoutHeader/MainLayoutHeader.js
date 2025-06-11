@@ -103,7 +103,7 @@ const MainLayoutHeader = () => {
                     </div>
                 </div>
                 <div className={styles.Body}>
-                    {data &&
+                    {data && data.length > 0 ? (
                         data.map((noti, index) => (
                             <Tooltip
                                 key={index}
@@ -130,7 +130,12 @@ const MainLayoutHeader = () => {
                                     </div>
                                 </div>
                             </Tooltip>
-                        ))}
+                        ))
+                    ) : (
+                        <div className={styles.empty}>
+                            Opps! Bạn không có thông báo nào.
+                        </div>
+                    )}
                     {notifications && visibleCount < notifications.length && (
                         <button onClick={handleLoadMore}>Xem thêm</button>
                     )}

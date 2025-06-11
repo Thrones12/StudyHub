@@ -1,170 +1,1317 @@
 [{
   "_id": {
-    "$oid": "67a9dab2e07a8de25c30a635"
+    "$oid": "68489b52ef9bf50d246bae4f"
   },
-  "title": "Chương 1: Dao động cơ",
+  "title": "Chương 1: Ứng Dụng Đạo Hàm Để Khảo Sát Và Vẽ Đồ Thị Của Hàm Số",
+  "subjectId": "68489863f11429f28356482b",
   "lessons": [
-    "67aa092fe07a8de25c30a648",
-    "67d32bb1cbc084035d9b8e92",
-    "67d32bb1cbc084035d9b8e93",
-    "67d32bb1cbc084035d9b8e94",
-    "67d32bb1cbc084035d9b8e95",
-    "67d32bb1cbc084035d9b8e96"
-  ],
-  "exams": [
     {
-      "$oid": "680d489b9ed7a3b0357a27d4"
+      "$oid": "68489ff7718b08cf11e56aec"
     },
     {
-      "$oid": "680d48a79ed7a3b0357a27da"
+      "$oid": "6848a2d0718b08cf11e57088"
     },
     {
-      "$oid": "680d48ba9ed7a3b0357a27e0"
+      "$oid": "6848a2d7718b08cf11e5708c"
+    },
+    {
+      "$oid": "6848a2e3718b08cf11e57090"
+    },
+    {
+      "$oid": "6848a2e8718b08cf11e57094"
+    },
+    {
+      "$oid": "6848a2ed718b08cf11e57098"
     }
   ],
-  "__v": 14
+  "exams": [],
+  "__v": 13,
+  "order": 0
 },
 {
   "_id": {
-    "$oid": "67d326eecbc084035d9b8e89"
+    "$oid": "6848a675718b08cf11e573da"
   },
-  "title": "Chương 2: Sóng cơ và sóng âm",
-  "lessons": [],
-  "exams": [
+  "title": "Chương 2: Hàm Số Lũy Thừa, Hàm Số Mũ Và Hàm Số Logarit",
+  "subjectId": "68489863f11429f28356482b",
+  "lessons": [
     {
-      "$oid": "680d4a659ed7a3b0357a2c98"
+      "$oid": "6848a70b718b08cf11e573de"
     },
     {
-      "$oid": "680d4a679ed7a3b0357a2c9e"
+      "$oid": "6848a715718b08cf11e573e2"
     },
     {
-      "$oid": "680d4a699ed7a3b0357a2ca4"
+      "$oid": "6848a717718b08cf11e573e6"
+    },
+    {
+      "$oid": "6848a71b718b08cf11e573ea"
+    },
+    {
+      "$oid": "6848a71e718b08cf11e573ee"
+    },
+    {
+      "$oid": "6848a720718b08cf11e573f2"
+    },
+    {
+      "$oid": "6848a724718b08cf11e573f6"
     }
   ],
+  "exams": [],
+  "__v": 7,
+  "order": 1
+},
+{
+  "_id": {
+    "$oid": "6848aa743e9f2a0fc526caf2"
+  },
+  "title": "Chương 3: Nguyên Hàm - Tích Phân Và Ứng Dụng",
+  "subjectId": "68489863f11429f28356482b",
+  "lessons": [
+    {
+      "$oid": "6848aaae3e9f2a0fc526caf6"
+    },
+    {
+      "$oid": "6848aab13e9f2a0fc526cafa"
+    },
+    {
+      "$oid": "6848aab43e9f2a0fc526cafe"
+    },
+    {
+      "$oid": "6848aab83e9f2a0fc526cb02"
+    }
+  ],
+  "exams": [],
+  "order": 2,
+  "createdAt": {
+    "$date": "2025-06-10T21:58:12.959Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:59:20.473Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "title": "Chương 4: Số Phức",
+  "subjectId": "68489863f11429f28356482b",
+  "lessons": [
+    {
+      "$oid": "6848ab253e9f2a0fc526cb0a"
+    },
+    {
+      "$oid": "6848ab283e9f2a0fc526cb0e"
+    },
+    {
+      "$oid": "6848ab2b3e9f2a0fc526cb12"
+    },
+    {
+      "$oid": "6848ab2f3e9f2a0fc526cb16"
+    },
+    {
+      "$oid": "6848ab323e9f2a0fc526cb1a"
+    },
+    {
+      "$oid": "6848ab4b3e9f2a0fc526cb1e"
+    }
+  ],
+  "exams": [],
+  "order": 3,
+  "createdAt": {
+    "$date": "2025-06-10T21:59:45.591Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:47.690Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "6848ab8d3e9f2a0fc526cd84"
+  },
+  "title": "Chương 1: Khối Đa Diện",
+  "subjectId": "6848ab7e3e9f2a0fc526cd80",
+  "lessons": [
+    {
+      "$oid": "6848ac8a3e9f2a0fc526cd90"
+    },
+    {
+      "$oid": "6848ac8d3e9f2a0fc526cd94"
+    },
+    {
+      "$oid": "6848ac903e9f2a0fc526cd98"
+    },
+    {
+      "$oid": "6848ac933e9f2a0fc526cd9c"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-10T22:02:53.679Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:15.197Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6848ab9a3e9f2a0fc526cd88"
+  },
+  "title": "Chương 2: Mặt Nón, Mặt Trụ, Mặt Cầu",
+  "subjectId": "6848ab7e3e9f2a0fc526cd80",
+  "lessons": [
+    {
+      "$oid": "6848ac963e9f2a0fc526cda0"
+    },
+    {
+      "$oid": "6848ac983e9f2a0fc526cda4"
+    },
+    {
+      "$oid": "6848ac9b3e9f2a0fc526cda8"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-10T22:03:06.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:23.195Z"
+  },
   "__v": 3
 },
 {
   "_id": {
-    "$oid": "67d326eecbc084035d9b8e8a"
+    "$oid": "6848abad3e9f2a0fc526cd8c"
   },
-  "title": "Chương 3: Dòng điện xoay chiều",
-  "lessons": [],
-  "exams": [
+  "title": "Chương 3: Phương Pháp Tọa Độ Trong Không Gian",
+  "subjectId": "6848ab7e3e9f2a0fc526cd80",
+  "lessons": [
     {
-      "$oid": "680d4a6f9ed7a3b0357a2caa"
+      "$oid": "6848ac9d3e9f2a0fc526cdac"
     },
     {
-      "$oid": "680d4a719ed7a3b0357a2cb0"
+      "$oid": "6848aca03e9f2a0fc526cdb0"
     },
     {
-      "$oid": "680d4a749ed7a3b0357a2cb6"
+      "$oid": "6848aca23e9f2a0fc526cdb4"
+    },
+    {
+      "$oid": "6848aca53e9f2a0fc526cdb8"
+    },
+    {
+      "$oid": "6848aca83e9f2a0fc526cdbc"
     }
   ],
-  "__v": 3
-},
-{
-  "_id": {
-    "$oid": "67d326eecbc084035d9b8e8b"
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-10T22:03:25.836Z"
   },
-  "title": "Chương 4: Dao động và sóng điện từ",
-  "lessons": [],
-  "exams": [
-    {
-      "$oid": "680d4a7a9ed7a3b0357a2cbc"
-    },
-    {
-      "$oid": "680d4a7c9ed7a3b0357a2cc2"
-    },
-    {
-      "$oid": "680d4a7e9ed7a3b0357a2cc8"
-    },
-    {
-      "$oid": "680d4a8e9ed7a3b0357a2cce"
-    },
-    {
-      "$oid": "680d4a919ed7a3b0357a2cd4"
-    },
-    {
-      "$oid": "680d4a939ed7a3b0357a2cda"
-    },
-    {
-      "$oid": "680d4a969ed7a3b0357a2ce0"
-    },
-    {
-      "$oid": "680d4a989ed7a3b0357a2ce6"
-    },
-    {
-      "$oid": "680d4a9a9ed7a3b0357a2cec"
-    },
-    {
-      "$oid": "680d4aa09ed7a3b0357a2cf2"
-    }
-  ],
-  "__v": 10
-},
-{
-  "_id": {
-    "$oid": "67d326eecbc084035d9b8e8c"
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:36.055Z"
   },
-  "title": "Chương 5: Sóng ánh sáng",
-  "lessons": [],
-  "exams": []
+  "__v": 5
 },
 {
   "_id": {
-    "$oid": "67d326eecbc084035d9b8e8d"
-  },
-  "title": "Chương 6: Lượng tử ánh sáng",
-  "lessons": [],
-  "exams": []
-},
-{
-  "_id": {
-    "$oid": "67d326eecbc084035d9b8e8e"
-  },
-  "title": "Chương 7: Hạt nhân nguyên tử",
-  "lessons": [],
-  "exams": []
-},
-{
-  "_id": {
-    "$oid": "67d326eecbc084035d9b8e8f"
-  },
-  "title": "Chương 8: Từ vi mô đến vĩ mô",
-  "lessons": [],
-  "exams": []
-},
-{
-  "_id": {
-    "$oid": "68015b1efcf88f9de2ec951d"
+    "$oid": "6848d328aefb6e69ffdf2034"
   },
   "title": "Tuần 1",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
   "lessons": [
-    "68015b8dfcf88f9de2ec9529",
-    "68015ba9fcf88f9de2ec952a"
-  ],
-  "exams": [
     {
-      "$oid": "680d48ff9ed7a3b0357a28bc"
+      "$oid": "6848d3f2aefb6e69ffdf20bc"
     },
     {
-      "$oid": "680d4a589ed7a3b0357a2c8c"
-    },
-    {
-      "$oid": "680d4a5b9ed7a3b0357a2c92"
+      "$oid": "6848d3f8aefb6e69ffdf20c0"
     }
   ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:52.355Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:20.718Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d329aefb6e69ffdf2038"
+  },
+  "title": "Tuần 2",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d3fcaefb6e69ffdf20c4"
+    },
+    {
+      "$oid": "6848d3feaefb6e69ffdf20c8"
+    },
+    {
+      "$oid": "6848d402aefb6e69ffdf20cc"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:53.572Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:30.229Z"
+  },
   "__v": 3
 },
 {
   "_id": {
-    "$oid": "68015b21fcf88f9de2ec951e"
+    "$oid": "6848d32aaefb6e69ffdf203c"
   },
-  "title": "Tuần 2",
+  "title": "Tuần 3",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
   "lessons": [
-    "68015bbffcf88f9de2ec952b",
-    "68015bd7fcf88f9de2ec952c",
-    "68015be9fcf88f9de2ec952d"
+    {
+      "$oid": "6848d409aefb6e69ffdf20d0"
+    },
+    {
+      "$oid": "6848d40caefb6e69ffdf20d4"
+    }
   ],
-  "exams": []
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:54.830Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:40.681Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d32caefb6e69ffdf2040"
+  },
+  "title": "Tuần 4",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d410aefb6e69ffdf20d8"
+    },
+    {
+      "$oid": "6848d414aefb6e69ffdf20dc"
+    },
+    {
+      "$oid": "6848d417aefb6e69ffdf20e0"
+    },
+    {
+      "$oid": "6848d41aaefb6e69ffdf20e4"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:56.063Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:54.276Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6848d32daefb6e69ffdf2044"
+  },
+  "title": "Tuần 5",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d421aefb6e69ffdf20e8"
+    },
+    {
+      "$oid": "6848d424aefb6e69ffdf20ec"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:57.173Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:56:04.658Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d32eaefb6e69ffdf2048"
+  },
+  "title": "Tuần 6",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d429aefb6e69ffdf20f0"
+    },
+    {
+      "$oid": "6848d42caefb6e69ffdf20f4"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:58.595Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:56:12.633Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d32faefb6e69ffdf204c"
+  },
+  "title": "Tuần 7",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d4bdaefb6e69ffdf20f8"
+    },
+    {
+      "$oid": "6848d4c2aefb6e69ffdf20fc"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:51:59.987Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:42.121Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d331aefb6e69ffdf2050"
+  },
+  "title": "Tuần 8",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d4c6aefb6e69ffdf2100"
+    },
+    {
+      "$oid": "6848d4c9aefb6e69ffdf2104"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:01.272Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:49.141Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d332aefb6e69ffdf2054"
+  },
+  "title": "Tuần 9",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d4ccaefb6e69ffdf2108"
+    },
+    {
+      "$oid": "6848d4ceaefb6e69ffdf210c"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:02.556Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:54.786Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d333aefb6e69ffdf2058"
+  },
+  "title": "Tuần 10",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d4d2aefb6e69ffdf2110"
+    },
+    {
+      "$oid": "6848d4d4aefb6e69ffdf2114"
+    },
+    {
+      "$oid": "6848d4d7aefb6e69ffdf2118"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:03.897Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:03.080Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6848d33caefb6e69ffdf205c"
+  },
+  "title": "Tuần 11",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d4d9aefb6e69ffdf211c"
+    },
+    {
+      "$oid": "6848d4dcaefb6e69ffdf2120"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:12.386Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:08.787Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d33daefb6e69ffdf2060"
+  },
+  "title": "Tuần 12",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d4deaefb6e69ffdf2124"
+    },
+    {
+      "$oid": "6848d4e1aefb6e69ffdf2128"
+    },
+    {
+      "$oid": "6848d4ebaefb6e69ffdf212c"
+    },
+    {
+      "$oid": "6848d4efaefb6e69ffdf2130"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:13.447Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:27.352Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6848d33eaefb6e69ffdf2064"
+  },
+  "title": "Tuần 13",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d518aefb6e69ffdf2134"
+    },
+    {
+      "$oid": "6848d51baefb6e69ffdf2138"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:14.381Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:11.545Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d33faefb6e69ffdf2068"
+  },
+  "title": "Tuần 14",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d51daefb6e69ffdf213c"
+    },
+    {
+      "$oid": "6848d520aefb6e69ffdf2140"
+    },
+    {
+      "$oid": "6848d522aefb6e69ffdf2144"
+    },
+    {
+      "$oid": "6848d525aefb6e69ffdf2148"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:15.711Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:21.154Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6848d340aefb6e69ffdf206c"
+  },
+  "title": "Tuần 15",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d924aefb6e69ffdf214c"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:16.589Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:24.591Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6848d341aefb6e69ffdf2070"
+  },
+  "title": "Tuần 16",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d927aefb6e69ffdf2150"
+    },
+    {
+      "$oid": "6848d929aefb6e69ffdf2154"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:17.637Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:29.520Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d342aefb6e69ffdf2074"
+  },
+  "title": "Tuần 17",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d92baefb6e69ffdf2158"
+    },
+    {
+      "$oid": "6848d92daefb6e69ffdf215c"
+    },
+    {
+      "$oid": "6848d930aefb6e69ffdf2160"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:18.807Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:36.056Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6848d343aefb6e69ffdf2078"
+  },
+  "title": "Tuần 18",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d933aefb6e69ffdf2164"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:19.945Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:39.051Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6848d344aefb6e69ffdf207c"
+  },
+  "title": "Tuần 19",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d935aefb6e69ffdf2168"
+    },
+    {
+      "$oid": "6848d936aefb6e69ffdf216c"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:20.974Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:42.923Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d347aefb6e69ffdf2080"
+  },
+  "title": "Tuần 20",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d939aefb6e69ffdf2170"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:23.131Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:45.509Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6848d347aefb6e69ffdf2084"
+  },
+  "title": "Tuần 21",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d93baefb6e69ffdf2174"
+    },
+    {
+      "$oid": "6848d93daefb6e69ffdf2178"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:23.992Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:49.763Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d348aefb6e69ffdf2088"
+  },
+  "title": "Tuần 22",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d940aefb6e69ffdf217c"
+    },
+    {
+      "$oid": "6848d942aefb6e69ffdf2180"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:24.850Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:54.968Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d349aefb6e69ffdf208c"
+  },
+  "title": "Tuần 23",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d945aefb6e69ffdf2184"
+    },
+    {
+      "$oid": "6848d947aefb6e69ffdf2188"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:25.687Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:59.965Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d34aaefb6e69ffdf2090"
+  },
+  "title": "Tuần 24",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d9fbaefb6e69ffdf218c"
+    },
+    {
+      "$oid": "6848d9fdaefb6e69ffdf2190"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:26.750Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:21:01.351Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d34baefb6e69ffdf2094"
+  },
+  "title": "Tuần 25",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848d9ffaefb6e69ffdf2194"
+    },
+    {
+      "$oid": "6848da01aefb6e69ffdf2198"
+    },
+    {
+      "$oid": "6848da04aefb6e69ffdf219c"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:27.563Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:21:08.436Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6848d34caefb6e69ffdf2098"
+  },
+  "title": "Tuần 26",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848da76aefb6e69ffdf21a0"
+    },
+    {
+      "$oid": "6848da78aefb6e69ffdf21a4"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:28.534Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:04.236Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d34daefb6e69ffdf209c"
+  },
+  "title": "Tuần 27",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848da7aaefb6e69ffdf21a8"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:29.553Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:06.797Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6848d34eaefb6e69ffdf20a0"
+  },
+  "title": "Tuần 28",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848da7daefb6e69ffdf21ac"
+    },
+    {
+      "$oid": "6848da7faefb6e69ffdf21b0"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:30.537Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:11.702Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d34faefb6e69ffdf20a4"
+  },
+  "title": "Tuần 29",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848da82aefb6e69ffdf21b4"
+    },
+    {
+      "$oid": "6848da84aefb6e69ffdf21b8"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:31.730Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:16.715Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d351aefb6e69ffdf20a8"
+  },
+  "title": "Tuần 30",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848da87aefb6e69ffdf21bc"
+    },
+    {
+      "$oid": "6848da89aefb6e69ffdf21c0"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:33.025Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:21.687Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d353aefb6e69ffdf20ac"
+  },
+  "title": "Tuần 31",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848daa9aefb6e69ffdf21c4"
+    },
+    {
+      "$oid": "6848daabaefb6e69ffdf21c8"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:35.275Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:56.003Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d354aefb6e69ffdf20b0"
+  },
+  "title": "Tuần 32",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848daaeaefb6e69ffdf21cc"
+    },
+    {
+      "$oid": "6848dabcaefb6e69ffdf21d0"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:36.325Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:12.135Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d355aefb6e69ffdf20b4"
+  },
+  "title": "Tuần 33",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848dabeaefb6e69ffdf21d4"
+    },
+    {
+      "$oid": "6848dac7aefb6e69ffdf21d8"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:37.335Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:23.457Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6848d356aefb6e69ffdf20b8"
+  },
+  "title": "Tuần 34",
+  "subjectId": "6848adb13e9f2a0fc526cfec",
+  "lessons": [
+    {
+      "$oid": "6848dacaaefb6e69ffdf21dc"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T00:52:38.365Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:26.160Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68493548aefb6e69ffdf25bc"
+  },
+  "title": "Chương 1: Dao Động Cơ",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "68493648aefb6e69ffdf25dc"
+    },
+    {
+      "$oid": "6849364aaefb6e69ffdf25e0"
+    },
+    {
+      "$oid": "6849364daefb6e69ffdf25e4"
+    },
+    {
+      "$oid": "684936dfaefb6e69ffdf25ec"
+    },
+    {
+      "$oid": "6849383faefb6e69ffdf25f0"
+    },
+    {
+      "$oid": "68493841aefb6e69ffdf25f4"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:50:32.586Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:13.879Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "68493552aefb6e69ffdf25c0"
+  },
+  "title": "Chương 2: Sóng Cơ Và Sóng Âm",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "6849384eaefb6e69ffdf25f8"
+    },
+    {
+      "$oid": "68493857aefb6e69ffdf25fc"
+    },
+    {
+      "$oid": "6849385aaefb6e69ffdf2600"
+    },
+    {
+      "$oid": "6849385caefb6e69ffdf2604"
+    },
+    {
+      "$oid": "6849385eaefb6e69ffdf2608"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:50:42.150Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:42.698Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "68493558aefb6e69ffdf25c4"
+  },
+  "title": "Chương 3: Dòng Điện Xoay Chiều",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "68493863aefb6e69ffdf260c"
+    },
+    {
+      "$oid": "68493866aefb6e69ffdf2610"
+    },
+    {
+      "$oid": "68493869aefb6e69ffdf2614"
+    },
+    {
+      "$oid": "6849386caefb6e69ffdf2618"
+    },
+    {
+      "$oid": "6849386eaefb6e69ffdf261c"
+    },
+    {
+      "$oid": "68493871aefb6e69ffdf2620"
+    },
+    {
+      "$oid": "68493874aefb6e69ffdf2624"
+    },
+    {
+      "$oid": "68493876aefb6e69ffdf2628"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:50:48.161Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:06.547Z"
+  },
+  "__v": 8
+},
+{
+  "_id": {
+    "$oid": "68493564aefb6e69ffdf25c8"
+  },
+  "title": "Chương 4: Dao Động Và Sóng Điện Từ",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "68493878aefb6e69ffdf262c"
+    },
+    {
+      "$oid": "6849387baefb6e69ffdf2630"
+    },
+    {
+      "$oid": "6849387eaefb6e69ffdf2634"
+    },
+    {
+      "$oid": "68493880aefb6e69ffdf2638"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:51:00.306Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:16.476Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6849356faefb6e69ffdf25cc"
+  },
+  "title": "Chương 5: Sóng Ánh Sáng",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "68493882aefb6e69ffdf263c"
+    },
+    {
+      "$oid": "684939c1aefb6e69ffdf2640"
+    },
+    {
+      "$oid": "684939c4aefb6e69ffdf2644"
+    },
+    {
+      "$oid": "684939c6aefb6e69ffdf2648"
+    },
+    {
+      "$oid": "684939c8aefb6e69ffdf264c"
+    },
+    {
+      "$oid": "684939cbaefb6e69ffdf2650"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:51:11.502Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:47.266Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "6849357baefb6e69ffdf25d0"
+  },
+  "title": "Chương 6: Lượng Tử Ánh Sáng",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "684939cdaefb6e69ffdf2654"
+    },
+    {
+      "$oid": "684939cfaefb6e69ffdf2658"
+    },
+    {
+      "$oid": "684939d1aefb6e69ffdf265c"
+    },
+    {
+      "$oid": "684939d4aefb6e69ffdf2660"
+    },
+    {
+      "$oid": "684939d7aefb6e69ffdf2664"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:51:23.377Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:59.738Z"
+  },
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "68493596aefb6e69ffdf25d4"
+  },
+  "title": "Chương 7: Hạt Nhân Nguyên Tử",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "684939dbaefb6e69ffdf2668"
+    },
+    {
+      "$oid": "684939ddaefb6e69ffdf266c"
+    },
+    {
+      "$oid": "684939dfaefb6e69ffdf2670"
+    },
+    {
+      "$oid": "684939e1aefb6e69ffdf2674"
+    },
+    {
+      "$oid": "684939e4aefb6e69ffdf2678"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:51:50.838Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:12.148Z"
+  },
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "684935a1aefb6e69ffdf25d8"
+  },
+  "title": "Chương 8: Từ Vi Mô Đến Vĩ Mô",
+  "subjectId": "6848ade63e9f2a0fc526cff4",
+  "lessons": [
+    {
+      "$oid": "684939e6aefb6e69ffdf267c"
+    },
+    {
+      "$oid": "684939e9aefb6e69ffdf2680"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-11T07:52:01.995Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:17.201Z"
+  },
+  "__v": 2
 }]

@@ -63,7 +63,6 @@ const LessonStudyPage = () => {
                 (exitTime - enterTimeRef.current) / 1000
             );
             if (secondsSpent > 0 && user && subjectId) {
-                console.log(secondsSpent);
                 await axios.put("http://localhost:8080/api/user/log-time", {
                     userId: user._id,
                     subjectId: subjectId,
@@ -412,7 +411,11 @@ const LessonStudyPage = () => {
                                     </div>
                                     {/* Câu hỏi */}
                                     <div className={styles.QuestionContent}>
-                                        {question.content}
+                                        <ReactMarkdown
+                                            children={question.content}
+                                            remarkPlugins={[remarkMath]}
+                                            rehypePlugins={[rehypeKatex]}
+                                        />
                                     </div>
                                     {/* Lựa chọn */}
                                     {question.options.map((option, opIndex) => (
@@ -451,7 +454,13 @@ const LessonStudyPage = () => {
                                                         : ""
                                                 }`}
                                             >
-                                                {option}
+                                                <ReactMarkdown
+                                                    children={option}
+                                                    remarkPlugins={[remarkMath]}
+                                                    rehypePlugins={[
+                                                        rehypeKatex,
+                                                    ]}
+                                                />
                                             </div>
                                         </div>
                                     ))}
@@ -470,7 +479,11 @@ const LessonStudyPage = () => {
                                             Gợi ý
                                         </div>
                                         <div className={styles.QuestionContent}>
-                                            {question.hint}
+                                            <ReactMarkdown
+                                                children={question.hint}
+                                                remarkPlugins={[remarkMath]}
+                                                rehypePlugins={[rehypeKatex]}
+                                            />
                                         </div>
                                     </div>
                                     {/* Bài giải */}
@@ -488,7 +501,11 @@ const LessonStudyPage = () => {
                                             Bài giải
                                         </div>
                                         <div className={styles.QuestionContent}>
-                                            {question.explanation}
+                                            <ReactMarkdown
+                                                children={question.explanation}
+                                                remarkPlugins={[remarkMath]}
+                                                rehypePlugins={[rehypeKatex]}
+                                            />
                                         </div>
                                     </div>
                                     {/* Hint toggle */}
@@ -602,26 +619,29 @@ function VideoComponent({ lesson, setIsDoneVideo, setActiveStep }) {
             >
                 Trình duyệt không hỗ trợ video.
             </video>
-            <div style={{ padding: "0 20px" }}>
-                <div className={styles.Title}>Mục lục</div>
-                <div className={styles.ChapterList}>
-                    {lesson.video.chapters.map((chapter, index) => (
-                        <button
-                            key={index}
-                            onClick={() => handleSeek(chapter.time)}
-                            className={styles.ChapterItem}
-                        >
-                            <VideoThumbnail
-                                videoUrl={lesson.video.url}
-                                time={chapter.time}
-                            />
-                            <div className={styles.ChapterTime}>
-                                ⏱ {formatTimer(chapter.time)} - {chapter.title}
-                            </div>
-                        </button>
-                    ))}
+            {lesson.video.chapters.length > 0 && (
+                <div style={{ padding: "0 20px" }}>
+                    <div className={styles.Title}>Mục lục</div>
+                    <div className={styles.ChapterList}>
+                        {lesson.video.chapters.map((chapter, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleSeek(chapter.time)}
+                                className={styles.ChapterItem}
+                            >
+                                <VideoThumbnail
+                                    videoUrl={lesson.video.url}
+                                    time={chapter.time}
+                                />
+                                <div className={styles.ChapterTime}>
+                                    ⏱ {formatTimer(chapter.time)} -{" "}
+                                    {chapter.title}
+                                </div>
+                            </button>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }

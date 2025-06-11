@@ -1,4 +1,7 @@
 const Support = require("../models/support");
+const Notification = require("../models/notification");
+const User = require("../models/user");
+const { sendMail } = require("../utils/mailers");
 
 // Get all supports
 exports.getAll = async (req, res) => {
@@ -54,8 +57,6 @@ exports.create = async (req, res) => {
 // Update a Support by ID
 exports.update = async (req, res) => {
     try {
-        console.log(req.body);
-
         const updatedSupport = await Support.findByIdAndUpdate(
             req.params.id,
             req.body,
@@ -63,6 +64,18 @@ exports.update = async (req, res) => {
         );
         if (!updatedSupport)
             return res.status(404).json({ message: "Support not found" });
+
+        await sendMail({
+            to: req.body.email,
+            subject: req.body.title,
+            html: req.body.answer,
+        });
+
+        let notification = new Notification({});
+        await notification.save();
+        let user = await User.findOne({ email: req.body.email });
+        user.notifications.push(notification);
+        await user.save();
         res.json(updatedSupport);
     } catch (err) {
         res.status(400).json({ message: err.message });

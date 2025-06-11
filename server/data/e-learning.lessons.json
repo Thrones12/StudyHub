@@ -1,1018 +1,4483 @@
 [{
   "_id": {
-    "$oid": "683c4d9fcd45165ec1affd06"
+    "$oid": "68489ff7718b08cf11e56aec"
+  },
+  "title": "Bài 1: Sự đồng biến, nghịch biến của hàm số",
+  "chapterId": {
+    "$oid": "68489b52ef9bf50d246bae4f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "**1. Khái niệm cơ bản**\n\nĐồng biến và nghịch biến:\n\n\\- Một hàm số y = f(x) được gọi là đồng biến trên khoảng (a, b) nếu với mọi x1 < x2 thuộc (a, b) thì f(x1) ≤ f(x2). Nếu f(x1) < f(x2) thì gọi là đồng biến nghiêm ngặt.\n\n\\- Hàm số nghịch biến trên (a, b) nếu với mọi x1 < x2 thì f(x1) ≥ f(x2). Nếu f(x1) > f(x2) thì là nghịch biến nghiêm ngặt.\n\nHiểu đơn giản:\n\n\\- Hàm đồng biến: đồ thị đi lên khi x tăng.\n\n\\- Hàm nghịch biến: đồ thị đi xuống khi x tăng.\n\n**2. Vai trò của đạo hàm trong việc khảo sát tính đơn điệu**\n\nLiên hệ với đạo hàm cấp 1:\n\n\\- Nếu f'(x) > 0 với mọi x ∈ (a, b) ⇒ hàm đồng biến trên (a, b).\n\n\\- Nếu f'(x) < 0 ⇒ hàm nghịch biến.\n\n\\- Nếu f'(x) = 0 ⇒ hàm hằng.\n\nĐiểm tới hạn (cực trị):\n\n\\- Những điểm mà f'(x) = 0 hoặc không xác định gọi là điểm tới hạn.\n\n\\- Dựa vào dấu của f'(x) quanh điểm đó để suy ra đồng/ nghịch biến và cực trị.\n\n**3. Quy trình khảo sát tính đơn điệu:\n\nBước 1: Tính f'(x).\n\nBước 2: Giải phương trình f'(x) = 0 và tìm điểm không xác định.\n\nBước 3: Lập bảng xét dấu f'(x).\n\nBước 4: Kết luận khoảng đồng biến, nghịch biến và cực trị.\n\n**4. Ví dụ minh họa:**\n\nCho hàm y = x^3 - 3x + 2\\n⇒ f'(x) = 3x² - 3 = 3(x - 1)(x + 1)\n\n⇒ Nghiệm: x = -1, x = 1\n\n\\- (-∞, -1): f'(x) > 0 ⇒ đồng biến\n\n\\- (-1, 1): f'(x) < 0 ⇒ nghịch biến\n\n\\- (1, +∞): f'(x) > 0 ⇒ đồng biến\n\n⇒ Cực đại tại x = -1 (y = 4), cực tiểu tại x = 1 (y = 0)\n\n\n**5. Lưu ý:**\n\n\\- Thuần thục quy tắc đạo hàm.\n\n\\- Cẩn thận điều kiện xác định với hàm phân thức.\n\n\\- Không bỏ sót nghiệm f'(x) = 0 và điểm không xác định.\n\n\\- Lập bảng biến thiên để tổng hợp kết quả.\n\n**6. Dạng bài tập thường gặp:**\n\n\\- Tìm khoảng đồng biến/ nghịch biến.\n\n\\- Tìm điều kiện tham số để hàm đơn điệu.\n\n\\- Tìm cực trị thông qua đạo hàm.\n\n\\- Chứng minh hàm luôn đồng biến/ nghịch biến.\n\n\\- So sánh giá trị hàm số qua tính đơn điệu.\n\n**7. Kết luận:**\n\nChủ đề này rất quan trọng, gắn liền với đạo hàm và bảng biến thiên. Hiểu và luyện tập tốt giúp học sinh giải nhanh bài khảo sát hàm và các câu trong đề thi THPT Quốc gia.",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 28,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:13:27.140Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T09:01:22.860Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a2d0718b08cf11e57088"
+  },
+  "title": "Bài 2: Cực trị của hàm số",
+  "chapterId": {
+    "$oid": "68489b52ef9bf50d246bae4f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "**1. Khái niệm cơ bản**\n\nĐồng biến và nghịch biến:\n\n\\- Một hàm số y = f(x) được gọi là đồng biến trên khoảng (a, b) nếu với mọi x1 < x2 thuộc (a, b) thì f(x1) ≤ f(x2). Nếu f(x1) < f(x2) thì gọi là đồng biến nghiêm ngặt.\n\n\\- Hàm số nghịch biến trên (a, b) nếu với mọi x1 < x2 thì f(x1) ≥ f(x2). Nếu f(x1) > f(x2) thì là nghịch biến nghiêm ngặt.\n\nHiểu đơn giản:\n\n\\- Hàm đồng biến: đồ thị đi lên khi x tăng.\n\n\\- Hàm nghịch biến: đồ thị đi xuống khi x tăng.\n\n**2. Vai trò của đạo hàm trong việc khảo sát tính đơn điệu**\n\nLiên hệ với đạo hàm cấp 1:\n\n\\- Nếu f'(x) > 0 với mọi x ∈ (a, b) ⇒ hàm đồng biến trên (a, b).\n\n\\- Nếu f'(x) < 0 ⇒ hàm nghịch biến.\n\n\\- Nếu f'(x) = 0 ⇒ hàm hằng.\n\nĐiểm tới hạn (cực trị):\n\n\\- Những điểm mà f'(x) = 0 hoặc không xác định gọi là điểm tới hạn.\n\n\\- Dựa vào dấu của f'(x) quanh điểm đó để suy ra đồng/ nghịch biến và cực trị.\n\n**3. Quy trình khảo sát tính đơn điệu:\n\nBước 1: Tính f'(x).\n\nBước 2: Giải phương trình f'(x) = 0 và tìm điểm không xác định.\n\nBước 3: Lập bảng xét dấu f'(x).\n\nBước 4: Kết luận khoảng đồng biến, nghịch biến và cực trị.\n\n**4. Ví dụ minh họa:**\n\nCho hàm y = x^3 - 3x + 2\\n⇒ f'(x) = 3x² - 3 = 3(x - 1)(x + 1)\n\n⇒ Nghiệm: x = -1, x = 1\n\n\\- (-∞, -1): f'(x) > 0 ⇒ đồng biến\n\n\\- (-1, 1): f'(x) < 0 ⇒ nghịch biến\n\n\\- (1, +∞): f'(x) > 0 ⇒ đồng biến\n\n⇒ Cực đại tại x = -1 (y = 4), cực tiểu tại x = 1 (y = 0)\n\n\n**5. Lưu ý:**\n\n\\- Thuần thục quy tắc đạo hàm.\n\n\\- Cẩn thận điều kiện xác định với hàm phân thức.\n\n\\- Không bỏ sót nghiệm f'(x) = 0 và điểm không xác định.\n\n\\- Lập bảng biến thiên để tổng hợp kết quả.\n\n**6. Dạng bài tập thường gặp:**\n\n\\- Tìm khoảng đồng biến/ nghịch biến.\n\n\\- Tìm điều kiện tham số để hàm đơn điệu.\n\n\\- Tìm cực trị thông qua đạo hàm.\n\n\\- Chứng minh hàm luôn đồng biến/ nghịch biến.\n\n\\- So sánh giá trị hàm số qua tính đơn điệu.\n\n**7. Kết luận:**\n\nChủ đề này rất quan trọng, gắn liền với đạo hàm và bảng biến thiên. Hiểu và luyện tập tốt giúp học sinh giải nhanh bài khảo sát hàm và các câu trong đề thi THPT Quốc gia.",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:25:36.705Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:25:36.705Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a2d7718b08cf11e5708c"
+  },
+  "title": "Bài 3: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
+  "chapterId": {
+    "$oid": "68489b52ef9bf50d246bae4f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "**1. Khái niệm cơ bản**\n\nĐồng biến và nghịch biến:\n\n\\- Một hàm số y = f(x) được gọi là đồng biến trên khoảng (a, b) nếu với mọi x1 < x2 thuộc (a, b) thì f(x1) ≤ f(x2). Nếu f(x1) < f(x2) thì gọi là đồng biến nghiêm ngặt.\n\n\\- Hàm số nghịch biến trên (a, b) nếu với mọi x1 < x2 thì f(x1) ≥ f(x2). Nếu f(x1) > f(x2) thì là nghịch biến nghiêm ngặt.\n\nHiểu đơn giản:\n\n\\- Hàm đồng biến: đồ thị đi lên khi x tăng.\n\n\\- Hàm nghịch biến: đồ thị đi xuống khi x tăng.\n\n**2. Vai trò của đạo hàm trong việc khảo sát tính đơn điệu**\n\nLiên hệ với đạo hàm cấp 1:\n\n\\- Nếu f'(x) > 0 với mọi x ∈ (a, b) ⇒ hàm đồng biến trên (a, b).\n\n\\- Nếu f'(x) < 0 ⇒ hàm nghịch biến.\n\n\\- Nếu f'(x) = 0 ⇒ hàm hằng.\n\nĐiểm tới hạn (cực trị):\n\n\\- Những điểm mà f'(x) = 0 hoặc không xác định gọi là điểm tới hạn.\n\n\\- Dựa vào dấu của f'(x) quanh điểm đó để suy ra đồng/ nghịch biến và cực trị.\n\n**3. Quy trình khảo sát tính đơn điệu:\n\nBước 1: Tính f'(x).\n\nBước 2: Giải phương trình f'(x) = 0 và tìm điểm không xác định.\n\nBước 3: Lập bảng xét dấu f'(x).\n\nBước 4: Kết luận khoảng đồng biến, nghịch biến và cực trị.\n\n**4. Ví dụ minh họa:**\n\nCho hàm y = x^3 - 3x + 2\\n⇒ f'(x) = 3x² - 3 = 3(x - 1)(x + 1)\n\n⇒ Nghiệm: x = -1, x = 1\n\n\\- (-∞, -1): f'(x) > 0 ⇒ đồng biến\n\n\\- (-1, 1): f'(x) < 0 ⇒ nghịch biến\n\n\\- (1, +∞): f'(x) > 0 ⇒ đồng biến\n\n⇒ Cực đại tại x = -1 (y = 4), cực tiểu tại x = 1 (y = 0)\n\n\n**5. Lưu ý:**\n\n\\- Thuần thục quy tắc đạo hàm.\n\n\\- Cẩn thận điều kiện xác định với hàm phân thức.\n\n\\- Không bỏ sót nghiệm f'(x) = 0 và điểm không xác định.\n\n\\- Lập bảng biến thiên để tổng hợp kết quả.\n\n**6. Dạng bài tập thường gặp:**\n\n\\- Tìm khoảng đồng biến/ nghịch biến.\n\n\\- Tìm điều kiện tham số để hàm đơn điệu.\n\n\\- Tìm cực trị thông qua đạo hàm.\n\n\\- Chứng minh hàm luôn đồng biến/ nghịch biến.\n\n\\- So sánh giá trị hàm số qua tính đơn điệu.\n\n**7. Kết luận:**\n\nChủ đề này rất quan trọng, gắn liền với đạo hàm và bảng biến thiên. Hiểu và luyện tập tốt giúp học sinh giải nhanh bài khảo sát hàm và các câu trong đề thi THPT Quốc gia.",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:25:43.833Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:25:43.833Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a2e3718b08cf11e57090"
+  },
+  "title": "Bài 4: Đường tiệm cận",
+  "chapterId": {
+    "$oid": "68489b52ef9bf50d246bae4f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "**1. Khái niệm cơ bản**\n\nĐồng biến và nghịch biến:\n\n\\- Một hàm số y = f(x) được gọi là đồng biến trên khoảng (a, b) nếu với mọi x1 < x2 thuộc (a, b) thì f(x1) ≤ f(x2). Nếu f(x1) < f(x2) thì gọi là đồng biến nghiêm ngặt.\n\n\\- Hàm số nghịch biến trên (a, b) nếu với mọi x1 < x2 thì f(x1) ≥ f(x2). Nếu f(x1) > f(x2) thì là nghịch biến nghiêm ngặt.\n\nHiểu đơn giản:\n\n\\- Hàm đồng biến: đồ thị đi lên khi x tăng.\n\n\\- Hàm nghịch biến: đồ thị đi xuống khi x tăng.\n\n**2. Vai trò của đạo hàm trong việc khảo sát tính đơn điệu**\n\nLiên hệ với đạo hàm cấp 1:\n\n\\- Nếu f'(x) > 0 với mọi x ∈ (a, b) ⇒ hàm đồng biến trên (a, b).\n\n\\- Nếu f'(x) < 0 ⇒ hàm nghịch biến.\n\n\\- Nếu f'(x) = 0 ⇒ hàm hằng.\n\nĐiểm tới hạn (cực trị):\n\n\\- Những điểm mà f'(x) = 0 hoặc không xác định gọi là điểm tới hạn.\n\n\\- Dựa vào dấu của f'(x) quanh điểm đó để suy ra đồng/ nghịch biến và cực trị.\n\n**3. Quy trình khảo sát tính đơn điệu:\n\nBước 1: Tính f'(x).\n\nBước 2: Giải phương trình f'(x) = 0 và tìm điểm không xác định.\n\nBước 3: Lập bảng xét dấu f'(x).\n\nBước 4: Kết luận khoảng đồng biến, nghịch biến và cực trị.\n\n**4. Ví dụ minh họa:**\n\nCho hàm y = x^3 - 3x + 2\\n⇒ f'(x) = 3x² - 3 = 3(x - 1)(x + 1)\n\n⇒ Nghiệm: x = -1, x = 1\n\n\\- (-∞, -1): f'(x) > 0 ⇒ đồng biến\n\n\\- (-1, 1): f'(x) < 0 ⇒ nghịch biến\n\n\\- (1, +∞): f'(x) > 0 ⇒ đồng biến\n\n⇒ Cực đại tại x = -1 (y = 4), cực tiểu tại x = 1 (y = 0)\n\n\n**5. Lưu ý:**\n\n\\- Thuần thục quy tắc đạo hàm.\n\n\\- Cẩn thận điều kiện xác định với hàm phân thức.\n\n\\- Không bỏ sót nghiệm f'(x) = 0 và điểm không xác định.\n\n\\- Lập bảng biến thiên để tổng hợp kết quả.\n\n**6. Dạng bài tập thường gặp:**\n\n\\- Tìm khoảng đồng biến/ nghịch biến.\n\n\\- Tìm điều kiện tham số để hàm đơn điệu.\n\n\\- Tìm cực trị thông qua đạo hàm.\n\n\\- Chứng minh hàm luôn đồng biến/ nghịch biến.\n\n\\- So sánh giá trị hàm số qua tính đơn điệu.\n\n**7. Kết luận:**\n\nChủ đề này rất quan trọng, gắn liền với đạo hàm và bảng biến thiên. Hiểu và luyện tập tốt giúp học sinh giải nhanh bài khảo sát hàm và các câu trong đề thi THPT Quốc gia.",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:25:55.772Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:25:55.772Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a2e8718b08cf11e57094"
+  },
+  "title": "Bài 5: Khảo sát sự biến thiên và vẽ đồ thị của hàm số",
+  "chapterId": {
+    "$oid": "68489b52ef9bf50d246bae4f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "**1. Khái niệm cơ bản**\n\nĐồng biến và nghịch biến:\n\n\\- Một hàm số y = f(x) được gọi là đồng biến trên khoảng (a, b) nếu với mọi x1 < x2 thuộc (a, b) thì f(x1) ≤ f(x2). Nếu f(x1) < f(x2) thì gọi là đồng biến nghiêm ngặt.\n\n\\- Hàm số nghịch biến trên (a, b) nếu với mọi x1 < x2 thì f(x1) ≥ f(x2). Nếu f(x1) > f(x2) thì là nghịch biến nghiêm ngặt.\n\nHiểu đơn giản:\n\n\\- Hàm đồng biến: đồ thị đi lên khi x tăng.\n\n\\- Hàm nghịch biến: đồ thị đi xuống khi x tăng.\n\n**2. Vai trò của đạo hàm trong việc khảo sát tính đơn điệu**\n\nLiên hệ với đạo hàm cấp 1:\n\n\\- Nếu f'(x) > 0 với mọi x ∈ (a, b) ⇒ hàm đồng biến trên (a, b).\n\n\\- Nếu f'(x) < 0 ⇒ hàm nghịch biến.\n\n\\- Nếu f'(x) = 0 ⇒ hàm hằng.\n\nĐiểm tới hạn (cực trị):\n\n\\- Những điểm mà f'(x) = 0 hoặc không xác định gọi là điểm tới hạn.\n\n\\- Dựa vào dấu của f'(x) quanh điểm đó để suy ra đồng/ nghịch biến và cực trị.\n\n**3. Quy trình khảo sát tính đơn điệu:\n\nBước 1: Tính f'(x).\n\nBước 2: Giải phương trình f'(x) = 0 và tìm điểm không xác định.\n\nBước 3: Lập bảng xét dấu f'(x).\n\nBước 4: Kết luận khoảng đồng biến, nghịch biến và cực trị.\n\n**4. Ví dụ minh họa:**\n\nCho hàm y = x^3 - 3x + 2\\n⇒ f'(x) = 3x² - 3 = 3(x - 1)(x + 1)\n\n⇒ Nghiệm: x = -1, x = 1\n\n\\- (-∞, -1): f'(x) > 0 ⇒ đồng biến\n\n\\- (-1, 1): f'(x) < 0 ⇒ nghịch biến\n\n\\- (1, +∞): f'(x) > 0 ⇒ đồng biến\n\n⇒ Cực đại tại x = -1 (y = 4), cực tiểu tại x = 1 (y = 0)\n\n\n**5. Lưu ý:**\n\n\\- Thuần thục quy tắc đạo hàm.\n\n\\- Cẩn thận điều kiện xác định với hàm phân thức.\n\n\\- Không bỏ sót nghiệm f'(x) = 0 và điểm không xác định.\n\n\\- Lập bảng biến thiên để tổng hợp kết quả.\n\n**6. Dạng bài tập thường gặp:**\n\n\\- Tìm khoảng đồng biến/ nghịch biến.\n\n\\- Tìm điều kiện tham số để hàm đơn điệu.\n\n\\- Tìm cực trị thông qua đạo hàm.\n\n\\- Chứng minh hàm luôn đồng biến/ nghịch biến.\n\n\\- So sánh giá trị hàm số qua tính đơn điệu.\n\n**7. Kết luận:**\n\nChủ đề này rất quan trọng, gắn liền với đạo hàm và bảng biến thiên. Hiểu và luyện tập tốt giúp học sinh giải nhanh bài khảo sát hàm và các câu trong đề thi THPT Quốc gia.",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:26:00.845Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:26:00.845Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a2ed718b08cf11e57098"
+  },
+  "title": "Ôn tập chương 1 Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số",
+  "chapterId": {
+    "$oid": "68489b52ef9bf50d246bae4f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "**1. Khái niệm cơ bản**\n\nĐồng biến và nghịch biến:\n\n\\- Một hàm số y = f(x) được gọi là đồng biến trên khoảng (a, b) nếu với mọi x1 < x2 thuộc (a, b) thì f(x1) ≤ f(x2). Nếu f(x1) < f(x2) thì gọi là đồng biến nghiêm ngặt.\n\n\\- Hàm số nghịch biến trên (a, b) nếu với mọi x1 < x2 thì f(x1) ≥ f(x2). Nếu f(x1) > f(x2) thì là nghịch biến nghiêm ngặt.\n\nHiểu đơn giản:\n\n\\- Hàm đồng biến: đồ thị đi lên khi x tăng.\n\n\\- Hàm nghịch biến: đồ thị đi xuống khi x tăng.\n\n**2. Vai trò của đạo hàm trong việc khảo sát tính đơn điệu**\n\nLiên hệ với đạo hàm cấp 1:\n\n\\- Nếu f'(x) > 0 với mọi x ∈ (a, b) ⇒ hàm đồng biến trên (a, b).\n\n\\- Nếu f'(x) < 0 ⇒ hàm nghịch biến.\n\n\\- Nếu f'(x) = 0 ⇒ hàm hằng.\n\nĐiểm tới hạn (cực trị):\n\n\\- Những điểm mà f'(x) = 0 hoặc không xác định gọi là điểm tới hạn.\n\n\\- Dựa vào dấu của f'(x) quanh điểm đó để suy ra đồng/ nghịch biến và cực trị.\n\n**3. Quy trình khảo sát tính đơn điệu:\n\nBước 1: Tính f'(x).\n\nBước 2: Giải phương trình f'(x) = 0 và tìm điểm không xác định.\n\nBước 3: Lập bảng xét dấu f'(x).\n\nBước 4: Kết luận khoảng đồng biến, nghịch biến và cực trị.\n\n**4. Ví dụ minh họa:**\n\nCho hàm y = x^3 - 3x + 2\\n⇒ f'(x) = 3x² - 3 = 3(x - 1)(x + 1)\n\n⇒ Nghiệm: x = -1, x = 1\n\n\\- (-∞, -1): f'(x) > 0 ⇒ đồng biến\n\n\\- (-1, 1): f'(x) < 0 ⇒ nghịch biến\n\n\\- (1, +∞): f'(x) > 0 ⇒ đồng biến\n\n⇒ Cực đại tại x = -1 (y = 4), cực tiểu tại x = 1 (y = 0)\n\n\n**5. Lưu ý:**\n\n\\- Thuần thục quy tắc đạo hàm.\n\n\\- Cẩn thận điều kiện xác định với hàm phân thức.\n\n\\- Không bỏ sót nghiệm f'(x) = 0 và điểm không xác định.\n\n\\- Lập bảng biến thiên để tổng hợp kết quả.\n\n**6. Dạng bài tập thường gặp:**\n\n\\- Tìm khoảng đồng biến/ nghịch biến.\n\n\\- Tìm điều kiện tham số để hàm đơn điệu.\n\n\\- Tìm cực trị thông qua đạo hàm.\n\n\\- Chứng minh hàm luôn đồng biến/ nghịch biến.\n\n\\- So sánh giá trị hàm số qua tính đơn điệu.\n\n**7. Kết luận:**\n\nChủ đề này rất quan trọng, gắn liền với đạo hàm và bảng biến thiên. Hiểu và luyện tập tốt giúp học sinh giải nhanh bài khảo sát hàm và các câu trong đề thi THPT Quốc gia.",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:26:05.266Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:26:05.266Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a70b718b08cf11e573de"
+  },
+  "title": "Bài 1: Lũy thừa",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:43:39.670Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:43:39.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a715718b08cf11e573e2"
+  },
+  "title": "Bài 2: Hàm số lũy thừa",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:43:49.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:43:49.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a717718b08cf11e573e6"
+  },
+  "title": "Bài 3: Lôgarit",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:43:51.823Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:43:51.823Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a71b718b08cf11e573ea"
+  },
+  "title": "Bài 4: Hàm số mũ. Hàm số lôgarit",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:43:55.025Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:43:55.025Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a71e718b08cf11e573ee"
+  },
+  "title": "Bài 5: Phương trình mũ và phương trình lôgarit",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:43:58.253Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:43:58.253Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a720718b08cf11e573f2"
+  },
+  "title": "Bài 6: Bất phương trình mũ và bất phương trình lôgarit",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:44:00.801Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:44:00.801Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848a724718b08cf11e573f6"
+  },
+  "title": "Ôn tập chương 2 Hàm số lũy thừa, Hàm số mũ và Hàm số Lôgarit",
+  "chapterId": {
+    "$oid": "6848a675718b08cf11e573da"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 6,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:44:04.067Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:44:04.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aaae3e9f2a0fc526caf6"
+  },
+  "title": "Bài 1: Nguyên hàm",
+  "chapterId": {
+    "$oid": "6848aa743e9f2a0fc526caf2"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:59:10.205Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:59:10.205Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aab13e9f2a0fc526cafa"
+  },
+  "title": "Bài 2: Tích phân",
+  "chapterId": {
+    "$oid": "6848aa743e9f2a0fc526caf2"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:59:13.569Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:59:13.569Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aab43e9f2a0fc526cafe"
+  },
+  "title": "Bài 3: Ứng dụng của tích phân trong hình học",
+  "chapterId": {
+    "$oid": "6848aa743e9f2a0fc526caf2"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:59:16.751Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:59:16.751Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aab83e9f2a0fc526cb02"
+  },
+  "title": "Ôn tập chương 3 Nguyên hàm, Tích phân và Ứng dụng",
+  "chapterId": {
+    "$oid": "6848aa743e9f2a0fc526caf2"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T21:59:20.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T21:59:20.470Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ab253e9f2a0fc526cb0a"
+  },
+  "title": "Bài 1: Số phức",
+  "chapterId": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:01:09.623Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:09.623Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ab283e9f2a0fc526cb0e"
+  },
+  "title": "Bài 2: Cộng, trừ và nhân số phức",
+  "chapterId": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:01:12.993Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:12.993Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ab2b3e9f2a0fc526cb12"
+  },
+  "title": "Bài 3: Phép chia số phức",
+  "chapterId": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:01:15.708Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:15.708Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ab2f3e9f2a0fc526cb16"
+  },
+  "title": "Bài 4: Phương trình bậc hai với hệ số thực",
+  "chapterId": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:01:19.486Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:19.486Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ab323e9f2a0fc526cb1a"
+  },
+  "title": "Ôn tập chương 4 Số phức",
+  "chapterId": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:01:22.212Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:22.212Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ab4b3e9f2a0fc526cb1e"
+  },
+  "title": "Ôn tập cuối năm phần Giải tích",
+  "chapterId": {
+    "$oid": "6848aad13e9f2a0fc526cb06"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:01:47.688Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:01:47.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac8a3e9f2a0fc526cd90"
+  },
+  "title": "Bài 1: Khái niệm về khối đa diện",
+  "chapterId": {
+    "$oid": "6848ab8d3e9f2a0fc526cd84"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 2,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:06.960Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:43.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac8d3e9f2a0fc526cd94"
+  },
+  "title": "Bài 2: Khối đa diện lồi và khối đa diện đều",
+  "chapterId": {
+    "$oid": "6848ab8d3e9f2a0fc526cd84"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:09.507Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:09.507Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac903e9f2a0fc526cd98"
+  },
+  "title": "Bài 3: Khái niệm về thể tích của khối đa diện",
+  "chapterId": {
+    "$oid": "6848ab8d3e9f2a0fc526cd84"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:12.243Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:12.243Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac933e9f2a0fc526cd9c"
+  },
+  "title": "Ôn tập chương 1 Khối đa diện",
+  "chapterId": {
+    "$oid": "6848ab8d3e9f2a0fc526cd84"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:15.195Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:15.195Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac963e9f2a0fc526cda0"
+  },
+  "title": "Bài 1: Khái niệm về mặt tròn xoay",
+  "chapterId": {
+    "$oid": "6848ab9a3e9f2a0fc526cd88"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:18.491Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:18.491Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac983e9f2a0fc526cda4"
+  },
+  "title": "Bài 2: Mặt cầu",
+  "chapterId": {
+    "$oid": "6848ab9a3e9f2a0fc526cd88"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:20.894Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:20.894Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac9b3e9f2a0fc526cda8"
+  },
+  "title": "Ôn tập chương 2 Mặt nón, Mặt trụ, Mặt cầu",
+  "chapterId": {
+    "$oid": "6848ab9a3e9f2a0fc526cd88"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:23.192Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:23.192Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848ac9d3e9f2a0fc526cdac"
+  },
+  "title": "Bài 1: Hệ tọa độ trong không gian",
+  "chapterId": {
+    "$oid": "6848abad3e9f2a0fc526cd8c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:25.655Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:25.655Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aca03e9f2a0fc526cdb0"
+  },
+  "title": "Bài 2: Phương trình mặt phẳng",
+  "chapterId": {
+    "$oid": "6848abad3e9f2a0fc526cd8c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:28.256Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:28.256Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aca23e9f2a0fc526cdb4"
+  },
+  "title": "Bài 3: Phương trình đường thẳng trong không gian",
+  "chapterId": {
+    "$oid": "6848abad3e9f2a0fc526cd8c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:30.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:30.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aca53e9f2a0fc526cdb8"
+  },
+  "title": "Ôn tập chương 3 Phương pháp tọa độ trong không gian",
+  "chapterId": {
+    "$oid": "6848abad3e9f2a0fc526cd8c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:33.473Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:33.473Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848aca83e9f2a0fc526cdbc"
+  },
+  "title": "Ôn tập cuối năm phần Hình học",
+  "chapterId": {
+    "$oid": "6848abad3e9f2a0fc526cd8c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-10T22:07:36.053Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-10T22:07:36.053Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d3f2aefb6e69ffdf20bc"
+  },
+  "title": "Khái quát văn học Việt Nam từ đầu Cách mạng tháng Tám 1945 đến thế kỉ XX",
+  "chapterId": {
+    "$oid": "6848d328aefb6e69ffdf2034"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 2,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:14.647Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T09:01:16.845Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d3f8aefb6e69ffdf20c0"
+  },
+  "title": "Nghị luận về một tư tưởng, đạo lý",
+  "chapterId": {
+    "$oid": "6848d328aefb6e69ffdf2034"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:20.715Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:20.715Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d3fcaefb6e69ffdf20c4"
+  },
+  "title": "Tuyên ngôn Độc lập - Hồ Chí Minh - Phần 1: Tác giả",
+  "chapterId": {
+    "$oid": "6848d329aefb6e69ffdf2038"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:24.460Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:24.460Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d3feaefb6e69ffdf20c8"
+  },
+  "title": "Giữ gìn sự trong sáng của tiếng Việt",
+  "chapterId": {
+    "$oid": "6848d329aefb6e69ffdf2038"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:26.962Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:26.962Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d402aefb6e69ffdf20cc"
+  },
+  "title": "Viết bài làm văn số 1: Nghị luận xã hội",
+  "chapterId": {
+    "$oid": "6848d329aefb6e69ffdf2038"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:30.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:30.227Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d409aefb6e69ffdf20d0"
+  },
+  "title": "Tuyên ngôn Độc lập - Hồ Chí Minh - Phần 2: Tác phẩm",
+  "chapterId": {
+    "$oid": "6848d32aaefb6e69ffdf203c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:37.843Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:37.843Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d40caefb6e69ffdf20d4"
+  },
+  "title": "Giữ gìn sự trong sáng của tiếng Việt (tiếp theo)",
+  "chapterId": {
+    "$oid": "6848d32aaefb6e69ffdf203c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:40.678Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:40.678Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d410aefb6e69ffdf20d8"
+  },
+  "title": "Nguyễn Đình Chiểu, ngôi sao sáng trong văn nghệ của dân tộc",
+  "chapterId": {
+    "$oid": "6848d32caefb6e69ffdf2040"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:44.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:44.154Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d414aefb6e69ffdf20dc"
+  },
+  "title": "Mấy ý nghĩ về thơ - Nguyễn Đình Thi",
+  "chapterId": {
+    "$oid": "6848d32caefb6e69ffdf2040"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:48.292Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:48.292Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d417aefb6e69ffdf20e0"
+  },
+  "title": "Đô-xtôi-ép-xki - X.Vxai-Gơ",
+  "chapterId": {
+    "$oid": "6848d32caefb6e69ffdf2040"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:51.406Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:51.406Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d41aaefb6e69ffdf20e4"
+  },
+  "title": "Nghị luận về một hiện tượng đời sống",
+  "chapterId": {
+    "$oid": "6848d32caefb6e69ffdf2040"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:55:54.274Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:55:54.274Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d421aefb6e69ffdf20e8"
+  },
+  "title": "Phong cách ngôn ngữ khoa học",
+  "chapterId": {
+    "$oid": "6848d32daefb6e69ffdf2044"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:56:01.655Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:56:01.655Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d424aefb6e69ffdf20ec"
+  },
+  "title": "Viết bài làm văn số 2: Nghị luận xã hội",
+  "chapterId": {
+    "$oid": "6848d32daefb6e69ffdf2044"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:56:04.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:56:04.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d429aefb6e69ffdf20f0"
+  },
+  "title": "Thông điệp nhân ngày thế giới phòng chống AIDS 01/12/2003",
+  "chapterId": {
+    "$oid": "6848d32eaefb6e69ffdf2048"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:56:09.036Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:56:09.036Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d42caefb6e69ffdf20f4"
+  },
+  "title": "Nghị luận về một bài thơ, đoạn thơ",
+  "chapterId": {
+    "$oid": "6848d32eaefb6e69ffdf2048"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:56:12.631Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:56:12.631Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4bdaefb6e69ffdf20f8"
+  },
+  "title": "Tây Tiến của Quang Dũng",
+  "chapterId": {
+    "$oid": "6848d32faefb6e69ffdf204c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:37.575Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:37.575Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4c2aefb6e69ffdf20fc"
+  },
+  "title": "Nghị luận về một ý kiến bàn về văn học",
+  "chapterId": {
+    "$oid": "6848d32faefb6e69ffdf204c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:42.119Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:42.119Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4c6aefb6e69ffdf2100"
+  },
+  "title": "Việt Bắc - Tố Hữu - Phần 1: Tác giả",
+  "chapterId": {
+    "$oid": "6848d331aefb6e69ffdf2050"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:46.744Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:46.744Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4c9aefb6e69ffdf2104"
+  },
+  "title": "Luật thơ",
+  "chapterId": {
+    "$oid": "6848d331aefb6e69ffdf2050"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:49.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:49.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4ccaefb6e69ffdf2108"
+  },
+  "title": "Việt Bắc - Tố Hữu - Phần 2: Tác phẩm",
+  "chapterId": {
+    "$oid": "6848d332aefb6e69ffdf2054"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:52.204Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:52.204Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4ceaefb6e69ffdf210c"
+  },
+  "title": "Phát biểu theo chủ đề",
+  "chapterId": {
+    "$oid": "6848d332aefb6e69ffdf2054"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:54.784Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:54.784Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4d2aefb6e69ffdf2110"
+  },
+  "title": "Đất Nước - Nguyễn Khoa Điềm",
+  "chapterId": {
+    "$oid": "6848d333aefb6e69ffdf2058"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:58:58.370Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:58:58.370Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4d4aefb6e69ffdf2114"
+  },
+  "title": "Đất nước - Nguyễn Đình Thi",
+  "chapterId": {
+    "$oid": "6848d333aefb6e69ffdf2058"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:00.627Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:00.627Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4d7aefb6e69ffdf2118"
+  },
+  "title": "Luật thơ (Tiếp theo)",
+  "chapterId": {
+    "$oid": "6848d333aefb6e69ffdf2058"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:03.078Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:03.078Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4d9aefb6e69ffdf211c"
+  },
+  "title": "Thực hành một số phép tu từ ngữ âm",
+  "chapterId": {
+    "$oid": "6848d33caefb6e69ffdf205c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:05.870Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:05.870Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4dcaefb6e69ffdf2120"
+  },
+  "title": "Viết bài làm văn số 3: Nghị luận văn học",
+  "chapterId": {
+    "$oid": "6848d33caefb6e69ffdf205c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:08.785Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:08.785Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4deaefb6e69ffdf2124"
+  },
+  "title": "Dọn về làng - Nông Quốc Chấn",
+  "chapterId": {
+    "$oid": "6848d33daefb6e69ffdf2060"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:10.942Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:10.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4e1aefb6e69ffdf2128"
+  },
+  "title": "Tiếng hát con tàu - Chế Lan Viên",
+  "chapterId": {
+    "$oid": "6848d33daefb6e69ffdf2060"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:13.362Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:13.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4ebaefb6e69ffdf212c"
+  },
+  "title": "Đò Lèn - Nguyễn Duy",
+  "chapterId": {
+    "$oid": "6848d33daefb6e69ffdf2060"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:23.521Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:23.521Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d4efaefb6e69ffdf2130"
+  },
+  "title": "Thực hành một số phép tu từ cú pháp",
+  "chapterId": {
+    "$oid": "6848d33daefb6e69ffdf2060"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T00:59:27.350Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T00:59:27.350Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d518aefb6e69ffdf2134"
+  },
+  "title": "Sóng - Xuân Quỳnh",
+  "chapterId": {
+    "$oid": "6848d33eaefb6e69ffdf2064"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:00:08.824Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:08.824Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d51baefb6e69ffdf2138"
+  },
+  "title": "Luyện tập vận dụng kết hợp các phương thức biểu đạt trong bài văn nghị luận",
+  "chapterId": {
+    "$oid": "6848d33eaefb6e69ffdf2064"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:00:11.542Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:11.542Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d51daefb6e69ffdf213c"
+  },
+  "title": "Đàn ghi ta của Lor-ca - Thanh Thảo",
+  "chapterId": {
+    "$oid": "6848d33faefb6e69ffdf2068"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:00:13.810Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:13.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d520aefb6e69ffdf2140"
+  },
+  "title": "Bác ơi - Tố Hữu",
+  "chapterId": {
+    "$oid": "6848d33faefb6e69ffdf2068"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:00:16.023Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:16.023Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d522aefb6e69ffdf2144"
+  },
+  "title": "Tự do - Pê-luy-a",
+  "chapterId": {
+    "$oid": "6848d33faefb6e69ffdf2068"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:00:18.136Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:18.136Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d525aefb6e69ffdf2148"
+  },
+  "title": "Luyện tập vận dụng kết hợp các thao tác lập luận",
+  "chapterId": {
+    "$oid": "6848d33faefb6e69ffdf2068"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:00:21.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:00:21.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d924aefb6e69ffdf214c"
+  },
+  "title": "Quá trình văn học và phong cách văn học",
+  "chapterId": {
+    "$oid": "6848d340aefb6e69ffdf206c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:24.588Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:24.588Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d927aefb6e69ffdf2150"
+  },
+  "title": "Người lái đò sông Đà - Nguyễn Tuân",
+  "chapterId": {
+    "$oid": "6848d341aefb6e69ffdf2070"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:27.414Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:27.414Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d929aefb6e69ffdf2154"
+  },
+  "title": "Chữa lỗi lập luận trong văn nghị luận",
+  "chapterId": {
+    "$oid": "6848d341aefb6e69ffdf2070"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:29.517Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:29.517Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d92baefb6e69ffdf2158"
+  },
+  "title": "Ai đã đặt tên cho dòng sông - Hoàng Phủ Ngọc Tường",
+  "chapterId": {
+    "$oid": "6848d342aefb6e69ffdf2074"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:31.756Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:31.756Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d92daefb6e69ffdf215c"
+  },
+  "title": "Những ngày đầu của nước Việt Nam mới - Võ Nguyên Giáp",
+  "chapterId": {
+    "$oid": "6848d342aefb6e69ffdf2074"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:33.967Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:33.967Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d930aefb6e69ffdf2160"
+  },
+  "title": "Thực hành chữa lỗi lập luận trong văn nghị luận",
+  "chapterId": {
+    "$oid": "6848d342aefb6e69ffdf2074"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:36.054Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:36.054Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d933aefb6e69ffdf2164"
+  },
+  "title": "Ôn tập phần văn học",
+  "chapterId": {
+    "$oid": "6848d343aefb6e69ffdf2078"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:39.049Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:39.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d935aefb6e69ffdf2168"
+  },
+  "title": "Vợ chồng A Phủ - Tô Hoài",
+  "chapterId": {
+    "$oid": "6848d344aefb6e69ffdf207c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:41.133Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:41.133Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d936aefb6e69ffdf216c"
+  },
+  "title": "Viết bài làm văn số 5: Nghị luận văn học",
+  "chapterId": {
+    "$oid": "6848d344aefb6e69ffdf207c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:42.921Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:42.921Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d939aefb6e69ffdf2170"
+  },
+  "title": "Nhân vật giao tiếp",
+  "chapterId": {
+    "$oid": "6848d347aefb6e69ffdf2080"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:45.506Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:45.506Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d93baefb6e69ffdf2174"
+  },
+  "title": "Vợ Nhặt - Kim Lân",
+  "chapterId": {
+    "$oid": "6848d347aefb6e69ffdf2084"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:47.581Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:47.581Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d93daefb6e69ffdf2178"
+  },
+  "title": "Nghị luận về một tác phẩm, một đoạn trích văn xuôi",
+  "chapterId": {
+    "$oid": "6848d347aefb6e69ffdf2084"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:49.761Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:49.761Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d940aefb6e69ffdf217c"
+  },
+  "title": "Rừng xà nu - Nguyễn Trung Thành",
+  "chapterId": {
+    "$oid": "6848d348aefb6e69ffdf2088"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:52.262Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:52.262Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d942aefb6e69ffdf2180"
+  },
+  "title": "Bắt sấu rừng U Minh Hạ - Sơn Nam",
+  "chapterId": {
+    "$oid": "6848d348aefb6e69ffdf2088"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:54.966Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:54.966Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d945aefb6e69ffdf2184"
+  },
+  "title": "Những đứa con trong gia đình - Nguyễn Thi",
+  "chapterId": {
+    "$oid": "6848d349aefb6e69ffdf208c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:57.349Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:57.349Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d947aefb6e69ffdf2188"
+  },
+  "title": "Viết bài làm văn số 6: Nghị luận văn học",
+  "chapterId": {
+    "$oid": "6848d349aefb6e69ffdf208c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:17:59.963Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:17:59.963Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d9fbaefb6e69ffdf218c"
+  },
+  "title": "Chiếc thuyền ngoài xa - Nguyễn Minh Châu",
+  "chapterId": {
+    "$oid": "6848d34aaefb6e69ffdf2090"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:20:59.350Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:20:59.350Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d9fdaefb6e69ffdf2190"
+  },
+  "title": "Thực hành về hàm ý",
+  "chapterId": {
+    "$oid": "6848d34aaefb6e69ffdf2090"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:21:01.349Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:21:01.349Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848d9ffaefb6e69ffdf2194"
+  },
+  "title": "Mùa lá rụng trong vườn - Ma Văn Kháng",
+  "chapterId": {
+    "$oid": "6848d34baefb6e69ffdf2094"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:21:03.546Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:21:03.546Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da01aefb6e69ffdf2198"
+  },
+  "title": "Một người Hà Nội - Nguyễn Khải",
+  "chapterId": {
+    "$oid": "6848d34baefb6e69ffdf2094"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:21:05.943Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:21:05.943Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da04aefb6e69ffdf219c"
+  },
+  "title": "Thực hành về hàm ý (tiếp theo)",
+  "chapterId": {
+    "$oid": "6848d34baefb6e69ffdf2094"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:21:08.434Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:21:08.434Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da76aefb6e69ffdf21a0"
+  },
+  "title": "Thuốc - Lỗ Tấn",
+  "chapterId": {
+    "$oid": "6848d34caefb6e69ffdf2098"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:02.087Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:02.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da78aefb6e69ffdf21a4"
+  },
+  "title": "Rèn luyện kĩ năng mở bài, kết bài trong văn nghị luận",
+  "chapterId": {
+    "$oid": "6848d34caefb6e69ffdf2098"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:04.233Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:04.233Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da7aaefb6e69ffdf21a8"
+  },
+  "title": "Số phận con người - M. Sô-lô-khốp",
+  "chapterId": {
+    "$oid": "6848d34daefb6e69ffdf209c"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:06.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:06.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da7daefb6e69ffdf21ac"
+  },
+  "title": "Ông già và biển cả - Hê-Minh-Uê",
+  "chapterId": {
+    "$oid": "6848d34eaefb6e69ffdf20a0"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:09.495Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:09.495Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da7faefb6e69ffdf21b0"
+  },
+  "title": "Diễn đạt trong văn nghị luận",
+  "chapterId": {
+    "$oid": "6848d34eaefb6e69ffdf20a0"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:11.699Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:11.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da82aefb6e69ffdf21b4"
+  },
+  "title": "Hồn Trương Ba, da hàng thịt - Lưu Quang Vũ",
+  "chapterId": {
+    "$oid": "6848d34faefb6e69ffdf20a4"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:14.900Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:14.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da84aefb6e69ffdf21b8"
+  },
+  "title": "Diễn đạt trong văn nghị luận (tiếp theo)",
+  "chapterId": {
+    "$oid": "6848d34faefb6e69ffdf20a4"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:16.713Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:16.713Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da87aefb6e69ffdf21bc"
+  },
+  "title": "Nhìn về vốn văn hóa dân tộc - Trần Đình Hượu",
+  "chapterId": {
+    "$oid": "6848d351aefb6e69ffdf20a8"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:19.575Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:19.575Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848da89aefb6e69ffdf21c0"
+  },
+  "title": "Phát biểu tự do",
+  "chapterId": {
+    "$oid": "6848d351aefb6e69ffdf20a8"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:21.684Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:21.684Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848daa9aefb6e69ffdf21c4"
+  },
+  "title": "Phong cách ngôn ngữ hành chính",
+  "chapterId": {
+    "$oid": "6848d353aefb6e69ffdf20ac"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:53.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:53.743Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848daabaefb6e69ffdf21c8"
+  },
+  "title": "Văn bản tổng kết",
+  "chapterId": {
+    "$oid": "6848d353aefb6e69ffdf20ac"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:56.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:56.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848daaeaefb6e69ffdf21cc"
+  },
+  "title": "Tổng kết phần tiếng Việt: Hoạt động giao tiếp bằng ngôn ngữ",
+  "chapterId": {
+    "$oid": "6848d354aefb6e69ffdf20b0"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:23:58.879Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:23:58.879Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848dabcaefb6e69ffdf21d0"
+  },
+  "title": "Ôn tập phần làm văn",
+  "chapterId": {
+    "$oid": "6848d354aefb6e69ffdf20b0"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:24:12.133Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:12.133Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848dabeaefb6e69ffdf21d4"
+  },
+  "title": "Giá trị văn học và tiếp nhận văn học",
+  "chapterId": {
+    "$oid": "6848d355aefb6e69ffdf20b4"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:24:14.928Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:14.928Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848dac7aefb6e69ffdf21d8"
+  },
+  "title": "Tổng kết phần tiếng Việt: Lịch sử, đặc điểm loại hình và các phong cách ngôn ngữ",
+  "chapterId": {
+    "$oid": "6848d355aefb6e69ffdf20b4"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:24:23.455Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:23.455Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6848dacaaefb6e69ffdf21dc"
+  },
+  "title": "Ôn tập phần văn học",
+  "chapterId": {
+    "$oid": "6848d356aefb6e69ffdf20b8"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T01:24:26.158Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T01:24:26.158Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68493648aefb6e69ffdf25dc"
   },
   "title": "Bài 1: Dao động điều hòa",
   "chapterId": {
-    "$oid": "683c3a4e8475a22496f60fc6"
+    "$oid": "68493548aefb6e69ffdf25bc"
   },
   "video": {
-    "url": "/videos/test3.mp4",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749633073/B%C3%A0i_1__Dao_%C4%91%E1%BB%99ng_%C4%91i%E1%BB%81u_h%C3%B2a-_V%E1%BA%ADt_l%C3%AD_12_OLM.VN_cpb2bv.mp4",
     "chapters": [
       {
-        "time": 40,
-        "title": "Phần 1"
+        "time": 45,
+        "title": "Khái niệm"
       },
       {
-        "time": 100,
-        "title": "Phần 2"
+        "time": 121,
+        "title": "Phương trình dao động điều hòa"
       },
       {
-        "time": 120,
-        "title": "Phần 3"
+        "time": 325,
+        "title": "Ghi nhớ"
       }
     ]
   },
-  "document": "**2.1. Dao động cơ, dao động tuần hoàn.**  \n\\- Dao động cơ là chuyển động qua lại của vật quanh vị trí cân bằng.  \n\\- Dao động tuần hoàn là dao động mà sau những khoảng thời gian bằng nhau, gọi là chu kỳ, vật trở lại vị trí cũ theo hướng cũ. Dao động tuần hoàn đơn giản nhất là dao động điều hòa.\n\n**2.2. Dao động điều hòa.**\n\n&nbsp;&nbsp;&nbsp;&nbsp;**a. Ví dụ dao động điều hòa**\n\n\n![Mô tả ảnh](https://res.cloudinary.com/ds5lvyntx/image/upload/v1749115890/12_p3kezr.png)\n\n\\- Giả sử M chuyển động theo chiều dương vận tốc góc là $$\\omega$$, **P** là hình chiếu của M lên Ox.\n\\- Tại t=0, M có tọa độ góc $$\\varphi$$",
-  "exercises": [
-    {
-      "type": "Dạng bài 1",
-      "questions": [
-        {
-          "$oid": "683ebf3f45b9d24226965809"
-        }
-      ]
-    },
-    {
-      "type": "Dạng bài 2",
-      "questions": [
-        {
-          "$oid": "683ec00445b9d2422696580d"
-        }
-      ]
-    },
-    {
-      "type": "Dạng bài 3",
-      "questions": [
-        {
-          "$oid": "683ec04345b9d24226965811"
-        }
-      ]
-    }
-  ],
-  "comments": [
-    {
-      "$oid": "681e8c82fc9f8f02001dcf19"
-    },
-    {
-      "$oid": "6819261d707fc47fa55fca8b"
-    },
-    {
-      "$oid": "6819265e707fc47fa55fca93"
-    },
-    {
-      "$oid": "68433a6748df3a0824187f9b"
-    },
-    {
-      "$oid": "68433a6a48df3a0824187fbb"
-    }
-  ],
-  "views": 4802,
-  "order": 0,
-  "__v": 42,
+  "document": "**2.1. Dao động cơ, dao động tuần hoàn.**  \n\\- Dao động cơ là chuyển động qua lại của vật quanh vị trí cân bằng.  \n\\- Dao động tuần hoàn là dao động mà sau những khoảng thời gian bằng nhau, gọi là chu kỳ, vật trở lại vị trí cũ theo hướng cũ. Dao động tuần hoàn đơn giản nhất là dao động điều hòa.\n\n**2.2. Dao động điều hòa.**\n\n**a. Ví dụ dao động điều hòa**\n\n\n![Mô tả ảnh](https://res.cloudinary.com/ds5lvyntx/image/upload/v1749115890/12_p3kezr.png)\n\n\\- Giả sử M chuyển động theo chiều dương vận tốc góc là $$\\omega$$, **P** là hình chiếu của M lên Ox.\n\n\\- Tại t=0, M có tọa độ góc **$\\varphi$**\n\n\\- Sau thời gian t, M có tọa độ góc **$$\\varphi$$ + $$\\omega$$t**.\n\n\\- Khi đó: **$\\vec{OP}$ = x; x = OM $\\cos(\\omega t + \\varphi)$**\n\n\\- Đặt A = OM ta có: x = $A \\cos(\\omega t + \\varphi)$\n\n\\- Trong đó A, $\\omega$, $\\varphi$ là hằng số\n\n\\- Do hàm cosin là hàm điều hòa nen điểm P được gọi là dao động điều hòa.\n\n**b. Định nghĩa dao động điều hòa**\n\n\\- Dao động điều hòa là dao động trong đó li độ của vật là một hàm cosin (hay sin) của thời gian.\n\n**c. Phương trình**\n\n\\- Phương trình **x = Acos($\\omega t + \\varphi$)** gọi là phương trình dao động điều hòa.\n\n\\- A là biên độ dao động, là li độ cực đại của vật, A>0.\n\n\\- **$\\omega t + \\varphi$** là pha dao động tại thời điểm t.\n\n\\- **$\\varphi$** là pha ban đầu tại t=0.\n\n**d. Chú ý**\n\n\\- Điểm P dao động điều hòa trên 1 đoạn thẳng luôn luôn có thể coi là hình chiếu của điểm M chuyển động tròn đều lên đường kính là đoạn thẳng đó.\n\n\\- Ta quy ước chọn trục x làm trục gốc để tính pha dao động và chiều tăng của pha tương ứng với chiều tăng của góc $\\widehat{MOP}$ trong chuyển động tròn đều.\n\n**2.3. Chu kì, tần số, tần số góc của dao động điều hòa.**  \n\n**a. Chu kì và tần số.**\n\n-\\ Khi vật trở về vị trí cũ, hướng cũ thì ta nói vật thực hiện 1 dao động tuần hoàn.\n\n\\- Chu kì (T): của dao động điều hòa là khoảng thời gian để vật thực hiện 1 dao động toàn phần. \n\n\\- Tần số (f): của dao động điều hòa là số dao động tuần hoàn thực hiện trong 1 giây.\n\n**b. Tần số góc**\n\n\\- Trong dao động điều hòa $\\omega$ được gọi là tần số góc.\n\n\\- Giữa tần số góc, chu kì và tần số có mối liên hệ: $\\omega = \\dfrac{2\\pi}{T} = 2\\pi f$\\\n\n**2.4. Vận tốc và gia tốc của dao động điều hòa**\n\n**a. Vận tốc**\n\n\\- Vận tốc là đạo hàm của li độ theo thời gian.\n\nv = x' = -$\\omega$ Asin($\\omega t + \\varphi$)\n\n\\- Vận tốc cũng biến thiên theo thời gian.\n\n\\- Tại x = $\\pm$A thì v = 0.\n\n\\- Tại x = 0 thì v = $\\omega$ A.\n\n**b. Gia tốc**\n\n\\- Gia tốc là đạo hàm của vận tốc theo thời gian.\n\na = v' = x'' = - $\\omega^2$ Asin($\\omega t + \\varphi$)\n\n$a = -\\omega^2 x$\n\n\\- Tại x = 0 thì a = 0.\n\n\\- Tại x = $\\pm$ A thì a = $\\omega^2$ A\n\n**2.5. Đồ thị của dao động điều hòa**\n\n![Mô tả ảnh](https://res.cloudinary.com/ds5lvyntx/image/upload/v1749635649/1111_2_i8kae3.png)\n\n\n\\- Đồ thị của dao động điều hòa với $\\varphi$ = 0 có dạng hình sin nên người ta còn gọi là dao động hình sin.\n\n**BÀI TẬP MINH HỌA**\n\n**Bài 1**\n\nMột vật dao động điều hòa trên đoạn thẳng dài 4cm với f = 10Hz. Lúc t = 0 vật qua VTCB theo chiều dương của quỹ đạo. Viết phương trình dao động của vật.\n\n**Hướng dẫn giải**\n\nTa có tần số góc $\\omega$ = 2 $\\pi$ f = $\\pi$ và biên độ A = $\\dfrac{MN}{2}$ = 2cm\n\nĐiều kiện ban đầu t = 0: x = 0, v > 0 => $\\varphi$ = -$\\dfrac{\\pi}{2}$ => x = 2cm(20$\\pi$t - $\\dfrac{\\pi}{2}$) (cm)\n\n",
+  "comments": [],
   "rating": {
-    "details": [
-      {
-        "_id": {
-          "$oid": "684225c8fae7105bb8480d4e"
-        },
-        "userId": "6840d73c5030b9a16d8c2b6a",
-        "rate": 3,
-        "content": "Phần tóm tắt lý thuyết hơi sơ sài"
-      },
-      {
-        "userId": "682a073de2776895a05ae93b",
-        "rate": 5,
-        "content": "123",
-        "_id": {
-          "$oid": "6842e42e9cd0a4d3d7527f19"
-        }
-      }
-    ],
-    "overall": 4
+    "overall": 0,
+    "details": []
   },
-  "likes": 1
+  "views": 33,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T07:54:48.544Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T10:00:32.761Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c4dbacd45165ec1affd0a"
+    "$oid": "6849364aaefb6e69ffdf25e0"
   },
   "title": "Bài 2: Con lắc lò xo",
   "chapterId": {
-    "$oid": "683c3a4e8475a22496f60fc6"
+    "$oid": "68493548aefb6e69ffdf25bc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T07:54:50.951Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T07:54:50.951Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c4dc0cd45165ec1affd0e"
+    "$oid": "6849364daefb6e69ffdf25e4"
   },
   "title": "Bài 3: Con lắc đơn",
   "chapterId": {
-    "$oid": "683c3a4e8475a22496f60fc6"
+    "$oid": "68493548aefb6e69ffdf25bc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 1,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
+    "overall": 0,
+    "details": []
   },
-  "likes": 0
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T07:54:53.037Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T07:54:53.037Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c4dcecd45165ec1affd12"
+    "$oid": "684936dfaefb6e69ffdf25ec"
   },
   "title": "Bài 4: Dao động tắt dần và dao động cưỡng bức",
   "chapterId": {
-    "$oid": "683c3a4e8475a22496f60fc6"
+    "$oid": "68493548aefb6e69ffdf25bc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 4,
-  "order": 0,
-  "__v": 0,
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
   "likes": 0,
-  "rating": {
-    "details": [],
-    "overall": 0
-  }
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T07:57:19.681Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T07:57:19.681Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c4deecd45165ec1affd16"
+    "$oid": "6849383faefb6e69ffdf25f0"
   },
-  "title": "Bài 5: Tổng hợp hai dao động điều hòa cùng phương, cùng tần số và phương pháp Fre-nen",
+  "title": "Bài 5: Tổng hợp hai dao động điều hòa cùng phương, cùng tần số và Phương pháp Fre-Nen",
   "chapterId": {
-    "$oid": "683c3a4e8475a22496f60fc6"
+    "$oid": "68493548aefb6e69ffdf25bc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 136,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
+    "overall": 0,
+    "details": []
   },
-  "likes": 0
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:11.097Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:11.097Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c4e12cd45165ec1affd1a"
+    "$oid": "68493841aefb6e69ffdf25f4"
   },
-  "title": "Bài 6: Thực hành khảo sát thực nghiệm các định luật dao động của con lắc đơn",
+  "title": "Bài 6: Thực hành Khảo sát thực nghiệm các định luật dao động của con lắc đơn",
   "chapterId": {
-    "$oid": "683c3a4e8475a22496f60fc6"
+    "$oid": "68493548aefb6e69ffdf25bc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 6,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
+    "overall": 0,
+    "details": []
   },
-  "likes": 0
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:13.877Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:13.877Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58a7cd45165ec1affd58"
+    "$oid": "6849384eaefb6e69ffdf25f8"
   },
   "title": "Bài 7: Sóng cơ và sự truyền sóng cơ",
   "chapterId": {
-    "$oid": "683c3a7b8475a22496f60fca"
+    "$oid": "68493552aefb6e69ffdf25c0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 6,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:26.691Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:26.691Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58aecd45165ec1affd5c"
+    "$oid": "68493857aefb6e69ffdf25fc"
   },
   "title": "Bài 8: Giao thoa sóng",
   "chapterId": {
-    "$oid": "683c3a7b8475a22496f60fca"
+    "$oid": "68493552aefb6e69ffdf25c0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 7,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:35.339Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:35.339Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58b4cd45165ec1affd60"
+    "$oid": "6849385aaefb6e69ffdf2600"
   },
   "title": "Bài 9: Sóng dừng",
   "chapterId": {
-    "$oid": "683c3a7b8475a22496f60fca"
+    "$oid": "68493552aefb6e69ffdf25c0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 8,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:38.130Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:38.130Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58becd45165ec1affd64"
+    "$oid": "6849385caefb6e69ffdf2604"
   },
-  "title": "Bài 10: Đặc trưng vật lý của âm",
+  "title": "Bài 10: Đặc trưng Vật lý của âm",
   "chapterId": {
-    "$oid": "683c3a7b8475a22496f60fca"
+    "$oid": "68493552aefb6e69ffdf25c0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 9,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:40.320Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:40.320Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58c7cd45165ec1affd68"
+    "$oid": "6849385eaefb6e69ffdf2608"
   },
-  "title": "Bài 11: Đặc trưng sinh lý của âm",
+  "title": "Bài 11: Đặc trưng sinh lí của âm",
   "chapterId": {
-    "$oid": "683c3a7b8475a22496f60fca"
+    "$oid": "68493552aefb6e69ffdf25c0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 10,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:42.696Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:42.696Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58decd45165ec1affd6c"
+    "$oid": "68493863aefb6e69ffdf260c"
   },
   "title": "Bài 12: Đại cương về dòng điện xoay chiều",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 11,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:47.755Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:47.755Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c58f3cd45165ec1affd70"
+    "$oid": "68493866aefb6e69ffdf2610"
   },
   "title": "Bài 13: Các mạch điện xoay chiều",
-  "chapterId": "683c3a868475a22496f60fce",
+  "chapterId": {
+    "$oid": "68493558aefb6e69ffdf25c4"
+  },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 12,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:50.492Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:50.492Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5906cd45165ec1affd74"
+    "$oid": "68493869aefb6e69ffdf2614"
   },
   "title": "Bài 14: Mạch có R, L, C mắc nối tiếp",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
   "views": 0,
-  "order": 0,
-  "__v": 0,
-  "rating": {
-    "details": [],
-    "overall": 0
-  }
+  "likes": 0,
+  "order": 13,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:53.773Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:53.773Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5922cd45165ec1affd78"
+    "$oid": "6849386caefb6e69ffdf2618"
   },
-  "title": "Bài 15: Công suất điện tiêu thụ của mạch điện xoay chiều và hệ số công suất",
+  "title": "Bài 15: Công suất điện tiêu thụ của mạch điện xoay chiều và Hệ số công suất",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 174,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
+    "overall": 0,
+    "details": []
   },
-  "likes": 1
+  "views": 0,
+  "likes": 0,
+  "order": 14,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:56.390Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:56.390Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c593bcd45165ec1affd7c"
+    "$oid": "6849386eaefb6e69ffdf261c"
   },
   "title": "Bài 16: Truyền tải điện năng và máy biến áp",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 15,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:03:58.974Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:03:58.974Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5949cd45165ec1affd80"
+    "$oid": "68493871aefb6e69ffdf2620"
   },
   "title": "Bài 17: Máy phát điện xoay chiều",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 16,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:01.675Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:01.675Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5954cd45165ec1affd84"
+    "$oid": "68493874aefb6e69ffdf2624"
   },
-  "title": "Bài 18: Động cơ không đồng bộ ba pha",
+  "title": "Bài 18: Dòng có không đồng bộ ba pha",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 17,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:04.093Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:04.093Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5965cd45165ec1affd88"
+    "$oid": "68493876aefb6e69ffdf2628"
   },
-  "title": "Bài 19: Thực hành khảo sát đoạn mạch xoay chiều RLC",
+  "title": "Bài 19: Thực hành Khảo sát đoạn mạch xoay chiều RLC",
   "chapterId": {
-    "$oid": "683c3a868475a22496f60fce"
+    "$oid": "68493558aefb6e69ffdf25c4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 18,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:06.545Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:06.545Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c597ccd45165ec1affd8c"
+    "$oid": "68493878aefb6e69ffdf262c"
   },
   "title": "Bài 20: Mạch dao động",
   "chapterId": {
-    "$oid": "683c3a918475a22496f60fd2"
+    "$oid": "68493564aefb6e69ffdf25c8"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 19,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:08.775Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:08.775Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c598dcd45165ec1affd90"
+    "$oid": "6849387baefb6e69ffdf2630"
   },
   "title": "Bài 21: Điện từ trường",
   "chapterId": {
-    "$oid": "683c3a918475a22496f60fd2"
+    "$oid": "68493564aefb6e69ffdf25c8"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 20,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:11.173Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:11.173Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5995cd45165ec1affd94"
+    "$oid": "6849387eaefb6e69ffdf2634"
   },
   "title": "Bài 22: Sóng điện từ",
   "chapterId": {
-    "$oid": "683c3a918475a22496f60fd2"
+    "$oid": "68493564aefb6e69ffdf25c8"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 21,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:14.087Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:14.087Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c59becd45165ec1affd98"
+    "$oid": "68493880aefb6e69ffdf2638"
   },
   "title": "Bài 23: Nguyên tắc thông tin liên lạc bằng sóng vô tuyến",
   "chapterId": {
-    "$oid": "683c3a918475a22496f60fd2"
+    "$oid": "68493564aefb6e69ffdf25c8"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 22,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:16.474Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:16.474Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5ab3cd45165ec1affd9c"
+    "$oid": "68493882aefb6e69ffdf263c"
   },
   "title": "Bài 24: Tán sắc ánh sáng",
   "chapterId": {
-    "$oid": "683c3a998475a22496f60fd6"
+    "$oid": "6849356faefb6e69ffdf25cc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 23,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:04:18.906Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:04:18.906Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5abccd45165ec1affda0"
+    "$oid": "684939c1aefb6e69ffdf2640"
   },
   "title": "Bài 25: Giao thoa ánh sáng",
   "chapterId": {
-    "$oid": "683c3a998475a22496f60fd6"
+    "$oid": "6849356faefb6e69ffdf25cc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 24,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:37.919Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:37.919Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5ac7cd45165ec1affda4"
+    "$oid": "684939c4aefb6e69ffdf2644"
   },
   "title": "Bài 26: Các loại quang phổ",
   "chapterId": {
-    "$oid": "683c3a998475a22496f60fd6"
+    "$oid": "6849356faefb6e69ffdf25cc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 25,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:40.339Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:40.339Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5aefcd45165ec1affda8"
+    "$oid": "684939c6aefb6e69ffdf2648"
   },
   "title": "Bài 27: Tia hồng ngoại và tia tử ngoại",
   "chapterId": {
-    "$oid": "683c3a998475a22496f60fd6"
+    "$oid": "6849356faefb6e69ffdf25cc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 26,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:42.492Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:42.492Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5af4cd45165ec1affdac"
+    "$oid": "684939c8aefb6e69ffdf264c"
   },
   "title": "Bài 28: Tia X",
   "chapterId": {
-    "$oid": "683c3a998475a22496f60fd6"
+    "$oid": "6849356faefb6e69ffdf25cc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 27,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:44.888Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:44.888Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5b03cd45165ec1affdb0"
+    "$oid": "684939cbaefb6e69ffdf2650"
   },
-  "title": "Bài 29: Thực hành đo bước sóng ánh sáng bằng phương pháp giao thoa",
+  "title": "Bài 29: Thực hành Do bước sóng ánh sáng bằng phương pháp giao thoa",
   "chapterId": {
-    "$oid": "683c3a998475a22496f60fd6"
+    "$oid": "6849356faefb6e69ffdf25cc"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 28,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:47.264Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:47.264Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5b56cd45165ec1affdb4"
+    "$oid": "684939cdaefb6e69ffdf2654"
   },
   "title": "Bài 30: Hiện tượng quang điện và thuyết lượng tử ánh sáng",
   "chapterId": {
-    "$oid": "683c3aa28475a22496f60fda"
+    "$oid": "6849357baefb6e69ffdf25d0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 29,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:49.357Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:49.357Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5b61cd45165ec1affdb8"
+    "$oid": "684939cfaefb6e69ffdf2658"
   },
   "title": "Bài 31: Hiện tượng quang điện trong",
   "chapterId": {
-    "$oid": "683c3aa28475a22496f60fda"
+    "$oid": "6849357baefb6e69ffdf25d0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 30,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:51.489Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:51.489Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5b72cd45165ec1affdbc"
+    "$oid": "684939d1aefb6e69ffdf265c"
   },
   "title": "Bài 32: Hiện tượng quang - phát quang",
   "chapterId": {
-    "$oid": "683c3aa28475a22496f60fda"
+    "$oid": "6849357baefb6e69ffdf25d0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 31,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:53.969Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:53.969Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5b7ecd45165ec1affdc0"
+    "$oid": "684939d4aefb6e69ffdf2660"
   },
   "title": "Bài 33: Mẫu nguyên tử Bo",
   "chapterId": {
-    "$oid": "683c3aa28475a22496f60fda"
+    "$oid": "6849357baefb6e69ffdf25d0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 32,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:56.924Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:56.924Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5ba2cd45165ec1affdc4"
+    "$oid": "684939d7aefb6e69ffdf2664"
   },
   "title": "Bài 34: Sơ lược về laze",
   "chapterId": {
-    "$oid": "683c3aa28475a22496f60fda"
+    "$oid": "6849357baefb6e69ffdf25d0"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 33,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:09:59.736Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:09:59.736Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5bbacd45165ec1affdc8"
+    "$oid": "684939dbaefb6e69ffdf2668"
   },
-  "title": "Bài 35: Tính chất và cấu tạo của hạt nhân",
+  "title": "Bài 35: Tính chất và cấu tạo hạt nhân",
   "chapterId": {
-    "$oid": "683c3aab8475a22496f60fde"
+    "$oid": "68493596aefb6e69ffdf25d4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 34,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:03.057Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:03.057Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5bd4cd45165ec1affdcc"
+    "$oid": "684939ddaefb6e69ffdf266c"
   },
   "title": "Bài 36: Năng lượng liên kết của hạt nhân và phản ứng hạt nhân",
   "chapterId": {
-    "$oid": "683c3aab8475a22496f60fde"
+    "$oid": "68493596aefb6e69ffdf25d4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 35,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:05.181Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:05.181Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5c38cd45165ec1affdd0"
+    "$oid": "684939dfaefb6e69ffdf2670"
   },
   "title": "Bài 37: Phóng xạ",
   "chapterId": {
-    "$oid": "683c3aab8475a22496f60fde"
+    "$oid": "68493596aefb6e69ffdf25d4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 36,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:07.665Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:07.665Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5c77cd45165ec1affdd4"
+    "$oid": "684939e1aefb6e69ffdf2674"
   },
   "title": "Bài 38: Phản ứng phân hạch",
   "chapterId": {
-    "$oid": "683c3aab8475a22496f60fde"
+    "$oid": "68493596aefb6e69ffdf25d4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 37,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:09.902Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:09.902Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5cafcd45165ec1affdd8"
+    "$oid": "684939e4aefb6e69ffdf2678"
   },
   "title": "Bài 39: Phản ứng nhiệt hạch",
   "chapterId": {
-    "$oid": "683c3aab8475a22496f60fde"
+    "$oid": "68493596aefb6e69ffdf25d4"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 38,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:12.147Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:12.147Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5cf5cd45165ec1affddc"
+    "$oid": "684939e6aefb6e69ffdf267c"
   },
   "title": "Bài 40: Các hạt sơ cấp",
   "chapterId": {
-    "$oid": "683c3ab68475a22496f60fe2"
+    "$oid": "684935a1aefb6e69ffdf25d8"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 39,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:14.964Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:14.964Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "683c5cfdcd45165ec1affde0"
+    "$oid": "684939e9aefb6e69ffdf2680"
   },
   "title": "Bài 41: Cấu tạo vũ trụ",
   "chapterId": {
-    "$oid": "683c3ab68475a22496f60fe2"
+    "$oid": "684935a1aefb6e69ffdf25d8"
   },
   "video": {
-    "url": "https://www.youtube.com/embed/_5r0AnoQAdg?si=It1gUyjQqriVod8T",
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
     "chapters": []
   },
-  "document": "Content nè",
-  "exercises": [],
+  "document": "",
   "comments": [],
-  "views": 0,
-  "order": 0,
-  "__v": 0,
   "rating": {
-    "details": [],
-    "overall": 0
-  }
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 40,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-11T08:10:17.199Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T08:10:17.199Z"
+  },
+  "__v": 0
 }]

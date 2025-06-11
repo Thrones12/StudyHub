@@ -168,7 +168,7 @@ const LikeLessonPage = () => {
     };
     return (
         <div className={styles.Card}>
-            <div className={styles.Header}>Bài kiểm tra đã lưu trữ</div>
+            <div className={styles.Header}>Bài học đã yêu thích</div>
             {/* Begin: card-body */}
             <div className={styles.Body}>
                 {/* Tools */}
@@ -233,7 +233,10 @@ function LessonCard(props) {
                     <MuiIcons.Close />
                 </div>
             </Tooltip>
-            <img src='/avatars/profile.png' alt='image' />
+            <img
+                src='https://res.cloudinary.com/ds5lvyntx/image/upload/v1749486154/images_mlysti.jpg'
+                alt='image'
+            />
             <div className={styles.title}>{lesson.title}</div>
             <div className={styles.author}>
                 {lesson.courseTitle}

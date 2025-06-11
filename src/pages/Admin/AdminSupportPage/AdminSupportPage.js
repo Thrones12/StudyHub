@@ -11,11 +11,7 @@ import Noti from "../../../utils/Noti";
 
 const AdminSupportPage = () => {
     // Lấy dữ liệu người dùng
-    const {
-        data: supports,
-        loading,
-        refetch,
-    } = useFetch({
+    const { data: supports, refetch } = useFetch({
         url: `http://localhost:8080/api/support`,
         method: "GET",
     });
@@ -172,6 +168,13 @@ const AdminSupportPage = () => {
     }, [searchText, processedSupports]);
 
     // EDIT
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        document.body.style.cursor = loading ? "wait" : "default";
+        return () => {
+            document.body.style.cursor = "default";
+        };
+    }, [loading]);
     const [showModal, setShowModal] = useState(false);
     const [formData, setFormData] = useState({
         _id: "",
@@ -191,21 +194,27 @@ const AdminSupportPage = () => {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(
-            `http://localhost:8080/api/support/${formData._id}`,
-            formData
-        );
-        refetch();
-        setFormData({
-            _id: "",
-            name: "",
-            email: "",
-            title: "",
-            question: "",
-            answer: "",
-        });
-        Noti.success("Trả lời thành công");
-        setShowModal(false);
+        setLoading(true);
+        try {
+            await axios.put(
+                `http://localhost:8080/api/support/${formData._id}`,
+                formData
+            );
+            refetch();
+            setFormData({
+                _id: "",
+                name: "",
+                email: "",
+                title: "",
+                question: "",
+                answer: "",
+            });
+            Noti.success("Trả lời thành công");
+            setShowModal(false);
+        } catch (err) {
+        } finally {
+            setLoading(false);
+        }
     };
     const handleDelete = async (e) => {
         e.preventDefault();
