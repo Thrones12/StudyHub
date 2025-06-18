@@ -95,6 +95,13 @@
                 color: var(--gray-500);
             }
         }
+        .error {
+            position: absolute;
+            left: 0;
+            top: -20px;
+            color: variables.$red-500;
+            font-size: 12px;
+        }
     }
     .Footer {
         display: flex;

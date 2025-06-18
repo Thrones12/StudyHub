@@ -40,7 +40,7 @@ function TimeAgo(inputDate) {
     if (days >= 1) return `${days} ngày trước`;
     if (hours >= 1) return `${hours} giờ trước`;
     if (minutes >= 1) return `${minutes} phút trước`;
-    if (seconds >= 1) return `${seconds} phút trước`;
+    if (seconds >= 1) return `${seconds} giây trước`;
     return `Vừa xong`;
 }
 

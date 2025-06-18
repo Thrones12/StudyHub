@@ -2,69 +2,81 @@ import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { AuthContext } from "../../../context/AuthContext";
 import "./StatisPage.css";
-import constants from "../../../utils/constants";
 import ChartAverageScore from "../../../components/ChartAverageScore/ChartAverageScore";
-import { User, Course, ExamResult } from "../../../services";
+import { User, ExamResult } from "../../../services";
 import { ChartHistogram, SelectComponent } from "../../../components";
 import { useNavigate } from "react-router-dom";
 import styles from "./StatisPage.module.scss";
 import useFetch from "../../../hooks/useFetch";
 import { formatExamLevel } from "../../../utils/Helpers";
 
-let courseOptions = [];
 let subjectOptions = [];
 
 const ExamStatisPage = () => {
-    const API = constants.API;
     const nav = useNavigate();
     const { user } = useContext(AuthContext);
-    const [courseId, setCourseId] = useState();
     // Lấy dữ liệu môn học
     const { data: courses } = useFetch({
         url: `http://localhost:8080/api/course`,
         method: "GET",
     });
+    // CourseId là id của môn học hiện tại đang được chọn
+    // Mặc định sẽ là môn học đầu tiên trong danh sách môn học
+    const [courseId, setCourseId] = useState();
+    // SubjectId là id của môn học trong chương trình học hiện tại đang được chọn
     const [subjectId, setSubjectId] = useState();
-    const [subjects, setSubjects] = useState([]);
+    // CourseOptions là danh sách các môn học để hiển thị trong dropdown
+    const [courseOptions, setCourseOptions] = useState([]);
+    // SubjectOptions là danh sách các môn học trong chương trình học hiện tại
+    const [subjectOptions, setSubjectOptions] = useState([]);
+    // Khi courses thay đổi, ta sẽ lấy môn học đầu tiên và set courseId, subjectId
+    // và cập nhật danh sách môn học trong dropdown
+    useEffect(() => {
+        if (courses && courses.length > 0) {
+            // Lấy chương trình học đầu tiên
+            setCourseId(courses[0]._id);
+            setCourseOptions(
+                courses.map((c) => ({
+                    value: c._id,
+                    label: c.title,
+                }))
+            );
+            // Lấy môn học đầu tiên trong chương trình học đó
+            setSubjectId(courses[0].subjects[0]._id);
+            setSubjectOptions(
+                courses[0].subjects.map((s) => ({
+                    value: s._id,
+                    label: s.title,
+                }))
+            );
+        }
+    }, [courses]);
+    // Khi courseId thay đổi, ta sẽ lấy điểm trung bình của người dùng trong môn học đó
+    // và cập nhật danh sách môn học trong dropdown
+    useEffect(() => {
+        if (courseId) {
+            // Lấy điểm trung bình của người dùng trong môn học hiện tại
+            User.GetAverageScore(user._id, courseId, setData);
+            // Cập nhật danh sách môn học trong dropdown
+            let course = courses.find((c) => c._id === courseId);
+            setSubjectId(course.subjects[0]._id);
+            setSubjectOptions(
+                course.subjects.map((s) => ({
+                    value: s._id,
+                    label: s.title,
+                }))
+            );
+        }
+    }, [courseId]);
 
     const [data, setData] = useState();
     const [examResults, setExamResults] = useState([]);
 
+    // Lấy dữ liệu phổ điểm của người dùng trong môn học hiện tại
     useEffect(() => {
         if (user && subjectId)
             ExamResult.GetHistogramData(user._id, subjectId, setExamResults);
     }, [user, courseId, subjectId]);
-
-    useEffect(() => {
-        if (courses && courses.length > 0) {
-            setCourseId(courses[0]._id);
-            courseOptions = courses.map((c) => ({
-                value: c._id,
-                label: c.title,
-            }));
-            console.log(courseOptions);
-
-            setSubjects(courses[0].subjects);
-            setSubjectId(courses[0].subjects[0]._id);
-            subjectOptions = courses[0].subjects.map((s) => ({
-                value: s._id,
-                label: s.title,
-            }));
-        }
-    }, [courses]);
-
-    useEffect(() => {
-        if (courseId) {
-            User.GetAverageScore(user._id, courseId, setData);
-            let course = courses.find((c) => c._id === courseId);
-            setSubjects(course.subjects);
-            setSubjectId(course.subjects[0]._id);
-            subjectOptions = course.subjects.map((s) => ({
-                value: s._id,
-                label: s.title,
-            }));
-        }
-    }, [courseId]);
 
     return (
         <div className='container'>
@@ -92,9 +104,7 @@ const ExamStatisPage = () => {
                         {data && (
                             <div className='row'>
                                 <div className='col-3'>
-                                    <div className='text'>
-                                        Điểm trung bình các môn học
-                                    </div>
+                                    <div className='text'>Điểm tổng kết</div>
                                     <div className='score'>
                                         <p>{data.averageScore}</p>
                                     </div>
@@ -132,7 +142,7 @@ const ExamStatisPage = () => {
                         {/* Begin: card-header */}
                         <div className={styles.Header}>
                             <div>Phổ điểm môn học</div>
-                            <div>
+                            <div style={{ display: "flex", gap: 10 }}>
                                 {courseId && courseOptions.length > 0 && (
                                     <SelectComponent
                                         value={courseId}
@@ -209,6 +219,15 @@ const ExamStatisPage = () => {
                                         ))}
                                     </tbody>
                                 </table>
+                                {examResults.length === 0 && (
+                                    <div className={styles.empty}>
+                                        <img
+                                            src='/images/oops.png'
+                                            alt='image'
+                                        />
+                                        <h3>Bạn chưa làm bài kiểm tra nào!</h3>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         {/* End: card-body */}

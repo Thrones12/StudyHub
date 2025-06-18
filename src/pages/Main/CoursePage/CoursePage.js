@@ -5,7 +5,7 @@ import { MainLayoutTools, MainLayoutHeader } from "../../../components";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook, faEye } from "@fortawesome/free-solid-svg-icons";
-import { formatViews } from "../../../utils/Helpers";
+import { formatCount } from "../../../utils/Helpers";
 import Noti from "../../../utils/Noti";
 
 const CoursePage = () => {
@@ -101,6 +101,7 @@ const CoursePage = () => {
 
 export default CoursePage;
 
+// Thẻ danh sách môn học
 const SubjectListCard = ({ courseId }) => {
     const nav = useNavigate();
     // Lấy dữ liệu môn học
@@ -145,7 +146,7 @@ const SubjectListCard = ({ courseId }) => {
                             </div>
                             <div className={styles.infoItem}>
                                 <FontAwesomeIcon icon={faEye} />
-                                <p>{formatViews(subject.views)} lượt xem</p>
+                                <p>{formatCount(subject.views)} lượt xem</p>
                             </div>
                         </div>
                     </div>

@@ -9,13 +9,12 @@ import * as MuiIcons from "@mui/icons-material";
 import {
     formatExamLevel,
     formatTimeAgo,
-    formatViews,
+    formatCount,
 } from "../../../utils/Helpers";
 import { Tooltip } from "@mui/material";
 import Noti from "../../../utils/Noti";
 const SaveExamPage = () => {
     const { user } = useContext(AuthContext);
-    const [data, setData] = useState([]);
     // Lấy dữ liệu bài kiểm tra
     const { data: exams, refetch } = useFetch({
         url: user
@@ -29,13 +28,60 @@ const SaveExamPage = () => {
         url: `http://localhost:8080/api/course`,
         method: "GET",
     });
-    // Xử lí dữ liệu hiển thị
+
+    // State quản lý dữ liệu bài kiểm tra đã xử lý
+    const [processedExams, setProcessedExams] = useState([]);
+    // Khi dữ liệu bài kiểm tra thay đổi, cập nhật processedExams
     useEffect(() => {
-        if (exams && exams.length > 0) {
-            setData([...exams]);
-        }
+        if (!exams || exams.length === 0) return;
+        setProcessedExams(exams);
     }, [exams]);
-    // Filter và Sort
+    // PHÂN TRANG
+    // Dữ liệu đã lọc và sắp xếp
+    const [filteredExams, setFilteredExams] = useState([]);
+    // Dữ liệu phân trang
+    const [paginatedExams, setPaginatedExams] = useState([]);
+    // Trang hiện tại và input đi đến trang
+    const [page, setPage] = useState(1);
+    const [gotoPageInput, setGotoPageInput] = useState("1");
+    // Số lượng bài kiểm tra trên mỗi trang
+    const itemsPerPage = 20;
+    // Tính toán tổng số trang dựa trên số lượng bài kiểm tra đã lọc
+    const totalPages = Math.ceil(filteredExams.length / itemsPerPage);
+
+    // Khi dữ liệu bài kiểm tra thay đổi, cập nhật danh sách đã lọc và phân trang
+    useEffect(() => {
+        setFilteredExams(processedExams);
+
+        // Nếu trang hiện tại lớn hơn tổng số trang mới, reset về trang 1
+        const newTotalPages = Math.ceil(processedExams.length / itemsPerPage);
+        const newPage = page > newTotalPages ? 1 : page;
+        setPage(newPage);
+        setGotoPageInput(String(newPage));
+
+        // Tính lại dữ liệu phân trang
+        const startIndex = (newPage - 1) * itemsPerPage;
+        const endIndex = newPage * itemsPerPage;
+        setPaginatedExams(processedExams.slice(startIndex, endIndex));
+    }, [processedExams]);
+
+    // Khi trang thay đổi, cập nhật dữ liệu phân trang
+    useEffect(() => {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = page * itemsPerPage;
+        setPaginatedExams(filteredExams.slice(startIndex, endIndex));
+        setGotoPageInput(String(page));
+    }, [page, filteredExams]);
+
+    // Khi nhấn nút phân trang, cập nhật trang hiện tại
+    const handleGotoPage = () => {
+        const pageNumber = parseInt(gotoPageInput);
+        if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
+            setPage(pageNumber);
+            setGotoPageInput(pageNumber.toFixed(0));
+        }
+    };
+    // State quản lý bộ lọc và sắp xếp
     const [filters, setFilters] = useState([
         {
             title: "Độ khó",
@@ -55,8 +101,12 @@ const SaveExamPage = () => {
         { label: "Lưu nhiều", value: "save" },
         { label: "Độ khó", value: "level" },
     ];
+    // State quản lý giá trị đã chọn của bộ lọc và sắp xếp
+    // filterValue: chứa các giá trị đã chọn từ bộ lọc
     const [filterValue, setFilterValue] = useState([]);
+    // sortValue: chứa giá trị đã chọn từ bộ lọc sắp xếp
     const [sortValue, setSortValue] = useState("best"); // Thêm giá trị vào bộ lọc
+    // Khi dữ liệu khóa học thay đổi, cập nhật bộ lọc
     useEffect(() => {
         let courseFilters = [];
         if (courses) {
@@ -135,8 +185,8 @@ const SaveExamPage = () => {
         switch (sortValue) {
             case "best":
                 filtered.sort((a, b) => {
-                    const scoreA = (a.attempts || 0) + (a.saves || 0);
-                    const scoreB = (b.attempts || 0) + (b.saves || 0);
+                    const scoreA = (a.attemps || 0) + (a.saves || 0);
+                    const scoreB = (b.attemps || 0) + (b.saves || 0);
                     if (scoreB === scoreA) {
                         return new Date(b.createdAt) - new Date(a.createdAt);
                     }
@@ -152,7 +202,7 @@ const SaveExamPage = () => {
                 filtered.sort((a, b) => a.title.localeCompare(b.title));
                 break;
             case "attemp":
-                filtered.sort((a, b) => (b.attempts || 0) - (a.attempts || 0));
+                filtered.sort((a, b) => (b.attemps || 0) - (a.attemps || 0));
                 break;
             case "save":
                 filtered.sort((a, b) => (b.saves || 0) - (a.saves || 0));
@@ -175,7 +225,7 @@ const SaveExamPage = () => {
                 break;
         }
 
-        setData(filtered);
+        setProcessedExams(filtered);
     }, [exams, courses, filterValue, sortValue, filters]);
 
     // Xử lý lưu trữ / hủy lưu bài kiểm tra
@@ -187,7 +237,7 @@ const SaveExamPage = () => {
             func: async () => deleteSavedExam({ userId: user._id, examId }),
         });
     };
-
+    // Xóa bài kiểm tra đã lưu
     const deleteSavedExam = async ({ userId, examId }) => {
         await User.Save({ userId, examId });
         refetch();
@@ -211,17 +261,99 @@ const SaveExamPage = () => {
                 )}
                 {/* Content */}
                 <div className={styles.container}>
-                    {data && data.length > 0 ? (
+                    {paginatedExams && paginatedExams.length > 0 ? (
                         <>
                             {/* Render each exam */}
                             <div className={styles.ExamList}>
-                                {data.map((exam, index) => (
+                                {paginatedExams.map((exam, index) => (
                                     <ExamCard
                                         key={index}
                                         exam={exam}
                                         onDelete={handleDelete}
                                     />
                                 ))}
+                            </div>
+                            {/* Pagination Controls */}
+                            <div className={styles.pagination}>
+                                <button
+                                    onClick={() =>
+                                        setPage((prev) => Math.max(prev - 1, 1))
+                                    }
+                                    disabled={page === 1}
+                                >
+                                    Trước
+                                </button>
+
+                                {Array.from(
+                                    { length: totalPages },
+                                    (_, i) => i + 1
+                                )
+                                    .filter(
+                                        (p) =>
+                                            Math.abs(p - page) <= 2 ||
+                                            p === 1 ||
+                                            p === totalPages
+                                    )
+                                    .map((p, index, arr) => {
+                                        // Hiển thị dấu ...
+                                        if (
+                                            index > 0 &&
+                                            p - arr[index - 1] > 1
+                                        ) {
+                                            return (
+                                                <span
+                                                    key={`ellipsis-${p}`}
+                                                    className={styles.ellipsis}
+                                                >
+                                                    ...
+                                                </span>
+                                            );
+                                        }
+                                        return (
+                                            <button
+                                                key={p}
+                                                className={
+                                                    p === page
+                                                        ? styles.activePage
+                                                        : ""
+                                                }
+                                                onClick={() => setPage(p)}
+                                            >
+                                                {p}
+                                            </button>
+                                        );
+                                    })}
+
+                                <button
+                                    onClick={() =>
+                                        setPage((prev) =>
+                                            Math.min(prev + 1, totalPages)
+                                        )
+                                    }
+                                    disabled={page === totalPages}
+                                >
+                                    Sau
+                                </button>
+
+                                <div className={styles.gotoPage}>
+                                    <span>Đi đến:</span>
+                                    <input
+                                        type='number'
+                                        value={gotoPageInput}
+                                        onChange={(e) =>
+                                            setGotoPageInput(e.target.value)
+                                        }
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter")
+                                                handleGotoPage();
+                                        }}
+                                        min={1}
+                                        max={totalPages}
+                                    />
+                                    <button onClick={handleGotoPage}>
+                                        Đến
+                                    </button>
+                                </div>
                             </div>
                         </>
                     ) : (
@@ -237,6 +369,7 @@ const SaveExamPage = () => {
         </div>
     );
 };
+// ExamCard Component
 function ExamCard(props) {
     const nav = useNavigate();
     const { exam, onDelete } = props;
@@ -302,11 +435,11 @@ function ExamCard(props) {
                 <div className={styles.Info}>
                     <div className={styles.flexRow}>
                         <MuiIcons.Assignment />
-                        <p>{formatViews(exam.attemps)}</p>
+                        <p>{formatCount(exam.attemps)}</p>
                     </div>
                     <div className={styles.flexRow}>
                         <MuiIcons.BookmarkOutlined />
-                        <p>{formatViews(exam.saves)}</p>
+                        <p>{formatCount(exam.saves)}</p>
                     </div>
                 </div>
             </div>

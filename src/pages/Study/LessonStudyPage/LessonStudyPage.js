@@ -19,16 +19,25 @@ const LessonStudyPage = () => {
     const nav = useNavigate();
     const { lessonId } = useParams();
     const { user, setUser } = useContext(AuthContext);
+    // State quản lý các bước của bài học
+    // Bước 0: Bài giảng, Bước 1: Bài tập
     const [activeStep, setActiveStep] = useState(0);
+    // State quản lý các trạng thái của bài học
+    // isDoneVideo: đã hoàn thành video, isDoneExercise: đã hoàn thành bài tập
     const [isDoneVideo, setIsDoneVideo] = useState(false);
     const [isDoneExercise, setIsDoneExercise] = useState(false);
-    const [isShowReportModal, setIsShowReportModal] = useState(false);
+    // State quản lý hiển thị thanh điều hướng
     const [isShowNavigationBar, setIsShowNavigationBar] = useState(false);
+    // State quản lý liked bài học
     const [isLiked, setIsLiked] = useState(false);
+    // State quản lý các câu hỏi và đáp án
     const [questions, setQuestions] = useState();
+    // inputs: chứa câu hỏi, đáp án và trạng thái (true/false/not_done)
     const [inputs, setInputs] = useState();
+    // State quản lý hiển thị gợi ý và bài giải
     const [showHints, setShowHints] = useState([]);
     const [showExplanations, setShowExplanations] = useState([]);
+    // Tham chiếu đến các input của câu hỏi
     const inputsRefs = useRef([]);
     // Đếm giờ học
     const [subjectId, setSubjectId] = useState(null);
@@ -37,6 +46,7 @@ const LessonStudyPage = () => {
         url: `http://localhost:8080/api/subject`,
         method: "GET",
     });
+    // Lấy subjectId từ danh sách subjects dựa trên lessonId
     useEffect(() => {
         if (subjects) {
             for (const subject of subjects) {
@@ -51,17 +61,32 @@ const LessonStudyPage = () => {
             }
         }
     }, [subjects, lessonId]);
+    // Làm mới dữ liệu mỗi khi lessonId thay đổi
+    useEffect(() => {
+        setActiveStep(0);
+        setIsDoneVideo(false);
+        setIsDoneExercise(false);
+        setInputs([]);
+        setQuestions([]);
+        setShowHints([]);
+        setShowExplanations([]);
+        inputsRefs.current = [];
+    }, [lessonId]);
+    // Ghi lại thời gian truy cập vào trang
     const enterTimeRef = useRef(null);
+    // Sử dụng useEffect để ghi lại thời gian truy cập và gửi dữ liệu khi rời khỏi trang
     useEffect(() => {
         // Ghi lại thời điểm truy cập vào trang
         enterTimeRef.current = Date.now();
 
         // Khi rời khỏi trang (component bị unmount)
         return async () => {
+            // Tính toán thời gian đã truy cập
             const exitTime = Date.now();
             const secondsSpent = Math.floor(
                 (exitTime - enterTimeRef.current) / 1000
             );
+            // Gửi dữ liệu về server nếu có thời gian đã truy cập
             if (secondsSpent > 0 && user && subjectId) {
                 await axios.put("http://localhost:8080/api/user/log-time", {
                     userId: user._id,
@@ -112,13 +137,13 @@ const LessonStudyPage = () => {
         method: "GET",
         deps: [lessonId],
     });
-    // Scroll on top mỗi khi đổi step
+    // Scroll on top mỗi khi đổi step và bài học
     useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
-    }, [activeStep]);
+    }, [activeStep, lessonId]);
     // Xử lý state đầu vào
     useEffect(() => {
         if (lesson) {
@@ -163,21 +188,17 @@ const LessonStudyPage = () => {
                 if (err.response?.data?.message) {
                     Noti.error(err.response.data.message);
                 } else {
+                    console.log("lỗi nè");
+
                     Noti.error("Lỗi hệ thống");
                 }
             }
         };
 
-        if (user?._id && lessonId) {
-            if (isDoneVideo && isDoneExercise) {
-                putLessonIntoUserLearned(user._id, lessonId);
-            } else if (isDoneVideo) {
-                if (isDoneVideo && !isDoneExercise) {
-                    setActiveStep(1);
-                }
-            }
+        if (isDoneVideo && isDoneExercise) {
+            putLessonIntoUserLearned(user._id, lessonId);
         }
-    }, [isDoneVideo, isDoneExercise, user?._id, lessonId, inputs, setUser]);
+    }, [isDoneVideo, isDoneExercise, inputs, setUser]);
     // Kiểm tra người dùng đã hoàn thành tất cả bài tập chưa
     useEffect(() => {
         if (inputs && inputs.every((input) => input.state === "true")) {
@@ -292,30 +313,13 @@ const LessonStudyPage = () => {
                                 className={`${styles.AbsolutePosition} ${styles.Button}`}
                                 style={{
                                     top: "15px",
-                                    right: "140px",
+                                    right: "30px",
                                     cursor: "pointer",
                                 }}
                                 onClick={handleNavigateSupport}
                             >
                                 <MuiIcons.Headphones className={styles.Icon} />
                                 <p>Hỗ trợ</p>
-                            </div>
-                        </Tooltip>
-                        {/* Báo cáo */}
-                        <Tooltip title='Gửi báo cáo'>
-                            <div
-                                className={`${styles.AbsolutePosition} ${styles.Button}`}
-                                style={{
-                                    top: "15px",
-                                    right: "30px",
-                                    cursor: "pointer",
-                                }}
-                                onClick={() => setIsShowReportModal(true)}
-                            >
-                                <MuiIcons.ReportOutlined
-                                    className={styles.Icon}
-                                />
-                                <p>Báo cáo</p>
                             </div>
                         </Tooltip>
                     </div>
@@ -381,81 +385,128 @@ const LessonStudyPage = () => {
                     {/* Bài tập */}
                     {activeStep === 1 && (
                         <div className={styles.Questions}>
-                            {questions.map((question, index) => (
-                                <div
-                                    key={index}
-                                    className={styles.Question}
-                                    ref={(el) =>
-                                        (inputsRefs.current[index] = el)
-                                    }
-                                >
-                                    {/* Index */}
-                                    <div className={styles.Index}>
-                                        {"Câu " + (index + 1)}
-                                        {` [ ${formatQuestionLevel(
-                                            question.level
-                                        )} ]`}
-                                    </div>
-                                    {/* Dạng bài */}
+                            {questions && questions.length > 0 ? (
+                                questions.map((question, index) => (
                                     <div
-                                        className={styles.Index}
-                                        style={{
-                                            fontSize: 16,
-                                            fontWeight: "normal",
-                                        }}
+                                        key={index}
+                                        className={styles.Question}
+                                        ref={(el) =>
+                                            (inputsRefs.current[index] = el)
+                                        }
                                     >
-                                        <span style={{ fontWeight: "bold" }}>
-                                            Dạng bài:{" "}
-                                        </span>
-                                        {question.type}
-                                    </div>
-                                    {/* Câu hỏi */}
-                                    <div className={styles.QuestionContent}>
-                                        <ReactMarkdown
-                                            children={question.content}
-                                            remarkPlugins={[remarkMath]}
-                                            rehypePlugins={[rehypeKatex]}
-                                        />
-                                    </div>
-                                    {/* Lựa chọn */}
-                                    {question.options.map((option, opIndex) => (
+                                        {/* Index */}
+                                        <div className={styles.Index}>
+                                            {"Câu " + (index + 1)}
+                                            {` [ ${formatQuestionLevel(
+                                                question.level
+                                            )} ]`}
+                                        </div>
+                                        {/* Dạng bài */}
                                         <div
-                                            key={opIndex}
-                                            className={`${styles.OptionWrapper}`}
-                                            onClick={() =>
-                                                hanldeCheck(index, option)
-                                            }
+                                            className={styles.Index}
+                                            style={{
+                                                fontSize: 16,
+                                                fontWeight: "normal",
+                                            }}
+                                        >
+                                            <span
+                                                style={{ fontWeight: "bold" }}
+                                            >
+                                                Dạng bài:{" "}
+                                            </span>
+                                            {question.type}
+                                        </div>
+                                        {/* Câu hỏi */}
+                                        <div className={styles.QuestionContent}>
+                                            <ReactMarkdown
+                                                children={question.content}
+                                                remarkPlugins={[remarkMath]}
+                                                rehypePlugins={[rehypeKatex]}
+                                            />
+                                        </div>
+                                        {/* Lựa chọn */}
+                                        {question.options.map(
+                                            (option, opIndex) => (
+                                                <div
+                                                    key={opIndex}
+                                                    className={`${styles.OptionWrapper}`}
+                                                    onClick={() =>
+                                                        hanldeCheck(
+                                                            index,
+                                                            option
+                                                        )
+                                                    }
+                                                >
+                                                    <div
+                                                        className={styles.Index}
+                                                    >
+                                                        {opIndex === 0
+                                                            ? "A"
+                                                            : opIndex === 1
+                                                            ? "B"
+                                                            : opIndex === 2
+                                                            ? "C"
+                                                            : "D"}
+                                                    </div>
+                                                    <div
+                                                        key={opIndex}
+                                                        className={`${
+                                                            styles.Option
+                                                        } ${
+                                                            inputs[index]
+                                                                .state ===
+                                                                "true" &&
+                                                            inputs[index]
+                                                                .question
+                                                                .correctAnswer ===
+                                                                option
+                                                                ? styles.True
+                                                                : ""
+                                                        } ${
+                                                            inputs[index]
+                                                                .state ===
+                                                                "false" &&
+                                                            inputs[index]
+                                                                .input ===
+                                                                option
+                                                                ? styles.False
+                                                                : ""
+                                                        }`}
+                                                    >
+                                                        <ReactMarkdown
+                                                            children={option}
+                                                            remarkPlugins={[
+                                                                remarkMath,
+                                                            ]}
+                                                            rehypePlugins={[
+                                                                rehypeKatex,
+                                                            ]}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            )
+                                        )}
+                                        {/* Gợi ý */}
+                                        <div
+                                            style={{
+                                                maxHeight:
+                                                    showHints[index] === true
+                                                        ? `${inputsRefs.current[index]?.scrollHeight}px`
+                                                        : "0px",
+                                                overflow: "hidden",
+                                                transition: "all 0.3s ease",
+                                            }}
                                         >
                                             <div className={styles.Index}>
-                                                {opIndex === 0
-                                                    ? "A"
-                                                    : opIndex === 1
-                                                    ? "B"
-                                                    : opIndex === 2
-                                                    ? "C"
-                                                    : "D"}
+                                                Gợi ý
                                             </div>
                                             <div
-                                                key={opIndex}
-                                                className={`${styles.Option} ${
-                                                    inputs[index].state ===
-                                                        "true" &&
-                                                    inputs[index].question
-                                                        .correctAnswer ===
-                                                        option
-                                                        ? styles.True
-                                                        : ""
-                                                } ${
-                                                    inputs[index].state ===
-                                                        "false" &&
-                                                    inputs[index].input ===
-                                                        option
-                                                        ? styles.False
-                                                        : ""
-                                                }`}
+                                                className={
+                                                    styles.QuestionContent
+                                                }
                                             >
                                                 <ReactMarkdown
-                                                    children={option}
+                                                    children={question.hint}
                                                     remarkPlugins={[remarkMath]}
                                                     rehypePlugins={[
                                                         rehypeKatex,
@@ -463,85 +514,77 @@ const LessonStudyPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                    ))}
-                                    {/* Gợi ý */}
-                                    <div
-                                        style={{
-                                            maxHeight:
-                                                showHints[index] === true
-                                                    ? `${inputsRefs.current[index]?.scrollHeight}px`
-                                                    : "0px",
-                                            overflow: "hidden",
-                                            transition: "all 0.3s ease",
-                                        }}
-                                    >
-                                        <div className={styles.Index}>
-                                            Gợi ý
-                                        </div>
-                                        <div className={styles.QuestionContent}>
-                                            <ReactMarkdown
-                                                children={question.hint}
-                                                remarkPlugins={[remarkMath]}
-                                                rehypePlugins={[rehypeKatex]}
-                                            />
-                                        </div>
-                                    </div>
-                                    {/* Bài giải */}
-                                    <div
-                                        style={{
-                                            maxHeight:
-                                                showExplanations[index] === true
-                                                    ? `${inputsRefs.current[index]?.scrollHeight}px`
-                                                    : "0px",
-                                            overflow: "hidden",
-                                            transition: "all 0.3s ease",
-                                        }}
-                                    >
-                                        <div className={styles.Index}>
-                                            Bài giải
-                                        </div>
-                                        <div className={styles.QuestionContent}>
-                                            <ReactMarkdown
-                                                children={question.explanation}
-                                                remarkPlugins={[remarkMath]}
-                                                rehypePlugins={[rehypeKatex]}
-                                            />
-                                        </div>
-                                    </div>
-                                    {/* Hint toggle */}
-                                    <Tooltip title='Gợi ý'>
+                                        {/* Bài giải */}
                                         <div
-                                            className={`${styles.AbsolutePosition} ${styles.Button}`}
                                             style={{
-                                                top: "40px",
-                                                right: "110px",
-                                                cursor: "pointer",
+                                                maxHeight:
+                                                    showExplanations[index] ===
+                                                    true
+                                                        ? `${inputsRefs.current[index]?.scrollHeight}px`
+                                                        : "0px",
+                                                overflow: "hidden",
+                                                transition: "all 0.3s ease",
                                             }}
-                                            onClick={() =>
-                                                handleShowHint(index)
-                                            }
                                         >
-                                            <MuiIcons.LightbulbOutlined />
+                                            <div className={styles.Index}>
+                                                Bài giải
+                                            </div>
+                                            <div
+                                                className={
+                                                    styles.QuestionContent
+                                                }
+                                            >
+                                                <ReactMarkdown
+                                                    children={
+                                                        question.explanation
+                                                    }
+                                                    remarkPlugins={[remarkMath]}
+                                                    rehypePlugins={[
+                                                        rehypeKatex,
+                                                    ]}
+                                                />
+                                            </div>
                                         </div>
-                                    </Tooltip>
-                                    {/* Show explanation toggle */}
-                                    <Tooltip title='Bài giải'>
-                                        <div
-                                            className={`${styles.AbsolutePosition} ${styles.Button}`}
-                                            style={{
-                                                top: "40px",
-                                                right: "60px",
-                                                cursor: "pointer",
-                                            }}
-                                            onClick={() =>
-                                                handleShowExplanation(index)
-                                            }
-                                        >
-                                            <MuiIcons.VisibilityOutlined />
-                                        </div>
-                                    </Tooltip>
+                                        {/* Hint toggle */}
+                                        <Tooltip title='Gợi ý'>
+                                            <div
+                                                className={`${styles.AbsolutePosition} ${styles.Button}`}
+                                                style={{
+                                                    top: "40px",
+                                                    right: "110px",
+                                                    cursor: "pointer",
+                                                }}
+                                                onClick={() =>
+                                                    handleShowHint(index)
+                                                }
+                                            >
+                                                <MuiIcons.LightbulbOutlined />
+                                            </div>
+                                        </Tooltip>
+                                        {/* Show explanation toggle */}
+                                        <Tooltip title='Bài giải'>
+                                            <div
+                                                className={`${styles.AbsolutePosition} ${styles.Button}`}
+                                                style={{
+                                                    top: "40px",
+                                                    right: "60px",
+                                                    cursor: "pointer",
+                                                }}
+                                                onClick={() =>
+                                                    handleShowExplanation(index)
+                                                }
+                                            >
+                                                <MuiIcons.VisibilityOutlined />
+                                            </div>
+                                        </Tooltip>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className={styles.empty}>
+                                    <img src='/images/oops.png' alt='image' />
+                                    <h3>Hiện chưa có bài tập!</h3>
                                 </div>
-                            ))}
+                            )}
                         </div>
                     )}
                     {/* Toggle */}
@@ -578,11 +621,6 @@ const LessonStudyPage = () => {
                     />
                     {/* Rating modal */}
                     <div className={styles.Modal}></div>
-                    {/* Report modal */}
-                    <ReportModal
-                        isOpen={isShowReportModal}
-                        onClose={() => setIsShowReportModal(false)}
-                    />
                 </>
             )}
         </div>
@@ -592,7 +630,7 @@ const LessonStudyPage = () => {
 export default LessonStudyPage;
 
 // Công cụ hiển thị video
-function VideoComponent({ lesson, setIsDoneVideo, setActiveStep }) {
+function VideoComponent({ lesson, setIsDoneVideo }) {
     const videoRef = useRef(null);
 
     const handleSeek = (time) => {
@@ -601,7 +639,14 @@ function VideoComponent({ lesson, setIsDoneVideo, setActiveStep }) {
             videoRef.current.play();
         }
     };
-
+    // Render lại video mỗi khi lesson thay đổi
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.load();
+            videoRef.current.currentTime = 0; // Reset video to start
+            setIsDoneVideo(false); // Reset done state
+        }
+    }, [lesson, setIsDoneVideo]);
     return (
         <div className={styles.VideoWrapper}>
             <video
@@ -705,115 +750,6 @@ function VideoThumbnail({ videoUrl, time }) {
                     style={{ width: "100%", borderRadius: "8px" }}
                 />
             )}
-        </>
-    );
-}
-// Modal báo cáo
-function ReportModal({ isOpen, onClose }) {
-    const { lessonId } = useParams();
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        title: "",
-        question: "",
-    });
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const res = await Support.Create({
-            ...formData,
-            title: `Báo cáo ở bài học ${lessonId}: ${formData.title}`,
-        });
-        if (res === true) {
-            setFormData({
-                name: "",
-                email: "",
-                title: "",
-                question: "",
-            });
-            Noti.success("Gửi báo cáo thành công");
-            onClose && onClose();
-        }
-    };
-    return (
-        <>
-            {isOpen && <div className={styles.Overlay} onClick={onClose}></div>}
-            <div className={`${styles.Modal} ${isOpen ? styles.open : ""}`}>
-                <div className={styles.Title}>Báo cáo</div>
-                {/* Close */}
-                <div
-                    className={`${styles.AbsolutePosition} ${styles.CloseButton}`}
-                    style={{
-                        top: "20px",
-                        right: "20px",
-                        cursor: "pointer",
-                    }}
-                    onClick={onClose}
-                >
-                    <MuiIcons.Close />
-                </div>
-                {/* Report form */}
-                <div className={styles.ReportForm}>
-                    <form onSubmit={handleSubmit} className={styles.Form}>
-                        <div className='row'>
-                            <div className={styles.ColLeft}>
-                                <div className={styles.Field}>
-                                    <input
-                                        type='text'
-                                        name='name'
-                                        placeholder='Họ tên'
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div className={styles.ColRight}>
-                                <div className={styles.Field}>
-                                    <input
-                                        type='email'
-                                        name='email'
-                                        placeholder='Email'
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.Field}>
-                            <input
-                                type='text'
-                                name='title'
-                                placeholder='Tiêu đề'
-                                value={formData.title}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className={styles.Field}>
-                            <textarea
-                                name='question'
-                                placeholder='Nội dung báo cáo'
-                                value={formData.question}
-                                onChange={handleChange}
-                                rows='10'
-                                required
-                            ></textarea>
-                        </div>
-                        <div
-                            className={styles.Button}
-                            style={{ width: 200, margin: "0 auto" }}
-                            onClick={handleSubmit}
-                        >
-                            Gửi yêu cầu
-                        </div>
-                    </form>
-                </div>
-            </div>
         </>
     );
 }
@@ -925,6 +861,14 @@ function NavigationBar({ isOpen, onClose }) {
 }
 // Chức năng đánh giá bài học
 function RatingComponent({ user, lesson }) {
+    // Render lại component mỗi khi lesson hoặc user thay đổi
+    useEffect(() => {
+        if (!user || !lesson) return;
+        setAverage(lesson.rating.overall);
+        setIsShowRatingModal(false);
+        setUserRate({});
+        setTopRating([]);
+    }, [user, lesson]);
     const [isShowRatingModal, setIsShowRatingModal] = useState(false);
     // Xử lý đánh giá của người dùng
     const [average, setAverage] = useState(lesson.rating.overall);
@@ -1331,10 +1275,18 @@ function CommentComponent({ user, comments, refetch }) {
         replyTo: "",
         commentId: "",
     });
+    // Render lại formData mỗi khi user thay đổi
+    useEffect(() => {
+        setFormData({
+            content: "",
+            replyTo: "",
+            commentId: "",
+        });
+    }, [user]);
+    // Xử lý thay đổi nội dung bình luận
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
     // Xử lý like bình luận
     const onLike = async (commentId) => {
         try {
@@ -1390,6 +1342,7 @@ function CommentComponent({ user, comments, refetch }) {
             Noti.success("Thêm bình luận thành công");
         }
     };
+    // Xử lý chỉnh sửa bình luận
     const handleOnEdit = (comment) => {
         setFormData({
             content: `${comment.content}`,
@@ -1404,6 +1357,7 @@ function CommentComponent({ user, comments, refetch }) {
             });
         }
     };
+    // Xử lý trả lời bình luận
     const handleOnReply = (comment) => {
         setFormData({
             content: `@${comment.user.profile.fullname} `,
@@ -1426,6 +1380,7 @@ function CommentComponent({ user, comments, refetch }) {
             func: () => deleteComment(commentId),
         });
     };
+    // Xử lý xóa bình luận
     const deleteComment = async (commentId) => {
         try {
             await axios.delete(
@@ -1441,6 +1396,7 @@ function CommentComponent({ user, comments, refetch }) {
             }
         }
     };
+    // Mở hoặc đóng danh sách trả lời bình luận
     const toggleReplies = (commentId) => {
         setOpenedReplyIds((prev) =>
             prev.includes(commentId)

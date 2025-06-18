@@ -3,7 +3,6 @@ import {
     ProfilePage,
     ProgressPage,
     StatisPage,
-    LearningPathPage,
     LikeLessonPage,
     SaveExamPage,
 } from "../pages";
@@ -14,7 +13,6 @@ const ProfileRoutes = (
         <Route path='profile' element={<ProfilePage />} />
         <Route path='progress' element={<ProgressPage />} />
         <Route path='statis' element={<StatisPage />} />
-        <Route path='learning-path' element={<LearningPathPage />} />
         <Route path='saves' element={<SaveExamPage />} />
         <Route path='likes' element={<LikeLessonPage />} />
     </>

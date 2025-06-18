@@ -298,16 +298,17 @@ exports.getAverageScore = async (req, res) => {
 
             if (lowest.score === 0) lowest = null;
         }
+        const validScores = subjectScore.filter((item) => item.score > 0);
 
         data = {
             averageScore:
-                subjectScore.length > 0
+                validScores.length > 0
                     ? Number(
                           (
-                              subjectScore.reduce(
-                                  (score, item) => (score += item.score),
+                              validScores.reduce(
+                                  (sum, item) => sum + item.score,
                                   0
-                              ) / subjectScore.length
+                              ) / validScores.length
                           ).toFixed(2)
                       )
                     : 0,
@@ -644,15 +645,19 @@ exports.updateProfile = async (req, res) => {
         if (!updatedUser)
             return res.status(404).json({ message: "User not found" });
         // Update
-        if (fullname) updatedUser.profile.fullname = fullname;
-        if (gender) updatedUser.profile.gender = gender;
-        if (address) updatedUser.profile.address = address;
-        if (phone) updatedUser.profile.phone = phone;
-        if (birthdate) updatedUser.profile.birthdate = birthdate;
-        if (school) updatedUser.profile.school = school;
-        if (grade) updatedUser.profile.grade = grade;
-        if (hobby) updatedUser.profile.hobby = hobby;
-        if (interests) updatedUser.profile.interests = interests;
+        if (fullname || fullname === "")
+            updatedUser.profile.fullname = fullname;
+        if (gender || gender === "") updatedUser.profile.gender = gender;
+        if (address || address === "") updatedUser.profile.address = address;
+        if (phone || phone === "") updatedUser.profile.phone = phone;
+
+        if (birthdate || birthdate === "")
+            updatedUser.profile.birthdate = birthdate;
+        if (school || school === "") updatedUser.profile.school = school;
+        if (grade || grade === "") updatedUser.profile.grade = grade;
+        if (hobby || hobby === "") updatedUser.profile.hobby = hobby;
+        if (interests || interests === "")
+            updatedUser.profile.interests = interests;
 
         const file = req.file;
         if (file) {
@@ -697,16 +702,20 @@ exports.update = async (req, res) => {
         if (password) {
             updatedUser.password = await bcrypt.hash(password, 10);
         }
-        if (status) updatedUser.status = status;
-        if (fullname) updatedUser.profile.fullname = fullname;
-        if (gender) updatedUser.profile.gender = gender;
-        if (address) updatedUser.profile.address = address;
-        if (phone) updatedUser.profile.phone = phone;
-        if (birthdate) updatedUser.profile.birthdate = birthdate;
-        if (school) updatedUser.profile.school = school;
-        if (grade) updatedUser.profile.grade = grade;
-        if (hobby) updatedUser.profile.hobby = hobby;
-        if (interests) updatedUser.profile.interests = interests;
+        if (status || status === "") updatedUser.status = status;
+        if (fullname || fullname === "")
+            updatedUser.profile.fullname = fullname;
+        if (gender || gender === "") updatedUser.profile.gender = gender;
+        if (address || address === "") updatedUser.profile.address = address;
+        if (phone || phone === "") updatedUser.profile.phone = phone;
+
+        if (birthdate || birthdate === "")
+            updatedUser.profile.birthdate = birthdate;
+        if (school || school === "") updatedUser.profile.school = school;
+        if (grade || grade === "") updatedUser.profile.grade = grade;
+        if (hobby || hobby === "") updatedUser.profile.hobby = hobby;
+        if (interests || interests === "")
+            updatedUser.profile.interests = interests;
 
         const file = req.file;
         if (file) {
@@ -970,11 +979,9 @@ exports.logTime = async (req, res) => {
         });
 
         if (monthIndex === -1) {
-            return res
-                .status(404)
-                .json({
-                    message: "No learningHour entry found for this month.",
-                });
+            return res.status(404).json({
+                message: "No learningHour entry found for this month.",
+            });
         }
 
         let updated = false;

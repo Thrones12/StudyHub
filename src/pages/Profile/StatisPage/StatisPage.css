@@ -24,12 +24,18 @@
     gap: 8px;
 }
 .profile-page .more-info .info {
+    user-select: none;
     width: 300px;
-    border: 1px solid var(--gray-600);
+    border: 1px solid var(--gray-400);
     border-radius: 10px;
     box-shadow: var(--box-shadow-2);
     padding: 8px 12px;
     font-size: 16px;
     font-weight: 600;
     color: var(--gray-700);
+    transition: all 0.2s ease;
+}
+.profile-page .more-info .info:hover {
+    box-shadow: var(--box-shadow-3);
+    border: 1px solid var(--green-500);
 }

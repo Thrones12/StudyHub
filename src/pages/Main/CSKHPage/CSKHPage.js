@@ -5,14 +5,20 @@ import styles from "./CSKHPage.module.scss";
 import { useNavigate } from "react-router-dom";
 import { Support } from "../../../services";
 import useFetch from "../../../hooks/useFetch";
-import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Tooltip,
+} from "@mui/material";
 import Noti from "../../../utils/Noti";
 
 const CSKHPage = () => {
+    // Sử dụng useNavigate để điều hướng
+    const navigate = useNavigate();
+    // State để quản lý trạng thái của accordion
     const [openIndex, setOpenIndex] = useState(null);
-    const toggleFAQ = (index) => {
-        setOpenIndex(index === openIndex ? null : index);
-    };
+    // State để quản lý dữ liệu biểu mẫu hỗ trợ
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -20,25 +26,65 @@ const CSKHPage = () => {
         question: "",
     });
     // Lấy dữ liệu support
-    const { data: supports, refetch } = useFetch({
+    const { data: supports } = useFetch({
         url: `http://localhost:8080/api/support/show`,
         method: "GET",
     });
+    // Hàm xử lý khi người dùng click vào một câu hỏi
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+    // Hàm xử lý khi người dùng gửi biểu mẫu hỗ trợ
+    // Gửi dữ liệu biểu mẫu đến API và reset lại form nếu thành công
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const res = await Support.Create(formData);
-        if (res === true) {
-            Noti.success("Gửi thành công");
+        try {
+            // Kiểm tra xem tất cả các trường đã được điền đầy đủ chưa
+            if (
+                !formData.name ||
+                !formData.email ||
+                !formData.title ||
+                !formData.question
+            ) {
+                Noti.error("Vui lòng điền đầy đủ thông tin.");
+                return;
+            }
+            // Kiểm tra định dạng email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(formData.email)) {
+                Noti.error("Email không hợp lệ.");
+                return;
+            }
+            // Kiểm tra độ dài tiêu đề và nội dung câu hỏi
+            if (formData.title.length < 5 || formData.question.length < 10) {
+                Noti.error(
+                    "Tiêu đề phải có ít nhất 5 ký tự và nội dung câu hỏi phải có ít nhất 10 ký tự."
+                );
+                return;
+            }
+            // Nếu tất cả các trường hợp trên đều hợp lệ, gửi yêu cầu hỗ trợ
+            // Đặt con trỏ chuột thành đợi để tránh gửi nhiều yêu cầu cùng lúc
+            document.body.style.cursor = "wait";
+            // Gọi API để gửi yêu cầu hỗ trợ
+            const res = await Support.Create(formData);
+            // Kiểm tra kết quả trả về từ API
+            if (res === true) {
+                Noti.success("Gửi yêu cầu hỗ trợ thành công.");
+            }
+            // Reset lại form sau khi gửi thành công
             setFormData({
                 name: "",
                 email: "",
                 title: "",
                 question: "",
             });
+        } catch (error) {
+            Noti.error("Đã xảy ra lỗi khi gửi yêu cầu hỗ trợ.");
+        } finally {
+            // Đặt con trỏ chuột trở lại trạng thái bình thường
+            // Điều này sẽ giúp người dùng biết rằng yêu cầu đã được gửi thành công hoặc thất bại
+            // và họ có thể tiếp tục sử dụng trang web mà không gặp rắc rối
+            document.body.style.cursor = "default";
         }
     };
     return (
@@ -53,12 +99,23 @@ const CSKHPage = () => {
                         <div className={styles.FAQ}>
                             {supports &&
                                 supports.map((support, index) => (
-                                    <Accordion key={index}>
+                                    <Accordion
+                                        key={index}
+                                        sx={{
+                                            mb: 2,
+                                            borderRadius: "8px",
+                                            border: "1px solid #e0e0e0",
+                                            overflow: "hidden",
+                                        }}
+                                    >
                                         <AccordionSummary
                                             expandIcon={<MuiIcons.ExpandMore />}
                                             aria-controls='panel1-content'
                                             id='panel1-header'
                                             sx={{
+                                                "&.MuiAccordionSummary-root": {
+                                                    borderRadius: "8px",
+                                                },
                                                 "&.Mui-expanded": {
                                                     minHeight: "48px",
                                                 },
@@ -108,20 +165,24 @@ const CSKHPage = () => {
 
                             {/* Mạng xã hội */}
                             <div className={styles.Socials}>
-                                <a
-                                    href='https://www.facebook.com/profile.php?id=61560673299548'
-                                    target='_blank'
-                                    className={styles.Social}
-                                >
-                                    <MuiIcons.Facebook />
-                                </a>
-                                <a
-                                    href='https://www.instagram.com/_phamphong/'
-                                    target='_blank'
-                                    className={styles.Social}
-                                >
-                                    <MuiIcons.Instagram />
-                                </a>
+                                <Tooltip title='Facebook'>
+                                    <a
+                                        href='https://www.facebook.com/profile.php?id=61560673299548'
+                                        target='_blank'
+                                        className={styles.Social}
+                                    >
+                                        <MuiIcons.Facebook />
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title='Instagram'>
+                                    <a
+                                        href='https://www.instagram.com/hoangminh_21110273/'
+                                        target='_blank'
+                                        className={styles.Social}
+                                    >
+                                        <MuiIcons.Instagram />
+                                    </a>
+                                </Tooltip>
                             </div>
                         </div>
                         {/* Support form */}

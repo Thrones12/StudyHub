@@ -8,6 +8,7 @@ import * as MuiIcons from "@mui/icons-material";
 import { normalize } from "../../../utils/Helpers";
 import axios from "axios";
 import Noti from "../../../utils/Noti";
+import { useFormik } from "formik";
 
 const AdminSupportPage = () => {
     // Lấy dữ liệu người dùng
@@ -244,7 +245,7 @@ const AdminSupportPage = () => {
     return (
         <div className={styles.wrapper}>
             {/* Header */}
-            <AdminLayoutHeader openModalAdd={() => setShowModal(true)} />
+            <AdminLayoutHeader />
             {/* Lọc và sắp xếp */}
             <AdminLayoutTools
                 filters={filters}

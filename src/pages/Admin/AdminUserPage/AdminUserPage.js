@@ -19,6 +19,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
 
 const AdminUserPage = () => {
     const nav = useNavigate();
@@ -488,10 +489,39 @@ const AdminUserPage = () => {
             func: () => onDelete(),
         });
     };
+
+    const [openNotiModal, setOpenNotiModal] = useState(false);
+    const notiFormik = useFormik({
+        initialValues: {
+            type: "System",
+            content: "",
+        },
+        onSubmit: async (values, { resetForm }) => {
+            const { type, content } = values;
+            // Gửi API
+            await axios
+                .post("http://localhost:8080/api/notification/toAll", {
+                    type,
+                    content,
+                })
+                .then((res) => {
+                    Noti.success("Gửi thông báo thành công");
+                    resetForm(); // Reset lại form
+                    setOpenNotiModal(false); // Đóng modal
+                })
+                .catch((err) => {
+                    Noti.error("Gửi thông báo thất bại");
+                });
+        },
+    });
     return (
         <div className={styles.wrapper}>
             {/* Header */}
-            <AdminLayoutHeader hasAdd={true} openModalAdd={onAdd} />
+            <AdminLayoutHeader
+                hasAdd={true}
+                openModalAdd={onAdd}
+                openNotiModal={setOpenNotiModal}
+            />
             {/* Lọc và sắp xếp */}
             <AdminLayoutTools
                 filters={filters}
@@ -897,6 +927,59 @@ const AdminUserPage = () => {
                                     Xóa
                                 </button>
                             )}
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {/* Noti Modal */}
+            <div
+                className={`${styles.Modal} ${
+                    openNotiModal ? styles.open : ""
+                }`}
+            >
+                <div className={styles.Header}>
+                    <p>Thông báo toàn bộ người dùng</p>
+                    <div
+                        className={styles.button}
+                        onClick={() => setOpenNotiModal(false)}
+                    >
+                        <MuiIcons.Close />
+                    </div>
+                </div>
+
+                <div className={styles.Body}>
+                    <form
+                        onSubmit={notiFormik.handleSubmit}
+                        className={styles.Form}
+                    >
+                        {/* Type */}
+                        <div className={styles.Field}>
+                            <input
+                                type='text'
+                                name='type'
+                                value={notiFormik.values.type}
+                                onChange={notiFormik.handleChange}
+                                style={{ backgroundColor: "#d3d3d3" }}
+                                disabled={true}
+                            />
+                        </div>
+                        {/* content */}
+                        <div className={styles.Field}>
+                            <textarea
+                                name='content'
+                                placeholder='Nội dung thông báo'
+                                value={notiFormik.values.content}
+                                onChange={notiFormik.handleChange}
+                                rows='10'
+                                style={{ resize: "vertical" }}
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div className={styles.Buttons}>
+                            <button type='submit' className={styles.button}>
+                                Xác nhận
+                            </button>
                         </div>
                     </form>
                 </div>

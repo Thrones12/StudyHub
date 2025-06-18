@@ -10,7 +10,7 @@ import {
     formatDurationToMinute,
     formatExamLevel,
     formatTimer,
-    formatViews,
+    formatCount,
 } from "../../../utils/Helpers";
 import { ExamResult, User } from "../../../services";
 import axios from "axios";
@@ -122,9 +122,11 @@ const TestPage = () => {
             });
 
             if (res) {
+                console.log("Kết quả nộp bài:", res);
+
                 // Bước 4: Nếu kết quả được lưu trữ thành công thì hiển thị kết quả
-                setState("done");
                 setResult(res);
+                setState("done");
                 // Set lại inputs để hỗ trợ review
                 setInputs(processedInputs);
             }
@@ -440,7 +442,7 @@ function ModalStart({ isOpen, onStart, exam, isSaved, onSave }) {
                         </div>
                         <div className={styles.FlexColumn}>
                             <p>Lượt làm bài</p>
-                            <h3>{formatViews(exam.attemps)}</h3>
+                            <h3>{formatCount(exam.attemps)}</h3>
                         </div>
                     </div>
                     {/* Điểm trung bình */}
@@ -821,7 +823,9 @@ function ModalResult({
                                                     <td>#{globalIndex + 1}</td>
                                                     <td>{item.name}</td>
                                                     <td>
-                                                        {item.score.toFixed(1)}
+                                                        {item?.score.toFixed(
+                                                            1
+                                                        ) || 0}
                                                     </td>
                                                     <td>
                                                         {formatTimer(

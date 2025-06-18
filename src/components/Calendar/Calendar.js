@@ -6,15 +6,9 @@ import {
     format,
     isSameMonth,
     isToday,
-    isSameDay,
 } from "date-fns";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClose } from "@fortawesome/free-solid-svg-icons";
 import "./Calendar.css";
-import dayjs from "dayjs";
-import { Task } from "../../services";
 import { AuthContext } from "../../context/AuthContext";
-import ModalTask from ".././ModalTask/ModalTask";
 import ModalMoreTask from "../ModalMoreTask/ModalMoreTask";
 
 const MAX_TASKS_DISPLAY = 3; // Số task tối đa hiển thị
@@ -121,6 +115,7 @@ const Calendar = ({ date, tasks, openTask }) => {
                     days.length > 0 &&
                     days.map((day, index) => {
                         let taskOfDay = getTaskOfDay(day);
+
                         return (
                             <div
                                 key={index}
@@ -154,13 +149,13 @@ const Calendar = ({ date, tasks, openTask }) => {
                                             .map((task, index) => (
                                                 <div
                                                     key={index}
-                                                    className={`task-item ${
-                                                        task.completed === true
-                                                            ? "completed"
-                                                            : ""
-                                                    }`}
-                                                    onClick={(e) =>
-                                                        openTask(e, task, day)
+                                                    className={`task-item`}
+                                                    style={{
+                                                        backgroundColor:
+                                                            getTaskColor(task),
+                                                    }}
+                                                    onClick={() =>
+                                                        openTask(task)
                                                     }
                                                 >
                                                     {task.title

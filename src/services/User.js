@@ -27,10 +27,9 @@ const GetLearningHour = async (userId, courseId, month, year, setData) => {
                 let data = res.data.data.courses.find(
                     (course) => course.courseId === courseId
                 );
-
-                setData(data.subjects);
+                return data.subjects;
             } else {
-                setData(null);
+                return [];
             }
         }
     } catch (err) {

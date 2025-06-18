@@ -141,7 +141,7 @@ exports.Create = async (req, res) => {
             } else {
                 // Không lưu, chỉ trả về kết quả mới để hiển thị
                 result = {
-                    _id: null,
+                    _id: existingResult._id,
                     user,
                     exam,
                     score,
@@ -149,12 +149,11 @@ exports.Create = async (req, res) => {
                     trueCount,
                     falseCount,
                     notDoneCount,
+
                     answers: formattedAnswers,
                 };
             }
         } else {
-            console.log(chapterId);
-
             const newResult = new ExamResult({
                 user,
                 exam,

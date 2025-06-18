@@ -34,20 +34,29 @@ const SoundPage = () => {
     const { user } = useContext(AuthContext);
     const [selectedBg, setSelectedBg] = useState("");
     const [selectTool, setSelectTool] = useState(-1);
+    // Link youtube để nhúng
+    const [embedUrl, setEmbedUrl] = useState("");
     // Pomodoro state
+    // Bắt đầu pomodoro
     const [isStartPomodoro, setIsStartPomodoro] = useState(false);
+    // Tiêu đề của pomodoro
     const [pomodoroTitle, setPomodoroTitle] = useState("");
+    // Thời gian còn lại của pomodoro (tính bằng giây)
     const [timeleft, setTimeleft] = useState(0);
+    // Chế độ hiển thị pomodoro (true: minimal, false: full)
     const [isMinimal, setIsMinimal] = useState(false);
     // Timer state
+    // Bắt đầu bộ đếm giờ
     const [isStartTimer, setIsStartTimer] = useState(false);
+    // Phiên học hiện tại
     const [timerSession, setTimerSession] = useState({});
+    // Danh sách hiệu ứng
     const [animations, setAnimations] = useState({
         rain: false,
         snow: false,
     });
-    const rainIntervalRef = useRef(null);
-    // Load từ localStorage khi mở trang
+
+    // Lấy nền đã lưu từ localStorage
     useEffect(() => {
         const savedBg = localStorage.getItem("study-bg");
         if (savedBg) setSelectedBg(savedBg);
@@ -89,10 +98,10 @@ const SoundPage = () => {
         setIsStartTimer(false);
         let res = await Session.Update({
             id: session._id,
-            spentTime: Number(((newTime + 60 * 2) / 60).toFixed(0)),
+            spentTime: Number((newTime / 60).toFixed(0)),
         });
         if (res === true) {
-            setSelectTool(2);
+            setSelectTool(3);
         }
     };
     // Xử lý hoàn thành phiên học
@@ -100,14 +109,19 @@ const SoundPage = () => {
         setIsStartTimer(false);
         let res = await Session.Update({
             id: session._id,
-            spentTime: Number(((newTime + 60 * 2) / 60).toFixed(0)),
+            spentTime: Number((newTime / 60).toFixed(0)),
             isDone: true,
         });
         if (res === true) {
-            setSelectTool(2);
+            const audio = new Audio("/sounds/ting.mp3");
+            audio.loop = false; // không lặp lại
+            audio.play();
+            setSelectTool(3);
         }
     };
     // Hiệu ứng mưa rơi
+    // Ref để quản lý hiệu ứng mưa rơi
+    const rainIntervalRef = useRef(null);
     useEffect(() => {
         const container = document.getElementById("rain");
         if (!container) return;
@@ -219,6 +233,7 @@ const SoundPage = () => {
                 <AmbienceTool
                     isOpen={selectTool === 1}
                     handleClose={handleCloseTool}
+                    setEmbedUrl={setEmbedUrl}
                 />
                 <AnimationTool
                     isOpen={selectTool === 2}
@@ -251,6 +266,19 @@ const SoundPage = () => {
                     />
                 )}
             </>
+            {/* Màn hình youtube */}
+            {embedUrl && embedUrl !== "" && (
+                <div className={styles.youtubeScreen}>
+                    <iframe
+                        src={embedUrl}
+                        title='YouTube video player'
+                        frameBorder='0'
+                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                        allowFullScreen
+                    ></iframe>
+                    <MuiIcons.CloseOutlined onClick={() => setEmbedUrl("")} />
+                </div>
+            )}
             {/* Pomodoro */}
             {isStartPomodoro && (
                 <Pomodoro
@@ -548,7 +576,7 @@ function BackgroundTool(props) {
 }
 // Công cụ phát âm thanh nền
 function AmbienceTool(props) {
-    const { isOpen, handleClose } = props;
+    const { isOpen, handleClose, setEmbedUrl } = props;
     const [isPlay, setIsPlay] = useState(false);
     const [playing, setPlaying] = useState({});
     const [volumes, setVolumes] = useState({});
@@ -607,6 +635,18 @@ function AmbienceTool(props) {
             playing[sound.name].volume(value);
         }
     };
+    // Xử lý mở link youtube
+    const [LinkYoutube, setLinkYoutube] = useState("");
+    // Xử lý khi nhấn nút mở youtube
+    const handleOpenYoutube = () => {
+        if (!LinkYoutube) return;
+        setEmbedUrl(getYoutubeEmbedUrl(LinkYoutube));
+    };
+    const getYoutubeEmbedUrl = (url) => {
+        const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/;
+        const match = url.match(regex);
+        return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+    };
     return (
         <div className={`${styles.ambienceTool} ${isOpen ? styles.open : ""}`}>
             <MuiIcons.CloseOutlined
@@ -624,6 +664,28 @@ function AmbienceTool(props) {
                         <MuiIcons.PlayCircleOutlined onClick={togglePlay} />
                     </Tooltip>
                 )}
+            </div>
+            {/* Nhập link youtube */}
+            <div className={styles.LinkYoutube}>
+                <input
+                    type='text'
+                    placeholder='Youtube.com'
+                    value={LinkYoutube}
+                    onChange={(e) => setLinkYoutube(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                            handleOpenYoutube();
+                        }
+                    }}
+                />
+                <div
+                    className={styles.addLink}
+                    onClick={handleOpenYoutube}
+                    title='Mở video'
+                    style={{ cursor: "pointer" }}
+                >
+                    <MuiIcons.PlayArrow />
+                </div>
             </div>
             <div className={styles.sounds}>
                 {sounds &&
@@ -847,13 +909,14 @@ function SessionTool(props) {
                 targetTime: time,
             });
         }
-        if (res === true) {
+        if (res) {
             setIsOpenModalAdd(false);
             setSessionId(null);
             setTitle("");
             setTargetTime("");
             refetch();
         }
+        return res;
     };
     // Chuyển giá trị targetTime -> number
     function parseTimeToMinutes(timeStr) {
@@ -878,7 +941,9 @@ function SessionTool(props) {
     // Xử lý thay đổi isDone của session
     const handleSetDone = async (e, session) => {
         e.stopPropagation();
-
+        const audio = new Audio("/sounds/ting.mp3");
+        audio.loop = false; // không lặp lại
+        audio.play();
         let res = await Session.Update({
             id: session._id,
             isDone: !session.isDone,
@@ -890,16 +955,26 @@ function SessionTool(props) {
     // Xử lý bắt đầu bộ đếm
     const handleStartSession = (e, session) => {
         e.stopPropagation();
+        const audio = new Audio("/sounds/start.mp3");
+        audio.loop = false; // không lặp lại
+        audio.play();
+        console.log(session);
 
         onStart(session);
     };
     // Xử lý xóa session
     const handleDeleteSession = async (e, id) => {
         e.stopPropagation();
-        let res = await Session.Delete(id);
-        if (res) {
-            refetch();
-        }
+        Noti.infoWithYesNo({
+            title: "Xóa phiên học",
+            message: "Bạn có chắc muốn xóa phiên học này?",
+            func: async () => {
+                let res = await Session.Delete(id);
+                if (res) {
+                    refetch();
+                }
+            },
+        });
     };
     // Xử lý tìm kiếm và sắp xếp
     useEffect(() => {
@@ -1138,58 +1213,70 @@ function SessionTool(props) {
                 </div>
             </div>
             {/* Modal tạo phiên học mới */}
-            <div
-                className={`${styles.overlay} ${
-                    isOpenModalAdd ? styles.open : ""
-                }`}
-                onClick={handleCloseModal}
-            ></div>
-            <div
-                className={`${styles.modalAddNewSession} ${
-                    isOpenModalAdd ? styles.open : ""
-                }`}
-            >
-                {/* Close icon */}
-                <MuiIcons.CloseOutlined
-                    className={styles.deleteIcon}
-                    onClick={handleCloseModal}
-                />
-                {/* Title */}
-                <div className={styles.title}>🍀 Tạo phiên học mới</div>
-                {/* Input title */}
-                <input
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className={styles.titleInput}
-                    placeholder='Nhập tiêu đề cho phiên học'
-                />
-                {/* Mục tiêu */}
-                <div className={styles.flexRow}>
-                    <MuiIcons.HourglassTop />
-                    <p>Mục tiêu:</p>
-                    <input
-                        value={targetTime}
-                        onChange={(e) => handleChangeTargetTime(e)}
-                        onBlur={handleSaveTargetTime}
-                        onFocus={(e) => handleFocus(e)}
-                        onKeyDown={(e) => {
-                            if (e.key === "Enter") {
-                                e.target.blur();
-                            }
-                        }}
-                        className={styles.time}
-                        placeholder='phút'
-                    />
-                </div>
-                {/* Các button */}
+            <>
+                {/* Overlay */}
                 <div
-                    className={styles.flexRow}
-                    style={{ justifyContent: "center" }}
+                    className={`${styles.overlay} ${
+                        isOpenModalAdd ? styles.open : ""
+                    }`}
+                    onClick={handleCloseModal}
+                ></div>
+                {/* Modal */}
+                <div
+                    className={`${styles.modalAddNewSession} ${
+                        isOpenModalAdd ? styles.open : ""
+                    }`}
                 >
-                    <button style={{ borderColor: "#78d87a" }}>Bắt đầu</button>
-                    <button onClick={handleSaveSession}>Lưu lại</button>
+                    {/* Close icon */}
+                    <MuiIcons.CloseOutlined
+                        className={styles.deleteIcon}
+                        onClick={handleCloseModal}
+                    />
+                    {/* Title */}
+                    <div className={styles.title}>🍀 Tạo phiên học mới</div>
+                    {/* Input title */}
+                    <input
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        className={styles.titleInput}
+                        placeholder='Nhập tiêu đề cho phiên học'
+                    />
+                    {/* Mục tiêu */}
+                    <div className={styles.flexRow}>
+                        <MuiIcons.HourglassTop />
+                        <p>Mục tiêu:</p>
+                        <input
+                            value={targetTime}
+                            onChange={(e) => handleChangeTargetTime(e)}
+                            onBlur={handleSaveTargetTime}
+                            onFocus={(e) => handleFocus(e)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    e.target.blur();
+                                }
+                            }}
+                            className={styles.time}
+                            placeholder='phút'
+                        />
+                    </div>
+                    {/* Các button */}
+                    <div
+                        className={styles.flexRow}
+                        style={{ justifyContent: "center" }}
+                    >
+                        <button
+                            style={{ borderColor: "#78d87a" }}
+                            onClick={async (e) => {
+                                let session = await handleSaveSession(e);
+                                handleStartSession(e, session);
+                            }}
+                        >
+                            Bắt đầu
+                        </button>
+                        <button onClick={handleSaveSession}>Lưu lại</button>
+                    </div>
                 </div>
-            </div>
+            </>
         </div>
     );
 }
@@ -1691,7 +1778,9 @@ function TodoTool(props) {
         refetch();
     };
     // Xử lý check task
-    const toggleTaskCompleted = async (taskId) => {
+    const toggleTaskCompleted = async (e, taskId) => {
+        e.stopPropagation();
+
         let updatedList = {
             ...lists[listSelect],
             tasks: [
@@ -1707,9 +1796,9 @@ function TodoTool(props) {
             tasks: updatedList.tasks,
         });
         refetch();
-    };
-    const handleOpenModal = (task) => {
-        setIsOpenTaskModal(true);
+        const audio = new Audio("/sounds/ting.mp3");
+        audio.loop = false; // không lặp lại
+        audio.play();
     };
     return (
         <>
@@ -1794,9 +1883,6 @@ function TodoTool(props) {
                                                         }
                                                         onCheck={
                                                             toggleTaskCompleted
-                                                        }
-                                                        openModal={
-                                                            handleOpenModal
                                                         }
                                                     />
                                                 )
@@ -1917,9 +2003,6 @@ function TodoTool(props) {
                                                                         onCheck={
                                                                             toggleTaskCompleted
                                                                         }
-                                                                        openModal={
-                                                                            handleOpenModal
-                                                                        }
                                                                     />
                                                                 )
                                                             )}
@@ -1958,21 +2041,10 @@ function TodoTool(props) {
                     </div>
                 )}
             </div>
-            <SlideInRightModal
-                isOpen={isOpenTaskModal}
-                onClose={() => setIsOpenTaskModal(false)}
-            />
         </>
     );
 }
-const SortableTask = ({
-    task,
-    id,
-    onDelete,
-    onCheck,
-    isCompleteAccordion,
-    openModal,
-}) => {
+const SortableTask = ({ task, id, onDelete, onCheck, isCompleteAccordion }) => {
     const {
         attributes,
         listeners,
@@ -1981,6 +2053,7 @@ const SortableTask = ({
         transition,
         isDragging,
     } = useSortable({ id });
+    const nav = useNavigate();
     const style = {
         transform: CSS.Transform.toString(transform),
         transition,
@@ -1993,7 +2066,6 @@ const SortableTask = ({
             style={style}
             className={styles.task}
             {...attributes}
-            onClick={() => openModal(task._id)}
         >
             {/* Nút kéo */}
             <MuiIcons.DragIndicatorOutlined
@@ -2002,13 +2074,24 @@ const SortableTask = ({
             />
             <CircleCheckbox
                 checked={task.completed}
-                onChange={() => onCheck(task)}
+                onChange={(e) => {
+                    e.stopPropagation();
+                    onCheck(e, task._id);
+                }}
             />
             <div className={styles.content}>
                 <div
                     className={`${styles.title} ${
                         task.completed === true ? styles.completed : ""
                     }`}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        Noti.infoWithYesNo({
+                            title: "Thông báo điều hướng",
+                            text: "Để xem chi tiết công việc, bạn có muốn chuyển đến trang chi tiết công việc không?",
+                            func: () => nav(`/task`),
+                        });
+                    }}
                 >
                     {task.title}
                 </div>
@@ -2040,7 +2123,12 @@ const SortableTask = ({
                     </>
                 )}
                 <MuiIcons.DeleteForeverOutlined
-                    onClick={() => onDelete(task._id)}
+                    onClick={() => {
+                        Noti.infoWithYesNo({
+                            title: "Xóa công việc",
+                            func: () => onDelete(task._id),
+                        });
+                    }}
                     className={styles.deleteIcon}
                 />
             </div>

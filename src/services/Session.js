@@ -5,15 +5,18 @@ const API = constants.API;
 // Tạo phiên học mới
 const Create = async ({ userId, title, targetTime }) => {
     try {
-        await axios.post(`${API}/session`, { userId, title, targetTime });
-        return true;
+        const res = await axios.post(`${API}/session`, {
+            userId,
+            title,
+            targetTime,
+        });
+        return res.data;
     } catch (err) {
         if (err.response && err.response.data?.message) {
             Noti.error(err.response.data.message);
         } else {
             Noti.error(err.message || err);
         }
-        return false;
     }
 };
 // Lưu phiên học

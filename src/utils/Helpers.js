@@ -13,7 +13,7 @@ export const normalize = (str) => {
         .trim();
 };
 // Định dạng để rút gọn số, ví dụ: 25000 -> 25N
-export function formatViews(number) {
+export function formatCount(number) {
     if (typeof number !== "number") return number;
 
     if (number >= 1_000_000) {

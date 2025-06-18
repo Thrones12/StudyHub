@@ -1,13 +1,4 @@
 import React, { useState, useContext, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faLocationDot,
-    faEnvelope,
-    faPhone,
-    faBook,
-    faHourglass1,
-    faFileLines,
-} from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../../context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./ProfileOverall.module.scss";
@@ -17,21 +8,29 @@ const tabs = [
     { name: "Hồ sơ", key: "profile" },
     { name: "Tiến độ", key: "progress" },
     { name: "Thống kê", key: "statis" },
-    // { name: "Lộ trình", key: "learning-path" },
     { name: "Lưu trữ", key: "saves" },
     { name: "Yêu thích", key: "likes" },
 ];
 const ProfileOverall = () => {
+    // Sử dụng useNavigate và useLocation để điều hướng và lấy thông tin đường dẫn
+    // từ URL hiện tại
     const nav = useNavigate();
     const location = useLocation();
+    // Lấy tên tab hiện tại từ đường dẫn URL
+    // Ví dụ: nếu đường dẫn là "/account/profile", thì activeTab sẽ là "profile"
+    // Nếu đường dẫn là "/account/progress", thì activeTab sẽ là "progress"
     const pathParts = location.pathname.split("/");
     const activeTab = pathParts[pathParts.length - 1];
     const { user } = useContext(AuthContext);
+    // Khởi tạo state để lưu trữ thông tin thống kê
+    // bao gồm số bài học đã hoàn thành, tổng số giờ học và tổng số bài
     const [statis, setStatis] = useState({
         doneLessons: 0,
         totalHours: 0,
         totalExams: 0,
     });
+    // Sử dụng useEffect để cập nhật thông tin thống kê khi người dùng thay đổi
+    // hoặc khi các thông tin liên quan đến người dùng thay đổi
     useEffect(() => {
         if (user) {
             let doneLessons =
@@ -92,18 +91,24 @@ const ProfileOverall = () => {
                             {user.profile.fullname}
                         </div>
                         <div className={styles.Info}>
-                            <div className={styles.Item}>
-                                <MuiIcons.Email />
-                                {user.email}
-                            </div>
-                            <div className={styles.Item}>
-                                <MuiIcons.LocationOn />
-                                {user.profile.address}
-                            </div>
-                            <div className={styles.Item}>
-                                <MuiIcons.LocalPhone />
-                                {user.profile.phone}
-                            </div>
+                            {user?.email && (
+                                <div className={styles.Item}>
+                                    <MuiIcons.Email />
+                                    {user.email}
+                                </div>
+                            )}
+                            {user.profile?.address && (
+                                <div className={styles.Item}>
+                                    <MuiIcons.LocationOn />
+                                    {user.profile.address}
+                                </div>
+                            )}
+                            {user.profile?.phone && (
+                                <div className={styles.Item}>
+                                    <MuiIcons.LocalPhone />
+                                    {user.profile.phone}
+                                </div>
+                            )}
                         </div>
                         <div className={styles.Statis}>
                             <div className={styles.Item}>

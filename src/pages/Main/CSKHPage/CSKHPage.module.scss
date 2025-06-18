@@ -59,8 +59,13 @@
         .Question {
             font-weight: bold;
             color: variables.$gray-400;
+            font-size: 18px;
         }
         .Answer {
+            color: variables.$gray-400;
+            font-size: 16px;
+            white-space: pre-line;
+            line-height: 1.5; // tuỳ chỉnh để dễ đọc
         }
     }
     .Form {

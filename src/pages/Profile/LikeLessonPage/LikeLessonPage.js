@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import styles from "./LikeLessonPage.module.scss";
 import { User } from "../../../services";
@@ -7,15 +7,14 @@ import { MainLayoutTools } from "../../../components";
 import { useNavigate } from "react-router-dom";
 import * as MuiIcons from "@mui/icons-material";
 import {
-    formatExamLevel,
+    formatlessonLevel,
     formatTimeAgo,
-    formatViews,
+    formatCount,
 } from "../../../utils/Helpers";
 import { Tooltip } from "@mui/material";
 import Noti from "../../../utils/Noti";
 const LikeLessonPage = () => {
     const { user } = useContext(AuthContext);
-    const [data, setData] = useState([]);
     // Lấy dữ liệu bài học đã hoàn thành
     const { data: learned } = useFetch({
         url: user
@@ -37,12 +36,58 @@ const LikeLessonPage = () => {
         url: `http://localhost:8080/api/course`,
         method: "GET",
     });
-    // Xử lí dữ liệu hiển thị
+    // State quản lý dữ liệu bài kiểm tra đã xử lý
+    const [processedLessons, setProcessedLessons] = useState([]);
+    // Khi dữ liệu bài kiểm tra thay đổi, cập nhật processedLessons
     useEffect(() => {
-        if (lessons && lessons.length > 0) {
-            setData([...lessons]);
-        }
+        if (!lessons || lessons.length === 0) return;
+        setProcessedLessons(lessons);
     }, [lessons]);
+    // PHÂN TRANG
+    // Dữ liệu đã lọc và sắp xếp
+    const [filteredLessons, setFilteredLessons] = useState([]);
+    // Dữ liệu phân trang
+    const [paginatedLessons, setPaginatedLessons] = useState([]);
+    // Trang hiện tại và input đi đến trang
+    const [page, setPage] = useState(1);
+    const [gotoPageInput, setGotoPageInput] = useState("1");
+    // Số lượng bài kiểm tra trên mỗi trang
+    const itemsPerPage = 20;
+    // Tính toán tổng số trang dựa trên số lượng bài kiểm tra đã lọc
+    const totalPages = Math.ceil(filteredLessons.length / itemsPerPage);
+
+    // Khi dữ liệu bài kiểm tra thay đổi, cập nhật danh sách đã lọc và phân trang
+    useEffect(() => {
+        setFilteredLessons(processedLessons);
+
+        // Nếu trang hiện tại lớn hơn tổng số trang mới, reset về trang 1
+        const newTotalPages = Math.ceil(processedLessons.length / itemsPerPage);
+        const newPage = page > newTotalPages ? 1 : page;
+        setPage(newPage);
+        setGotoPageInput(String(newPage));
+
+        // Tính lại dữ liệu phân trang
+        const startIndex = (newPage - 1) * itemsPerPage;
+        const endIndex = newPage * itemsPerPage;
+        setPaginatedLessons(processedLessons.slice(startIndex, endIndex));
+    }, [processedLessons]);
+
+    // Khi trang thay đổi, cập nhật dữ liệu phân trang
+    useEffect(() => {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = page * itemsPerPage;
+        setPaginatedLessons(filteredLessons.slice(startIndex, endIndex));
+        setGotoPageInput(String(page));
+    }, [page, filteredLessons]);
+
+    // Khi nhấn nút phân trang, cập nhật trang hiện tại
+    const handleGotoPage = () => {
+        const pageNumber = parseInt(gotoPageInput);
+        if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
+            setPage(pageNumber);
+            setGotoPageInput(pageNumber.toFixed(0));
+        }
+    };
     // Filter và Sort
     const [filters, setFilters] = useState([]);
     const sortBy = [
@@ -51,8 +96,14 @@ const LikeLessonPage = () => {
         { label: "Yêu thích", value: "like" },
         { label: "Xem nhiều", value: "view" },
     ];
+    // State để lưu trữ giá trị filter và sort
+    // filterValue: Lưu trữ các giá trị đã chọn trong bộ lọc
     const [filterValue, setFilterValue] = useState([]);
+    // sortValue: Lưu trữ giá trị đã chọn trong bộ lọc sắp xếp
+    // Mặc định là "newest" (mới nhất)
     const [sortValue, setSortValue] = useState("newest"); // Thêm giá trị vào bộ lọc
+    // Lấy dữ liệu khóa học và tạo bộ lọc
+    // Chỉ lấy các khóa học đã được fetch và có subjects
     useEffect(() => {
         let courseFilters = [];
         if (courses) {
@@ -108,12 +159,14 @@ const LikeLessonPage = () => {
                                 filtered = [
                                     ...filtered,
                                     ...lessons.filter(
-                                        (exam) =>
+                                        (lesson) =>
                                             (chapter.lessons.includes(
-                                                exam._id
+                                                lesson._id
                                             ) &&
                                                 selectedLevels.length === 0) ||
-                                            selectedLevels.includes(exam.level)
+                                            selectedLevels.includes(
+                                                lesson.level
+                                            )
                                     ),
                                 ];
                             }
@@ -124,9 +177,9 @@ const LikeLessonPage = () => {
         } else {
             // Không chọn subject, thì lấy toàn bộ lessons gốc
             filtered = lessons.filter(
-                (exam) =>
+                (lesson) =>
                     selectedLevels.length === 0 ||
-                    selectedLevels.includes(exam.level)
+                    selectedLevels.includes(lesson.level)
             );
         }
 
@@ -149,7 +202,7 @@ const LikeLessonPage = () => {
             default:
                 break;
         }
-        setData(filtered);
+        setProcessedLessons(filtered);
     }, [lessons, courses, filterValue, sortValue, filters]);
 
     // Xử lý lưu trữ / hủy lưu bài kiểm tra
@@ -158,11 +211,12 @@ const LikeLessonPage = () => {
         Noti.infoWithYesNo({
             title: "Hủy yêu thích",
             text: "Bạn có chắc chắn muốn hủy yêu thích bài học này không?",
-            func: async () => deleteSavedExam({ userId: user._id, lessonId }),
+            func: async () => deleteLikedLesson({ userId: user._id, lessonId }),
         });
     };
-
-    const deleteSavedExam = async ({ userId, lessonId }) => {
+    // Hàm xóa bài học đã yêu thích
+    // Gọi API để hủy yêu thích bài học
+    const deleteLikedLesson = async ({ userId, lessonId }) => {
         await User.Like({ userId, lessonId });
         refetch();
     };
@@ -185,11 +239,11 @@ const LikeLessonPage = () => {
                 )}
                 {/* Content */}
                 <div className={styles.container}>
-                    {data && data.length > 0 ? (
+                    {paginatedLessons && paginatedLessons.length > 0 ? (
                         <>
                             {/* Render each lesson */}
                             <div className={styles.LessonList}>
-                                {data.map((lesson, index) => (
+                                {paginatedLessons.map((lesson, index) => (
                                     <LessonCard
                                         key={index}
                                         lesson={lesson}
@@ -197,6 +251,88 @@ const LikeLessonPage = () => {
                                         isDone={learned.includes(lesson._id)}
                                     />
                                 ))}
+                            </div>
+                            {/* Pagination Controls */}
+                            <div className={styles.pagination}>
+                                <button
+                                    onClick={() =>
+                                        setPage((prev) => Math.max(prev - 1, 1))
+                                    }
+                                    disabled={page === 1}
+                                >
+                                    Trước
+                                </button>
+
+                                {Array.from(
+                                    { length: totalPages },
+                                    (_, i) => i + 1
+                                )
+                                    .filter(
+                                        (p) =>
+                                            Math.abs(p - page) <= 2 ||
+                                            p === 1 ||
+                                            p === totalPages
+                                    )
+                                    .map((p, index, arr) => {
+                                        // Hiển thị dấu ...
+                                        if (
+                                            index > 0 &&
+                                            p - arr[index - 1] > 1
+                                        ) {
+                                            return (
+                                                <span
+                                                    key={`ellipsis-${p}`}
+                                                    className={styles.ellipsis}
+                                                >
+                                                    ...
+                                                </span>
+                                            );
+                                        }
+                                        return (
+                                            <button
+                                                key={p}
+                                                className={
+                                                    p === page
+                                                        ? styles.activePage
+                                                        : ""
+                                                }
+                                                onClick={() => setPage(p)}
+                                            >
+                                                {p}
+                                            </button>
+                                        );
+                                    })}
+
+                                <button
+                                    onClick={() =>
+                                        setPage((prev) =>
+                                            Math.min(prev + 1, totalPages)
+                                        )
+                                    }
+                                    disabled={page === totalPages}
+                                >
+                                    Sau
+                                </button>
+
+                                <div className={styles.gotoPage}>
+                                    <span>Đi đến:</span>
+                                    <input
+                                        type='number'
+                                        value={gotoPageInput}
+                                        onChange={(e) =>
+                                            setGotoPageInput(e.target.value)
+                                        }
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter")
+                                                handleGotoPage();
+                                        }}
+                                        min={1}
+                                        max={totalPages}
+                                    />
+                                    <button onClick={handleGotoPage}>
+                                        Đến
+                                    </button>
+                                </div>
                             </div>
                         </>
                     ) : (
@@ -216,6 +352,8 @@ function LessonCard(props) {
     const nav = useNavigate();
     const { lesson, onDelete, isDone } = props;
 
+    // Hàm xử lý điều hướng đến trang bài học
+    // Khi người dùng click vào bài học, sẽ điều hướng đến trang chi tiết bài học
     function handleNavigate(lesson) {
         nav(`/study/lesson/${lesson._id}`);
     }
@@ -233,10 +371,13 @@ function LessonCard(props) {
                     <MuiIcons.Close />
                 </div>
             </Tooltip>
-            <img
-                src='https://res.cloudinary.com/ds5lvyntx/image/upload/v1749486154/images_mlysti.jpg'
-                alt='image'
-            />
+            {lesson.video && (
+                <VideoThumbnail
+                    videoUrl={lesson.video.url}
+                    alt='Thumbnail'
+                    style={{ width: "100%" }}
+                />
+            )}
             <div className={styles.title}>{lesson.title}</div>
             <div className={styles.author}>
                 {lesson.courseTitle}
@@ -258,14 +399,59 @@ function LessonCard(props) {
                 </div>
                 <div className={styles.infoItem}>
                     <MuiIcons.Favorite />
-                    <p>{formatViews(lesson.likes)}</p>
+                    <p>{formatCount(lesson.likes)}</p>
                 </div>
                 <div className={styles.infoItem}>
                     <MuiIcons.Visibility />
-                    <p>{formatViews(lesson.views)}</p>
+                    <p>{formatCount(lesson.views)}</p>
                 </div>
             </div>
         </div>
     );
 }
+// Thumbnail component for video trong lesson cards
+const VideoThumbnail = ({ videoUrl, fallbackUrl, ...props }) => {
+    const [thumbnail, setThumbnail] = useState(null);
+    const videoRef = useRef(null);
+    const canvasRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        const canvas = canvasRef.current;
+
+        if (!video || !canvas) return;
+
+        const capture = () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            setThumbnail(canvas.toDataURL("image/jpeg"));
+        };
+
+        video.currentTime = 1;
+        video.addEventListener("loadeddata", capture);
+        return () => video.removeEventListener("loadeddata", capture);
+    }, [videoUrl]);
+
+    return (
+        <>
+            {thumbnail ? (
+                <img src={thumbnail} alt='Video thumbnail' {...props} />
+            ) : (
+                <>
+                    <video
+                        ref={videoRef}
+                        src={videoUrl}
+                        crossOrigin='anonymous'
+                        style={{ display: "none" }}
+                    />
+                    <canvas ref={canvasRef} style={{ display: "none" }} />
+                    <img src={fallbackUrl} alt='Fallback' {...props} />
+                </>
+            )}
+        </>
+    );
+};
+
 export default LikeLessonPage;

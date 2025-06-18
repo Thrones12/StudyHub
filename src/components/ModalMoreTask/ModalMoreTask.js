@@ -37,17 +37,22 @@ const ModalMoreTask = ({ openTask, setIsOpen, tasks }) => {
             document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    // Tắt modal khi nhấn ESC
-    useEffect(() => {
-        const handleEsc = (event) => {
-            if (event.key === "Escape") setIsOpen(false);
-        };
-        window.addEventListener("keydown", handleEsc);
+    const getTaskColor = (task) => {
+        if (task.completed) return "#4CAF50"; // ✅ Đã hoàn thành (xanh lá)
 
-        return () => {
-            window.removeEventListener("keydown", handleEsc);
-        };
-    }, [setIsOpen]);
+        switch (task.priority) {
+            case "low":
+                return "#2196F3"; // 🟢 Ưu tiên thấp (xanh dương)
+            case "medium":
+                return "#FFC107"; // 🟡 Trung bình (vàng)
+            case "high":
+                return "#FF9800"; // 🟠 Cao (cam)
+            case "urgent":
+                return "#F44336"; // 🔴 Khẩn cấp (đỏ)
+            default:
+                return "#BDBDBD"; // ⚪️ Mặc định (xám nhạt)
+        }
+    };
     return (
         <div
             className={`modal-more-task show`}
@@ -69,9 +74,12 @@ const ModalMoreTask = ({ openTask, setIsOpen, tasks }) => {
                             <div
                                 key={index}
                                 className='more-task-item'
-                                onClick={(e) => {
+                                style={{
+                                    backgroundColor: getTaskColor(task),
+                                }}
+                                onClick={() => {
                                     setIsOpen(-1);
-                                    openTask(e, task, task.date);
+                                    openTask(task);
                                 }}
                             >
                                 {task.title ? task.title : "(Không có tiêu đề)"}

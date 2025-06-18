@@ -26,7 +26,6 @@ const SelectComponent = ({ value, setValue, options, width }) => {
                     backgroundColor: "#fff",
                     boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
                     border: "1px solid #b9bac0",
-                    borderRadius: "10px",
                     transition: "all 0.2s ease",
                     display: "flex",
                     alignItems: "center",

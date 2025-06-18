@@ -5,7 +5,7 @@ import Noti from "../../../utils/Noti";
 import styles from "./VerifyPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
-import { motion, time } from "framer-motion";
+import { motion } from "framer-motion";
 
 const VerifyPage = () => {
     const nav = useNavigate();
@@ -164,7 +164,6 @@ const VerifyPage = () => {
             Noti.error(err.response.data?.message);
         }
     };
-    const changePasswordSubmit = async (email) => {};
     return (
         <div className={styles.verifyPage}>
             <motion.div

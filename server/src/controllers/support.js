@@ -71,10 +71,14 @@ exports.update = async (req, res) => {
             html: req.body.answer,
         });
 
-        let notification = new Notification({});
-        await notification.save();
         let user = await User.findOne({ email: req.body.email });
-        user.notifications.push(notification);
+        let notification = new Notification({
+            userId: user._id,
+            type: "Support",
+            content: `Vấn đề của bạn đã được trả lời: ${updatedSupport.title}`,
+        });
+        await notification.save();
+        user.notifications.push(notification._id);
         await user.save();
         res.json(updatedSupport);
     } catch (err) {

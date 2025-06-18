@@ -8,6 +8,7 @@ import {
     Button,
     CircularProgress,
     TextareaAutosize,
+    Tooltip,
 } from "@mui/material";
 import * as MuiIcons from "@mui/icons-material";
 import { normalize } from "../../../utils/Helpers";
@@ -179,17 +180,17 @@ const AdminLessonPage = () => {
     // MODAL
 
     // Lấy dữ liệu khóa học
-    const { data: courses } = useFetch({
+    const { data: courses, refetch: refetchCourse } = useFetch({
         url: `http://localhost:8080/api/course`,
         method: "GET",
     });
     // Lấy dữ liệu môn học
-    const { data: subjects } = useFetch({
+    const { data: subjects, refetch: refetchSubject } = useFetch({
         url: `http://localhost:8080/api/subject`,
         method: "GET",
     });
     // Lấy dữ liệu chương
-    const { data: chapters } = useFetch({
+    const { data: chapters, refetch: refetchChapter } = useFetch({
         url: `http://localhost:8080/api/chapter`,
         method: "GET",
     });
@@ -405,6 +406,7 @@ const AdminLessonPage = () => {
             func: () => onDelete(),
         });
     };
+
     return (
         <div className={styles.wrapper}>
             {/* Header */}
@@ -549,131 +551,165 @@ const AdminLessonPage = () => {
                 </div>
                 <div className={styles.Body}>
                     <form onSubmit={handleSubmit} className={styles.Form}>
-                        {/* Course */}
-                        <div className={styles.Field}>
-                            <select
-                                value={selectedCourseId}
-                                onChange={handleCourseChange}
-                                required
-                            >
-                                <option value=''>Chọn khóa học</option>
-                                {courses?.map((course) => (
-                                    <option key={course._id} value={course._id}>
-                                        {course.title}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                        {/* Subject */}
-                        <div className={styles.Field}>
-                            <select
-                                value={selectedSubjectId}
-                                onChange={handleSubjectChange}
-                                required
-                            >
-                                <option value=''>Chọn môn học</option>
-                                {subjects
-                                    ?.filter(
-                                        (s) => s.courseId === selectedCourseId
-                                    )
-                                    .map((subject) => (
-                                        <option
-                                            key={subject._id}
-                                            value={subject._id}
-                                        >
-                                            {subject.title}
-                                        </option>
-                                    ))}
-                            </select>
-                        </div>
-                        {/* Chapter */}
-                        <div className={styles.Field}>
-                            <select
-                                value={selectedChapterId}
-                                onChange={handleChapterChange}
-                                required
-                            >
-                                <option value=''>Chọn chương</option>
-                                {chapters
-                                    ?.filter(
-                                        (c) => c.subjectId === selectedSubjectId
-                                    )
-                                    .map((chapter) => (
-                                        <option
-                                            key={chapter._id}
-                                            value={chapter._id}
-                                        >
-                                            {chapter.title}
-                                        </option>
-                                    ))}
-                            </select>
-                        </div>
-                        {/* title */}
-                        <div className={styles.Field}>
-                            <input
-                                type='text'
-                                name='title'
-                                placeholder='Tiêu đề'
-                                value={formData.title}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type='file'
-                                accept='video/*'
-                                onChange={(e) => {
-                                    setFormData({
-                                        ...formData,
-                                        videoFile: e.target.files[0],
-                                        videoUrl: URL.createObjectURL(
-                                            e.target.files[0]
-                                        ),
-                                    });
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                gap: 10,
+                            }}
+                        >
+                            {/* Input */}
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: 10,
+                                    flex: 1,
                                 }}
-                            />
+                            >
+                                {/* Course */}
+                                <div className={styles.Field}>
+                                    <select
+                                        value={selectedCourseId}
+                                        onChange={handleCourseChange}
+                                        required
+                                    >
+                                        <option value=''>Chọn khóa học</option>
+                                        {courses?.map((course) => (
+                                            <option
+                                                key={course._id}
+                                                value={course._id}
+                                            >
+                                                {course.title}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                {/* Subject */}
+                                <div className={styles.Field}>
+                                    <select
+                                        value={selectedSubjectId}
+                                        onChange={handleSubjectChange}
+                                        required
+                                    >
+                                        <option value=''>Chọn môn học</option>
+                                        {subjects
+                                            ?.filter(
+                                                (s) =>
+                                                    s.courseId ===
+                                                    selectedCourseId
+                                            )
+                                            .map((subject) => (
+                                                <option
+                                                    key={subject._id}
+                                                    value={subject._id}
+                                                >
+                                                    {subject.title}
+                                                </option>
+                                            ))}
+                                    </select>
+                                </div>
+                                {/* Chapter */}
+                                <div className={styles.Field}>
+                                    <select
+                                        value={selectedChapterId}
+                                        onChange={handleChapterChange}
+                                        required
+                                    >
+                                        <option value=''>Chọn chương</option>
+                                        {chapters
+                                            ?.filter(
+                                                (c) =>
+                                                    c.subjectId ===
+                                                    selectedSubjectId
+                                            )
+                                            .map((chapter) => (
+                                                <option
+                                                    key={chapter._id}
+                                                    value={chapter._id}
+                                                >
+                                                    {chapter.title}
+                                                </option>
+                                            ))}
+                                    </select>
+                                </div>
+                                {/* title */}
+                                <div className={styles.Field}>
+                                    <input
+                                        type='text'
+                                        name='title'
+                                        placeholder='Tiêu đề'
+                                        value={formData.title}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                    <input
+                                        type='file'
+                                        accept='video/*'
+                                        onChange={(e) => {
+                                            setFormData({
+                                                ...formData,
+                                                videoFile: e.target.files[0],
+                                                videoUrl: URL.createObjectURL(
+                                                    e.target.files[0]
+                                                ),
+                                            });
+                                        }}
+                                    />
+                                </div>
+                                {/* videoUrl */}
+                                <div className={styles.Field}>
+                                    <input
+                                        type='text'
+                                        name='videoUrl'
+                                        placeholder='Link video'
+                                        value={formData.videoUrl}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </div>
+                                {/* videoChapters */}
+                                <div className={styles.Field}>
+                                    <textarea
+                                        name='videoChapters'
+                                        placeholder='[thời gian]: [tiêu đề]'
+                                        style={{ resize: "vertical" }}
+                                        value={formData.videoChapters}
+                                        onChange={handleChange}
+                                        rows='10'
+                                    />
+                                </div>
+                                {/* exercises */}
+                                <div className={styles.Field}>
+                                    <textarea
+                                        name='exercises'
+                                        placeholder='[Dạng bài] - [danh sách id bài tập]'
+                                        style={{ resize: "vertical" }}
+                                        value={formData.exercises}
+                                        onChange={handleChange}
+                                        rows='18'
+                                    />
+                                </div>
+                            </div>
+                            {/* Soạn thảo tóm tắt lý thuyết */}
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flex: 1,
+                                }}
+                            >
+                                <MarkdownEditor
+                                    value={formData.document}
+                                    onChange={(val) =>
+                                        setFormData((prev) => ({
+                                            ...prev,
+                                            document: val,
+                                        }))
+                                    }
+                                />
+                            </div>
                         </div>
-                        {/* videoUrl */}
-                        <div className={styles.Field}>
-                            <input
-                                type='text'
-                                name='videoUrl'
-                                placeholder='Link video'
-                                value={formData.videoUrl}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        {/* videoChapters */}
-                        <div className={styles.Field}>
-                            <textarea
-                                name='videoChapters'
-                                placeholder='[thời gian]: [tiêu đề]'
-                                style={{ resize: "vertical" }}
-                                value={formData.videoChapters}
-                                onChange={handleChange}
-                                rows='5'
-                            />
-                        </div>
-                        {/* exercises */}
-                        <div className={styles.Field}>
-                            <textarea
-                                name='exercises'
-                                placeholder='[Dạng bài] - [danh sách id bài tập]'
-                                style={{ resize: "vertical" }}
-                                value={formData.exercises}
-                                onChange={handleChange}
-                                rows='5'
-                            />
-                        </div>
-                        <MarkdownEditor
-                            value={formData.document}
-                            onChange={(val) =>
-                                setFormData((prev) => ({
-                                    ...prev,
-                                    document: val,
-                                }))
-                            }
-                        />
+
                         <div className={styles.Buttons}>
                             <button type='submit' className={styles.button}>
                                 Xác nhận
@@ -827,7 +863,7 @@ const MarkdownEditor = ({ value, onChange }) => {
                                 }
                             }
                         }}
-                        minRows={10}
+                        minRows={40}
                         placeholder='Nhập nội dung lý thuyết tại đây (Markdown hỗ trợ công thức, ảnh...)'
                     />
                 </div>

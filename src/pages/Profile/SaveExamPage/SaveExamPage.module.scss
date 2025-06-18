@@ -181,6 +181,51 @@
             }
         }
     }
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+
+        button {
+            padding: 4px 10px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: default;
+            }
+        }
+
+        .activePage {
+            background: #007bff;
+            color: white;
+        }
+
+        .ellipsis {
+            padding: 0 6px;
+            color: #888;
+        }
+
+        .gotoPage {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            input {
+                width: 50px;
+                padding: 4px;
+            }
+
+            button {
+                padding: 4px 6px;
+            }
+        }
+    }
     .noExam {
         user-select: none;
         display: flex;

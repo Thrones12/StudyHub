@@ -164,7 +164,7 @@ const MainLayoutToolbar = ({ isCollapsed, setIsCollapsed }) => {
                         alt='user avatar'
                     />
                     <p className={styles.username}>
-                        {user?.name || "Phạm Hùng Phong "}
+                        {user?.profile.fullname || "Người dùng"}
                     </p>
                 </div>
 

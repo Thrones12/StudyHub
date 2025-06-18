@@ -8,7 +8,6 @@ import LoginPage from "./Auth/LoginPage/LoginPage";
 import ProfilePage from "./Profile/ProfilePage/ProfilePage";
 import ProgressPage from "./Profile/ProgressPage/ProgressPage";
 import StatisPage from "./Profile/StatisPage/StatisPage";
-import LearningPathPage from "./Profile/LearningPathPage/LearningPathPage";
 import SaveExamPage from "./Profile/SaveExamPage/SaveExamPage";
 import LikeLessonPage from "./Profile/LikeLessonPage/LikeLessonPage";
 
@@ -16,16 +15,13 @@ import LikeLessonPage from "./Profile/LikeLessonPage/LikeLessonPage";
 import HomePage from "./Main/HomePage/HomePage";
 import CoursePage from "./Main/CoursePage/CoursePage";
 import ExamPage from "./Main/ExamPage/ExamPage";
-import TaskPage from "./Main/TaskPage/TaskPage";
 import SoundPage from "./Main/SoundPage/SoundPage";
 import CSKHPage from "./Main/CSKHPage/CSKHPage";
+import CalendarPage from "./Main/CalendarPage/CalendarPage";
 
 // Study
 import TestPage from "./Study/TestPage/TestPage";
 import LessonStudyPage from "./Study/LessonStudyPage/LessonStudyPage";
-
-// Storage
-import CalendarPage from "./CalendarPage/CalendarPage";
 
 // Admin
 import AdminUserPage from "./Admin/AdminUserPage/AdminUserPage";
@@ -42,25 +38,22 @@ export {
     VerifyPage,
     RegisterPage,
     LoginPage,
-    CSKHPage,
-    // Main route
-    TaskPage,
     // Profile page
     ProfilePage,
     ProgressPage,
     StatisPage,
-    LearningPathPage,
     SaveExamPage,
     LikeLessonPage,
     // Study page
     TestPage,
     LessonStudyPage,
-    CoursePage,
-    ExamPage,
+    // Main route
     CalendarPage,
-    //
-    SoundPage,
+    CoursePage,
+    CSKHPage,
+    ExamPage,
     HomePage,
+    SoundPage,
     // Admin
     AdminUserPage,
     AdminUserDetailPage,

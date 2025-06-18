@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./HomePage.module.scss";
 import { MainLayoutHeader } from "../../../components";
 import { AuthContext } from "../../../context/AuthContext";
@@ -12,15 +12,18 @@ import { Tooltip } from "recharts";
 import {
     formatExamLevel,
     formatTimeAgo,
-    formatViews,
+    formatCount,
 } from "../../../utils/Helpers";
+import dayjs from "dayjs";
+import axios from "axios";
 const MAX_HISTORY = 5;
 
 const HomePage = () => {
-    const { user } = useContext(AuthContext);
+    const nav = useNavigate();
+    const { user, setUser } = useContext(AuthContext);
     const [newHistories, setNewHistories] = useState([]);
     // Lấy dữ liệu bài học
-    const { data: lessons, refetch } = useFetch({
+    const { data: lessons } = useFetch({
         url: `http://localhost:8080/api/lesson`,
         method: "GET",
     });
@@ -29,7 +32,8 @@ const HomePage = () => {
         url: `http://localhost:8080/api/exam`,
         method: "GET",
     });
-    const nav = useNavigate();
+    // Xử lý dữ liệu lịch sử học tập
+    // Chỉ lấy 6 hoạt động gần đây nhất
     useEffect(() => {
         if (user && lessons && exams) {
             let handledData = [];
@@ -66,6 +70,39 @@ const HomePage = () => {
             setNewHistories([...handledData]);
         }
     }, [user, lessons, exams]);
+
+    // Xử lý thông báo nhắc nhở công việc mỗi khi người dùng mở trang chủ
+    useEffect(() => {
+        const reminderUser = async () => {
+            await axios
+                .post(
+                    `http://localhost:8080/api/notification/reminder?userId=${user._id}`
+                )
+                .then((res) => {
+                    if (res.data.user) {
+                        setUser(res.data.user);
+                    }
+                })
+                .catch((err) => {
+                    console.error("Lỗi khi tạo reminder:", err);
+                });
+        };
+        if (user && user.notifications) {
+            const today = dayjs().startOf("day");
+
+            const hasReminderToday = user.notifications.some((noti) => {
+                return (
+                    noti.type === "Reminder" &&
+                    dayjs(noti.createdAt).isSame(today, "day")
+                );
+            });
+
+            if (!hasReminderToday) {
+                // Gọi API tạo thông báo Reminder mới
+                reminderUser();
+            }
+        }
+    }, [user]);
     return (
         <div className={styles.wrapper}>
             {/* Header */}
@@ -220,10 +257,14 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+// Thẻ bài học
 function LessonCard(props) {
     const nav = useNavigate();
-    const { lesson, onDelete, isDone } = props;
+    const { lesson } = props;
 
+    // Hàm xử lý điều hướng đến trang bài học
+    // Khi người dùng click vào bài học, sẽ điều hướng đến trang chi tiết bài học
     function handleNavigate(lesson) {
         nav(`/study/lesson/${lesson._id}`);
     }
@@ -232,18 +273,10 @@ function LessonCard(props) {
             className={styles.LessonCard}
             onClick={() => handleNavigate(lesson)}
         >
-            {/* Toggle Delete */}
-            <Tooltip title='Hủy yêu thích'>
-                <div
-                    className={styles.ToggleDelete}
-                    onClick={(e) => onDelete(e, lesson._id)}
-                >
-                    <MuiIcons.Close />
-                </div>
-            </Tooltip>
-            <img
-                src='https://res.cloudinary.com/ds5lvyntx/image/upload/v1749486154/images_mlysti.jpg'
-                alt='image'
+            <VideoThumbnail
+                videoUrl={lesson.video.url}
+                alt='Thumbnail'
+                style={{ width: "100%" }}
             />
             <div className={styles.title}>{lesson.title}</div>
             <div className={styles.author}>
@@ -256,32 +289,29 @@ function LessonCard(props) {
                     className={styles.infoItem}
                     style={{
                         flex: 1,
-                        color: isDone ? "#34aa36" : "#454e5c",
-                        fontWeight: isDone ? "bold" : "normal",
+                        color: "#454e5c",
                         fontStyle: "normal",
                     }}
-                >
-                    <MuiIcons.TaskAlt />
-                    <p>{isDone ? "Đã hoàn thành" : "Chưa hoàn thành"}</p>
-                </div>
+                ></div>
                 <div className={styles.infoItem}>
                     <MuiIcons.Favorite />
-                    <p>{formatViews(lesson.likes)}</p>
+                    <p>{formatCount(lesson.likes)}</p>
                 </div>
                 <div className={styles.infoItem}>
                     <MuiIcons.Visibility />
-                    <p>{formatViews(lesson.views)}</p>
+                    <p>{formatCount(lesson.views)}</p>
                 </div>
             </div>
         </div>
     );
 }
+// Thẻ bài kiểm tra
 function ExamCard(props) {
     const nav = useNavigate();
-    const { exam, onDelete } = props;
+    const { exam } = props;
 
     const formatTimeToMinute = (seconds) => {
-        const minutes = Math.round(seconds / 60); // dùng round để làm tròn
+        const minutes = Math.round(seconds / 60);
         return `${minutes} phút`;
     };
     function handleNavigate(exam) {
@@ -289,15 +319,6 @@ function ExamCard(props) {
     }
     return (
         <div className={styles.ExamCard} onClick={() => handleNavigate(exam)}>
-            {/* Toggle Delete */}
-            <Tooltip title='Hủy lưu'>
-                <div
-                    className={styles.ToggleDelete}
-                    onClick={(e) => onDelete(e, exam._id)}
-                >
-                    <MuiIcons.Close />
-                </div>
-            </Tooltip>
             {/* Main info */}
             <div
                 className={`${styles.MainInfo} ${
@@ -346,14 +367,56 @@ function ExamCard(props) {
                 <div className={styles.Info}>
                     <div className={styles.FlexRow}>
                         <MuiIcons.Assignment />
-                        <p>{formatViews(exam.attemps)}</p>
+                        <p>{formatCount(exam.attemps)}</p>
                     </div>
                     <div className={styles.FlexRow}>
                         <MuiIcons.BookmarkOutlined />
-                        <p>{formatViews(exam.saves)}</p>
+                        <p>{formatCount(exam.saves)}</p>
                     </div>
                 </div>
             </div>
         </div>
     );
 }
+// Thumbnail component for video trong lesson cards
+const VideoThumbnail = ({ videoUrl, fallbackUrl, ...props }) => {
+    const [thumbnail, setThumbnail] = useState(null);
+    const videoRef = useRef(null);
+    const canvasRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        const canvas = canvasRef.current;
+
+        const capture = () => {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            setThumbnail(canvas.toDataURL("image/jpeg"));
+        };
+
+        video.currentTime = 1;
+        video.addEventListener("loadeddata", capture);
+        return () => video.removeEventListener("loadeddata", capture);
+    }, [videoUrl]);
+
+    return (
+        <>
+            {thumbnail ? (
+                <img src={thumbnail} alt='Video thumbnail' {...props} />
+            ) : (
+                <>
+                    <video
+                        ref={videoRef}
+                        src={videoUrl}
+                        crossOrigin='anonymous'
+                        style={{ display: "none" }}
+                    />
+                    <canvas ref={canvasRef} style={{ display: "none" }} />
+                    <img src={fallbackUrl} alt='Fallback' {...props} />
+                </>
+            )}
+        </>
+    );
+};

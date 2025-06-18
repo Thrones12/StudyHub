@@ -190,6 +190,7 @@ $text-glow: 0 0 10px variables.$green-200;
                     border-radius: 15px;
                 }
                 .deleteIcon {
+                    cursor: pointer;
                     position: absolute;
                     top: -5px;
                     right: -5px;
@@ -226,9 +227,8 @@ $text-glow: 0 0 10px variables.$green-200;
             }
         }
         .sounds {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
             gap: 20px;
             padding: 10px 0;
             overflow: auto;
@@ -292,6 +292,68 @@ $text-glow: 0 0 10px variables.$green-200;
                 input[type="range"]::-webkit-slider-thumb:active {
                     transform: scale(1.2);
                 }
+            }
+        }
+        .LinkYoutube {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            margin: 10px auto 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid variables.$gray-200;
+            transition: all 0.2s ease;
+            &:hover,
+            &:has(input:focus) {
+                border: 1px solid variables.$green-300;
+            }
+
+            input {
+                outline: none;
+                border: none;
+                display: flex;
+                flex: 1;
+                padding: 8px 12px;
+            }
+            .addLink {
+                cursor: pointer;
+                width: 50px;
+                background-color: variables.$green-300;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .youtubeScreen {
+        position: fixed;
+        top: 100px;
+        right: 10px;
+        width: 400px;
+        height: 200px;
+        border-radius: 15px;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        svg {
+            cursor: pointer;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: variables.$gray-200;
+            color: #fff;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: variables.$red-500;
+                transform: scale(1.2);
             }
         }
     }
@@ -1074,6 +1136,7 @@ $text-glow: 0 0 10px variables.$green-200;
         gap: 20px;
         color: variables.$white;
         .deleteIcon {
+            cursor: pointer;
             position: absolute;
             top: 10px;
             right: 10px;
@@ -1082,7 +1145,7 @@ $text-glow: 0 0 10px variables.$green-200;
             color: variables.$white;
             transition: all 0.5s ease;
             &:hover {
-                color: variables.$red-300;
+                color: variables.$red-500;
                 transform: scale(1.1);
             }
         }

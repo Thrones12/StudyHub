@@ -1,5 +1,7 @@
 const Comment = require("../models/comment");
 const Lesson = require("../models/lesson");
+const Notification = require("../models/notification");
+const User = require("../models/user");
 
 // GET /comment
 exports.getAll = async (req, res) => {
@@ -76,12 +78,13 @@ exports.create = async (req, res) => {
     try {
         const { lessonId, user, content, replyTo } = req.body;
 
-        // Create
+        // Tạo comment mới
         const data = new Comment({
             user,
             content,
             replyTo: replyTo || null, // Nếu có replyTo thì dùng, không thì null
         });
+        // Lưu comment vào CSDL
         await data.save();
 
         // Thêm comment vào lesson
@@ -89,6 +92,32 @@ exports.create = async (req, res) => {
         lesson.comments.push(data._id.toString());
         await lesson.save();
 
+        // Nếu như là reply thì gửi thông báo cho người dùng được reply
+        if (replyTo) {
+            const replyToComment = await Comment.findById(replyTo);
+            let userReply = await User.findById(user);
+            if (replyToComment && replyToComment.user.toString() !== user) {
+                // Gửi thông báo cho người dùng được reply
+                const notification = {
+                    userId: replyToComment.user,
+                    type: "Comment",
+                    content: `${userReply.profile.fullname} đã trả lời bình luận của bạn`,
+                    commentId: data._id,
+                    link: `/study/lesson/${lessonId}`,
+                };
+                // Gửi thông báo đến người dùng
+                const newNotification = new Notification(notification);
+                await newNotification.save();
+                // Cập nhật thông báo cho người dùng
+                const userNotification = await User.findById(
+                    replyToComment.user
+                );
+                userNotification.notifications.push(newNotification._id);
+                await userNotification.save();
+            }
+        }
+
+        // Dữ liệu trả về
         let returnData = await Comment.findById(data._id).populate({
             path: "user",
             model: "User",
@@ -97,6 +126,8 @@ exports.create = async (req, res) => {
         // 200 - Success
         return res.status(200).json({ data: returnData });
     } catch (err) {
+        console.log(err);
+
         return res.status(500).json({ message: "Server Error: ", err });
     }
 };
