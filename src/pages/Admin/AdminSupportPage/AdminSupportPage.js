@@ -260,50 +260,43 @@ const AdminSupportPage = () => {
             />
             {/* Nội dung */}
             <div className={styles.content}>
-                {loading ? (
-                    <div className={styles.loading}>
-                        <CircularProgress />
-                    </div>
-                ) : (
-                    <table className={styles.table}>
-                        <thead>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th style={{ width: 400 }}>Tiêu đề</th>
+                            <th style={{ width: 600 }}>Nội dung</th>
+                            <th>Người dùng</th>
+                            <th>Email</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {paginatedSupports && paginatedSupports.length > 0 ? (
+                            paginatedSupports.map((support, index) => {
+                                return (
+                                    <tr
+                                        key={index}
+                                        onClick={() => onEdit(support)}
+                                    >
+                                        <td>{support.title}</td>
+                                        <td>{support.question}</td>
+                                        <td>{support.name}</td>
+                                        <td>{support.email}</td>
+                                        <td>
+                                            {support?.answer !== ""
+                                                ? "Đã trả lời"
+                                                : ""}
+                                        </td>
+                                    </tr>
+                                );
+                            })
+                        ) : (
                             <tr>
-                                <th style={{ width: 400 }}>Tiêu đề</th>
-                                <th style={{ width: 600 }}>Nội dung</th>
-                                <th>Người dùng</th>
-                                <th>Email</th>
-                                <th>Trạng thái</th>
+                                <td colSpan={5}>Không có câu hỏi nào.</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {paginatedSupports &&
-                            paginatedSupports.length > 0 ? (
-                                paginatedSupports.map((support, index) => {
-                                    return (
-                                        <tr
-                                            key={index}
-                                            onClick={() => onEdit(support)}
-                                        >
-                                            <td>{support.title}</td>
-                                            <td>{support.question}</td>
-                                            <td>{support.name}</td>
-                                            <td>{support.email}</td>
-                                            <td>
-                                                {support?.answer !== ""
-                                                    ? "Đã trả lời"
-                                                    : ""}
-                                            </td>
-                                        </tr>
-                                    );
-                                })
-                            ) : (
-                                <tr>
-                                    <td colSpan={5}>Không có câu hỏi nào.</td>
-                                </tr>
-                            )}
-                        </tbody>
-                    </table>
-                )}
+                        )}
+                    </tbody>
+                </table>
             </div>
             {/* Pagination Controls */}
             <div className={styles.pagination}>

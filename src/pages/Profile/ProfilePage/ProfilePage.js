@@ -39,7 +39,9 @@ const ProfilePage = () => {
             gender: user?.profile.gender ?? "Male",
             address: user?.profile.address ?? "",
             phone: user?.profile.phone ?? "",
-            birthdate: user?.profile.birthdate.slice(0, 10) ?? Date.now,
+            birthdate: user?.profile?.birthdate
+                ? user?.profile?.birthdate.slice(0, 10)
+                : Date.now,
             school: user?.profile.school ?? "",
             grade: user?.profile.grade ?? "",
             hobby: user?.profile.hobby ?? "",

@@ -177,7 +177,6 @@ exports.getProgress = async (req, res) => {
             return res.status(404).json({ message: "Data not found" });
         if (!user) return res.status(404).json({ message: "Data not found" });
 
-        console.log(courses);
         for (let learnedCourse of user.learned) {
             const course = courses.find(
                 (c) => c._id.toString() === learnedCourse.courseId
@@ -193,7 +192,6 @@ exports.getProgress = async (req, res) => {
                 const totalChapters = subject.chapters.length;
                 let totalLessons = 0;
                 let doneLessons = 0;
-                let doneExams = 0;
 
                 const learnedSubject = subjectProgress.lessons || [];
 
@@ -204,10 +202,7 @@ exports.getProgress = async (req, res) => {
                 }
 
                 let progress =
-                    totalLessons > 0 && totalChapters > 0
-                        ? (doneLessons + doneExams) /
-                          (totalLessons + totalChapters)
-                        : 0;
+                    totalLessons > 0 ? doneLessons / totalLessons : 0;
 
                 if (progress > 0)
                     data.push({
