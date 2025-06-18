@@ -1,164 +1,180 @@
-[
-    {
-        "_id": {
-            "$oid": "683d6bde009a9d8d2ca96f33"
-        },
-        "name": "Phạm Hùng Phong",
-        "email": "21110273@student.hcmute.edu.vn",
-        "title": "Đây là tiêu đề",
-        "question": "Làm sao để liên hệ với CSKH?",
-        "answer": "Bạn có thể liên hệ qua Facebook, Instagram, email hoặc số điện thoại bên phải.",
-        "isShow": true,
-        "createdAt": {
-            "$date": "2025-06-02T09:16:14.642Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-02T09:16:14.642Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "683d6be8009a9d8d2ca96f35"
-        },
-        "name": "Phạm Hùng Phong",
-        "email": "21110273@student.hcmute.edu.vn",
-        "title": "Đây là tiêu đề",
-        "question": "Làm sao để đăng ký tài khoản?",
-        "answer": "Bạn vào trang Đăng ký và điền đầy đủ thông tin để tạo tài khoản mới.",
-        "isShow": true,
-        "createdAt": {
-            "$date": "2025-06-02T09:16:24.381Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-02T09:16:24.381Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "683d6bf6009a9d8d2ca96f37"
-        },
-        "name": "Phạm Hùng Phong",
-        "email": "21110273@student.hcmute.edu.vn",
-        "title": "Đây là tiêu đề",
-        "question": "Tôi quên mật khẩu thì phải làm sao?",
-        "answer": "Bạn có thể bấm 'Quên mật khẩu' để lấy lại qua email đã đăng ký.",
-        "isShow": true,
-        "createdAt": {
-            "$date": "2025-06-02T09:16:38.081Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-02T09:16:38.081Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "683d6c03009a9d8d2ca96f39"
-        },
-        "name": "Phạm Hùng Phong",
-        "email": "21110273@student.hcmute.edu.vn",
-        "title": "Đây là tiêu đề",
-        "question": "Câu hỏi nè",
-        "answer": "",
-        "isShow": false,
-        "createdAt": {
-            "$date": "2025-06-02T09:16:51.298Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-02T09:16:51.298Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "6841e94200f1fc42d4b0cc5d"
-        },
-        "name": "Phạm Hùng Phong",
-        "email": "hungphong.canhan@gmail.com",
-        "title": "Tiêu đề nè",
-        "question": "Nội dung báo cáo nè",
-        "answer": "",
-        "isShow": false,
-        "createdAt": {
-            "$date": "2025-06-05T19:00:18.175Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-05T19:00:18.175Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "6841e9f000f1fc42d4b0cc5f"
-        },
-        "name": "Phạm Hùng Phong",
-        "email": "hungphong.canhan@gmail.com",
-        "title": "Báo cáo ở bài học 683c4d9fcd45165ec1affd06: Sai nội dung bài giảng",
-        "question": "Đây là nội dung bài giảng môn ngữ văn chứ không phải môn vật lý",
-        "answer": "",
-        "isShow": false,
-        "createdAt": {
-            "$date": "2025-06-05T19:03:12.580Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-05T19:03:12.580Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "684429d35772a2cb2a60c643"
-        },
-        "name": "phongggg",
-        "email": "123@gmail.com",
-        "title": "123",
-        "question": "123",
-        "answer": "",
-        "isShow": false,
-        "createdAt": {
-            "$date": "2025-06-07T12:00:19.722Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-07T12:00:19.722Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "684429e05772a2cb2a60c645"
-        },
-        "name": "phongggg",
-        "email": "thunder1412.td@gmail.com",
-        "title": "123123",
-        "question": "1231231",
-        "answer": "",
-        "isShow": false,
-        "createdAt": {
-            "$date": "2025-06-07T12:00:32.181Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-07T12:00:32.181Z"
-        },
-        "__v": 0
-    },
-    {
-        "_id": {
-            "$oid": "68442a095772a2cb2a60c647"
-        },
-        "name": "Samsung Galaxy S211",
-        "email": "hungphong.canhan@gmail.com",
-        "title": "123123",
-        "question": "341516",
-        "answer": "",
-        "isShow": false,
-        "createdAt": {
-            "$date": "2025-06-07T12:01:13.634Z"
-        },
-        "updatedAt": {
-            "$date": "2025-06-07T12:01:13.634Z"
-        },
-        "__v": 0
-    }
-]
+[{
+  "_id": {
+    "$oid": "683d6bde009a9d8d2ca96f33"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "1. Làm thế nào để tiến hành đăng ký một tài khoản?\n",
+  "answer": "Để đăng ký tài khoản, bạn chỉ cần nhấn vào nút “Đăng ký” ở góc phải trên cùng của trang chủ. Sau đó, điền đầy đủ thông tin cá nhân bao gồm họ tên, email, mật khẩu và xác nhận mật khẩu. Một số nền tảng có thể yêu cầu xác minh qua email hoặc số điện thoại để đảm bảo an toàn cho tài khoản của bạn.\nSau khi hoàn tất, bạn sẽ nhận được một email kích hoạt. Hãy kiểm tra hộp thư đến (hoặc mục spam nếu không thấy email), nhấp vào liên kết trong email đó để xác nhận tài khoản. Sau bước này, bạn có thể đăng nhập và sử dụng tất cả các chức năng của nền tảng.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c372598f3b551e6e4d0"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "2. Tôi quên mật khẩu, làm sao để khôi phục?",
+  "answer": "Bạn có thể khôi phục mật khẩu bằng cách nhấn vào liên kết “Quên mật khẩu” tại trang đăng nhập. Hệ thống sẽ yêu cầu bạn nhập địa chỉ email đã đăng ký, và sau đó gửi cho bạn một email hướng dẫn khôi phục.\nTrong email đó sẽ có một liên kết để bạn đặt lại mật khẩu mới. Hãy chắc chắn rằng mật khẩu mới đủ mạnh và khác với mật khẩu cũ để đảm bảo an toàn cho tài khoản của bạn. Sau khi thay đổi, bạn có thể đăng nhập lại bình thường.\nSau khi hoàn tất, bạn sẽ nhận được một email kích hoạt. Hãy kiểm tra hộp thư đến (hoặc mục spam nếu không thấy email), nhấp vào liên kết trong email đó để xác nhận tài khoản. Sau bước này, bạn có thể đăng nhập và sử dụng tất cả các chức năng của nền tảng.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c3c2598f3b551e6e4d1"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "3. Làm sao để cập nhật thông tin cá nhân trong tài khoản?\n",
+  "answer": "Sau khi đăng nhập, bạn hãy truy cập vào mục “Tài khoản của tôi” hoặc “Thông tin cá nhân” trong phần cài đặt. Tại đây, bạn có thể thay đổi tên, ảnh đại diện, số điện thoại, địa chỉ hoặc các thông tin liên quan khác.\nSau khi chỉnh sửa, đừng quên nhấn “Lưu” để cập nhật thông tin. Một số thay đổi như email hoặc số điện thoại có thể yêu cầu xác minh lại để bảo vệ quyền riêng tư và bảo mật tài khoản của bạn.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c4c2598f3b551e6e4d2"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "4. Tôi không nhận được email xác nhận, phải làm gì?\n",
+  "answer": "Trong trường hợp bạn không thấy email xác nhận trong hộp thư đến, hãy kiểm tra thư mục “Spam” hoặc “Quảng cáo”. Đôi khi hệ thống email có thể lọc nhầm những thư này. Nếu vẫn không thấy, bạn có thể quay lại trang đăng ký hoặc đăng nhập và chọn “Gửi lại email xác nhận”.\nNếu sau vài lần thử vẫn không nhận được, có thể địa chỉ email bạn nhập bị sai. Khi đó, bạn nên thử đăng ký lại với địa chỉ đúng hoặc liên hệ trực tiếp với bộ phận hỗ trợ để được xử lý thủ công.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c562598f3b551e6e4d3"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "5. Làm thế nào để tham gia một khóa học/bài giảng?\n",
+  "answer": "Sau khi đăng nhập, bạn có thể truy cập vào mục “Khóa học” hoặc “Bài giảng” trên thanh điều hướng. Chọn khóa học phù hợp và nhấn vào nút “Tham gia học” hoặc “Vào học”. Nếu khóa học miễn phí, bạn có thể vào học ngay. Nếu là khóa học trả phí, hệ thống sẽ hướng dẫn bạn thanh toán.\nSau khi tham gia, bạn sẽ thấy danh sách các bài học trong khóa đó. Bạn có thể học theo thứ tự hoặc chọn bài học bạn muốn, tùy thuộc vào cách thiết kế của khóa học.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c612598f3b551e6e4d4"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "6. Tôi không thể xem được video bài giảng, cần làm gì?\n",
+  "answer": "Nếu bạn không xem được video, trước tiên hãy kiểm tra kết nối Internet của bạn. Video cần một tốc độ mạng ổn định để hoạt động mượt mà. Ngoài ra, hãy thử làm mới trình duyệt (F5), đăng xuất rồi đăng nhập lại, hoặc dùng trình duyệt khác như Chrome hay Firefox.\nNếu vẫn không xem được, có thể trình duyệt của bạn đang chặn nội dung hoặc Cloudinary (nơi lưu trữ video) đang gặp lỗi tạm thời. Hãy thử xoá cache hoặc bật lại JavaScript. Nếu không khắc phục được, bạn nên gửi mã bài học và ảnh lỗi cụ thể cho bộ phận kỹ thuật.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c6d2598f3b551e6e4d5"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "7. Làm sao để đánh giá hoặc phản hồi sau khi học bài?\n",
+  "answer": "Sau khi hoàn thành bài học, bạn sẽ thấy nút “Đánh giá” hoặc “Gửi phản hồi” ở cuối trang. Hãy nhấp vào đó để để lại nhận xét về chất lượng nội dung, giảng viên hoặc những góp ý cải thiện.\nPhản hồi của bạn rất quan trọng với đội ngũ phát triển vì nó giúp cải thiện chất lượng chương trình học trong tương lai. Những đánh giá mang tính xây dựng sẽ được ưu tiên xem xét và cập nhật trong các phiên bản sau.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c792598f3b551e6e4d6"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "8. Làm sao để thanh toán khóa học trả phí?\n",
+  "answer": "Bạn có thể chọn khóa học bạn muốn, nhấn vào “Thanh toán” và làm theo hướng dẫn. Hệ thống sẽ cung cấp các phương thức thanh toán phổ biến như thẻ ATM, ví điện tử (Momo, ZaloPay), hoặc chuyển khoản ngân hàng.\nSau khi thanh toán thành công, hệ thống sẽ tự động kích hoạt quyền truy cập khóa học. Trong trường hợp lỗi phát sinh như thanh toán xong nhưng không được mở khóa, bạn chỉ cần cung cấp mã giao dịch và ảnh chụp để được hỗ trợ xử lý nhanh chóng.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c852598f3b551e6e4d7"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "9. Tôi muốn hủy đăng ký hoặc xóa tài khoản thì làm sao?\n",
+  "answer": "Nếu bạn muốn hủy tài khoản, hãy truy cập phần “Cài đặt tài khoản” và tìm nút “Xóa tài khoản” hoặc “Yêu cầu hủy đăng ký”. Một số nền tảng yêu cầu bạn gửi email yêu cầu xác minh để đảm bảo quyền sở hữu.\nLưu ý rằng sau khi xóa tài khoản, toàn bộ dữ liệu học tập, kết quả và quyền truy cập sẽ bị mất vĩnh viễn. Vì vậy, hãy cân nhắc kỹ và sao lưu dữ liệu cần thiết trước khi thực hiện thao tác này.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68527c902598f3b551e6e4d8"
+  },
+  "name": "Phạm Hùng Phong",
+  "email": "21110273@student.hcmute.edu.vn",
+  "title": "Đây là tiêu đề",
+  "question": "10. Tôi muốn liên hệ trực tiếp với bộ phận hỗ trợ thì làm như thế nào?\n",
+  "answer": "Bạn có thể liên hệ với bộ phận hỗ trợ qua nhiều kênh khác nhau: email, hotline, khung chat trực tiếp trên trang web hoặc fanpage Facebook của hệ thống. Thường thì sẽ có mục “Liên hệ” hoặc “Trợ giúp” ở cuối trang.\nKhi gửi yêu cầu hỗ trợ, hãy nêu rõ vấn đề bạn gặp phải kèm theo thông tin tài khoản (email, mã học viên...) để đội ngũ kỹ thuật có thể hỗ trợ nhanh chóng và chính xác hơn.",
+  "isShow": true,
+  "createdAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:16:14.642Z"
+  },
+  "__v": 0
+}]

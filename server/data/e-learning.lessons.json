@@ -16,15 +16,15 @@
     "overall": 0,
     "details": []
   },
-  "views": 28,
-  "likes": 0,
+  "views": 49,
+  "likes": 1,
   "order": 0,
   "exercises": [],
   "createdAt": {
     "$date": "2025-06-10T21:13:27.140Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T09:01:22.860Z"
+    "$date": "2025-06-18T21:23:04.124Z"
   },
   "__v": 0
 },
@@ -46,7 +46,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
+  "views": 2,
   "likes": 0,
   "order": 1,
   "exercises": [],
@@ -54,7 +54,7 @@
     "$date": "2025-06-10T21:25:36.705Z"
   },
   "updatedAt": {
-    "$date": "2025-06-10T21:25:36.705Z"
+    "$date": "2025-06-11T13:34:34.626Z"
   },
   "__v": 0
 },
@@ -706,7 +706,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 2,
+  "views": 6,
   "likes": 0,
   "order": 0,
   "exercises": [],
@@ -714,7 +714,7 @@
     "$date": "2025-06-10T22:07:06.960Z"
   },
   "updatedAt": {
-    "$date": "2025-06-10T22:07:43.841Z"
+    "$date": "2025-06-18T11:41:02.643Z"
   },
   "__v": 0
 },
@@ -1066,7 +1066,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 2,
+  "views": 6,
   "likes": 0,
   "order": 0,
   "exercises": [],
@@ -1074,7 +1074,7 @@
     "$date": "2025-06-11T00:55:14.647Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T09:01:16.845Z"
+    "$date": "2025-06-18T22:07:55.524Z"
   },
   "__v": 0
 },
@@ -3251,35 +3251,103 @@
     "chapters": [
       {
         "time": 45,
-        "title": "Khái niệm"
+        "title": "Khái niệm",
+        "_id": {
+          "$oid": "68499975b7080c1d4ee11510"
+        }
       },
       {
         "time": 121,
-        "title": "Phương trình dao động điều hòa"
+        "title": "Phương trình dao động điều hòa",
+        "_id": {
+          "$oid": "68499975b7080c1d4ee11511"
+        }
       },
       {
         "time": 325,
-        "title": "Ghi nhớ"
+        "title": "Ghi nhớ",
+        "_id": {
+          "$oid": "68499975b7080c1d4ee11512"
+        }
       }
     ]
   },
   "document": "**2.1. Dao động cơ, dao động tuần hoàn.**  \n\\- Dao động cơ là chuyển động qua lại của vật quanh vị trí cân bằng.  \n\\- Dao động tuần hoàn là dao động mà sau những khoảng thời gian bằng nhau, gọi là chu kỳ, vật trở lại vị trí cũ theo hướng cũ. Dao động tuần hoàn đơn giản nhất là dao động điều hòa.\n\n**2.2. Dao động điều hòa.**\n\n**a. Ví dụ dao động điều hòa**\n\n\n![Mô tả ảnh](https://res.cloudinary.com/ds5lvyntx/image/upload/v1749115890/12_p3kezr.png)\n\n\\- Giả sử M chuyển động theo chiều dương vận tốc góc là $$\\omega$$, **P** là hình chiếu của M lên Ox.\n\n\\- Tại t=0, M có tọa độ góc **$\\varphi$**\n\n\\- Sau thời gian t, M có tọa độ góc **$$\\varphi$$ + $$\\omega$$t**.\n\n\\- Khi đó: **$\\vec{OP}$ = x; x = OM $\\cos(\\omega t + \\varphi)$**\n\n\\- Đặt A = OM ta có: x = $A \\cos(\\omega t + \\varphi)$\n\n\\- Trong đó A, $\\omega$, $\\varphi$ là hằng số\n\n\\- Do hàm cosin là hàm điều hòa nen điểm P được gọi là dao động điều hòa.\n\n**b. Định nghĩa dao động điều hòa**\n\n\\- Dao động điều hòa là dao động trong đó li độ của vật là một hàm cosin (hay sin) của thời gian.\n\n**c. Phương trình**\n\n\\- Phương trình **x = Acos($\\omega t + \\varphi$)** gọi là phương trình dao động điều hòa.\n\n\\- A là biên độ dao động, là li độ cực đại của vật, A>0.\n\n\\- **$\\omega t + \\varphi$** là pha dao động tại thời điểm t.\n\n\\- **$\\varphi$** là pha ban đầu tại t=0.\n\n**d. Chú ý**\n\n\\- Điểm P dao động điều hòa trên 1 đoạn thẳng luôn luôn có thể coi là hình chiếu của điểm M chuyển động tròn đều lên đường kính là đoạn thẳng đó.\n\n\\- Ta quy ước chọn trục x làm trục gốc để tính pha dao động và chiều tăng của pha tương ứng với chiều tăng của góc $\\widehat{MOP}$ trong chuyển động tròn đều.\n\n**2.3. Chu kì, tần số, tần số góc của dao động điều hòa.**  \n\n**a. Chu kì và tần số.**\n\n-\\ Khi vật trở về vị trí cũ, hướng cũ thì ta nói vật thực hiện 1 dao động tuần hoàn.\n\n\\- Chu kì (T): của dao động điều hòa là khoảng thời gian để vật thực hiện 1 dao động toàn phần. \n\n\\- Tần số (f): của dao động điều hòa là số dao động tuần hoàn thực hiện trong 1 giây.\n\n**b. Tần số góc**\n\n\\- Trong dao động điều hòa $\\omega$ được gọi là tần số góc.\n\n\\- Giữa tần số góc, chu kì và tần số có mối liên hệ: $\\omega = \\dfrac{2\\pi}{T} = 2\\pi f$\\\n\n**2.4. Vận tốc và gia tốc của dao động điều hòa**\n\n**a. Vận tốc**\n\n\\- Vận tốc là đạo hàm của li độ theo thời gian.\n\nv = x' = -$\\omega$ Asin($\\omega t + \\varphi$)\n\n\\- Vận tốc cũng biến thiên theo thời gian.\n\n\\- Tại x = $\\pm$A thì v = 0.\n\n\\- Tại x = 0 thì v = $\\omega$ A.\n\n**b. Gia tốc**\n\n\\- Gia tốc là đạo hàm của vận tốc theo thời gian.\n\na = v' = x'' = - $\\omega^2$ Asin($\\omega t + \\varphi$)\n\n$a = -\\omega^2 x$\n\n\\- Tại x = 0 thì a = 0.\n\n\\- Tại x = $\\pm$ A thì a = $\\omega^2$ A\n\n**2.5. Đồ thị của dao động điều hòa**\n\n![Mô tả ảnh](https://res.cloudinary.com/ds5lvyntx/image/upload/v1749635649/1111_2_i8kae3.png)\n\n\n\\- Đồ thị của dao động điều hòa với $\\varphi$ = 0 có dạng hình sin nên người ta còn gọi là dao động hình sin.\n\n**BÀI TẬP MINH HỌA**\n\n**Bài 1**\n\nMột vật dao động điều hòa trên đoạn thẳng dài 4cm với f = 10Hz. Lúc t = 0 vật qua VTCB theo chiều dương của quỹ đạo. Viết phương trình dao động của vật.\n\n**Hướng dẫn giải**\n\nTa có tần số góc $\\omega$ = 2 $\\pi$ f = $\\pi$ và biên độ A = $\\dfrac{MN}{2}$ = 2cm\n\nĐiều kiện ban đầu t = 0: x = 0, v > 0 => $\\varphi$ = -$\\dfrac{\\pi}{2}$ => x = 2cm(20$\\pi$t - $\\dfrac{\\pi}{2}$) (cm)\n\n",
-  "comments": [],
+  "comments": [
+    {
+      "$oid": "68533976d4e4d41877d9c85d"
+    }
+  ],
   "rating": {
-    "overall": 0,
-    "details": []
+    "overall": 5,
+    "details": [
+      {
+        "userId": "68532e2621a8095ac1c4404a",
+        "rate": 5,
+        "content": "Nội dung bài học thực sự rất tuyệt",
+        "_id": {
+          "$oid": "6853395fd4e4d41877d9c85b"
+        }
+      }
+    ]
   },
-  "views": 33,
-  "likes": 0,
+  "views": 183,
+  "likes": 3,
   "order": 0,
-  "exercises": [],
+  "exercises": [
+    {
+      "type": "Dạng bài 1",
+      "questions": [
+        {
+          "$oid": "6849637a3d37c42e74086f39"
+        },
+        {
+          "$oid": "6849637f3d37c42e74086f3b"
+        },
+        {
+          "$oid": "684963823d37c42e74086f3d"
+        }
+      ],
+      "_id": {
+        "$oid": "68499975b7080c1d4ee11516"
+      }
+    },
+    {
+      "type": "Dạng bài 2",
+      "questions": [
+        {
+          "$oid": "684963863d37c42e74086f3f"
+        },
+        {
+          "$oid": "684963893d37c42e74086f41"
+        }
+      ],
+      "_id": {
+        "$oid": "68499975b7080c1d4ee11517"
+      }
+    },
+    {
+      "type": "Dạng bài 3",
+      "questions": [
+        {
+          "$oid": "6849638b3d37c42e74086f43"
+        },
+        {
+          "$oid": "6849638e3d37c42e74086f45"
+        }
+      ],
+      "_id": {
+        "$oid": "68499975b7080c1d4ee11518"
+      }
+    }
+  ],
   "createdAt": {
     "$date": "2025-06-11T07:54:48.544Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T10:00:32.761Z"
+    "$date": "2025-06-18T22:11:48.649Z"
   },
-  "__v": 0
+  "__v": 29
 },
 {
   "_id": {
@@ -3299,17 +3367,17 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
-  "likes": 0,
+  "views": 67,
+  "likes": 1,
   "order": 1,
   "exercises": [],
   "createdAt": {
     "$date": "2025-06-11T07:54:50.951Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T07:54:50.951Z"
+    "$date": "2025-06-18T14:31:25.454Z"
   },
-  "__v": 0
+  "__v": 2
 },
 {
   "_id": {
@@ -3329,15 +3397,15 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
-  "likes": 0,
+  "views": 45,
+  "likes": 1,
   "order": 2,
   "exercises": [],
   "createdAt": {
     "$date": "2025-06-11T07:54:53.037Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T07:54:53.037Z"
+    "$date": "2025-06-18T14:35:02.512Z"
   },
   "__v": 0
 },
@@ -3359,7 +3427,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
+  "views": 35,
   "likes": 0,
   "order": 3,
   "exercises": [],
@@ -3367,7 +3435,7 @@
     "$date": "2025-06-11T07:57:19.681Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T07:57:19.681Z"
+    "$date": "2025-06-18T14:29:16.105Z"
   },
   "__v": 0
 },
@@ -3389,15 +3457,15 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
-  "likes": 0,
+  "views": 32,
+  "likes": 1,
   "order": 4,
   "exercises": [],
   "createdAt": {
     "$date": "2025-06-11T08:03:11.097Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:03:11.097Z"
+    "$date": "2025-06-18T14:29:55.806Z"
   },
   "__v": 0
 },
@@ -3419,7 +3487,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
+  "views": 10,
   "likes": 0,
   "order": 5,
   "exercises": [],
@@ -3427,7 +3495,7 @@
     "$date": "2025-06-11T08:03:13.877Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:03:13.877Z"
+    "$date": "2025-06-18T14:22:55.527Z"
   },
   "__v": 0
 },
@@ -3899,7 +3967,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
+  "views": 2,
   "likes": 0,
   "order": 21,
   "exercises": [],
@@ -3907,7 +3975,7 @@
     "$date": "2025-06-11T08:04:14.087Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:04:14.087Z"
+    "$date": "2025-06-11T12:05:41.972Z"
   },
   "__v": 0
 },
@@ -4049,7 +4117,7 @@
     "overall": 0,
     "details": []
   },
-  "views": 0,
+  "views": 4,
   "likes": 0,
   "order": 26,
   "exercises": [],
@@ -4057,7 +4125,7 @@
     "$date": "2025-06-11T08:09:42.492Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:09:42.492Z"
+    "$date": "2025-06-18T02:13:16.190Z"
   },
   "__v": 0
 },
@@ -4478,6 +4546,1296 @@
   },
   "updatedAt": {
     "$date": "2025-06-11T08:10:17.199Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685334f2d4e4d41877d95ecb"
+  },
+  "title": "Unit 1: Home Life - Reading",
+  "chapterId": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 4,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:51:46.833Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:57.690Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533506d4e4d41877d97203"
+  },
+  "title": "Unit 1: Home Life - Speaking",
+  "chapterId": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:52:06.768Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:52:06.768Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853350cd4e4d41877d97207"
+  },
+  "title": "Unit 1: Home Life - Listening",
+  "chapterId": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:52:12.913Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:52:12.913Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853350fd4e4d41877d9720b"
+  },
+  "title": "Unit 1: Home Life - Writing",
+  "chapterId": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:52:15.552Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:52:15.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533512d4e4d41877d9720f"
+  },
+  "title": "Unit 1: Home Life - Language Focus",
+  "chapterId": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:52:18.412Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:52:18.412Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533514d4e4d41877d97213"
+  },
+  "title": "Unit 1: Home Life - Vocabulary",
+  "chapterId": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:52:20.981Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:52:20.981Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853378ad4e4d41877d97217"
+  },
+  "title": "Bài 1: Este",
+  "chapterId": {
+    "$oid": "68532fe2d4e4d41877d951f3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 2,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:02:50.361Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:58.954Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853378cd4e4d41877d9721b"
+  },
+  "title": "Bài 2: Lipit",
+  "chapterId": {
+    "$oid": "68532fe2d4e4d41877d951f3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:02:52.872Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:02:52.872Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853378ed4e4d41877d9721f"
+  },
+  "title": "Bài 3: Khái Niệm Về Xà Phòng Và Chất Giặt Rửa Tổng Hợp",
+  "chapterId": {
+    "$oid": "68532fe2d4e4d41877d951f3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:02:54.960Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:02:54.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533791d4e4d41877d97223"
+  },
+  "title": "Bài 4: Luyện Tập Este Và Chất Béo",
+  "chapterId": {
+    "$oid": "68532fe2d4e4d41877d951f3"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:02:57.059Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:02:57.059Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337bed4e4d41877d97227"
+  },
+  "title": "Bài 1: Gen, Mã Di Truyền Và Quá Trình Nhân Đôi ADN",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:03:42.428Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:03:42.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337c0d4e4d41877d9722b"
+  },
+  "title": "Bài 2: Phiên Mã Và Dịch Mã",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:03:44.445Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:03:44.445Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337c2d4e4d41877d9722f"
+  },
+  "title": "Bài 3: Điều Hòa Hoạt Động Gen",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:03:46.666Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:03:46.666Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337c4d4e4d41877d97233"
+  },
+  "title": "Bài 4: Đột Biến Gen",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:03:48.795Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:03:48.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337cad4e4d41877d97237"
+  },
+  "title": "Bài 5: Nhiễm Sắc Thể Và Đột Biến Cấu Trúc Nhiễm Sắc Thể",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:03:54.320Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:03:54.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337ced4e4d41877d9723b"
+  },
+  "title": "Bài 6: Đột Biến Số Lượng Nhiễm Sắc Thể",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:03:58.422Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:03:58.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337d0d4e4d41877d9723f"
+  },
+  "title": "Bài 7: Thực Hành Quan Sát Các Dạng Đột Biến Số Lượng NST Trên Tiêu Bản Cố Định Và Tiêu Bản Tạm Thời",
+  "chapterId": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 6,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:04:00.903Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:00.903Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337e8d4e4d41877d97243"
+  },
+  "title": "Bài 1: Việt Nam trên đường đổi mới và hội nhập",
+  "chapterId": {
+    "$oid": "6853309ed4e4d41877d9523f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 6,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:04:24.311Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:24.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337f0d4e4d41877d97247"
+  },
+  "title": "Bài 2: Vị Trí Địa Lí, Phạm Vi Lãnh Thổ",
+  "chapterId": {
+    "$oid": "685330a0d4e4d41877d95243"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:04:32.322Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:32.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337f2d4e4d41877d9724b"
+  },
+  "title": "Bài 3: Thực Hành Vẽ Lược Đồ Việt Nam",
+  "chapterId": {
+    "$oid": "685330a0d4e4d41877d95243"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:04:34.968Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:34.968Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337f4d4e4d41877d9724f"
+  },
+  "title": "Bài 4: Lịch Sử Hình Thành Và Phát Triển Lãnh Thổ",
+  "chapterId": {
+    "$oid": "685330a0d4e4d41877d95243"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:04:36.961Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:36.961Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685337f7d4e4d41877d97253"
+  },
+  "title": "Bài 5: Lịch Sử Hình Thành Và Phát Triển Lãnh Thổ (tt)",
+  "chapterId": {
+    "$oid": "685330a0d4e4d41877d95243"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:04:39.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:39.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533823d4e4d41877d97257"
+  },
+  "title": "Bài 1: Sự Hình Thành Trật Tự Thế Giới Mới Sau Chiến Tranh Thế Giới Thứ Hai (1945 - 1949)",
+  "chapterId": {
+    "$oid": "68533102d4e4d41877d9526b"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:05:23.319Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:05:23.319Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853382cd4e4d41877d9725b"
+  },
+  "title": "Bài 2: Liên Xô Và Các Nước Đông Âu (1945 - 2000), Liên Bang Nga (1991 - 2000)",
+  "chapterId": {
+    "$oid": "68533108d4e4d41877d9526f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:05:32.594Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:05:32.594Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853383dd4e4d41877d9725f"
+  },
+  "title": "Bài 3: Các Nước Đông Bắc Á",
+  "chapterId": {
+    "$oid": "6853310bd4e4d41877d95273"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:05:49.919Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:05:49.919Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533845d4e4d41877d97263"
+  },
+  "title": "Bài 4: Các Nước Đông Nam Á Và Ấn Độ",
+  "chapterId": {
+    "$oid": "6853310bd4e4d41877d95273"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:05:57.738Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:05:57.738Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853384cd4e4d41877d97267"
+  },
+  "title": "Bài 5: Các Nước Châu Phi Và Mĩ Latinh",
+  "chapterId": {
+    "$oid": "6853310bd4e4d41877d95273"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:06:04.202Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:04.202Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533877d4e4d41877d9726b"
+  },
+  "title": "Bài 1: Pháp Luật Và Đời Sống",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:06:47.906Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:47.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853387ad4e4d41877d9726f"
+  },
+  "title": "Bài 2: Thực Hiện Pháp Luật",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:06:50.162Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:50.162Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853387dd4e4d41877d97273"
+  },
+  "title": "Bài 3: Công Dân Bình Đẳng Trước Pháp Luật",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:06:53.587Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:53.587Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533881d4e4d41877d97277"
+  },
+  "title": "Bài 4: Quyền Bình Đẳng Của Công Dân Trong Một Số Lĩnh Vực Đời Sống",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:06:57.286Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:57.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533883d4e4d41877d9727b"
+  },
+  "title": "Bài 5: Quyền Bình Đẳng Giữa Các Dân Tộc, Tôn Giáo",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:06:59.437Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:59.437Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533888d4e4d41877d9727f"
+  },
+  "title": "Bài 6: Công Dân Với Các Quyền Tự Do Cơ Bản",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:07:04.343Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:04.343Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853388bd4e4d41877d97283"
+  },
+  "title": "Ôn Tập: Công Dân Với Pháp Luật",
+  "chapterId": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 6,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:07:07.705Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:07.705Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338a3d4e4d41877d97287"
+  },
+  "title": "Bài 1: Một Số Khái Niệm Cơ Bản",
+  "chapterId": {
+    "$oid": "685331c6d4e4d41877d9529f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:07:31.975Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:31.975Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338a6d4e4d41877d9728b"
+  },
+  "title": "Bài 2: Hệ Quản Trị Cơ Sở Dữ Liệu",
+  "chapterId": {
+    "$oid": "685331c6d4e4d41877d9529f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:07:34.435Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:34.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338a9d4e4d41877d9728f"
+  },
+  "title": "Bài Tập Và Thực Hành 1: Tìm Hiểu Hệ Cơ Sở Dữ Liệu",
+  "chapterId": {
+    "$oid": "685331c6d4e4d41877d9529f"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:07:37.842Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:37.842Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338cfd4e4d41877d9b232"
+  },
+  "title": "Bài 1: Vai Trò Và Triển Vọng Phát Triển Của Ngành Kĩ Thuật Điện Tử Trong Sản Xuất Và Đời Sống",
+  "chapterId": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 0,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:08:15.942Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:15.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338d3d4e4d41877d9b236"
+  },
+  "title": "Bài 2: Điện Trở – Tụ Điện – Cuộn Cảm",
+  "chapterId": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 1,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:08:19.074Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:19.074Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338d6d4e4d41877d9b23a"
+  },
+  "title": "Bài 3: Thực Hành Điện Trở – Tụ Điện – Cuộn Cảm",
+  "chapterId": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 2,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:08:22.630Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:22.630Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338d9d4e4d41877d9b23e"
+  },
+  "title": "Bài 4: Linh Kiện Bán Dẫn Và IC",
+  "chapterId": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 3,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:08:25.484Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:25.484Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338dbd4e4d41877d9b242"
+  },
+  "title": "Bài 5: Thực Hành Điốt – Tiristo – Triac",
+  "chapterId": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 4,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:08:27.917Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:27.917Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685338ddd4e4d41877d9b246"
+  },
+  "title": "Bài 6: Thực Hành Tranzito",
+  "chapterId": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "video": {
+    "url": "https://res.cloudinary.com/ds5lvyntx/video/upload/v1749589042/S%E1%BB%B1_%C4%91%E1%BB%93ng_bi%E1%BA%BFn_ngh%E1%BB%8Bch_bi%E1%BA%BFn_c%E1%BB%A7a_h%C3%A0m_s%E1%BB%91_-_B%C3%A0i_1_-_To%C3%A1n_h%E1%BB%8Dc_12_-_Th%E1%BA%A7y_Tr%E1%BA%A7n_Th%E1%BA%BF_M%E1%BA%A1nh_D%E1%BB%84_HI%E1%BB%82U_NH%E1%BA%A4T_frspjo.mp4",
+    "chapters": []
+  },
+  "document": "",
+  "comments": [],
+  "rating": {
+    "overall": 0,
+    "details": []
+  },
+  "views": 0,
+  "likes": 0,
+  "order": 5,
+  "exercises": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:08:29.924Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:29.924Z"
   },
   "__v": 0
 }]

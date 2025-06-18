@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "68374ec3b03919bf708e89d2"
+  },
+  "name": "Động vật",
+  "icon": "PetsOutlined",
+  "images": [
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748456234/09f51dfaa6c99462a5fc019242b651ac_akpwfj.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748456220/07ddbc7a83008ad19fd6282693e651df_jzglf3.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748456174/68cd0891bbb16d695257a25ca970cc78_bknqnu.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748456068/aa22cae63316d192ae2dcb8f3b5264b5_c5pmxl.jpg"
+  ],
+  "__v": 0,
+  "updatedAt": {
+    "$date": "2025-06-11T14:47:07.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68374f64b03919bf708e89d4"
+  },
+  "name": "Thành phố",
+  "icon": "LocationCity",
+  "images": [
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472202/8a22de00e9a9e5b5ea6ef960d2ea72ba_bxva3o.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472249/0ca70df37e188ba16c899ce2199f263d_vmkd0f.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472244/c9cf009b350522e080e5f1725cf18df6_h5tju7.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472346/99c6c0650009ea7e37d3fc92100daf9c_lwwzso.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472371/26caf7b83e94eab9232690798f92db80_m6oeei.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472410/6c6a193baf4c555dfd225267bbee691a_jbafer.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472449/30b887b8c5e3b612c81e0b9465478755_jxctye.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472465/2aa262f1eef9ed9ac70b13fceb63cf97_yrqlao.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472470/f7a1d6f251a8652f73b23e55e4fa11a5_o9tmbk.jpg"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68374f8bb03919bf708e89d6"
+  },
+  "name": "Thiên nhiên",
+  "icon": "ForestOutlined",
+  "images": [
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472608/b69d30d08b55ab7622237229195ce3db_o9c5d4.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472608/e33e47b8af99f8e65e623290df092359_ncklrq.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472620/a42cd11ed8b4470215e47a3e05cf99a7_dl4a3k.jpg"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68374fb3b03919bf708e89d8"
+  },
+  "name": "Fantasy",
+  "icon": "AutoAwesomeOutlined",
+  "images": [
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472736/0e96c4d57ee3e39ae0d99c0adcb98c81_coz7ih.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472738/5b109c12eff384d888138c1aa35dad8d_g7dbun.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472739/42be52ba0dce69cd9e7e31d43b9d9ef7_oubzk8.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472741/ed999ebeb5babae099e12a14af5d0730_zqyvoo.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472742/f16e07f005d28cdfdc9cd04a66ac7e34_tguy26.jpg"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68375040b03919bf708e89e0"
+  },
+  "name": "Cà phê",
+  "icon": "LocalCafeOutlined",
+  "images": [
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472852/780465edb288d9a61c78061008774fa5_stjplb.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472851/4fbe9e40e7815ce3bf2d49e246b71731_fursga.jpg",
+    "https://res.cloudinary.com/ds5lvyntx/image/upload/v1748472853/a3e2f3318f6550e2c72caad2d36bbbaa_yvgogz.jpg"
+  ],
+  "__v": 0
+}]

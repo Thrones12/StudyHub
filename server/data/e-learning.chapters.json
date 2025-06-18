@@ -25,8 +25,11 @@
     }
   ],
   "exams": [],
-  "__v": 13,
-  "order": 0
+  "__v": 17,
+  "order": 0,
+  "updatedAt": {
+    "$date": "2025-06-11T12:56:06.748Z"
+  }
 },
 {
   "_id": {
@@ -1072,6 +1075,9 @@
     },
     {
       "$oid": "68493841aefb6e69ffdf25f4"
+    },
+    {
+      "$oid": "68499911b7080c1d4ee0fe3b"
     }
   ],
   "exams": [],
@@ -1080,9 +1086,9 @@
     "$date": "2025-06-11T07:50:32.586Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:03:13.879Z"
+    "$date": "2025-06-11T15:00:49.781Z"
   },
-  "__v": 6
+  "__v": 10
 },
 {
   "_id": {
@@ -1113,9 +1119,9 @@
     "$date": "2025-06-11T07:50:42.150Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:03:42.698Z"
+    "$date": "2025-06-11T11:12:35.489Z"
   },
-  "__v": 6
+  "__v": 10
 },
 {
   "_id": {
@@ -1155,9 +1161,9 @@
     "$date": "2025-06-11T07:50:48.161Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:04:06.547Z"
+    "$date": "2025-06-11T11:12:20.256Z"
   },
-  "__v": 8
+  "__v": 10
 },
 {
   "_id": {
@@ -1185,9 +1191,9 @@
     "$date": "2025-06-11T07:51:00.306Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:04:16.476Z"
+    "$date": "2025-06-11T11:12:37.624Z"
   },
-  "__v": 4
+  "__v": 6
 },
 {
   "_id": {
@@ -1221,9 +1227,9 @@
     "$date": "2025-06-11T07:51:11.502Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:09:47.266Z"
+    "$date": "2025-06-11T11:12:33.012Z"
   },
-  "__v": 6
+  "__v": 9
 },
 {
   "_id": {
@@ -1254,9 +1260,9 @@
     "$date": "2025-06-11T07:51:23.377Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:09:59.738Z"
+    "$date": "2025-06-11T11:12:24.441Z"
   },
-  "__v": 5
+  "__v": 8
 },
 {
   "_id": {
@@ -1287,9 +1293,9 @@
     "$date": "2025-06-11T07:51:50.838Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:10:12.148Z"
+    "$date": "2025-06-11T11:12:30.957Z"
   },
-  "__v": 5
+  "__v": 7
 },
 {
   "_id": {
@@ -1311,7 +1317,2544 @@
     "$date": "2025-06-11T07:52:01.995Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T08:10:17.201Z"
+    "$date": "2025-06-11T11:12:15.627Z"
   },
-  "__v": 2
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "68532e7ed4e4d41877d951b3"
+  },
+  "title": "Unit 1: Home life - Đời sống gia đình",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [
+    {
+      "$oid": "685334f2d4e4d41877d95ecb"
+    },
+    {
+      "$oid": "68533506d4e4d41877d97203"
+    },
+    {
+      "$oid": "6853350cd4e4d41877d97207"
+    },
+    {
+      "$oid": "6853350fd4e4d41877d9720b"
+    },
+    {
+      "$oid": "68533512d4e4d41877d9720f"
+    },
+    {
+      "$oid": "68533514d4e4d41877d97213"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:24:14.940Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:52:20.983Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "68532e99d4e4d41877d951b7"
+  },
+  "title": "Unit 2: Cultural Diversity - Sự đa dạng văn hóa",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:24:41.311Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:24:41.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f44d4e4d41877d951bb"
+  },
+  "title": "Unit 3: Ways of Socialising - Phương thức giao tiếp xã hội",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:32.678Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:32.678Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f47d4e4d41877d951bf"
+  },
+  "title": "Unit 4: School Education System - Hệ thống giáo dục",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:35.680Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:35.680Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f49d4e4d41877d951c3"
+  },
+  "title": "Unit 5: Higher Education - Nền giáo dục bậc cao",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:37.907Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:37.907Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f4cd4e4d41877d951c7"
+  },
+  "title": "Unit 6: Future Jobs - Nghề nghiệp tương lai",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:40.951Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:40.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f4fd4e4d41877d951cb"
+  },
+  "title": "Unit 7: Economic Reforms - Sự cải cách kinh tế",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:43.140Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:43.140Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f51d4e4d41877d951cf"
+  },
+  "title": "Unit 8: Life in the future - Cuộc sống trong tương lai",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:45.810Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:45.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f54d4e4d41877d951d3"
+  },
+  "title": "Unit 9: Deserts - Sa mạc",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:48.364Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:48.364Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f56d4e4d41877d951d7"
+  },
+  "title": "Unit 10: Endangered Species - Những loài đang gặp nguy hiểm",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:50.796Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:50.796Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f59d4e4d41877d951db"
+  },
+  "title": "Unit 11: Books - Các loại sách",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:53.177Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:53.177Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f5bd4e4d41877d951df"
+  },
+  "title": "Unit 12: Water Sports - Những môn thể thao dưới nước",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:55.899Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:55.899Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f5ed4e4d41877d951e3"
+  },
+  "title": "Unit 13: The 22nd Sea Game - Sea Game lần thứ 22",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:27:58.389Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:27:58.389Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f60d4e4d41877d951e7"
+  },
+  "title": "Unit 14: International Organizations - Những tổ chức quốc tế",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:28:00.675Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:28:00.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f62d4e4d41877d951eb"
+  },
+  "title": "Unit 15: Women in Society - Người phụ nữ trong xã hội",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:28:02.783Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:28:02.783Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532f64d4e4d41877d951ef"
+  },
+  "title": "Unit 16: The Association of Southeast Asian Nations - Hiệp hội các quốc gia Đông Nam Á",
+  "subjectId": "6848adbc3e9f2a0fc526cff0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:28:04.773Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:28:04.773Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532fe2d4e4d41877d951f3"
+  },
+  "title": "Chương 1: Este - Lipit",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [
+    {
+      "$oid": "6853378ad4e4d41877d97217"
+    },
+    {
+      "$oid": "6853378cd4e4d41877d9721b"
+    },
+    {
+      "$oid": "6853378ed4e4d41877d9721f"
+    },
+    {
+      "$oid": "68533791d4e4d41877d97223"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:10.012Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:02:57.061Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "68532febd4e4d41877d951f7"
+  },
+  "title": "Chương 2: Cacbohidrat",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:19.534Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:19.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532fedd4e4d41877d951fb"
+  },
+  "title": "Chương 3: Amin, Amino Axit Và Protein",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:21.712Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:21.712Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532ff0d4e4d41877d951ff"
+  },
+  "title": "Chương 4: Polime Và Vật Liệu Polime",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:24.081Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:24.081Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532ff1d4e4d41877d95203"
+  },
+  "title": "Chương 5: Đại Cương Về Kim Loại",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:25.970Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:25.970Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532ff4d4e4d41877d95207"
+  },
+  "title": "Chương 6: Kim Loại Kiềm, Kim Loại Kiềm Thổ, Nhôm",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:28.192Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:28.192Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532ff6d4e4d41877d9520b"
+  },
+  "title": "Chương 7: Sắt Và Một Số Kim Loại Quan Trọng",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:30.982Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:30.982Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532ff8d4e4d41877d9520f"
+  },
+  "title": "Chương 8: Phân Biệt Một Số Chất Vô Cơ",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:32.770Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:32.770Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68532ffad4e4d41877d95213"
+  },
+  "title": "Chương 9: Hóa Học Và Vấn Đề Phát Triển Kinh Tế, Xã Hội, Môi Trường",
+  "subjectId": "6848ae6a3e9f2a0fc526cff8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:30:34.863Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:30:34.863Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533038d4e4d41877d95217"
+  },
+  "title": "Cơ Chế Di Truyền Và Biến Dị",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [
+    {
+      "$oid": "685337bed4e4d41877d97227"
+    },
+    {
+      "$oid": "685337c0d4e4d41877d9722b"
+    },
+    {
+      "$oid": "685337c2d4e4d41877d9722f"
+    },
+    {
+      "$oid": "685337c4d4e4d41877d97233"
+    },
+    {
+      "$oid": "685337cad4e4d41877d97237"
+    },
+    {
+      "$oid": "685337ced4e4d41877d9723b"
+    },
+    {
+      "$oid": "685337d0d4e4d41877d9723f"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:31:36.457Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:00.905Z"
+  },
+  "__v": 7
+},
+{
+  "_id": {
+    "$oid": "6853303ad4e4d41877d9521b"
+  },
+  "title": "Tính Quy Luật Của Hiện Tượng Di Truyền",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:31:38.388Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:31:38.388Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853303cd4e4d41877d9521f"
+  },
+  "title": "Di Truyền Học Quần Thể",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:31:40.409Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:31:40.409Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853303ed4e4d41877d95223"
+  },
+  "title": "Ứng Dụng Di Truyền Học",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:31:42.370Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:31:42.370Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533040d4e4d41877d95227"
+  },
+  "title": "Di Truyền Học Người",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:31:44.935Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:31:44.935Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853304ad4e4d41877d9522b"
+  },
+  "title": "Bằng Chứng Và Cơ Chế Tiến Hóa",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:31:54.194Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:31:54.194Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533053d4e4d41877d9522f"
+  },
+  "title": "Sự Phát Sinh Và Phát Triển Của Sự Sống Trên Trái Đất",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:32:03.230Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:32:03.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533057d4e4d41877d95233"
+  },
+  "title": "Cá Thể Và Quần Thể Sinh Vật",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:32:07.660Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:32:07.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853305cd4e4d41877d95237"
+  },
+  "title": "Quần Xã Sinh Vật",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:32:12.101Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:32:12.101Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533060d4e4d41877d9523b"
+  },
+  "title": "Hệ Sinh Thái, Sinh Quyển Và Bảo Vệ Môi Trường",
+  "subjectId": "6848ae723e9f2a0fc526cffc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:32:16.910Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:32:16.910Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853309ed4e4d41877d9523f"
+  },
+  "title": "Địa Lý Việt Nam",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [
+    {
+      "$oid": "685337e8d4e4d41877d97243"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:18.155Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:24.313Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "685330a0d4e4d41877d95243"
+  },
+  "title": "Vị Trí Địa Lý Và Lịch Sử Phát Triển Lãnh Thổ",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [
+    {
+      "$oid": "685337f0d4e4d41877d97247"
+    },
+    {
+      "$oid": "685337f2d4e4d41877d9724b"
+    },
+    {
+      "$oid": "685337f4d4e4d41877d9724f"
+    },
+    {
+      "$oid": "685337f7d4e4d41877d97253"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:20.553Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:04:39.796Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "685330a2d4e4d41877d95247"
+  },
+  "title": "Đặc Điểm Chung Của Tự Nhiên",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:22.667Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:22.667Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330a6d4e4d41877d9524b"
+  },
+  "title": "Vấn Đề Sử Dụng Và Bảo Vệ Tự Nhiên",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:26.573Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:26.573Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330a9d4e4d41877d9524f"
+  },
+  "title": "Địa Lý Dân Cư",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:29.236Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:29.236Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330abd4e4d41877d95253"
+  },
+  "title": "Địa Lý Kinh Tế",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:31.839Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:31.839Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330aed4e4d41877d95257"
+  },
+  "title": "Một Số Vấn Đề Phát Triển Và Phân Bố Nông Nghiệp",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:34.434Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:34.434Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330b3d4e4d41877d9525b"
+  },
+  "title": "Một Số Vấn Đề Phát Triển Và Phân Bố Công Nghiệp",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:39.122Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:39.122Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330b5d4e4d41877d9525f"
+  },
+  "title": "Một Số Vấn Đề Phát Triển Và Phân Bố Các Ngành Dịch Vụ",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:41.584Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:41.584Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330b8d4e4d41877d95263"
+  },
+  "title": "Địa Lý Các Vùng Kinh Tế",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:44.717Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:44.717Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685330bbd4e4d41877d95267"
+  },
+  "title": "Địa Lý Địa Phương",
+  "subjectId": "6848ae813e9f2a0fc526d000",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:33:47.105Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:33:47.105Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533102d4e4d41877d9526b"
+  },
+  "title": "Sự Hình Thành Trật Tự Thế Giới Mới Sau Chiến Tranh Thế Giới Thứ Hai (1945 - 1949)",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [
+    {
+      "$oid": "68533823d4e4d41877d97257"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:34:58.191Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:05:23.320Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68533108d4e4d41877d9526f"
+  },
+  "title": "Liên Xô Và Các Nước Đông Âu (1945 - 1991). Liên Bang Nga (1991 - 2000)",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [
+    {
+      "$oid": "6853382cd4e4d41877d9725b"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:35:04.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:05:32.596Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6853310bd4e4d41877d95273"
+  },
+  "title": "Các Nước Á, Phi Và Mĩ Latinh (1945 - 2000)",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [
+    {
+      "$oid": "6853383dd4e4d41877d9725f"
+    },
+    {
+      "$oid": "68533845d4e4d41877d97263"
+    },
+    {
+      "$oid": "6853384cd4e4d41877d97267"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:35:07.796Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:06:04.203Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "68533150d4e4d41877d95277"
+  },
+  "title": "Mĩ, Tây Âu, Nhật Bản (1945 - 2000)",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:16.858Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:16.858Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533156d4e4d41877d9527b"
+  },
+  "title": "Quan Hệ Quốc Tế (1945 - 2000)",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:22.857Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:22.857Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853315cd4e4d41877d9527f"
+  },
+  "title": "Cách Mạng Khoa Học - Công Nghệ Và Xu Thế Toàn Cầu Hóa",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:28.608Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:28.608Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533165d4e4d41877d95283"
+  },
+  "title": "Việt Nam Từ Năm 1919 Đến Năm 1930",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:37.862Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:37.862Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853316cd4e4d41877d95287"
+  },
+  "title": "Việt Nam Từ Năm 1930 Đến Năm 1945",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:44.814Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:44.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533171d4e4d41877d9528b"
+  },
+  "title": "Việt Nam Từ Năm 1945 Đến Năm 1954",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:49.049Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:49.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533178d4e4d41877d9528f"
+  },
+  "title": "Việt Nam Từ Năm 1954 Đến Năm 1975",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:36:56.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:36:56.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853317cd4e4d41877d95293"
+  },
+  "title": "Việt Nam Từ Năm 1975 Đến Năm 2000",
+  "subjectId": "6848ae8d3e9f2a0fc526d004",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:37:00.348Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:37:00.348Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331a0d4e4d41877d95297"
+  },
+  "title": "Học Kì 1",
+  "subjectId": "6848ae9e3e9f2a0fc526d008",
+  "lessons": [
+    {
+      "$oid": "68533877d4e4d41877d9726b"
+    },
+    {
+      "$oid": "6853387ad4e4d41877d9726f"
+    },
+    {
+      "$oid": "6853387dd4e4d41877d97273"
+    },
+    {
+      "$oid": "68533881d4e4d41877d97277"
+    },
+    {
+      "$oid": "68533883d4e4d41877d9727b"
+    },
+    {
+      "$oid": "68533888d4e4d41877d9727f"
+    },
+    {
+      "$oid": "6853388bd4e4d41877d97283"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:37:36.908Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:07.707Z"
+  },
+  "__v": 7
+},
+{
+  "_id": {
+    "$oid": "685331a7d4e4d41877d9529b"
+  },
+  "title": "Học Kì 2",
+  "subjectId": "6848ae9e3e9f2a0fc526d008",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:37:43.850Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:37:43.850Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331c6d4e4d41877d9529f"
+  },
+  "title": "Chương I: Khái Niệm Về Hệ Cơ Sở Dữ Liệu",
+  "subjectId": "6848aeab3e9f2a0fc526d00c",
+  "lessons": [
+    {
+      "$oid": "685338a3d4e4d41877d97287"
+    },
+    {
+      "$oid": "685338a6d4e4d41877d9728b"
+    },
+    {
+      "$oid": "685338a9d4e4d41877d9728f"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:38:14.726Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:07:37.845Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "685331c9d4e4d41877d952a3"
+  },
+  "title": "Chương II: Hệ Quản Trị Cơ Sở Dữ Liệu Microsoft Access",
+  "subjectId": "6848aeab3e9f2a0fc526d00c",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:38:17.159Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:38:17.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331cbd4e4d41877d952a7"
+  },
+  "title": "Chương III: Hệ Cơ Sở Dữ Liệu Quan Hệ",
+  "subjectId": "6848aeab3e9f2a0fc526d00c",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:38:19.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:38:19.227Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331cdd4e4d41877d952ab"
+  },
+  "title": "Chương IV: Kiến Trúc Và Bảo Mật Các Hệ Cơ Sở Dữ Liệu",
+  "subjectId": "6848aeab3e9f2a0fc526d00c",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:38:21.200Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:38:21.200Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331f6d4e4d41877d952af"
+  },
+  "title": "Chương 1: Linh Kiện Điện Tử",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [
+    {
+      "$oid": "685338cfd4e4d41877d9b232"
+    },
+    {
+      "$oid": "685338d3d4e4d41877d9b236"
+    },
+    {
+      "$oid": "685338d6d4e4d41877d9b23a"
+    },
+    {
+      "$oid": "685338d9d4e4d41877d9b23e"
+    },
+    {
+      "$oid": "685338dbd4e4d41877d9b242"
+    },
+    {
+      "$oid": "685338ddd4e4d41877d9b246"
+    }
+  ],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:02.273Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:08:29.925Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "685331f8d4e4d41877d952b3"
+  },
+  "title": "Chương 2: Một Số Mạch Điện Tử Cơ Bản",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:04.831Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:39:04.831Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331fad4e4d41877d952b7"
+  },
+  "title": "Chương 3: Một Số Mạch Điện Tử Điều Khiển Dân Giản",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:06.901Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:39:06.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331fdd4e4d41877d952bb"
+  },
+  "title": "Chương 4: Một Số Thiết Bị Điện Tử Dân Dụng",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:09.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:39:09.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685331ffd4e4d41877d952bf"
+  },
+  "title": "Chương 5: Mạch Điện Xoay Chiều Ba Pha",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:11.380Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:39:11.380Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533201d4e4d41877d952c3"
+  },
+  "title": "Chương 6: Máy Điện Ba Pha",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:13.535Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:39:13.535Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533203d4e4d41877d952c7"
+  },
+  "title": "Chương 7: Mạng Điện Sản Xuất Quy Mô Nhỏ",
+  "subjectId": "6848aeb53e9f2a0fc526d010",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:39:15.995Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:39:15.995Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533261d4e4d41877d952cb"
+  },
+  "title": "Chương 1: Hàm Số Lượng Giác Và Phương Trình Lượng Giác",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:40:49.978Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:40:49.978Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533264d4e4d41877d952cf"
+  },
+  "title": "Chương 2: Dãy Số, Cấp Số Cộng Và Cấp Số Nhân",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:40:52.398Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:40:52.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533266d4e4d41877d952d3"
+  },
+  "title": "Chương 3: Các Số Đặc Trưng Đo Xu Thế Trung Tâm Của Mẫu Số Liệu Ghép Nhóm",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:40:54.406Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:40:54.406Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533268d4e4d41877d952d7"
+  },
+  "title": "Chương 4: Quan Hệ Song Song Trong Không Gian",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:40:56.742Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:40:56.742Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533273d4e4d41877d952db"
+  },
+  "title": "Chương 5: Giới Hạn. Hàm Số Liên Tục",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:41:07.017Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:41:07.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533276d4e4d41877d952df"
+  },
+  "title": "Chương 6: Hàm Số Mũ Và Hàm Số Lôgarit",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:41:10.082Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:41:10.082Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533278d4e4d41877d952e3"
+  },
+  "title": "Chương 7: Quan Hệ Vuông Góc Trong Không Gian",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:41:12.557Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:41:12.557Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853327ad4e4d41877d952e7"
+  },
+  "title": "Chương 8: Các Quy Tắc Tính Xác Suất",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:41:14.918Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:41:14.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853327cd4e4d41877d952eb"
+  },
+  "title": "Chương 9: Đạo Hàm",
+  "subjectId": "6848db93aefb6e69ffdf22cc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:41:16.914Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:41:16.914Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332c2d4e4d41877d952ef"
+  },
+  "title": "Bài 1: Câu Chuyện Và Điểm Nhìn Trong Truyện Kể",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:26.154Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:26.154Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332c4d4e4d41877d952f3"
+  },
+  "title": "Bài 2: Câu Từ Và Hình Ảnh Trong Thơ Trữ Tình",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:28.148Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:28.148Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332c7d4e4d41877d952f7"
+  },
+  "title": "Bài 3: Cấu Trúc Của Văn Bản Nghị Luận",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:31.676Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:31.676Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332d3d4e4d41877d952fb"
+  },
+  "title": "Bài 4: Tự Sự Trong Truyền Thuyết Dân Gian Và Trong Thơ Trữ Tình",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:43.010Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:43.010Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332d6d4e4d41877d952ff"
+  },
+  "title": "Bài 5: Nhân Vật Và Xung Đột Trong Bi Kịch",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:46.232Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:46.232Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332d8d4e4d41877d95303"
+  },
+  "title": "Bài 6: Nguyễn Du – Những Điều Trông Thấy Mà Đau Đớn Lòng",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:48.604Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:48.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332dad4e4d41877d95307"
+  },
+  "title": "Bài 7: Ghi Chép Và Tưởng Tượng Trong Kí",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:50.801Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:50.801Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332dcd4e4d41877d9530b"
+  },
+  "title": "Bài 8: Cấu Trúc Của Văn Bản Thông Tin",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:52.872Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:52.872Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332dfd4e4d41877d9530f"
+  },
+  "title": "Bài 9: Lựa Chọn Và Hành Động",
+  "subjectId": "6848db9baefb6e69ffdf22d0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:42:55.579Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:42:55.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332f9d4e4d41877d95313"
+  },
+  "title": "Unit 1: A long and healthy life - Một cuộc sống lâu dài và khỏe mạnh",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:21.240Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:21.240Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332fbd4e4d41877d95317"
+  },
+  "title": "Unit 2: The generation gap - Khoảng cách thế hệ",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:23.725Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:23.725Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685332fdd4e4d41877d9531b"
+  },
+  "title": "Unit 3: Cities of the future - Thành phố của tương lai",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:25.797Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:25.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533301d4e4d41877d9531f"
+  },
+  "title": "Unit 4: Asean and Vietnam - Asean và Việt Nam",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:29.254Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:29.254Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533304d4e4d41877d95323"
+  },
+  "title": "Unit 5: Global warming - Sự nóng lên toàn cầu",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:32.371Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:32.371Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533306d4e4d41877d95327"
+  },
+  "title": "Unit 6: Preserving our heritage - Bảo tồn di sản",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:34.634Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:34.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533309d4e4d41877d9532b"
+  },
+  "title": "Unit 7: Education options for school-leavers - Lựa chọn học tập cho học sinh sắp ra trường",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:37.197Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:37.197Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853330bd4e4d41877d9532f"
+  },
+  "title": "Unit 8: Becoming independent - Trở nên độc lập",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:39.705Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:39.705Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853330dd4e4d41877d95333"
+  },
+  "title": "Unit 9: Social issues - Các vấn đề xã hội",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:41.901Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:41.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853330fd4e4d41877d95337"
+  },
+  "title": "Unit 10: The ecosystem - Hệ sinh thái",
+  "subjectId": "6848dba1aefb6e69ffdf22d4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:43.978Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:43.978Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853331ed4e4d41877d9533b"
+  },
+  "title": "Chương 1: Dao Động",
+  "subjectId": "6848dba6aefb6e69ffdf22d8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:43:58.178Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:43:58.178Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533320d4e4d41877d9533f"
+  },
+  "title": "Chương 2: Sóng",
+  "subjectId": "6848dba6aefb6e69ffdf22d8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:00.561Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:00.561Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533323d4e4d41877d95343"
+  },
+  "title": "Chương 3: Điện Trường",
+  "subjectId": "6848dba6aefb6e69ffdf22d8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:03.180Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:03.180Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533325d4e4d41877d95347"
+  },
+  "title": "Chương 4: Dòng Điện, Mạch Điện",
+  "subjectId": "6848dba6aefb6e69ffdf22d8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:05.674Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:05.674Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533344d4e4d41877d9534b"
+  },
+  "title": "Chương 1: Cân Bằng Hóa Học",
+  "subjectId": "6848dba8aefb6e69ffdf22dc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:36.229Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:36.229Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533346d4e4d41877d9534f"
+  },
+  "title": "Chương 2: Nitrogen - Sulfur",
+  "subjectId": "6848dba8aefb6e69ffdf22dc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:38.355Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:38.355Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533348d4e4d41877d95353"
+  },
+  "title": "Chương 3: Đại Cương Về Hóa Học Hữu Cơ",
+  "subjectId": "6848dba8aefb6e69ffdf22dc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:40.258Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:40.258Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853334ad4e4d41877d95357"
+  },
+  "title": "Chương 4: Hydrocarbon",
+  "subjectId": "6848dba8aefb6e69ffdf22dc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:42.510Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:42.510Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853334cd4e4d41877d9535b"
+  },
+  "title": "Chương 5: Dẫn Xuất Halogen - Alcohol - Phenol",
+  "subjectId": "6848dba8aefb6e69ffdf22dc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:44.482Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:44.482Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853334ed4e4d41877d9535f"
+  },
+  "title": "Chương 6: Hợp Chất Carbonyl - Carboxylic Acid",
+  "subjectId": "6848dba8aefb6e69ffdf22dc",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:44:46.615Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:44:46.615Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853336ed4e4d41877d95363"
+  },
+  "title": "Chương 1: Trao Đổi Chất Và Chuyển Hóa Năng Lượng Ở Sinh Vật",
+  "subjectId": "6848dbabaefb6e69ffdf22e0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:45:18.524Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:45:18.524Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533370d4e4d41877d95367"
+  },
+  "title": "Chương 2: Cảm Ứng Ở Sinh Vật",
+  "subjectId": "6848dbabaefb6e69ffdf22e0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:45:20.742Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:45:20.742Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533372d4e4d41877d9536b"
+  },
+  "title": "Chương 3: Sinh Trưởng Và Phát Triển Ở Sinh Vật",
+  "subjectId": "6848dbabaefb6e69ffdf22e0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:45:22.644Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:45:22.644Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533374d4e4d41877d9536f"
+  },
+  "title": "Chương 4: Sinh Sản Ở Sinh Vật",
+  "subjectId": "6848dbabaefb6e69ffdf22e0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:45:24.426Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:45:24.426Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533376d4e4d41877d95373"
+  },
+  "title": "Chương 5: Mối Quan Hệ Giữa Các Quá Trình Sinh Lí Trong Cơ Thể Sinh Vật Và Ngành Nghề Liên Quan Đến Sinh Học Cơ Thể",
+  "subjectId": "6848dbabaefb6e69ffdf22e0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:45:26.214Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:45:26.214Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853339ad4e4d41877d95377"
+  },
+  "title": "Một Số Vấn Đề Về Kinh Tế - Xã Hội Thế Giới",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:02.938Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:02.938Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853339dd4e4d41877d9537b"
+  },
+  "title": "Khu Vực Mĩ La Tinh",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:05.274Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:05.274Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853339fd4e4d41877d9537f"
+  },
+  "title": "Liên Minh Châu Âu (EU)",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:07.675Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:07.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333a1d4e4d41877d95383"
+  },
+  "title": "Khu Vực Đông Nam Á",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:09.642Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:09.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333a4d4e4d41877d95387"
+  },
+  "title": "Khu Vực Tây Nam Á",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:12.002Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:12.002Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333a6d4e4d41877d9538b"
+  },
+  "title": "Hợp Chủng Quốc Hoa Kỳ (Hoa Kỳ)",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:14.272Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:14.272Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333a8d4e4d41877d9538f"
+  },
+  "title": "Liên Bang Nga",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:16.304Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:16.304Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333aad4e4d41877d95393"
+  },
+  "title": "Nhật Bản",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:18.558Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:18.558Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333add4e4d41877d95397"
+  },
+  "title": "Cộng Hòa Nhân Dân Trung Hoa (Trung Quốc)",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:21.326Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:21.326Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333afd4e4d41877d9539b"
+  },
+  "title": "Ô-xtrây-li-a",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:23.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:23.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333b1d4e4d41877d9539f"
+  },
+  "title": "Cộng Hòa Nam Phi",
+  "subjectId": "6848dbb0aefb6e69ffdf22e4",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:46:25.459Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:46:25.459Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333e0d4e4d41877d95e87"
+  },
+  "title": "Chủ Đề 1: Cách Mạng Tư Sản Và Sự Phát Triển Của Chủ Nghĩa Tư Bản",
+  "subjectId": "6848dbb5aefb6e69ffdf22e8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:12.965Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:12.965Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333e3d4e4d41877d95e8b"
+  },
+  "title": "Chủ Đề 2: Chủ Nghĩa Xã Hội Từ Năm 1917 Đến Nay",
+  "subjectId": "6848dbb5aefb6e69ffdf22e8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:15.319Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:15.319Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333e5d4e4d41877d95e8f"
+  },
+  "title": "Chủ Đề 3: Quá Trình Giành Độc Lập Dân Tộc Của Các Quốc Gia Đông Nam Á",
+  "subjectId": "6848dbb5aefb6e69ffdf22e8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:17.485Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:17.485Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333e8d4e4d41877d95e93"
+  },
+  "title": "Chủ Đề 4: Chiến Tranh Bảo Vệ Tổ Quốc Và Chiến Tranh GPDT Trong LSVN (Trước CMT8 Năm 1945)",
+  "subjectId": "6848dbb5aefb6e69ffdf22e8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:20.322Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:20.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333ead4e4d41877d95e97"
+  },
+  "title": "Chủ Đề 5: Một Số Cuộc Cải Cách Lớn Trong Lịch Sử Việt Nam (Trước Năm 1858)",
+  "subjectId": "6848dbb5aefb6e69ffdf22e8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:22.223Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:22.223Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333edd4e4d41877d95e9b"
+  },
+  "title": "Chủ Đề 6: Lịch Sử Bảo Vệ Chủ Quyền, Các Quyền Và Lợi Ích Hợp Pháp Của Việt Nam Ở Biển Đông",
+  "subjectId": "6848dbb5aefb6e69ffdf22e8",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:25.434Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:25.434Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333f1d4e4d41877d95e9f"
+  },
+  "title": "Chủ Đề 1: Máy Tính Và Xã Hội Tri Thức",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:29.659Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:29.659Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333f3d4e4d41877d95ea3"
+  },
+  "title": "Chủ Đề 2: Tổ Chức Lưu Trữ, Tìm Kiếm Và Trao Đổi Thông Tin",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:31.840Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:31.840Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333f5d4e4d41877d95ea7"
+  },
+  "title": "Chủ Đề 3: Đạo Đức, Pháp Luật Và Văn Hóa Trong Môi Trường Số",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:33.958Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:33.958Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333f8d4e4d41877d95eab"
+  },
+  "title": "Chủ Đề 4: Giới Thiệu Các Hệ Cơ Sở Dữ Liệu",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:36.068Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:36.068Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333fad4e4d41877d95eaf"
+  },
+  "title": "Chủ Đề 5: Hướng Nghiệp Với Tin Học",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:38.412Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:38.412Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333fcd4e4d41877d95eb3"
+  },
+  "title": "Chủ Đề 6: Thực Hành Tạo Và Khai Thác Cơ Sở Dữ Liệu",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:40.745Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:40.745Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685333ffd4e4d41877d95eb7"
+  },
+  "title": "Chủ Đề 7: Phần Mềm Chỉnh Sửa Ảnh Và Video",
+  "subjectId": "6848dbbaaefb6e69ffdf22ec",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:47:43.835Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:47:43.835Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853342cd4e4d41877d95ebb"
+  },
+  "title": "Chương 1: Giới Thiệu Chung Về Cơ Khí Chế Tạo",
+  "subjectId": "6848dbbdaefb6e69ffdf22f0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:48:28.453Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:48:28.453Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853342ed4e4d41877d95ebf"
+  },
+  "title": "Chương 2: Vật Liệu Cơ Khí",
+  "subjectId": "6848dbbdaefb6e69ffdf22f0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:48:30.755Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:48:30.755Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533431d4e4d41877d95ec3"
+  },
+  "title": "Chương 3: Các Phương Pháp Gia Công Cơ Khí",
+  "subjectId": "6848dbbdaefb6e69ffdf22f0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:48:33.237Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:48:33.237Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68533433d4e4d41877d95ec7"
+  },
+  "title": "Chương 4: Sản Xuất Cơ Khí",
+  "subjectId": "6848dbbdaefb6e69ffdf22f0",
+  "lessons": [],
+  "exams": [],
+  "order": 0,
+  "createdAt": {
+    "$date": "2025-06-18T21:48:35.109Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:48:35.109Z"
+  },
+  "__v": 0
 }]

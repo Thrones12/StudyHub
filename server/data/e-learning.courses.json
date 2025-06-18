@@ -1,38 +1,126 @@
-[
+[{
+  "_id": {
+    "$oid": "68489774f11429f283564786"
+  },
+  "title": "Chương trình lớp 10",
+  "order": 2,
+  "subjects": [
     {
-        "_id": {
-            "$oid": "67a9c5090d5fbff4d3b34e2d"
-        },
-        "title": "Chương trình lớp 10",
-        "subjects": [
-            "67a9c9060d5fbff4d3b34e39",
-            "67a9c9060d5fbff4d3b34e36",
-            "67a9c9060d5fbff4d3b34e3a"
-        ],
-        "order": 0
+      "$oid": "6848dbd1aefb6e69ffdf22f4"
     },
     {
-        "_id": {
-            "$oid": "67a9c5250d5fbff4d3b34e2e"
-        },
-        "title": "Chương trình lớp 11",
-        "subjects": [
-            "67d301f51332f6140b9c9e22",
-            "67d301f51332f6140b9c9e23",
-            "67d301f51332f6140b9c9e24"
-        ],
-        "order": 1
+      "$oid": "6848dbd5aefb6e69ffdf22f8"
     },
     {
-        "_id": {
-            "$oid": "67a9c5290d5fbff4d3b34e2f"
-        },
-        "title": "Chương trình lớp 12",
-        "subjects": [
-            "67d301f51332f6140b9c9e2e",
-            "67d301f51332f6140b9c9e2f",
-            "67d301f51332f6140b9c9e31"
-        ],
-        "order": 2
+      "$oid": "6848dbdaaefb6e69ffdf22fc"
+    },
+    {
+      "$oid": "6848dbddaefb6e69ffdf2300"
+    },
+    {
+      "$oid": "6848dbe0aefb6e69ffdf2304"
+    },
+    {
+      "$oid": "6848dbe3aefb6e69ffdf2308"
+    },
+    {
+      "$oid": "6848dbe7aefb6e69ffdf230c"
+    },
+    {
+      "$oid": "6848dbebaefb6e69ffdf2310"
+    },
+    {
+      "$oid": "6848dbefaefb6e69ffdf2314"
+    },
+    {
+      "$oid": "6848dbf3aefb6e69ffdf2318"
     }
-]
+  ],
+  "__v": 11
+},
+{
+  "_id": {
+    "$oid": "68489780f11429f283564788"
+  },
+  "title": "Chương trình lớp 11",
+  "order": 1,
+  "subjects": [
+    {
+      "$oid": "6848db93aefb6e69ffdf22cc"
+    },
+    {
+      "$oid": "6848db9baefb6e69ffdf22d0"
+    },
+    {
+      "$oid": "6848dba1aefb6e69ffdf22d4"
+    },
+    {
+      "$oid": "6848dba6aefb6e69ffdf22d8"
+    },
+    {
+      "$oid": "6848dba8aefb6e69ffdf22dc"
+    },
+    {
+      "$oid": "6848dbabaefb6e69ffdf22e0"
+    },
+    {
+      "$oid": "6848dbb0aefb6e69ffdf22e4"
+    },
+    {
+      "$oid": "6848dbb5aefb6e69ffdf22e8"
+    },
+    {
+      "$oid": "6848dbbaaefb6e69ffdf22ec"
+    },
+    {
+      "$oid": "6848dbbdaefb6e69ffdf22f0"
+    }
+  ],
+  "__v": 10
+},
+{
+  "_id": {
+    "$oid": "68489786f11429f28356478a"
+  },
+  "title": "Chương trình lớp 12",
+  "order": 0,
+  "subjects": [
+    {
+      "$oid": "68489863f11429f28356482b"
+    },
+    {
+      "$oid": "6848ab7e3e9f2a0fc526cd80"
+    },
+    {
+      "$oid": "6848adb13e9f2a0fc526cfec"
+    },
+    {
+      "$oid": "6848adbc3e9f2a0fc526cff0"
+    },
+    {
+      "$oid": "6848ade63e9f2a0fc526cff4"
+    },
+    {
+      "$oid": "6848ae6a3e9f2a0fc526cff8"
+    },
+    {
+      "$oid": "6848ae723e9f2a0fc526cffc"
+    },
+    {
+      "$oid": "6848ae813e9f2a0fc526d000"
+    },
+    {
+      "$oid": "6848ae8d3e9f2a0fc526d004"
+    },
+    {
+      "$oid": "6848ae9e3e9f2a0fc526d008"
+    },
+    {
+      "$oid": "6848aeab3e9f2a0fc526d00c"
+    },
+    {
+      "$oid": "6848aeb53e9f2a0fc526d010"
+    }
+  ],
+  "__v": 12
+}]

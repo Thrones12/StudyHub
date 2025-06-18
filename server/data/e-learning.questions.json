@@ -1,0 +1,464 @@
+[{
+  "_id": {
+    "$oid": "6849637a3d37c42e74086f39"
+  },
+  "content": "Câu hỏi số 1: ",
+  "options": [
+    "Đáp án A0",
+    "Đáp án B0",
+    "Đáp án C0",
+    "Đáp án D0"
+  ],
+  "correctAnswer": "Đáp án B0",
+  "hint": "Gợi ý cho câu 1",
+  "explanation": "Giải thích cho câu 1",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:38.644Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:07:38.644Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849637f3d37c42e74086f3b"
+  },
+  "content": "Câu hỏi số 2: ",
+  "options": [
+    "Đáp án A1",
+    "Đáp án B1",
+    "Đáp án C1",
+    "Đáp án D1"
+  ],
+  "correctAnswer": "Đáp án B1",
+  "hint": "Gợi ý cho câu 2",
+  "explanation": "Giải thích cho câu 2",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:43.851Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:43:29.285Z"
+  },
+  "__v": 0,
+  "chapterTitle": "Chương 3: Dòng Điện Xoay Chiều",
+  "courseTitle": "Chương trình lớp 12",
+  "lessonTitle": "",
+  "subjectTitle": "Vật lý"
+},
+{
+  "_id": {
+    "$oid": "684963823d37c42e74086f3d"
+  },
+  "content": "Câu hỏi số 3: ",
+  "options": [
+    "Đáp án A2",
+    "Đáp án B2",
+    "Đáp án C2",
+    "Đáp án D2"
+  ],
+  "correctAnswer": "Đáp án B2",
+  "hint": "Gợi ý cho câu 3",
+  "explanation": "Giải thích cho câu 3",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:46.901Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:07:46.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963863d37c42e74086f3f"
+  },
+  "content": "Câu hỏi số 4: ",
+  "options": [
+    "Đáp án A3",
+    "Đáp án B3",
+    "Đáp án C3",
+    "Đáp án D3"
+  ],
+  "correctAnswer": "Đáp án B3",
+  "hint": "Gợi ý cho câu 4",
+  "explanation": "Giải thích cho câu 4",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:50.863Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:07:50.863Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963893d37c42e74086f41"
+  },
+  "content": "Câu hỏi số 5: ",
+  "options": [
+    "Đáp án A4",
+    "Đáp án B4",
+    "Đáp án C4",
+    "Đáp án D4"
+  ],
+  "correctAnswer": "Đáp án B4",
+  "hint": "Gợi ý cho câu 5",
+  "explanation": "Giải thích cho câu 5",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:53.199Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:07:53.199Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849638b3d37c42e74086f43"
+  },
+  "content": "Câu hỏi số 6: ",
+  "options": [
+    "Đáp án A5",
+    "Đáp án B5",
+    "Đáp án C5",
+    "Đáp án D5"
+  ],
+  "correctAnswer": "Đáp án B5",
+  "hint": "Gợi ý cho câu 6",
+  "explanation": "Giải thích cho câu 6",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:55.749Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:07:55.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849638e3d37c42e74086f45"
+  },
+  "content": "Câu hỏi số 7: ",
+  "options": [
+    "Đáp án A6",
+    "Đáp án B6",
+    "Đáp án C6",
+    "Đáp án D6"
+  ],
+  "correctAnswer": "Đáp án B6",
+  "hint": "Gợi ý cho câu 7",
+  "explanation": "Giải thích cho câu 7",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:07:58.248Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:07:58.248Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963913d37c42e74086f47"
+  },
+  "content": "Câu hỏi số 8: ",
+  "options": [
+    "Đáp án A7",
+    "Đáp án B7",
+    "Đáp án C7",
+    "Đáp án D7"
+  ],
+  "correctAnswer": "Đáp án B7",
+  "hint": "Gợi ý cho câu 8",
+  "explanation": "Giải thích cho câu 8",
+  "level": "Medium",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:01.087Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:01.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963933d37c42e74086f49"
+  },
+  "content": "Câu hỏi số 9: ",
+  "options": [
+    "Đáp án A8",
+    "Đáp án B8",
+    "Đáp án C8",
+    "Đáp án D8"
+  ],
+  "correctAnswer": "Đáp án B8",
+  "hint": "Gợi ý cho câu 9",
+  "explanation": "Giải thích cho câu 9",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:03.634Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:03.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963953d37c42e74086f4b"
+  },
+  "content": "Câu hỏi số 10: ",
+  "options": [
+    "Đáp án A9",
+    "Đáp án B9",
+    "Đáp án C9",
+    "Đáp án D9"
+  ],
+  "correctAnswer": "Đáp án B9",
+  "hint": "Gợi ý cho câu 10",
+  "explanation": "Giải thích cho câu 10",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:05.850Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:05.850Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963983d37c42e74086f4d"
+  },
+  "content": "Câu hỏi số 11: ",
+  "options": [
+    "Đáp án A10",
+    "Đáp án B10",
+    "Đáp án C10",
+    "Đáp án D10"
+  ],
+  "correctAnswer": "Đáp án B10",
+  "hint": "Gợi ý cho câu 11",
+  "explanation": "Giải thích cho câu 11",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:08.057Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:08.057Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849639a3d37c42e74086f4f"
+  },
+  "content": "Câu hỏi số 12: ",
+  "options": [
+    "Đáp án A11",
+    "Đáp án B11",
+    "Đáp án C11",
+    "Đáp án D11"
+  ],
+  "correctAnswer": "Đáp án B11",
+  "hint": "Gợi ý cho câu 12",
+  "explanation": "Giải thích cho câu 12",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:10.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:10.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849639c3d37c42e74086f51"
+  },
+  "content": "Câu hỏi số 13: ",
+  "options": [
+    "Đáp án A12",
+    "Đáp án B12",
+    "Đáp án C12",
+    "Đáp án D12"
+  ],
+  "correctAnswer": "Đáp án B12",
+  "hint": "Gợi ý cho câu 13",
+  "explanation": "Giải thích cho câu 13",
+  "level": "Extreme",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:12.301Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:12.301Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6849639e3d37c42e74086f53"
+  },
+  "content": "Câu hỏi số 14: ",
+  "options": [
+    "Đáp án A13",
+    "Đáp án B13",
+    "Đáp án C13",
+    "Đáp án D13"
+  ],
+  "correctAnswer": "Đáp án B13",
+  "hint": "Gợi ý cho câu 14",
+  "explanation": "Giải thích cho câu 14",
+  "level": "Hard",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:14.569Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:14.569Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963a03d37c42e74086f55"
+  },
+  "content": "Câu hỏi số 15: ",
+  "options": [
+    "Đáp án A14",
+    "Đáp án B14",
+    "Đáp án C14",
+    "Đáp án D14"
+  ],
+  "correctAnswer": "Đáp án B14",
+  "hint": "Gợi ý cho câu 15",
+  "explanation": "Giải thích cho câu 15",
+  "level": "Hard",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:16.555Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:16.555Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963a23d37c42e74086f57"
+  },
+  "content": "Câu hỏi số 16: ",
+  "options": [
+    "Đáp án A15",
+    "Đáp án B15",
+    "Đáp án C15",
+    "Đáp án D15"
+  ],
+  "correctAnswer": "Đáp án B15",
+  "hint": "Gợi ý cho câu 16",
+  "explanation": "Giải thích cho câu 16",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:18.518Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:18.518Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963a43d37c42e74086f59"
+  },
+  "content": "Câu hỏi số 17: ",
+  "options": [
+    "Đáp án A16",
+    "Đáp án B16",
+    "Đáp án C16",
+    "Đáp án D16"
+  ],
+  "correctAnswer": "Đáp án B16",
+  "hint": "Gợi ý cho câu 17",
+  "explanation": "Giải thích cho câu 17",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:20.636Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:20.636Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963a63d37c42e74086f5b"
+  },
+  "content": "Câu hỏi số 18: ",
+  "options": [
+    "Đáp án A17",
+    "Đáp án B17",
+    "Đáp án C17",
+    "Đáp án D17"
+  ],
+  "correctAnswer": "Đáp án B17",
+  "hint": "Gợi ý cho câu 18",
+  "explanation": "Giải thích cho câu 18",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:22.757Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:22.757Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963a93d37c42e74086f5d"
+  },
+  "content": "Câu hỏi số 19: ",
+  "options": [
+    "Đáp án A18",
+    "Đáp án B18",
+    "Đáp án C18",
+    "Đáp án D18"
+  ],
+  "correctAnswer": "Đáp án B18",
+  "hint": "Gợi ý cho câu 19",
+  "explanation": "Giải thích cho câu 19",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:25.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:25.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684963ab3d37c42e74086f5f"
+  },
+  "content": "Câu hỏi số 20: ",
+  "options": [
+    "Đáp án A19",
+    "Đáp án B19",
+    "Đáp án C19",
+    "Đáp án D19"
+  ],
+  "correctAnswer": "Đáp án B19",
+  "hint": "Gợi ý cho câu 20",
+  "explanation": "Giải thích cho câu 20",
+  "level": "Medium",
+  "createdAt": {
+    "$date": "2025-06-11T11:08:27.164Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T11:08:27.164Z"
+  },
+  "__v": 0
+}]

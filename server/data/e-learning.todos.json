@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "68532dbbd4e4d41877d9418d"
+  },
+  "name": "Công việc",
+  "order": 0,
+  "tasks": [],
+  "createdAt": {
+    "$date": "2025-06-18T21:20:59.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T21:20:59.714Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685339c8d4e4d41877d9ec93"
+  },
+  "name": "Công việc",
+  "order": 0,
+  "tasks": [],
+  "createdAt": {
+    "$date": "2025-06-18T22:12:24.223Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T22:12:24.223Z"
+  },
+  "__v": 0
+}]

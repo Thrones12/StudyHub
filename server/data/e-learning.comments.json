@@ -1,45 +1,15 @@
 [{
   "_id": {
-    "$oid": "6819261d707fc47fa55fca8b"
+    "$oid": "68533976d4e4d41877d9c85d"
   },
   "user": {
-    "$oid": "682a073de2776895a05ae93b"
+    "$oid": "68532e2621a8095ac1c4404a"
   },
-  "content": "Emperor",
+  "content": "Cho mình xin thêm nhiều bài tập minh họa hơn nữa\n",
   "replyTo": null,
   "likes": [],
   "timestamp": {
-    "$date": "2025-05-05T20:57:01.623Z"
+    "$date": "2025-06-18T22:11:02.569Z"
   },
-  "__v": 3
-},
-{
-  "_id": {
-    "$oid": "6819265e707fc47fa55fca93"
-  },
-  "user": {
-    "$oid": "682a073de2776895a05ae93b"
-  },
-  "content": "Chó của Khorn",
-  "replyTo": null,
-  "likes": [],
-  "timestamp": {
-    "$date": "2025-05-05T20:58:06.915Z"
-  },
-  "__v": 2
-},
-{
-  "_id": {
-    "$oid": "681e8c82fc9f8f02001dcf19"
-  },
-  "user": {
-    "$oid": "6840d73c5030b9a16d8c2b6a"
-  },
-  "content": "Um",
-  "replyTo": null,
-  "likes": [],
-  "timestamp": {
-    "$date": "2025-05-09T23:15:14.640Z"
-  },
-  "__v": 2
+  "__v": 0
 }]
