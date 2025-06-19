@@ -1,4 +1,3 @@
-const { duration } = require("@mui/material");
 const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema(

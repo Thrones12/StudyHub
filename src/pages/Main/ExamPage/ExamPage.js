@@ -419,6 +419,12 @@ function ExamCard(props) {
                             <p>{formatCount(exam.saves)}</p>
                         </div>
                     </Tooltip>
+                    <Tooltip title='Đánh giá'>
+                        <div className={styles.flexRow}>
+                            <MuiIcons.StarOutlined />
+                            <p>{exam.rating.overall.toFixed(0)}</p>
+                        </div>
+                    </Tooltip>
                 </div>
             </div>
         </div>

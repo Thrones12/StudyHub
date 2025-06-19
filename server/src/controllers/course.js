@@ -3,6 +3,8 @@ const Course = require("../models/course");
 // Get all courses, sorted by order
 exports.getAll = async (req, res) => {
     try {
+        console.log(123);
+
         const courses = await Course.find()
             .populate({ path: "subjects", populate: { path: "chapters" } })
             .sort({ order: 1 }); // 1 = tăng dần, -1 = giảm dần

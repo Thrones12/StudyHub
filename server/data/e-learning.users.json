@@ -3187,7 +3187,7 @@
                                 "link": "/study/lesson/68489ff7718b08cf11e56aec",
                                 "subjectTitle": "Giải tích",
                                 "subjectId": "68489863f11429f28356482b",
-                                "second": 4210,
+                                "second": 43210,
                                 "_id": {
                                     "$oid": "685339d7d4e4d41877d9ef5d"
                                 }
@@ -3214,7 +3214,7 @@
                                 "link": "/study/lesson/685334f2d4e4d41877d95ecb",
                                 "subjectTitle": "Tiếng anh",
                                 "subjectId": "6848adbc3e9f2a0fc526cff0",
-                                "second": 8760,
+                                "second": 18760,
                                 "_id": {
                                     "$oid": "685339d7d4e4d41877d9ef60"
                                 }
@@ -3223,7 +3223,7 @@
                                 "link": "/study/lesson/68493648aefb6e69ffdf25dc",
                                 "subjectTitle": "Vật lý",
                                 "subjectId": "6848ade63e9f2a0fc526cff4",
-                                "second": 940,
+                                "second": 9940,
                                 "_id": {
                                     "$oid": "685339d7d4e4d41877d9ef61"
                                 }
@@ -3232,7 +3232,7 @@
                                 "link": "/study/lesson/6853378ad4e4d41877d97217",
                                 "subjectTitle": "Hóa học",
                                 "subjectId": "6848ae6a3e9f2a0fc526cff8",
-                                "second": 4170,
+                                "second": 16170,
                                 "_id": {
                                     "$oid": "685339d7d4e4d41877d9ef62"
                                 }
@@ -3241,7 +3241,7 @@
                                 "link": "/study/lesson/685337bed4e4d41877d97227",
                                 "subjectTitle": "Sinh học",
                                 "subjectId": "6848ae723e9f2a0fc526cffc",
-                                "second": 7520,
+                                "second": 17520,
                                 "_id": {
                                     "$oid": "685339d7d4e4d41877d9ef63"
                                 }
@@ -3304,6 +3304,325 @@
             {
                 "time": {
                     "$date": "2025-05-18T22:12:39.843Z"
+                },
+                "courses": [
+                    {
+                        "courseId": "68489774f11429f283564786",
+                        "subjects": [
+                            {
+                                "link": "",
+                                "subjectTitle": "Toán",
+                                "subjectId": "6848dbd1aefb6e69ffdf22f4",
+                                "second": 3610,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef47"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Ngữ văn",
+                                "subjectId": "6848dbd5aefb6e69ffdf22f8",
+                                "second": 18670,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef48"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Tiếng anh",
+                                "subjectId": "6848dbdaaefb6e69ffdf22fc",
+                                "second": 7260,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef49"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Vật lý",
+                                "subjectId": "6848dbddaefb6e69ffdf2300",
+                                "second": 1170,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef4a"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Hóa học",
+                                "subjectId": "6848dbe0aefb6e69ffdf2304",
+                                "second": 860,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef4b"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Sinh học",
+                                "subjectId": "6848dbe3aefb6e69ffdf2308",
+                                "second": 4170,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef4c"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Địa lí",
+                                "subjectId": "6848dbe7aefb6e69ffdf230c",
+                                "second": 9620,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef4d"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Lịch sử",
+                                "subjectId": "6848dbebaefb6e69ffdf2310",
+                                "second": 1730,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef4e"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Tin học",
+                                "subjectId": "6848dbefaefb6e69ffdf2314",
+                                "second": 5430,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef4f"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Công nghệ",
+                                "subjectId": "6848dbf3aefb6e69ffdf2318",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef50"
+                                }
+                            }
+                        ],
+                        "_id": {
+                            "$oid": "685339d7d4e4d41877d9ef46"
+                        }
+                    },
+                    {
+                        "courseId": "68489780f11429f283564788",
+                        "subjects": [
+                            {
+                                "link": "",
+                                "subjectTitle": "Toán",
+                                "subjectId": "6848db93aefb6e69ffdf22cc",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef52"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Ngữ văn",
+                                "subjectId": "6848db9baefb6e69ffdf22d0",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef53"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Tiếng anh",
+                                "subjectId": "6848dba1aefb6e69ffdf22d4",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef54"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Vật lý",
+                                "subjectId": "6848dba6aefb6e69ffdf22d8",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef55"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Hóa học",
+                                "subjectId": "6848dba8aefb6e69ffdf22dc",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef56"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Sinh học",
+                                "subjectId": "6848dbabaefb6e69ffdf22e0",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef57"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Địa lí",
+                                "subjectId": "6848dbb0aefb6e69ffdf22e4",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef58"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Lịch sử",
+                                "subjectId": "6848dbb5aefb6e69ffdf22e8",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef59"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Tin học",
+                                "subjectId": "6848dbbaaefb6e69ffdf22ec",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef5a"
+                                }
+                            },
+                            {
+                                "link": "",
+                                "subjectTitle": "Công nghệ",
+                                "subjectId": "6848dbbdaefb6e69ffdf22f0",
+                                "second": 0,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef5b"
+                                }
+                            }
+                        ],
+                        "_id": {
+                            "$oid": "685339d7d4e4d41877d9ef51"
+                        }
+                    },
+                    {
+                        "courseId": "68489786f11429f28356478a",
+                        "subjects": [
+                            {
+                                "link": "/study/lesson/68489ff7718b08cf11e56aec",
+                                "subjectTitle": "Giải tích",
+                                "subjectId": "68489863f11429f28356482b",
+                                "second": 33210,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef5d"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/6848ac8a3e9f2a0fc526cd90",
+                                "subjectTitle": "Hình học",
+                                "subjectId": "6848ab7e3e9f2a0fc526cd80",
+                                "second": 16130,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef5e"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/6848d3f2aefb6e69ffdf20bc",
+                                "subjectTitle": "Ngữ văn",
+                                "subjectId": "6848adb13e9f2a0fc526cfec",
+                                "second": 12570,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef5f"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/685334f2d4e4d41877d95ecb",
+                                "subjectTitle": "Tiếng anh",
+                                "subjectId": "6848adbc3e9f2a0fc526cff0",
+                                "second": 36760,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef60"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/68493648aefb6e69ffdf25dc",
+                                "subjectTitle": "Vật lý",
+                                "subjectId": "6848ade63e9f2a0fc526cff4",
+                                "second": 14940,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef61"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/6853378ad4e4d41877d97217",
+                                "subjectTitle": "Hóa học",
+                                "subjectId": "6848ae6a3e9f2a0fc526cff8",
+                                "second": 18170,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef62"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/685337bed4e4d41877d97227",
+                                "subjectTitle": "Sinh học",
+                                "subjectId": "6848ae723e9f2a0fc526cffc",
+                                "second": 17520,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef63"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/685337e8d4e4d41877d97243",
+                                "subjectTitle": "Địa lí",
+                                "subjectId": "6848ae813e9f2a0fc526d000",
+                                "second": 23340,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef64"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/68533823d4e4d41877d97257",
+                                "subjectTitle": "Lịch sử",
+                                "subjectId": "6848ae8d3e9f2a0fc526d004",
+                                "second": 17520,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef65"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/68533877d4e4d41877d9726b",
+                                "subjectTitle": "Giáo dục công dân",
+                                "subjectId": "6848ae9e3e9f2a0fc526d008",
+                                "second": 13564,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef66"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/685338a3d4e4d41877d97287",
+                                "subjectTitle": "Tin học",
+                                "subjectId": "6848aeab3e9f2a0fc526d00c",
+                                "second": 9245,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef67"
+                                }
+                            },
+                            {
+                                "link": "/study/lesson/685338cfd4e4d41877d9b232",
+                                "subjectTitle": "Công nghệ",
+                                "subjectId": "6848aeb53e9f2a0fc526d010",
+                                "second": 1379,
+                                "_id": {
+                                    "$oid": "685339d7d4e4d41877d9ef68"
+                                }
+                            }
+                        ],
+                        "_id": {
+                            "$oid": "685339d7d4e4d41877d9ef5c"
+                        }
+                    }
+                ]
+            },
+            {
+                "time": {
+                    "$date": "2025-04-18T22:12:39.843Z"
                 },
                 "courses": [
                     {

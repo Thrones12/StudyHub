@@ -48,6 +48,30 @@ const TestPage = () => {
         method: "GET",
         enabled: !!examId, // chỉ chạy khi examId có dữ liệu
     });
+
+    const enterTimeRef = useRef(null);
+    useEffect(() => {
+        // Ghi lại thời điểm truy cập vào trang
+        enterTimeRef.current = Date.now();
+
+        // Khi rời khỏi trang (component bị unmount)
+        return async () => {
+            // Tính toán thời gian đã truy cập
+            const exitTime = Date.now();
+            const secondsSpent = Math.floor(
+                (exitTime - enterTimeRef.current) / 1000
+            );
+            // Gửi dữ liệu về server nếu có thời gian đã truy cập
+            if (secondsSpent > 0 && state === "start") {
+                // Tính toán thời gian đã truy cập
+                // Noti.infoWithYesNo({
+                //     title: "Xác nhận thoát",
+                //     text: "Dữ liệu bài kiểm tra sẽ mất",
+                //     func: () => console.log(123),
+                // });
+            }
+        };
+    }, [state]);
     // Xử lý dữ liệu ban đầu sau khi fetch exam
     useEffect(() => {
         if (exam) {
